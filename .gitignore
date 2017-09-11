@@ -1,0 +1,12 @@
+TestNew/Library/
+TestOld/Library/
+TestNew/.vs/
+TestOld/.vs/
+TestNew/Temp/
+TestOld/Temp/
+TestNew/Assets/UnityVector*
+TestOld/Assets/UnityVector*
+*.sublime-workspace
+*.csproj
+*.sln
+*.meta
