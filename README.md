@@ -1,7 +1,7 @@
 # Oswald Hurlem's Unity Vector Library and Generator
 
 ## Development/Epistemic status
-I am a C++ and C# developer with five years of experience. This is the first ever library I've put out for public consumption. I am not certain it is bug-free, especially when it comes to the python code generator. I am using this code in my own project, [Swedish Cubes for Unity](https://yave.handmade.network/). I am interested in hashing out the details of this library with a party who intends to use it. 
+I am a C++ and C# developer with five years of experience. This is the first ever library I've put out for public consumption. I am not certain it is bug-free, especially when it comes to the python code generator. I am using this code in my own project, [Swedish Cubes for Unity](https://yave.handmade.network/). I am interested in hashing out the details of this library with a party who intends to use it. Breaking changes to names and calling conventions are not out of the question.
 
 ## Description
 This is a library that includes several types of non-float vector types, many operations for vector types,
