@@ -1,4 +1,9 @@
-# Oswald Hurlem's Unity Vector Library
+# Oswald Hurlem's Unity Vector Library and Generator
+
+## Development/Epistemic status
+I am a C++ and C# developer with five years of experience. This is the first ever library I've put out for public consumption. I am not certain it is bug-free, especially when it comes to the python code generator. I am using this code in my own project, [Swedish Cubes for Unity](https://yave.handmade.network/). I am interested in hashing out the details of this library with a party who intends to use it. 
+
+## Description
 This is a library that includes several types of non-float vector types, many operations for vector types,
 and a python script to generate more.
 The vector types, and most functions, are implemented in both C++ and C#, with identical memory layouts. Unity's VectorN types are also implemented in C++. This makes writing and utilizing native code easier and more fun, as I can personally attest. Crucially, neither language's implementation is a wrapper around the other, which would prevent inlining and create slow code.
