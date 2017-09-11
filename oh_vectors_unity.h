@@ -1,4 +1,5 @@
-#ifndef UNITY_VECTORSunion VectorI2
+#ifndef UNITY_VECTORS
+union VectorI2
 {
     struct { Int32 x, y; };
     Int32 E[2];
@@ -6350,4 +6351,5 @@ inline Vector4 Swizz___X(Vector4 V){ return MkVector4(0, 0, 0, V.x); }
 inline Vector4 Swizz___Y(Vector4 V){ return MkVector4(0, 0, 0, V.y); }
 inline Vector4 Swizz___Z(Vector4 V){ return MkVector4(0, 0, 0, V.z); }
 inline Vector4 Swizz___W(Vector4 V){ return MkVector4(0, 0, 0, V.w); }
-}
+#define UNITY_VECTORS
+#endif

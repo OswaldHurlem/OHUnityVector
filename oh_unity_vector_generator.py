@@ -22,7 +22,7 @@ MAJOR TODOS
 '''
 
 # TODO stb-style _IMPLEMENTATION macro
-cFileBegin = '#ifndef UNITY_VECTORS'
+cFileBegin = '''#ifndef UNITY_VECTORS'''
 cFileEnd = '''#define UNITY_VECTORS
 #endif'''
 
@@ -34,8 +34,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace OH
-{
-'''
+{'''
 
 csFileEnd = '}'
 
@@ -464,14 +463,14 @@ def closeCurrentFile():
         currentFile.write(settingsByLanguage[currentLanguage]['fileEnd'])
         currentFile.close()
 
-def switchToFileIfSpecified(fileKey):
+def switchToFileIfSpecified(language, fileKey):
     global currentFile
     global currentLanguage
-    newFileName = settingsByLanguage[currentLanguage].get('outputFile' + fileKey)
+    newFileName = settingsByLanguage[language].get('outputFile' + fileKey)
     if newFileName:
         closeCurrentFile()
-        currentFile = open(settingsByLanguage[currentLanguage]['outputFile' + fileKey], 'w')
-        currentFile.write(settingsByLanguage[currentLanguage]['fileBegin'])
+        currentFile = open(settingsByLanguage[language]['outputFile' + fileKey], 'w')
+        currentFile.write(settingsByLanguage[language]['fileBegin'] + '\n')
 
 
 def switchToLanguage(language):
@@ -483,8 +482,8 @@ def switchToLanguage(language):
     global booleanName
     global vectorFunctionClassPrefix
     global mathFunctionCallPrefix
+    switchToFileIfSpecified(language, '')
     currentLanguage = language
-    switchToFileIfSpecified('')
     for vector in vecList:
         vector.name = vector.nameByLang[language]
         vector.declare = vector.declareVecsInLangs[language]
@@ -890,14 +889,14 @@ def outputStaticClassFunctionsCSharp():
 
 if settingsByLanguage['C#'].get('stdCallClassName'):
     className = settingsByLanguage['C#']['stdCallClassName']
-    switchToFileIfSpecified('_ops')
+    switchToFileIfSpecified('C#', '_ops')
     OUT("public static partial class #{className}")
     OUT('{')
     if pushIndent(1):
         outputStaticClassFunctionsCSharp()
     popIndent()
     OUT('}')
-    switchToFileIfSpecified('_swizzle')
+    switchToFileIfSpecified('C#', '_swizzle')
     OUT("public static partial class #{className}")
     OUT('{')
     if pushIndent(1):
@@ -909,14 +908,14 @@ if settingsByLanguage['C#'].get('stdCallClassName'):
 if settingsByLanguage['C#'].get('extMethodClassName'):
     className = settingsByLanguage['C#']['extMethodClassName']
     firstParamModifier = settingsByLanguage['C#']['firstParamModifier']
-    switchToFileIfSpecified('_ext')
+    switchToFileIfSpecified('C#', '_ext')
     OUT("public static partial class #{className}")
     OUT('{')
     if pushIndent(1):
         outputStaticClassFunctionsCSharp()
     popIndent()
     OUT('}')
-    switchToFileIfSpecified('_swizzle_ext')
+    switchToFileIfSpecified('C#', '_swizzle_ext')
     OUT("public static partial class #{className}")
     OUT('{')
     if pushIndent(1):

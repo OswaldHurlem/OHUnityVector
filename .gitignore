@@ -10,3 +10,5 @@ TestOld/Assets/UnityVector*
 *.csproj
 *.sln
 *.meta
+*.exe
+*.obj
