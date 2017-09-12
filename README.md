@@ -1,7 +1,7 @@
 # Oswald Hurlem's Unity Vector Library and Generator
 
 ## Development/Epistemic status
-I am a C++ and C# developer with five years of experience. This is the first ever library I've put out for public consumption. I am not certain it is bug-free, especially when it comes to the python code generator. I am using this code in my own project, [Swedish Cubes for Unity](https://yave.handmade.network/). I am interested in hashing out the details of this library with a party who intends to use it. Breaking changes to names and calling conventions are not out of the question.
+I am a C++ and C# developer with five years of experience. This is the first ever library I've put out for public consumption. I am not certain it is bug-free, especially when it comes to the python code generator. I am using this code in my own project, [Swedish Cubes for Unity](https://yave.handmade.network/). Some of the vector types and functions within will not just be used within Swedish Cubes but also its API, so I am interested in hashing out the details of this library with a party who intends to use it or Swedish Cubes. Breaking changes to names and calling conventions are not out of the question.
 
 ## Description
 This is a library that includes several types of non-float vector types, many operations for vector types,
@@ -9,6 +9,7 @@ and a python script to generate more.
 The vector types, and most functions, are implemented in both C++ and C#, with identical memory layouts. Unity's VectorN types are also implemented in C++. This makes writing and utilizing native code easier and more fun, as I can personally attest. Crucially, neither language's implementation is a wrapper around the other, which would prevent inlining and create slow code.
 
 ## Features
+* Vectors that use byte, int, and double as components.
 * It's generated code, but very easy to read for the most part.
 * Implements most built-in Unity functions with an (IMO) better naming scheme, plus many more.
 * No implicit casts (except for with Unity's VectorN types, which can't be helped).
