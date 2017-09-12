@@ -5,21 +5,21 @@ I am a C++ and C# developer with five years of experience. This is the first eve
 
 ## Description
 This is a library that includes several types of non-float vector types, many operations for vector types,
-and a python script to generate more.
+and a python script to generate either more or less of them.
 The vector types, and most functions, are implemented in both C++ and C#, with identical memory layouts. Unity's VectorN types are also implemented in C++. This makes writing and utilizing native code easier and more fun, as I can personally attest. Crucially, neither language's implementation is a wrapper around the other, which would prevent inlining and create slow code.
 
 ## Features
 * Vectors that use byte, int, and double as components.
 * It's generated code, but very easy to read for the most part.
 * Implements most built-in Unity functions with an (IMO) better naming scheme, plus many more.
-* No implicit casts (except for with Unity's VectorN types, which can't be helped).
+* The added vector types do not implicitly cast
 * Identical method names across each type, but no functions where they don't make sense (e.g. no normalizing integer vectors).
 * Swizzles! Swizzle between any two vectors with the same component type. Allows you to use underscores to blank members out.
 * Conversion from float to integer vectors rounds to -Infinity like God intended.
 * All functions are pure! All functions look like functions! Say goodbye to Unity's impure .Normalize() function and sqrt-concealing .normalized property.
 * Implemented as both extension methods and non-extension methods.
-    * With the upgraded Mono Runtime, `using static OH.VecOps` lets you call vector operations without giving the class name!
-    * `using OH` gives you all functions as extention methods.
+    * With the upgraded Mono Runtime, `using static OH.VecOps;` lets you call vector operations without giving the class name.
+    * `using OH;` gives you all functions as extension methods.
     * Mix and match to choose how much work Intellisense has to do. Or use both so that it's just like UFCS!
 
 ## Usage
@@ -36,6 +36,7 @@ To use the python script, you must have Interpy installed.
 * Add SIMD/SOA types
 * Some of the required math functions (such as Div() for float types) shouldn't be required.
 * MAYBE: Generate C instead of C++
+* EVENTUALLY: Unity has plans to add an integer-based Vector type some day. I'll have to adjust the naming scheme to fit with whatever it ends up being named. (It's currently named Vector3Int (yuck) but this has been criticized).
 
 ## Please!!
-Let me know if you are using this library, how you're using it, and what features you'd like me to add.
+Let me know if you are using this library, how you're using it, and what you'd like changed or added.
