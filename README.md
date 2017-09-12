@@ -15,7 +15,7 @@ The vector types, and most functions, are implemented in both C++ and C#, with i
 * Identical method names across each type, but no functions where they don't make sense (e.g. no normalizing integer vectors).
 * Swizzles! Swizzle between any two vectors with the same component type. Allows you to use underscores to blank members out.
 * Conversion from float to integer vectors rounds to -Infinity like God intended.
-* All functions are pure! Say goodbye to Unity's icky Normalize function.
+* All functions are pure! All functions look like functions! Say goodbye to Unity's impure .Normalize() function and sqrt-concealing .normalized property.
 * Implemented as both extension methods and non-extension methods.
     * With the upgraded Mono Runtime, `using static OH.VecOps` lets you call vector operations without giving the class name!
     * `using OH` gives you all functions as extention methods.
@@ -33,7 +33,8 @@ To use the python script, you must have Interpy installed.
 * Improve flexibility of code generator.
 * Unit tests using some established Vector library??
 * Add SIMD/SOA types
-* Optionally generate C (not C++) code.
+* Some of the required math functions (such as Div() for float types) shouldn't be required.
+* MAYBE: Generate C instead of C++
 
 ## Please!!
 Let me know if you are using this library, how you're using it, and what features you'd like me to add.

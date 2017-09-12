@@ -2447,6 +2447,1225 @@ namespace OH
         public static VectorB4 ___Y(VectorB4 V){ return VecOps.MkVectorB4(0, 0, 0, V.y); }
         public static VectorB4 ___Z(VectorB4 V){ return VecOps.MkVectorB4(0, 0, 0, V.z); }
         public static VectorB4 ___W(VectorB4 V){ return VecOps.MkVectorB4(0, 0, 0, V.w); }
+        public static VectorD2 XX(VectorD2 V){ return VecOps.MkVectorD2(V.x, V.x); }
+        public static VectorD2 XY(VectorD2 V){ return VecOps.MkVectorD2(V.x, V.y); }
+        public static VectorD2 X_(VectorD2 V){ return VecOps.MkVectorD2(V.x, 0); }
+        public static VectorD2 YX(VectorD2 V){ return VecOps.MkVectorD2(V.y, V.x); }
+        public static VectorD2 YY(VectorD2 V){ return VecOps.MkVectorD2(V.y, V.y); }
+        public static VectorD2 Y_(VectorD2 V){ return VecOps.MkVectorD2(V.y, 0); }
+        public static VectorD2 _X(VectorD2 V){ return VecOps.MkVectorD2(0, V.x); }
+        public static VectorD2 _Y(VectorD2 V){ return VecOps.MkVectorD2(0, V.y); }
+        public static VectorD3 XXX(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.x, V.x); }
+        public static VectorD3 XXY(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.x, V.y); }
+        public static VectorD3 XX_(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.x, 0); }
+        public static VectorD3 XYX(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.y, V.x); }
+        public static VectorD3 XYY(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.y, V.y); }
+        public static VectorD3 XY_(VectorD2 V){ return VecOps.MkVectorD3(V.x, V.y, 0); }
+        public static VectorD3 X_X(VectorD2 V){ return VecOps.MkVectorD3(V.x, 0, V.x); }
+        public static VectorD3 X_Y(VectorD2 V){ return VecOps.MkVectorD3(V.x, 0, V.y); }
+        public static VectorD3 X__(VectorD2 V){ return VecOps.MkVectorD3(V.x, 0, 0); }
+        public static VectorD3 YXX(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.x, V.x); }
+        public static VectorD3 YXY(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.x, V.y); }
+        public static VectorD3 YX_(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.x, 0); }
+        public static VectorD3 YYX(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.y, V.x); }
+        public static VectorD3 YYY(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.y, V.y); }
+        public static VectorD3 YY_(VectorD2 V){ return VecOps.MkVectorD3(V.y, V.y, 0); }
+        public static VectorD3 Y_X(VectorD2 V){ return VecOps.MkVectorD3(V.y, 0, V.x); }
+        public static VectorD3 Y_Y(VectorD2 V){ return VecOps.MkVectorD3(V.y, 0, V.y); }
+        public static VectorD3 Y__(VectorD2 V){ return VecOps.MkVectorD3(V.y, 0, 0); }
+        public static VectorD3 _XX(VectorD2 V){ return VecOps.MkVectorD3(0, V.x, V.x); }
+        public static VectorD3 _XY(VectorD2 V){ return VecOps.MkVectorD3(0, V.x, V.y); }
+        public static VectorD3 _X_(VectorD2 V){ return VecOps.MkVectorD3(0, V.x, 0); }
+        public static VectorD3 _YX(VectorD2 V){ return VecOps.MkVectorD3(0, V.y, V.x); }
+        public static VectorD3 _YY(VectorD2 V){ return VecOps.MkVectorD3(0, V.y, V.y); }
+        public static VectorD3 _Y_(VectorD2 V){ return VecOps.MkVectorD3(0, V.y, 0); }
+        public static VectorD3 __X(VectorD2 V){ return VecOps.MkVectorD3(0, 0, V.x); }
+        public static VectorD3 __Y(VectorD2 V){ return VecOps.MkVectorD3(0, 0, V.y); }
+        public static VectorD4 XXXX(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.x); }
+        public static VectorD4 XXXY(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.y); }
+        public static VectorD4 XXX_(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, 0); }
+        public static VectorD4 XXYX(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.x); }
+        public static VectorD4 XXYY(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.y); }
+        public static VectorD4 XXY_(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, 0); }
+        public static VectorD4 XX_X(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.x); }
+        public static VectorD4 XX_Y(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.y); }
+        public static VectorD4 XX__(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.x, 0, 0); }
+        public static VectorD4 XYXX(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.x); }
+        public static VectorD4 XYXY(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.y); }
+        public static VectorD4 XYX_(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, 0); }
+        public static VectorD4 XYYX(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.x); }
+        public static VectorD4 XYYY(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.y); }
+        public static VectorD4 XYY_(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, 0); }
+        public static VectorD4 XY_X(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.x); }
+        public static VectorD4 XY_Y(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.y); }
+        public static VectorD4 XY__(VectorD2 V){ return VecOps.MkVectorD4(V.x, V.y, 0, 0); }
+        public static VectorD4 X_XX(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.x); }
+        public static VectorD4 X_XY(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.y); }
+        public static VectorD4 X_X_(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.x, 0); }
+        public static VectorD4 X_YX(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.x); }
+        public static VectorD4 X_YY(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.y); }
+        public static VectorD4 X_Y_(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, V.y, 0); }
+        public static VectorD4 X__X(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.x); }
+        public static VectorD4 X__Y(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.y); }
+        public static VectorD4 X___(VectorD2 V){ return VecOps.MkVectorD4(V.x, 0, 0, 0); }
+        public static VectorD4 YXXX(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.x); }
+        public static VectorD4 YXXY(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.y); }
+        public static VectorD4 YXX_(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, 0); }
+        public static VectorD4 YXYX(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.x); }
+        public static VectorD4 YXYY(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.y); }
+        public static VectorD4 YXY_(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, 0); }
+        public static VectorD4 YX_X(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.x); }
+        public static VectorD4 YX_Y(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.y); }
+        public static VectorD4 YX__(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.x, 0, 0); }
+        public static VectorD4 YYXX(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.x); }
+        public static VectorD4 YYXY(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.y); }
+        public static VectorD4 YYX_(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, 0); }
+        public static VectorD4 YYYX(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.x); }
+        public static VectorD4 YYYY(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.y); }
+        public static VectorD4 YYY_(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, 0); }
+        public static VectorD4 YY_X(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.x); }
+        public static VectorD4 YY_Y(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.y); }
+        public static VectorD4 YY__(VectorD2 V){ return VecOps.MkVectorD4(V.y, V.y, 0, 0); }
+        public static VectorD4 Y_XX(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.x); }
+        public static VectorD4 Y_XY(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.y); }
+        public static VectorD4 Y_X_(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.x, 0); }
+        public static VectorD4 Y_YX(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.x); }
+        public static VectorD4 Y_YY(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.y); }
+        public static VectorD4 Y_Y_(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, V.y, 0); }
+        public static VectorD4 Y__X(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.x); }
+        public static VectorD4 Y__Y(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.y); }
+        public static VectorD4 Y___(VectorD2 V){ return VecOps.MkVectorD4(V.y, 0, 0, 0); }
+        public static VectorD4 _XXX(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.x); }
+        public static VectorD4 _XXY(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.y); }
+        public static VectorD4 _XX_(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.x, 0); }
+        public static VectorD4 _XYX(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.x); }
+        public static VectorD4 _XYY(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.y); }
+        public static VectorD4 _XY_(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, V.y, 0); }
+        public static VectorD4 _X_X(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, 0, V.x); }
+        public static VectorD4 _X_Y(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, 0, V.y); }
+        public static VectorD4 _X__(VectorD2 V){ return VecOps.MkVectorD4(0, V.x, 0, 0); }
+        public static VectorD4 _YXX(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.x); }
+        public static VectorD4 _YXY(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.y); }
+        public static VectorD4 _YX_(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.x, 0); }
+        public static VectorD4 _YYX(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.x); }
+        public static VectorD4 _YYY(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.y); }
+        public static VectorD4 _YY_(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, V.y, 0); }
+        public static VectorD4 _Y_X(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, 0, V.x); }
+        public static VectorD4 _Y_Y(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, 0, V.y); }
+        public static VectorD4 _Y__(VectorD2 V){ return VecOps.MkVectorD4(0, V.y, 0, 0); }
+        public static VectorD4 __XX(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.x, V.x); }
+        public static VectorD4 __XY(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.x, V.y); }
+        public static VectorD4 __X_(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.x, 0); }
+        public static VectorD4 __YX(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.y, V.x); }
+        public static VectorD4 __YY(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.y, V.y); }
+        public static VectorD4 __Y_(VectorD2 V){ return VecOps.MkVectorD4(0, 0, V.y, 0); }
+        public static VectorD4 ___X(VectorD2 V){ return VecOps.MkVectorD4(0, 0, 0, V.x); }
+        public static VectorD4 ___Y(VectorD2 V){ return VecOps.MkVectorD4(0, 0, 0, V.y); }
+        public static VectorD2 XX(VectorD3 V){ return VecOps.MkVectorD2(V.x, V.x); }
+        public static VectorD2 XY(VectorD3 V){ return VecOps.MkVectorD2(V.x, V.y); }
+        public static VectorD2 XZ(VectorD3 V){ return VecOps.MkVectorD2(V.x, V.z); }
+        public static VectorD2 X_(VectorD3 V){ return VecOps.MkVectorD2(V.x, 0); }
+        public static VectorD2 YX(VectorD3 V){ return VecOps.MkVectorD2(V.y, V.x); }
+        public static VectorD2 YY(VectorD3 V){ return VecOps.MkVectorD2(V.y, V.y); }
+        public static VectorD2 YZ(VectorD3 V){ return VecOps.MkVectorD2(V.y, V.z); }
+        public static VectorD2 Y_(VectorD3 V){ return VecOps.MkVectorD2(V.y, 0); }
+        public static VectorD2 ZX(VectorD3 V){ return VecOps.MkVectorD2(V.z, V.x); }
+        public static VectorD2 ZY(VectorD3 V){ return VecOps.MkVectorD2(V.z, V.y); }
+        public static VectorD2 ZZ(VectorD3 V){ return VecOps.MkVectorD2(V.z, V.z); }
+        public static VectorD2 Z_(VectorD3 V){ return VecOps.MkVectorD2(V.z, 0); }
+        public static VectorD2 _X(VectorD3 V){ return VecOps.MkVectorD2(0, V.x); }
+        public static VectorD2 _Y(VectorD3 V){ return VecOps.MkVectorD2(0, V.y); }
+        public static VectorD2 _Z(VectorD3 V){ return VecOps.MkVectorD2(0, V.z); }
+        public static VectorD3 XXX(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.x, V.x); }
+        public static VectorD3 XXY(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.x, V.y); }
+        public static VectorD3 XXZ(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.x, V.z); }
+        public static VectorD3 XX_(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.x, 0); }
+        public static VectorD3 XYX(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.y, V.x); }
+        public static VectorD3 XYY(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.y, V.y); }
+        public static VectorD3 XYZ(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.y, V.z); }
+        public static VectorD3 XY_(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.y, 0); }
+        public static VectorD3 XZX(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.z, V.x); }
+        public static VectorD3 XZY(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.z, V.y); }
+        public static VectorD3 XZZ(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.z, V.z); }
+        public static VectorD3 XZ_(VectorD3 V){ return VecOps.MkVectorD3(V.x, V.z, 0); }
+        public static VectorD3 X_X(VectorD3 V){ return VecOps.MkVectorD3(V.x, 0, V.x); }
+        public static VectorD3 X_Y(VectorD3 V){ return VecOps.MkVectorD3(V.x, 0, V.y); }
+        public static VectorD3 X_Z(VectorD3 V){ return VecOps.MkVectorD3(V.x, 0, V.z); }
+        public static VectorD3 X__(VectorD3 V){ return VecOps.MkVectorD3(V.x, 0, 0); }
+        public static VectorD3 YXX(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.x, V.x); }
+        public static VectorD3 YXY(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.x, V.y); }
+        public static VectorD3 YXZ(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.x, V.z); }
+        public static VectorD3 YX_(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.x, 0); }
+        public static VectorD3 YYX(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.y, V.x); }
+        public static VectorD3 YYY(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.y, V.y); }
+        public static VectorD3 YYZ(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.y, V.z); }
+        public static VectorD3 YY_(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.y, 0); }
+        public static VectorD3 YZX(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.z, V.x); }
+        public static VectorD3 YZY(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.z, V.y); }
+        public static VectorD3 YZZ(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.z, V.z); }
+        public static VectorD3 YZ_(VectorD3 V){ return VecOps.MkVectorD3(V.y, V.z, 0); }
+        public static VectorD3 Y_X(VectorD3 V){ return VecOps.MkVectorD3(V.y, 0, V.x); }
+        public static VectorD3 Y_Y(VectorD3 V){ return VecOps.MkVectorD3(V.y, 0, V.y); }
+        public static VectorD3 Y_Z(VectorD3 V){ return VecOps.MkVectorD3(V.y, 0, V.z); }
+        public static VectorD3 Y__(VectorD3 V){ return VecOps.MkVectorD3(V.y, 0, 0); }
+        public static VectorD3 ZXX(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.x, V.x); }
+        public static VectorD3 ZXY(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.x, V.y); }
+        public static VectorD3 ZXZ(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.x, V.z); }
+        public static VectorD3 ZX_(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.x, 0); }
+        public static VectorD3 ZYX(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.y, V.x); }
+        public static VectorD3 ZYY(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.y, V.y); }
+        public static VectorD3 ZYZ(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.y, V.z); }
+        public static VectorD3 ZY_(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.y, 0); }
+        public static VectorD3 ZZX(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.z, V.x); }
+        public static VectorD3 ZZY(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.z, V.y); }
+        public static VectorD3 ZZZ(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.z, V.z); }
+        public static VectorD3 ZZ_(VectorD3 V){ return VecOps.MkVectorD3(V.z, V.z, 0); }
+        public static VectorD3 Z_X(VectorD3 V){ return VecOps.MkVectorD3(V.z, 0, V.x); }
+        public static VectorD3 Z_Y(VectorD3 V){ return VecOps.MkVectorD3(V.z, 0, V.y); }
+        public static VectorD3 Z_Z(VectorD3 V){ return VecOps.MkVectorD3(V.z, 0, V.z); }
+        public static VectorD3 Z__(VectorD3 V){ return VecOps.MkVectorD3(V.z, 0, 0); }
+        public static VectorD3 _XX(VectorD3 V){ return VecOps.MkVectorD3(0, V.x, V.x); }
+        public static VectorD3 _XY(VectorD3 V){ return VecOps.MkVectorD3(0, V.x, V.y); }
+        public static VectorD3 _XZ(VectorD3 V){ return VecOps.MkVectorD3(0, V.x, V.z); }
+        public static VectorD3 _X_(VectorD3 V){ return VecOps.MkVectorD3(0, V.x, 0); }
+        public static VectorD3 _YX(VectorD3 V){ return VecOps.MkVectorD3(0, V.y, V.x); }
+        public static VectorD3 _YY(VectorD3 V){ return VecOps.MkVectorD3(0, V.y, V.y); }
+        public static VectorD3 _YZ(VectorD3 V){ return VecOps.MkVectorD3(0, V.y, V.z); }
+        public static VectorD3 _Y_(VectorD3 V){ return VecOps.MkVectorD3(0, V.y, 0); }
+        public static VectorD3 _ZX(VectorD3 V){ return VecOps.MkVectorD3(0, V.z, V.x); }
+        public static VectorD3 _ZY(VectorD3 V){ return VecOps.MkVectorD3(0, V.z, V.y); }
+        public static VectorD3 _ZZ(VectorD3 V){ return VecOps.MkVectorD3(0, V.z, V.z); }
+        public static VectorD3 _Z_(VectorD3 V){ return VecOps.MkVectorD3(0, V.z, 0); }
+        public static VectorD3 __X(VectorD3 V){ return VecOps.MkVectorD3(0, 0, V.x); }
+        public static VectorD3 __Y(VectorD3 V){ return VecOps.MkVectorD3(0, 0, V.y); }
+        public static VectorD3 __Z(VectorD3 V){ return VecOps.MkVectorD3(0, 0, V.z); }
+        public static VectorD4 XXXX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.x); }
+        public static VectorD4 XXXY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.y); }
+        public static VectorD4 XXXZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.z); }
+        public static VectorD4 XXX_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, 0); }
+        public static VectorD4 XXYX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.x); }
+        public static VectorD4 XXYY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.y); }
+        public static VectorD4 XXYZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.z); }
+        public static VectorD4 XXY_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, 0); }
+        public static VectorD4 XXZX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.x); }
+        public static VectorD4 XXZY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.y); }
+        public static VectorD4 XXZZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.z); }
+        public static VectorD4 XXZ_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, 0); }
+        public static VectorD4 XX_X(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.x); }
+        public static VectorD4 XX_Y(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.y); }
+        public static VectorD4 XX_Z(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.z); }
+        public static VectorD4 XX__(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.x, 0, 0); }
+        public static VectorD4 XYXX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.x); }
+        public static VectorD4 XYXY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.y); }
+        public static VectorD4 XYXZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.z); }
+        public static VectorD4 XYX_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, 0); }
+        public static VectorD4 XYYX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.x); }
+        public static VectorD4 XYYY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.y); }
+        public static VectorD4 XYYZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.z); }
+        public static VectorD4 XYY_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, 0); }
+        public static VectorD4 XYZX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.x); }
+        public static VectorD4 XYZY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.y); }
+        public static VectorD4 XYZZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.z); }
+        public static VectorD4 XYZ_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, 0); }
+        public static VectorD4 XY_X(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.x); }
+        public static VectorD4 XY_Y(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.y); }
+        public static VectorD4 XY_Z(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.z); }
+        public static VectorD4 XY__(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.y, 0, 0); }
+        public static VectorD4 XZXX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.x); }
+        public static VectorD4 XZXY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.y); }
+        public static VectorD4 XZXZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.z); }
+        public static VectorD4 XZX_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, 0); }
+        public static VectorD4 XZYX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.x); }
+        public static VectorD4 XZYY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.y); }
+        public static VectorD4 XZYZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.z); }
+        public static VectorD4 XZY_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, 0); }
+        public static VectorD4 XZZX(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.x); }
+        public static VectorD4 XZZY(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.y); }
+        public static VectorD4 XZZZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.z); }
+        public static VectorD4 XZZ_(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, 0); }
+        public static VectorD4 XZ_X(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.x); }
+        public static VectorD4 XZ_Y(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.y); }
+        public static VectorD4 XZ_Z(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.z); }
+        public static VectorD4 XZ__(VectorD3 V){ return VecOps.MkVectorD4(V.x, V.z, 0, 0); }
+        public static VectorD4 X_XX(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.x); }
+        public static VectorD4 X_XY(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.y); }
+        public static VectorD4 X_XZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.z); }
+        public static VectorD4 X_X_(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.x, 0); }
+        public static VectorD4 X_YX(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.x); }
+        public static VectorD4 X_YY(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.y); }
+        public static VectorD4 X_YZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.z); }
+        public static VectorD4 X_Y_(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.y, 0); }
+        public static VectorD4 X_ZX(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.x); }
+        public static VectorD4 X_ZY(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.y); }
+        public static VectorD4 X_ZZ(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.z); }
+        public static VectorD4 X_Z_(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, V.z, 0); }
+        public static VectorD4 X__X(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.x); }
+        public static VectorD4 X__Y(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.y); }
+        public static VectorD4 X__Z(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.z); }
+        public static VectorD4 X___(VectorD3 V){ return VecOps.MkVectorD4(V.x, 0, 0, 0); }
+        public static VectorD4 YXXX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.x); }
+        public static VectorD4 YXXY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.y); }
+        public static VectorD4 YXXZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.z); }
+        public static VectorD4 YXX_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, 0); }
+        public static VectorD4 YXYX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.x); }
+        public static VectorD4 YXYY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.y); }
+        public static VectorD4 YXYZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.z); }
+        public static VectorD4 YXY_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, 0); }
+        public static VectorD4 YXZX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.x); }
+        public static VectorD4 YXZY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.y); }
+        public static VectorD4 YXZZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.z); }
+        public static VectorD4 YXZ_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, 0); }
+        public static VectorD4 YX_X(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.x); }
+        public static VectorD4 YX_Y(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.y); }
+        public static VectorD4 YX_Z(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.z); }
+        public static VectorD4 YX__(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.x, 0, 0); }
+        public static VectorD4 YYXX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.x); }
+        public static VectorD4 YYXY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.y); }
+        public static VectorD4 YYXZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.z); }
+        public static VectorD4 YYX_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, 0); }
+        public static VectorD4 YYYX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.x); }
+        public static VectorD4 YYYY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.y); }
+        public static VectorD4 YYYZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.z); }
+        public static VectorD4 YYY_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, 0); }
+        public static VectorD4 YYZX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.x); }
+        public static VectorD4 YYZY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.y); }
+        public static VectorD4 YYZZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.z); }
+        public static VectorD4 YYZ_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, 0); }
+        public static VectorD4 YY_X(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.x); }
+        public static VectorD4 YY_Y(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.y); }
+        public static VectorD4 YY_Z(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.z); }
+        public static VectorD4 YY__(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.y, 0, 0); }
+        public static VectorD4 YZXX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.x); }
+        public static VectorD4 YZXY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.y); }
+        public static VectorD4 YZXZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.z); }
+        public static VectorD4 YZX_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, 0); }
+        public static VectorD4 YZYX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.x); }
+        public static VectorD4 YZYY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.y); }
+        public static VectorD4 YZYZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.z); }
+        public static VectorD4 YZY_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, 0); }
+        public static VectorD4 YZZX(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.x); }
+        public static VectorD4 YZZY(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.y); }
+        public static VectorD4 YZZZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.z); }
+        public static VectorD4 YZZ_(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, 0); }
+        public static VectorD4 YZ_X(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.x); }
+        public static VectorD4 YZ_Y(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.y); }
+        public static VectorD4 YZ_Z(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.z); }
+        public static VectorD4 YZ__(VectorD3 V){ return VecOps.MkVectorD4(V.y, V.z, 0, 0); }
+        public static VectorD4 Y_XX(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.x); }
+        public static VectorD4 Y_XY(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.y); }
+        public static VectorD4 Y_XZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.z); }
+        public static VectorD4 Y_X_(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.x, 0); }
+        public static VectorD4 Y_YX(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.x); }
+        public static VectorD4 Y_YY(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.y); }
+        public static VectorD4 Y_YZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.z); }
+        public static VectorD4 Y_Y_(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.y, 0); }
+        public static VectorD4 Y_ZX(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.x); }
+        public static VectorD4 Y_ZY(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.y); }
+        public static VectorD4 Y_ZZ(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.z); }
+        public static VectorD4 Y_Z_(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, V.z, 0); }
+        public static VectorD4 Y__X(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.x); }
+        public static VectorD4 Y__Y(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.y); }
+        public static VectorD4 Y__Z(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.z); }
+        public static VectorD4 Y___(VectorD3 V){ return VecOps.MkVectorD4(V.y, 0, 0, 0); }
+        public static VectorD4 ZXXX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.x); }
+        public static VectorD4 ZXXY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.y); }
+        public static VectorD4 ZXXZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.z); }
+        public static VectorD4 ZXX_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, 0); }
+        public static VectorD4 ZXYX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.x); }
+        public static VectorD4 ZXYY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.y); }
+        public static VectorD4 ZXYZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.z); }
+        public static VectorD4 ZXY_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, 0); }
+        public static VectorD4 ZXZX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.x); }
+        public static VectorD4 ZXZY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.y); }
+        public static VectorD4 ZXZZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.z); }
+        public static VectorD4 ZXZ_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, 0); }
+        public static VectorD4 ZX_X(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.x); }
+        public static VectorD4 ZX_Y(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.y); }
+        public static VectorD4 ZX_Z(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.z); }
+        public static VectorD4 ZX__(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.x, 0, 0); }
+        public static VectorD4 ZYXX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.x); }
+        public static VectorD4 ZYXY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.y); }
+        public static VectorD4 ZYXZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.z); }
+        public static VectorD4 ZYX_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, 0); }
+        public static VectorD4 ZYYX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.x); }
+        public static VectorD4 ZYYY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.y); }
+        public static VectorD4 ZYYZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.z); }
+        public static VectorD4 ZYY_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, 0); }
+        public static VectorD4 ZYZX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.x); }
+        public static VectorD4 ZYZY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.y); }
+        public static VectorD4 ZYZZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.z); }
+        public static VectorD4 ZYZ_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, 0); }
+        public static VectorD4 ZY_X(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.x); }
+        public static VectorD4 ZY_Y(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.y); }
+        public static VectorD4 ZY_Z(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.z); }
+        public static VectorD4 ZY__(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.y, 0, 0); }
+        public static VectorD4 ZZXX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.x); }
+        public static VectorD4 ZZXY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.y); }
+        public static VectorD4 ZZXZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.z); }
+        public static VectorD4 ZZX_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, 0); }
+        public static VectorD4 ZZYX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.x); }
+        public static VectorD4 ZZYY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.y); }
+        public static VectorD4 ZZYZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.z); }
+        public static VectorD4 ZZY_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, 0); }
+        public static VectorD4 ZZZX(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.x); }
+        public static VectorD4 ZZZY(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.y); }
+        public static VectorD4 ZZZZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.z); }
+        public static VectorD4 ZZZ_(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, 0); }
+        public static VectorD4 ZZ_X(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.x); }
+        public static VectorD4 ZZ_Y(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.y); }
+        public static VectorD4 ZZ_Z(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.z); }
+        public static VectorD4 ZZ__(VectorD3 V){ return VecOps.MkVectorD4(V.z, V.z, 0, 0); }
+        public static VectorD4 Z_XX(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.x); }
+        public static VectorD4 Z_XY(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.y); }
+        public static VectorD4 Z_XZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.z); }
+        public static VectorD4 Z_X_(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.x, 0); }
+        public static VectorD4 Z_YX(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.x); }
+        public static VectorD4 Z_YY(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.y); }
+        public static VectorD4 Z_YZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.z); }
+        public static VectorD4 Z_Y_(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.y, 0); }
+        public static VectorD4 Z_ZX(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.x); }
+        public static VectorD4 Z_ZY(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.y); }
+        public static VectorD4 Z_ZZ(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.z); }
+        public static VectorD4 Z_Z_(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, V.z, 0); }
+        public static VectorD4 Z__X(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.x); }
+        public static VectorD4 Z__Y(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.y); }
+        public static VectorD4 Z__Z(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.z); }
+        public static VectorD4 Z___(VectorD3 V){ return VecOps.MkVectorD4(V.z, 0, 0, 0); }
+        public static VectorD4 _XXX(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.x); }
+        public static VectorD4 _XXY(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.y); }
+        public static VectorD4 _XXZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.z); }
+        public static VectorD4 _XX_(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.x, 0); }
+        public static VectorD4 _XYX(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.x); }
+        public static VectorD4 _XYY(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.y); }
+        public static VectorD4 _XYZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.z); }
+        public static VectorD4 _XY_(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.y, 0); }
+        public static VectorD4 _XZX(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.x); }
+        public static VectorD4 _XZY(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.y); }
+        public static VectorD4 _XZZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.z); }
+        public static VectorD4 _XZ_(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, V.z, 0); }
+        public static VectorD4 _X_X(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, 0, V.x); }
+        public static VectorD4 _X_Y(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, 0, V.y); }
+        public static VectorD4 _X_Z(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, 0, V.z); }
+        public static VectorD4 _X__(VectorD3 V){ return VecOps.MkVectorD4(0, V.x, 0, 0); }
+        public static VectorD4 _YXX(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.x); }
+        public static VectorD4 _YXY(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.y); }
+        public static VectorD4 _YXZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.z); }
+        public static VectorD4 _YX_(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.x, 0); }
+        public static VectorD4 _YYX(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.x); }
+        public static VectorD4 _YYY(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.y); }
+        public static VectorD4 _YYZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.z); }
+        public static VectorD4 _YY_(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.y, 0); }
+        public static VectorD4 _YZX(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.x); }
+        public static VectorD4 _YZY(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.y); }
+        public static VectorD4 _YZZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.z); }
+        public static VectorD4 _YZ_(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, V.z, 0); }
+        public static VectorD4 _Y_X(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, 0, V.x); }
+        public static VectorD4 _Y_Y(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, 0, V.y); }
+        public static VectorD4 _Y_Z(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, 0, V.z); }
+        public static VectorD4 _Y__(VectorD3 V){ return VecOps.MkVectorD4(0, V.y, 0, 0); }
+        public static VectorD4 _ZXX(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.x); }
+        public static VectorD4 _ZXY(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.y); }
+        public static VectorD4 _ZXZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.z); }
+        public static VectorD4 _ZX_(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.x, 0); }
+        public static VectorD4 _ZYX(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.x); }
+        public static VectorD4 _ZYY(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.y); }
+        public static VectorD4 _ZYZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.z); }
+        public static VectorD4 _ZY_(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.y, 0); }
+        public static VectorD4 _ZZX(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.x); }
+        public static VectorD4 _ZZY(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.y); }
+        public static VectorD4 _ZZZ(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.z); }
+        public static VectorD4 _ZZ_(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, V.z, 0); }
+        public static VectorD4 _Z_X(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, 0, V.x); }
+        public static VectorD4 _Z_Y(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, 0, V.y); }
+        public static VectorD4 _Z_Z(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, 0, V.z); }
+        public static VectorD4 _Z__(VectorD3 V){ return VecOps.MkVectorD4(0, V.z, 0, 0); }
+        public static VectorD4 __XX(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.x, V.x); }
+        public static VectorD4 __XY(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.x, V.y); }
+        public static VectorD4 __XZ(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.x, V.z); }
+        public static VectorD4 __X_(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.x, 0); }
+        public static VectorD4 __YX(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.y, V.x); }
+        public static VectorD4 __YY(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.y, V.y); }
+        public static VectorD4 __YZ(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.y, V.z); }
+        public static VectorD4 __Y_(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.y, 0); }
+        public static VectorD4 __ZX(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.z, V.x); }
+        public static VectorD4 __ZY(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.z, V.y); }
+        public static VectorD4 __ZZ(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.z, V.z); }
+        public static VectorD4 __Z_(VectorD3 V){ return VecOps.MkVectorD4(0, 0, V.z, 0); }
+        public static VectorD4 ___X(VectorD3 V){ return VecOps.MkVectorD4(0, 0, 0, V.x); }
+        public static VectorD4 ___Y(VectorD3 V){ return VecOps.MkVectorD4(0, 0, 0, V.y); }
+        public static VectorD4 ___Z(VectorD3 V){ return VecOps.MkVectorD4(0, 0, 0, V.z); }
+        public static VectorD2 XX(VectorD4 V){ return VecOps.MkVectorD2(V.x, V.x); }
+        public static VectorD2 XY(VectorD4 V){ return VecOps.MkVectorD2(V.x, V.y); }
+        public static VectorD2 XZ(VectorD4 V){ return VecOps.MkVectorD2(V.x, V.z); }
+        public static VectorD2 XW(VectorD4 V){ return VecOps.MkVectorD2(V.x, V.w); }
+        public static VectorD2 X_(VectorD4 V){ return VecOps.MkVectorD2(V.x, 0); }
+        public static VectorD2 YX(VectorD4 V){ return VecOps.MkVectorD2(V.y, V.x); }
+        public static VectorD2 YY(VectorD4 V){ return VecOps.MkVectorD2(V.y, V.y); }
+        public static VectorD2 YZ(VectorD4 V){ return VecOps.MkVectorD2(V.y, V.z); }
+        public static VectorD2 YW(VectorD4 V){ return VecOps.MkVectorD2(V.y, V.w); }
+        public static VectorD2 Y_(VectorD4 V){ return VecOps.MkVectorD2(V.y, 0); }
+        public static VectorD2 ZX(VectorD4 V){ return VecOps.MkVectorD2(V.z, V.x); }
+        public static VectorD2 ZY(VectorD4 V){ return VecOps.MkVectorD2(V.z, V.y); }
+        public static VectorD2 ZZ(VectorD4 V){ return VecOps.MkVectorD2(V.z, V.z); }
+        public static VectorD2 ZW(VectorD4 V){ return VecOps.MkVectorD2(V.z, V.w); }
+        public static VectorD2 Z_(VectorD4 V){ return VecOps.MkVectorD2(V.z, 0); }
+        public static VectorD2 WX(VectorD4 V){ return VecOps.MkVectorD2(V.w, V.x); }
+        public static VectorD2 WY(VectorD4 V){ return VecOps.MkVectorD2(V.w, V.y); }
+        public static VectorD2 WZ(VectorD4 V){ return VecOps.MkVectorD2(V.w, V.z); }
+        public static VectorD2 WW(VectorD4 V){ return VecOps.MkVectorD2(V.w, V.w); }
+        public static VectorD2 W_(VectorD4 V){ return VecOps.MkVectorD2(V.w, 0); }
+        public static VectorD2 _X(VectorD4 V){ return VecOps.MkVectorD2(0, V.x); }
+        public static VectorD2 _Y(VectorD4 V){ return VecOps.MkVectorD2(0, V.y); }
+        public static VectorD2 _Z(VectorD4 V){ return VecOps.MkVectorD2(0, V.z); }
+        public static VectorD2 _W(VectorD4 V){ return VecOps.MkVectorD2(0, V.w); }
+        public static VectorD3 XXX(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.x, V.x); }
+        public static VectorD3 XXY(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.x, V.y); }
+        public static VectorD3 XXZ(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.x, V.z); }
+        public static VectorD3 XXW(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.x, V.w); }
+        public static VectorD3 XX_(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.x, 0); }
+        public static VectorD3 XYX(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.y, V.x); }
+        public static VectorD3 XYY(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.y, V.y); }
+        public static VectorD3 XYZ(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.y, V.z); }
+        public static VectorD3 XYW(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.y, V.w); }
+        public static VectorD3 XY_(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.y, 0); }
+        public static VectorD3 XZX(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.z, V.x); }
+        public static VectorD3 XZY(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.z, V.y); }
+        public static VectorD3 XZZ(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.z, V.z); }
+        public static VectorD3 XZW(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.z, V.w); }
+        public static VectorD3 XZ_(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.z, 0); }
+        public static VectorD3 XWX(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.w, V.x); }
+        public static VectorD3 XWY(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.w, V.y); }
+        public static VectorD3 XWZ(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.w, V.z); }
+        public static VectorD3 XWW(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.w, V.w); }
+        public static VectorD3 XW_(VectorD4 V){ return VecOps.MkVectorD3(V.x, V.w, 0); }
+        public static VectorD3 X_X(VectorD4 V){ return VecOps.MkVectorD3(V.x, 0, V.x); }
+        public static VectorD3 X_Y(VectorD4 V){ return VecOps.MkVectorD3(V.x, 0, V.y); }
+        public static VectorD3 X_Z(VectorD4 V){ return VecOps.MkVectorD3(V.x, 0, V.z); }
+        public static VectorD3 X_W(VectorD4 V){ return VecOps.MkVectorD3(V.x, 0, V.w); }
+        public static VectorD3 X__(VectorD4 V){ return VecOps.MkVectorD3(V.x, 0, 0); }
+        public static VectorD3 YXX(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.x, V.x); }
+        public static VectorD3 YXY(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.x, V.y); }
+        public static VectorD3 YXZ(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.x, V.z); }
+        public static VectorD3 YXW(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.x, V.w); }
+        public static VectorD3 YX_(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.x, 0); }
+        public static VectorD3 YYX(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.y, V.x); }
+        public static VectorD3 YYY(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.y, V.y); }
+        public static VectorD3 YYZ(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.y, V.z); }
+        public static VectorD3 YYW(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.y, V.w); }
+        public static VectorD3 YY_(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.y, 0); }
+        public static VectorD3 YZX(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.z, V.x); }
+        public static VectorD3 YZY(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.z, V.y); }
+        public static VectorD3 YZZ(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.z, V.z); }
+        public static VectorD3 YZW(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.z, V.w); }
+        public static VectorD3 YZ_(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.z, 0); }
+        public static VectorD3 YWX(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.w, V.x); }
+        public static VectorD3 YWY(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.w, V.y); }
+        public static VectorD3 YWZ(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.w, V.z); }
+        public static VectorD3 YWW(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.w, V.w); }
+        public static VectorD3 YW_(VectorD4 V){ return VecOps.MkVectorD3(V.y, V.w, 0); }
+        public static VectorD3 Y_X(VectorD4 V){ return VecOps.MkVectorD3(V.y, 0, V.x); }
+        public static VectorD3 Y_Y(VectorD4 V){ return VecOps.MkVectorD3(V.y, 0, V.y); }
+        public static VectorD3 Y_Z(VectorD4 V){ return VecOps.MkVectorD3(V.y, 0, V.z); }
+        public static VectorD3 Y_W(VectorD4 V){ return VecOps.MkVectorD3(V.y, 0, V.w); }
+        public static VectorD3 Y__(VectorD4 V){ return VecOps.MkVectorD3(V.y, 0, 0); }
+        public static VectorD3 ZXX(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.x, V.x); }
+        public static VectorD3 ZXY(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.x, V.y); }
+        public static VectorD3 ZXZ(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.x, V.z); }
+        public static VectorD3 ZXW(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.x, V.w); }
+        public static VectorD3 ZX_(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.x, 0); }
+        public static VectorD3 ZYX(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.y, V.x); }
+        public static VectorD3 ZYY(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.y, V.y); }
+        public static VectorD3 ZYZ(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.y, V.z); }
+        public static VectorD3 ZYW(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.y, V.w); }
+        public static VectorD3 ZY_(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.y, 0); }
+        public static VectorD3 ZZX(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.z, V.x); }
+        public static VectorD3 ZZY(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.z, V.y); }
+        public static VectorD3 ZZZ(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.z, V.z); }
+        public static VectorD3 ZZW(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.z, V.w); }
+        public static VectorD3 ZZ_(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.z, 0); }
+        public static VectorD3 ZWX(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.w, V.x); }
+        public static VectorD3 ZWY(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.w, V.y); }
+        public static VectorD3 ZWZ(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.w, V.z); }
+        public static VectorD3 ZWW(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.w, V.w); }
+        public static VectorD3 ZW_(VectorD4 V){ return VecOps.MkVectorD3(V.z, V.w, 0); }
+        public static VectorD3 Z_X(VectorD4 V){ return VecOps.MkVectorD3(V.z, 0, V.x); }
+        public static VectorD3 Z_Y(VectorD4 V){ return VecOps.MkVectorD3(V.z, 0, V.y); }
+        public static VectorD3 Z_Z(VectorD4 V){ return VecOps.MkVectorD3(V.z, 0, V.z); }
+        public static VectorD3 Z_W(VectorD4 V){ return VecOps.MkVectorD3(V.z, 0, V.w); }
+        public static VectorD3 Z__(VectorD4 V){ return VecOps.MkVectorD3(V.z, 0, 0); }
+        public static VectorD3 WXX(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.x, V.x); }
+        public static VectorD3 WXY(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.x, V.y); }
+        public static VectorD3 WXZ(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.x, V.z); }
+        public static VectorD3 WXW(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.x, V.w); }
+        public static VectorD3 WX_(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.x, 0); }
+        public static VectorD3 WYX(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.y, V.x); }
+        public static VectorD3 WYY(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.y, V.y); }
+        public static VectorD3 WYZ(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.y, V.z); }
+        public static VectorD3 WYW(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.y, V.w); }
+        public static VectorD3 WY_(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.y, 0); }
+        public static VectorD3 WZX(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.z, V.x); }
+        public static VectorD3 WZY(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.z, V.y); }
+        public static VectorD3 WZZ(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.z, V.z); }
+        public static VectorD3 WZW(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.z, V.w); }
+        public static VectorD3 WZ_(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.z, 0); }
+        public static VectorD3 WWX(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.w, V.x); }
+        public static VectorD3 WWY(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.w, V.y); }
+        public static VectorD3 WWZ(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.w, V.z); }
+        public static VectorD3 WWW(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.w, V.w); }
+        public static VectorD3 WW_(VectorD4 V){ return VecOps.MkVectorD3(V.w, V.w, 0); }
+        public static VectorD3 W_X(VectorD4 V){ return VecOps.MkVectorD3(V.w, 0, V.x); }
+        public static VectorD3 W_Y(VectorD4 V){ return VecOps.MkVectorD3(V.w, 0, V.y); }
+        public static VectorD3 W_Z(VectorD4 V){ return VecOps.MkVectorD3(V.w, 0, V.z); }
+        public static VectorD3 W_W(VectorD4 V){ return VecOps.MkVectorD3(V.w, 0, V.w); }
+        public static VectorD3 W__(VectorD4 V){ return VecOps.MkVectorD3(V.w, 0, 0); }
+        public static VectorD3 _XX(VectorD4 V){ return VecOps.MkVectorD3(0, V.x, V.x); }
+        public static VectorD3 _XY(VectorD4 V){ return VecOps.MkVectorD3(0, V.x, V.y); }
+        public static VectorD3 _XZ(VectorD4 V){ return VecOps.MkVectorD3(0, V.x, V.z); }
+        public static VectorD3 _XW(VectorD4 V){ return VecOps.MkVectorD3(0, V.x, V.w); }
+        public static VectorD3 _X_(VectorD4 V){ return VecOps.MkVectorD3(0, V.x, 0); }
+        public static VectorD3 _YX(VectorD4 V){ return VecOps.MkVectorD3(0, V.y, V.x); }
+        public static VectorD3 _YY(VectorD4 V){ return VecOps.MkVectorD3(0, V.y, V.y); }
+        public static VectorD3 _YZ(VectorD4 V){ return VecOps.MkVectorD3(0, V.y, V.z); }
+        public static VectorD3 _YW(VectorD4 V){ return VecOps.MkVectorD3(0, V.y, V.w); }
+        public static VectorD3 _Y_(VectorD4 V){ return VecOps.MkVectorD3(0, V.y, 0); }
+        public static VectorD3 _ZX(VectorD4 V){ return VecOps.MkVectorD3(0, V.z, V.x); }
+        public static VectorD3 _ZY(VectorD4 V){ return VecOps.MkVectorD3(0, V.z, V.y); }
+        public static VectorD3 _ZZ(VectorD4 V){ return VecOps.MkVectorD3(0, V.z, V.z); }
+        public static VectorD3 _ZW(VectorD4 V){ return VecOps.MkVectorD3(0, V.z, V.w); }
+        public static VectorD3 _Z_(VectorD4 V){ return VecOps.MkVectorD3(0, V.z, 0); }
+        public static VectorD3 _WX(VectorD4 V){ return VecOps.MkVectorD3(0, V.w, V.x); }
+        public static VectorD3 _WY(VectorD4 V){ return VecOps.MkVectorD3(0, V.w, V.y); }
+        public static VectorD3 _WZ(VectorD4 V){ return VecOps.MkVectorD3(0, V.w, V.z); }
+        public static VectorD3 _WW(VectorD4 V){ return VecOps.MkVectorD3(0, V.w, V.w); }
+        public static VectorD3 _W_(VectorD4 V){ return VecOps.MkVectorD3(0, V.w, 0); }
+        public static VectorD3 __X(VectorD4 V){ return VecOps.MkVectorD3(0, 0, V.x); }
+        public static VectorD3 __Y(VectorD4 V){ return VecOps.MkVectorD3(0, 0, V.y); }
+        public static VectorD3 __Z(VectorD4 V){ return VecOps.MkVectorD3(0, 0, V.z); }
+        public static VectorD3 __W(VectorD4 V){ return VecOps.MkVectorD3(0, 0, V.w); }
+        public static VectorD4 XXXX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.x); }
+        public static VectorD4 XXXY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.y); }
+        public static VectorD4 XXXZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.z); }
+        public static VectorD4 XXXW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, V.w); }
+        public static VectorD4 XXX_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.x, 0); }
+        public static VectorD4 XXYX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.x); }
+        public static VectorD4 XXYY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.y); }
+        public static VectorD4 XXYZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.z); }
+        public static VectorD4 XXYW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, V.w); }
+        public static VectorD4 XXY_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.y, 0); }
+        public static VectorD4 XXZX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.x); }
+        public static VectorD4 XXZY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.y); }
+        public static VectorD4 XXZZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.z); }
+        public static VectorD4 XXZW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, V.w); }
+        public static VectorD4 XXZ_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.z, 0); }
+        public static VectorD4 XXWX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.w, V.x); }
+        public static VectorD4 XXWY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.w, V.y); }
+        public static VectorD4 XXWZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.w, V.z); }
+        public static VectorD4 XXWW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.w, V.w); }
+        public static VectorD4 XXW_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, V.w, 0); }
+        public static VectorD4 XX_X(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.x); }
+        public static VectorD4 XX_Y(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.y); }
+        public static VectorD4 XX_Z(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.z); }
+        public static VectorD4 XX_W(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, 0, V.w); }
+        public static VectorD4 XX__(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.x, 0, 0); }
+        public static VectorD4 XYXX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.x); }
+        public static VectorD4 XYXY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.y); }
+        public static VectorD4 XYXZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.z); }
+        public static VectorD4 XYXW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, V.w); }
+        public static VectorD4 XYX_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.x, 0); }
+        public static VectorD4 XYYX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.x); }
+        public static VectorD4 XYYY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.y); }
+        public static VectorD4 XYYZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.z); }
+        public static VectorD4 XYYW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, V.w); }
+        public static VectorD4 XYY_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.y, 0); }
+        public static VectorD4 XYZX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.x); }
+        public static VectorD4 XYZY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.y); }
+        public static VectorD4 XYZZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.z); }
+        public static VectorD4 XYZW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, V.w); }
+        public static VectorD4 XYZ_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.z, 0); }
+        public static VectorD4 XYWX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.w, V.x); }
+        public static VectorD4 XYWY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.w, V.y); }
+        public static VectorD4 XYWZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.w, V.z); }
+        public static VectorD4 XYWW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.w, V.w); }
+        public static VectorD4 XYW_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, V.w, 0); }
+        public static VectorD4 XY_X(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.x); }
+        public static VectorD4 XY_Y(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.y); }
+        public static VectorD4 XY_Z(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.z); }
+        public static VectorD4 XY_W(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, 0, V.w); }
+        public static VectorD4 XY__(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.y, 0, 0); }
+        public static VectorD4 XZXX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.x); }
+        public static VectorD4 XZXY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.y); }
+        public static VectorD4 XZXZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.z); }
+        public static VectorD4 XZXW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, V.w); }
+        public static VectorD4 XZX_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.x, 0); }
+        public static VectorD4 XZYX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.x); }
+        public static VectorD4 XZYY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.y); }
+        public static VectorD4 XZYZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.z); }
+        public static VectorD4 XZYW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, V.w); }
+        public static VectorD4 XZY_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.y, 0); }
+        public static VectorD4 XZZX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.x); }
+        public static VectorD4 XZZY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.y); }
+        public static VectorD4 XZZZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.z); }
+        public static VectorD4 XZZW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, V.w); }
+        public static VectorD4 XZZ_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.z, 0); }
+        public static VectorD4 XZWX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.w, V.x); }
+        public static VectorD4 XZWY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.w, V.y); }
+        public static VectorD4 XZWZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.w, V.z); }
+        public static VectorD4 XZWW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.w, V.w); }
+        public static VectorD4 XZW_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, V.w, 0); }
+        public static VectorD4 XZ_X(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.x); }
+        public static VectorD4 XZ_Y(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.y); }
+        public static VectorD4 XZ_Z(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.z); }
+        public static VectorD4 XZ_W(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, 0, V.w); }
+        public static VectorD4 XZ__(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.z, 0, 0); }
+        public static VectorD4 XWXX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.x, V.x); }
+        public static VectorD4 XWXY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.x, V.y); }
+        public static VectorD4 XWXZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.x, V.z); }
+        public static VectorD4 XWXW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.x, V.w); }
+        public static VectorD4 XWX_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.x, 0); }
+        public static VectorD4 XWYX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.y, V.x); }
+        public static VectorD4 XWYY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.y, V.y); }
+        public static VectorD4 XWYZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.y, V.z); }
+        public static VectorD4 XWYW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.y, V.w); }
+        public static VectorD4 XWY_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.y, 0); }
+        public static VectorD4 XWZX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.z, V.x); }
+        public static VectorD4 XWZY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.z, V.y); }
+        public static VectorD4 XWZZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.z, V.z); }
+        public static VectorD4 XWZW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.z, V.w); }
+        public static VectorD4 XWZ_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.z, 0); }
+        public static VectorD4 XWWX(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.w, V.x); }
+        public static VectorD4 XWWY(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.w, V.y); }
+        public static VectorD4 XWWZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.w, V.z); }
+        public static VectorD4 XWWW(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.w, V.w); }
+        public static VectorD4 XWW_(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, V.w, 0); }
+        public static VectorD4 XW_X(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, 0, V.x); }
+        public static VectorD4 XW_Y(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, 0, V.y); }
+        public static VectorD4 XW_Z(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, 0, V.z); }
+        public static VectorD4 XW_W(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, 0, V.w); }
+        public static VectorD4 XW__(VectorD4 V){ return VecOps.MkVectorD4(V.x, V.w, 0, 0); }
+        public static VectorD4 X_XX(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.x); }
+        public static VectorD4 X_XY(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.y); }
+        public static VectorD4 X_XZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.z); }
+        public static VectorD4 X_XW(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.x, V.w); }
+        public static VectorD4 X_X_(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.x, 0); }
+        public static VectorD4 X_YX(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.x); }
+        public static VectorD4 X_YY(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.y); }
+        public static VectorD4 X_YZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.z); }
+        public static VectorD4 X_YW(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.y, V.w); }
+        public static VectorD4 X_Y_(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.y, 0); }
+        public static VectorD4 X_ZX(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.x); }
+        public static VectorD4 X_ZY(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.y); }
+        public static VectorD4 X_ZZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.z); }
+        public static VectorD4 X_ZW(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.z, V.w); }
+        public static VectorD4 X_Z_(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.z, 0); }
+        public static VectorD4 X_WX(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.w, V.x); }
+        public static VectorD4 X_WY(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.w, V.y); }
+        public static VectorD4 X_WZ(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.w, V.z); }
+        public static VectorD4 X_WW(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.w, V.w); }
+        public static VectorD4 X_W_(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, V.w, 0); }
+        public static VectorD4 X__X(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.x); }
+        public static VectorD4 X__Y(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.y); }
+        public static VectorD4 X__Z(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.z); }
+        public static VectorD4 X__W(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, 0, V.w); }
+        public static VectorD4 X___(VectorD4 V){ return VecOps.MkVectorD4(V.x, 0, 0, 0); }
+        public static VectorD4 YXXX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.x); }
+        public static VectorD4 YXXY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.y); }
+        public static VectorD4 YXXZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.z); }
+        public static VectorD4 YXXW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, V.w); }
+        public static VectorD4 YXX_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.x, 0); }
+        public static VectorD4 YXYX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.x); }
+        public static VectorD4 YXYY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.y); }
+        public static VectorD4 YXYZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.z); }
+        public static VectorD4 YXYW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, V.w); }
+        public static VectorD4 YXY_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.y, 0); }
+        public static VectorD4 YXZX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.x); }
+        public static VectorD4 YXZY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.y); }
+        public static VectorD4 YXZZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.z); }
+        public static VectorD4 YXZW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, V.w); }
+        public static VectorD4 YXZ_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.z, 0); }
+        public static VectorD4 YXWX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.w, V.x); }
+        public static VectorD4 YXWY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.w, V.y); }
+        public static VectorD4 YXWZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.w, V.z); }
+        public static VectorD4 YXWW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.w, V.w); }
+        public static VectorD4 YXW_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, V.w, 0); }
+        public static VectorD4 YX_X(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.x); }
+        public static VectorD4 YX_Y(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.y); }
+        public static VectorD4 YX_Z(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.z); }
+        public static VectorD4 YX_W(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, 0, V.w); }
+        public static VectorD4 YX__(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.x, 0, 0); }
+        public static VectorD4 YYXX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.x); }
+        public static VectorD4 YYXY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.y); }
+        public static VectorD4 YYXZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.z); }
+        public static VectorD4 YYXW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, V.w); }
+        public static VectorD4 YYX_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.x, 0); }
+        public static VectorD4 YYYX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.x); }
+        public static VectorD4 YYYY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.y); }
+        public static VectorD4 YYYZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.z); }
+        public static VectorD4 YYYW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, V.w); }
+        public static VectorD4 YYY_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.y, 0); }
+        public static VectorD4 YYZX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.x); }
+        public static VectorD4 YYZY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.y); }
+        public static VectorD4 YYZZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.z); }
+        public static VectorD4 YYZW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, V.w); }
+        public static VectorD4 YYZ_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.z, 0); }
+        public static VectorD4 YYWX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.w, V.x); }
+        public static VectorD4 YYWY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.w, V.y); }
+        public static VectorD4 YYWZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.w, V.z); }
+        public static VectorD4 YYWW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.w, V.w); }
+        public static VectorD4 YYW_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, V.w, 0); }
+        public static VectorD4 YY_X(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.x); }
+        public static VectorD4 YY_Y(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.y); }
+        public static VectorD4 YY_Z(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.z); }
+        public static VectorD4 YY_W(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, 0, V.w); }
+        public static VectorD4 YY__(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.y, 0, 0); }
+        public static VectorD4 YZXX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.x); }
+        public static VectorD4 YZXY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.y); }
+        public static VectorD4 YZXZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.z); }
+        public static VectorD4 YZXW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, V.w); }
+        public static VectorD4 YZX_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.x, 0); }
+        public static VectorD4 YZYX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.x); }
+        public static VectorD4 YZYY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.y); }
+        public static VectorD4 YZYZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.z); }
+        public static VectorD4 YZYW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, V.w); }
+        public static VectorD4 YZY_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.y, 0); }
+        public static VectorD4 YZZX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.x); }
+        public static VectorD4 YZZY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.y); }
+        public static VectorD4 YZZZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.z); }
+        public static VectorD4 YZZW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, V.w); }
+        public static VectorD4 YZZ_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.z, 0); }
+        public static VectorD4 YZWX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.w, V.x); }
+        public static VectorD4 YZWY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.w, V.y); }
+        public static VectorD4 YZWZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.w, V.z); }
+        public static VectorD4 YZWW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.w, V.w); }
+        public static VectorD4 YZW_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, V.w, 0); }
+        public static VectorD4 YZ_X(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.x); }
+        public static VectorD4 YZ_Y(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.y); }
+        public static VectorD4 YZ_Z(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.z); }
+        public static VectorD4 YZ_W(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, 0, V.w); }
+        public static VectorD4 YZ__(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.z, 0, 0); }
+        public static VectorD4 YWXX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.x, V.x); }
+        public static VectorD4 YWXY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.x, V.y); }
+        public static VectorD4 YWXZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.x, V.z); }
+        public static VectorD4 YWXW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.x, V.w); }
+        public static VectorD4 YWX_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.x, 0); }
+        public static VectorD4 YWYX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.y, V.x); }
+        public static VectorD4 YWYY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.y, V.y); }
+        public static VectorD4 YWYZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.y, V.z); }
+        public static VectorD4 YWYW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.y, V.w); }
+        public static VectorD4 YWY_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.y, 0); }
+        public static VectorD4 YWZX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.z, V.x); }
+        public static VectorD4 YWZY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.z, V.y); }
+        public static VectorD4 YWZZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.z, V.z); }
+        public static VectorD4 YWZW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.z, V.w); }
+        public static VectorD4 YWZ_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.z, 0); }
+        public static VectorD4 YWWX(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.w, V.x); }
+        public static VectorD4 YWWY(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.w, V.y); }
+        public static VectorD4 YWWZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.w, V.z); }
+        public static VectorD4 YWWW(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.w, V.w); }
+        public static VectorD4 YWW_(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, V.w, 0); }
+        public static VectorD4 YW_X(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, 0, V.x); }
+        public static VectorD4 YW_Y(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, 0, V.y); }
+        public static VectorD4 YW_Z(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, 0, V.z); }
+        public static VectorD4 YW_W(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, 0, V.w); }
+        public static VectorD4 YW__(VectorD4 V){ return VecOps.MkVectorD4(V.y, V.w, 0, 0); }
+        public static VectorD4 Y_XX(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.x); }
+        public static VectorD4 Y_XY(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.y); }
+        public static VectorD4 Y_XZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.z); }
+        public static VectorD4 Y_XW(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.x, V.w); }
+        public static VectorD4 Y_X_(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.x, 0); }
+        public static VectorD4 Y_YX(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.x); }
+        public static VectorD4 Y_YY(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.y); }
+        public static VectorD4 Y_YZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.z); }
+        public static VectorD4 Y_YW(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.y, V.w); }
+        public static VectorD4 Y_Y_(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.y, 0); }
+        public static VectorD4 Y_ZX(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.x); }
+        public static VectorD4 Y_ZY(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.y); }
+        public static VectorD4 Y_ZZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.z); }
+        public static VectorD4 Y_ZW(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.z, V.w); }
+        public static VectorD4 Y_Z_(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.z, 0); }
+        public static VectorD4 Y_WX(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.w, V.x); }
+        public static VectorD4 Y_WY(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.w, V.y); }
+        public static VectorD4 Y_WZ(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.w, V.z); }
+        public static VectorD4 Y_WW(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.w, V.w); }
+        public static VectorD4 Y_W_(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, V.w, 0); }
+        public static VectorD4 Y__X(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.x); }
+        public static VectorD4 Y__Y(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.y); }
+        public static VectorD4 Y__Z(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.z); }
+        public static VectorD4 Y__W(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, 0, V.w); }
+        public static VectorD4 Y___(VectorD4 V){ return VecOps.MkVectorD4(V.y, 0, 0, 0); }
+        public static VectorD4 ZXXX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.x); }
+        public static VectorD4 ZXXY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.y); }
+        public static VectorD4 ZXXZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.z); }
+        public static VectorD4 ZXXW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, V.w); }
+        public static VectorD4 ZXX_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.x, 0); }
+        public static VectorD4 ZXYX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.x); }
+        public static VectorD4 ZXYY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.y); }
+        public static VectorD4 ZXYZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.z); }
+        public static VectorD4 ZXYW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, V.w); }
+        public static VectorD4 ZXY_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.y, 0); }
+        public static VectorD4 ZXZX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.x); }
+        public static VectorD4 ZXZY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.y); }
+        public static VectorD4 ZXZZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.z); }
+        public static VectorD4 ZXZW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, V.w); }
+        public static VectorD4 ZXZ_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.z, 0); }
+        public static VectorD4 ZXWX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.w, V.x); }
+        public static VectorD4 ZXWY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.w, V.y); }
+        public static VectorD4 ZXWZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.w, V.z); }
+        public static VectorD4 ZXWW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.w, V.w); }
+        public static VectorD4 ZXW_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, V.w, 0); }
+        public static VectorD4 ZX_X(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.x); }
+        public static VectorD4 ZX_Y(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.y); }
+        public static VectorD4 ZX_Z(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.z); }
+        public static VectorD4 ZX_W(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, 0, V.w); }
+        public static VectorD4 ZX__(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.x, 0, 0); }
+        public static VectorD4 ZYXX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.x); }
+        public static VectorD4 ZYXY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.y); }
+        public static VectorD4 ZYXZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.z); }
+        public static VectorD4 ZYXW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, V.w); }
+        public static VectorD4 ZYX_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.x, 0); }
+        public static VectorD4 ZYYX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.x); }
+        public static VectorD4 ZYYY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.y); }
+        public static VectorD4 ZYYZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.z); }
+        public static VectorD4 ZYYW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, V.w); }
+        public static VectorD4 ZYY_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.y, 0); }
+        public static VectorD4 ZYZX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.x); }
+        public static VectorD4 ZYZY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.y); }
+        public static VectorD4 ZYZZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.z); }
+        public static VectorD4 ZYZW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, V.w); }
+        public static VectorD4 ZYZ_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.z, 0); }
+        public static VectorD4 ZYWX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.w, V.x); }
+        public static VectorD4 ZYWY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.w, V.y); }
+        public static VectorD4 ZYWZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.w, V.z); }
+        public static VectorD4 ZYWW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.w, V.w); }
+        public static VectorD4 ZYW_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, V.w, 0); }
+        public static VectorD4 ZY_X(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.x); }
+        public static VectorD4 ZY_Y(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.y); }
+        public static VectorD4 ZY_Z(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.z); }
+        public static VectorD4 ZY_W(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, 0, V.w); }
+        public static VectorD4 ZY__(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.y, 0, 0); }
+        public static VectorD4 ZZXX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.x); }
+        public static VectorD4 ZZXY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.y); }
+        public static VectorD4 ZZXZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.z); }
+        public static VectorD4 ZZXW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, V.w); }
+        public static VectorD4 ZZX_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.x, 0); }
+        public static VectorD4 ZZYX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.x); }
+        public static VectorD4 ZZYY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.y); }
+        public static VectorD4 ZZYZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.z); }
+        public static VectorD4 ZZYW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, V.w); }
+        public static VectorD4 ZZY_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.y, 0); }
+        public static VectorD4 ZZZX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.x); }
+        public static VectorD4 ZZZY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.y); }
+        public static VectorD4 ZZZZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.z); }
+        public static VectorD4 ZZZW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, V.w); }
+        public static VectorD4 ZZZ_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.z, 0); }
+        public static VectorD4 ZZWX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.w, V.x); }
+        public static VectorD4 ZZWY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.w, V.y); }
+        public static VectorD4 ZZWZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.w, V.z); }
+        public static VectorD4 ZZWW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.w, V.w); }
+        public static VectorD4 ZZW_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, V.w, 0); }
+        public static VectorD4 ZZ_X(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.x); }
+        public static VectorD4 ZZ_Y(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.y); }
+        public static VectorD4 ZZ_Z(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.z); }
+        public static VectorD4 ZZ_W(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, 0, V.w); }
+        public static VectorD4 ZZ__(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.z, 0, 0); }
+        public static VectorD4 ZWXX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.x, V.x); }
+        public static VectorD4 ZWXY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.x, V.y); }
+        public static VectorD4 ZWXZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.x, V.z); }
+        public static VectorD4 ZWXW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.x, V.w); }
+        public static VectorD4 ZWX_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.x, 0); }
+        public static VectorD4 ZWYX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.y, V.x); }
+        public static VectorD4 ZWYY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.y, V.y); }
+        public static VectorD4 ZWYZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.y, V.z); }
+        public static VectorD4 ZWYW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.y, V.w); }
+        public static VectorD4 ZWY_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.y, 0); }
+        public static VectorD4 ZWZX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.z, V.x); }
+        public static VectorD4 ZWZY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.z, V.y); }
+        public static VectorD4 ZWZZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.z, V.z); }
+        public static VectorD4 ZWZW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.z, V.w); }
+        public static VectorD4 ZWZ_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.z, 0); }
+        public static VectorD4 ZWWX(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.w, V.x); }
+        public static VectorD4 ZWWY(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.w, V.y); }
+        public static VectorD4 ZWWZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.w, V.z); }
+        public static VectorD4 ZWWW(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.w, V.w); }
+        public static VectorD4 ZWW_(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, V.w, 0); }
+        public static VectorD4 ZW_X(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, 0, V.x); }
+        public static VectorD4 ZW_Y(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, 0, V.y); }
+        public static VectorD4 ZW_Z(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, 0, V.z); }
+        public static VectorD4 ZW_W(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, 0, V.w); }
+        public static VectorD4 ZW__(VectorD4 V){ return VecOps.MkVectorD4(V.z, V.w, 0, 0); }
+        public static VectorD4 Z_XX(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.x); }
+        public static VectorD4 Z_XY(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.y); }
+        public static VectorD4 Z_XZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.z); }
+        public static VectorD4 Z_XW(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.x, V.w); }
+        public static VectorD4 Z_X_(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.x, 0); }
+        public static VectorD4 Z_YX(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.x); }
+        public static VectorD4 Z_YY(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.y); }
+        public static VectorD4 Z_YZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.z); }
+        public static VectorD4 Z_YW(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.y, V.w); }
+        public static VectorD4 Z_Y_(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.y, 0); }
+        public static VectorD4 Z_ZX(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.x); }
+        public static VectorD4 Z_ZY(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.y); }
+        public static VectorD4 Z_ZZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.z); }
+        public static VectorD4 Z_ZW(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.z, V.w); }
+        public static VectorD4 Z_Z_(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.z, 0); }
+        public static VectorD4 Z_WX(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.w, V.x); }
+        public static VectorD4 Z_WY(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.w, V.y); }
+        public static VectorD4 Z_WZ(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.w, V.z); }
+        public static VectorD4 Z_WW(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.w, V.w); }
+        public static VectorD4 Z_W_(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, V.w, 0); }
+        public static VectorD4 Z__X(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.x); }
+        public static VectorD4 Z__Y(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.y); }
+        public static VectorD4 Z__Z(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.z); }
+        public static VectorD4 Z__W(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, 0, V.w); }
+        public static VectorD4 Z___(VectorD4 V){ return VecOps.MkVectorD4(V.z, 0, 0, 0); }
+        public static VectorD4 WXXX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.x, V.x); }
+        public static VectorD4 WXXY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.x, V.y); }
+        public static VectorD4 WXXZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.x, V.z); }
+        public static VectorD4 WXXW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.x, V.w); }
+        public static VectorD4 WXX_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.x, 0); }
+        public static VectorD4 WXYX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.y, V.x); }
+        public static VectorD4 WXYY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.y, V.y); }
+        public static VectorD4 WXYZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.y, V.z); }
+        public static VectorD4 WXYW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.y, V.w); }
+        public static VectorD4 WXY_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.y, 0); }
+        public static VectorD4 WXZX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.z, V.x); }
+        public static VectorD4 WXZY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.z, V.y); }
+        public static VectorD4 WXZZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.z, V.z); }
+        public static VectorD4 WXZW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.z, V.w); }
+        public static VectorD4 WXZ_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.z, 0); }
+        public static VectorD4 WXWX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.w, V.x); }
+        public static VectorD4 WXWY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.w, V.y); }
+        public static VectorD4 WXWZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.w, V.z); }
+        public static VectorD4 WXWW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.w, V.w); }
+        public static VectorD4 WXW_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, V.w, 0); }
+        public static VectorD4 WX_X(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, 0, V.x); }
+        public static VectorD4 WX_Y(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, 0, V.y); }
+        public static VectorD4 WX_Z(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, 0, V.z); }
+        public static VectorD4 WX_W(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, 0, V.w); }
+        public static VectorD4 WX__(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.x, 0, 0); }
+        public static VectorD4 WYXX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.x, V.x); }
+        public static VectorD4 WYXY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.x, V.y); }
+        public static VectorD4 WYXZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.x, V.z); }
+        public static VectorD4 WYXW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.x, V.w); }
+        public static VectorD4 WYX_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.x, 0); }
+        public static VectorD4 WYYX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.y, V.x); }
+        public static VectorD4 WYYY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.y, V.y); }
+        public static VectorD4 WYYZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.y, V.z); }
+        public static VectorD4 WYYW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.y, V.w); }
+        public static VectorD4 WYY_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.y, 0); }
+        public static VectorD4 WYZX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.z, V.x); }
+        public static VectorD4 WYZY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.z, V.y); }
+        public static VectorD4 WYZZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.z, V.z); }
+        public static VectorD4 WYZW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.z, V.w); }
+        public static VectorD4 WYZ_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.z, 0); }
+        public static VectorD4 WYWX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.w, V.x); }
+        public static VectorD4 WYWY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.w, V.y); }
+        public static VectorD4 WYWZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.w, V.z); }
+        public static VectorD4 WYWW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.w, V.w); }
+        public static VectorD4 WYW_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, V.w, 0); }
+        public static VectorD4 WY_X(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, 0, V.x); }
+        public static VectorD4 WY_Y(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, 0, V.y); }
+        public static VectorD4 WY_Z(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, 0, V.z); }
+        public static VectorD4 WY_W(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, 0, V.w); }
+        public static VectorD4 WY__(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.y, 0, 0); }
+        public static VectorD4 WZXX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.x, V.x); }
+        public static VectorD4 WZXY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.x, V.y); }
+        public static VectorD4 WZXZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.x, V.z); }
+        public static VectorD4 WZXW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.x, V.w); }
+        public static VectorD4 WZX_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.x, 0); }
+        public static VectorD4 WZYX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.y, V.x); }
+        public static VectorD4 WZYY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.y, V.y); }
+        public static VectorD4 WZYZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.y, V.z); }
+        public static VectorD4 WZYW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.y, V.w); }
+        public static VectorD4 WZY_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.y, 0); }
+        public static VectorD4 WZZX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.z, V.x); }
+        public static VectorD4 WZZY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.z, V.y); }
+        public static VectorD4 WZZZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.z, V.z); }
+        public static VectorD4 WZZW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.z, V.w); }
+        public static VectorD4 WZZ_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.z, 0); }
+        public static VectorD4 WZWX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.w, V.x); }
+        public static VectorD4 WZWY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.w, V.y); }
+        public static VectorD4 WZWZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.w, V.z); }
+        public static VectorD4 WZWW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.w, V.w); }
+        public static VectorD4 WZW_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, V.w, 0); }
+        public static VectorD4 WZ_X(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, 0, V.x); }
+        public static VectorD4 WZ_Y(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, 0, V.y); }
+        public static VectorD4 WZ_Z(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, 0, V.z); }
+        public static VectorD4 WZ_W(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, 0, V.w); }
+        public static VectorD4 WZ__(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.z, 0, 0); }
+        public static VectorD4 WWXX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.x, V.x); }
+        public static VectorD4 WWXY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.x, V.y); }
+        public static VectorD4 WWXZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.x, V.z); }
+        public static VectorD4 WWXW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.x, V.w); }
+        public static VectorD4 WWX_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.x, 0); }
+        public static VectorD4 WWYX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.y, V.x); }
+        public static VectorD4 WWYY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.y, V.y); }
+        public static VectorD4 WWYZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.y, V.z); }
+        public static VectorD4 WWYW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.y, V.w); }
+        public static VectorD4 WWY_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.y, 0); }
+        public static VectorD4 WWZX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.z, V.x); }
+        public static VectorD4 WWZY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.z, V.y); }
+        public static VectorD4 WWZZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.z, V.z); }
+        public static VectorD4 WWZW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.z, V.w); }
+        public static VectorD4 WWZ_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.z, 0); }
+        public static VectorD4 WWWX(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.w, V.x); }
+        public static VectorD4 WWWY(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.w, V.y); }
+        public static VectorD4 WWWZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.w, V.z); }
+        public static VectorD4 WWWW(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.w, V.w); }
+        public static VectorD4 WWW_(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, V.w, 0); }
+        public static VectorD4 WW_X(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, 0, V.x); }
+        public static VectorD4 WW_Y(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, 0, V.y); }
+        public static VectorD4 WW_Z(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, 0, V.z); }
+        public static VectorD4 WW_W(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, 0, V.w); }
+        public static VectorD4 WW__(VectorD4 V){ return VecOps.MkVectorD4(V.w, V.w, 0, 0); }
+        public static VectorD4 W_XX(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.x, V.x); }
+        public static VectorD4 W_XY(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.x, V.y); }
+        public static VectorD4 W_XZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.x, V.z); }
+        public static VectorD4 W_XW(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.x, V.w); }
+        public static VectorD4 W_X_(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.x, 0); }
+        public static VectorD4 W_YX(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.y, V.x); }
+        public static VectorD4 W_YY(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.y, V.y); }
+        public static VectorD4 W_YZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.y, V.z); }
+        public static VectorD4 W_YW(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.y, V.w); }
+        public static VectorD4 W_Y_(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.y, 0); }
+        public static VectorD4 W_ZX(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.z, V.x); }
+        public static VectorD4 W_ZY(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.z, V.y); }
+        public static VectorD4 W_ZZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.z, V.z); }
+        public static VectorD4 W_ZW(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.z, V.w); }
+        public static VectorD4 W_Z_(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.z, 0); }
+        public static VectorD4 W_WX(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.w, V.x); }
+        public static VectorD4 W_WY(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.w, V.y); }
+        public static VectorD4 W_WZ(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.w, V.z); }
+        public static VectorD4 W_WW(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.w, V.w); }
+        public static VectorD4 W_W_(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, V.w, 0); }
+        public static VectorD4 W__X(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, 0, V.x); }
+        public static VectorD4 W__Y(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, 0, V.y); }
+        public static VectorD4 W__Z(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, 0, V.z); }
+        public static VectorD4 W__W(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, 0, V.w); }
+        public static VectorD4 W___(VectorD4 V){ return VecOps.MkVectorD4(V.w, 0, 0, 0); }
+        public static VectorD4 _XXX(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.x); }
+        public static VectorD4 _XXY(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.y); }
+        public static VectorD4 _XXZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.z); }
+        public static VectorD4 _XXW(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.x, V.w); }
+        public static VectorD4 _XX_(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.x, 0); }
+        public static VectorD4 _XYX(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.x); }
+        public static VectorD4 _XYY(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.y); }
+        public static VectorD4 _XYZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.z); }
+        public static VectorD4 _XYW(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.y, V.w); }
+        public static VectorD4 _XY_(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.y, 0); }
+        public static VectorD4 _XZX(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.x); }
+        public static VectorD4 _XZY(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.y); }
+        public static VectorD4 _XZZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.z); }
+        public static VectorD4 _XZW(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.z, V.w); }
+        public static VectorD4 _XZ_(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.z, 0); }
+        public static VectorD4 _XWX(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.w, V.x); }
+        public static VectorD4 _XWY(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.w, V.y); }
+        public static VectorD4 _XWZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.w, V.z); }
+        public static VectorD4 _XWW(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.w, V.w); }
+        public static VectorD4 _XW_(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, V.w, 0); }
+        public static VectorD4 _X_X(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, 0, V.x); }
+        public static VectorD4 _X_Y(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, 0, V.y); }
+        public static VectorD4 _X_Z(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, 0, V.z); }
+        public static VectorD4 _X_W(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, 0, V.w); }
+        public static VectorD4 _X__(VectorD4 V){ return VecOps.MkVectorD4(0, V.x, 0, 0); }
+        public static VectorD4 _YXX(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.x); }
+        public static VectorD4 _YXY(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.y); }
+        public static VectorD4 _YXZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.z); }
+        public static VectorD4 _YXW(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.x, V.w); }
+        public static VectorD4 _YX_(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.x, 0); }
+        public static VectorD4 _YYX(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.x); }
+        public static VectorD4 _YYY(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.y); }
+        public static VectorD4 _YYZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.z); }
+        public static VectorD4 _YYW(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.y, V.w); }
+        public static VectorD4 _YY_(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.y, 0); }
+        public static VectorD4 _YZX(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.x); }
+        public static VectorD4 _YZY(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.y); }
+        public static VectorD4 _YZZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.z); }
+        public static VectorD4 _YZW(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.z, V.w); }
+        public static VectorD4 _YZ_(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.z, 0); }
+        public static VectorD4 _YWX(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.w, V.x); }
+        public static VectorD4 _YWY(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.w, V.y); }
+        public static VectorD4 _YWZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.w, V.z); }
+        public static VectorD4 _YWW(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.w, V.w); }
+        public static VectorD4 _YW_(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, V.w, 0); }
+        public static VectorD4 _Y_X(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, 0, V.x); }
+        public static VectorD4 _Y_Y(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, 0, V.y); }
+        public static VectorD4 _Y_Z(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, 0, V.z); }
+        public static VectorD4 _Y_W(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, 0, V.w); }
+        public static VectorD4 _Y__(VectorD4 V){ return VecOps.MkVectorD4(0, V.y, 0, 0); }
+        public static VectorD4 _ZXX(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.x); }
+        public static VectorD4 _ZXY(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.y); }
+        public static VectorD4 _ZXZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.z); }
+        public static VectorD4 _ZXW(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.x, V.w); }
+        public static VectorD4 _ZX_(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.x, 0); }
+        public static VectorD4 _ZYX(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.x); }
+        public static VectorD4 _ZYY(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.y); }
+        public static VectorD4 _ZYZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.z); }
+        public static VectorD4 _ZYW(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.y, V.w); }
+        public static VectorD4 _ZY_(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.y, 0); }
+        public static VectorD4 _ZZX(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.x); }
+        public static VectorD4 _ZZY(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.y); }
+        public static VectorD4 _ZZZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.z); }
+        public static VectorD4 _ZZW(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.z, V.w); }
+        public static VectorD4 _ZZ_(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.z, 0); }
+        public static VectorD4 _ZWX(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.w, V.x); }
+        public static VectorD4 _ZWY(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.w, V.y); }
+        public static VectorD4 _ZWZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.w, V.z); }
+        public static VectorD4 _ZWW(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.w, V.w); }
+        public static VectorD4 _ZW_(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, V.w, 0); }
+        public static VectorD4 _Z_X(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, 0, V.x); }
+        public static VectorD4 _Z_Y(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, 0, V.y); }
+        public static VectorD4 _Z_Z(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, 0, V.z); }
+        public static VectorD4 _Z_W(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, 0, V.w); }
+        public static VectorD4 _Z__(VectorD4 V){ return VecOps.MkVectorD4(0, V.z, 0, 0); }
+        public static VectorD4 _WXX(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.x, V.x); }
+        public static VectorD4 _WXY(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.x, V.y); }
+        public static VectorD4 _WXZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.x, V.z); }
+        public static VectorD4 _WXW(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.x, V.w); }
+        public static VectorD4 _WX_(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.x, 0); }
+        public static VectorD4 _WYX(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.y, V.x); }
+        public static VectorD4 _WYY(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.y, V.y); }
+        public static VectorD4 _WYZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.y, V.z); }
+        public static VectorD4 _WYW(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.y, V.w); }
+        public static VectorD4 _WY_(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.y, 0); }
+        public static VectorD4 _WZX(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.z, V.x); }
+        public static VectorD4 _WZY(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.z, V.y); }
+        public static VectorD4 _WZZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.z, V.z); }
+        public static VectorD4 _WZW(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.z, V.w); }
+        public static VectorD4 _WZ_(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.z, 0); }
+        public static VectorD4 _WWX(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.w, V.x); }
+        public static VectorD4 _WWY(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.w, V.y); }
+        public static VectorD4 _WWZ(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.w, V.z); }
+        public static VectorD4 _WWW(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.w, V.w); }
+        public static VectorD4 _WW_(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, V.w, 0); }
+        public static VectorD4 _W_X(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, 0, V.x); }
+        public static VectorD4 _W_Y(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, 0, V.y); }
+        public static VectorD4 _W_Z(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, 0, V.z); }
+        public static VectorD4 _W_W(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, 0, V.w); }
+        public static VectorD4 _W__(VectorD4 V){ return VecOps.MkVectorD4(0, V.w, 0, 0); }
+        public static VectorD4 __XX(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.x, V.x); }
+        public static VectorD4 __XY(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.x, V.y); }
+        public static VectorD4 __XZ(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.x, V.z); }
+        public static VectorD4 __XW(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.x, V.w); }
+        public static VectorD4 __X_(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.x, 0); }
+        public static VectorD4 __YX(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.y, V.x); }
+        public static VectorD4 __YY(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.y, V.y); }
+        public static VectorD4 __YZ(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.y, V.z); }
+        public static VectorD4 __YW(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.y, V.w); }
+        public static VectorD4 __Y_(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.y, 0); }
+        public static VectorD4 __ZX(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.z, V.x); }
+        public static VectorD4 __ZY(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.z, V.y); }
+        public static VectorD4 __ZZ(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.z, V.z); }
+        public static VectorD4 __ZW(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.z, V.w); }
+        public static VectorD4 __Z_(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.z, 0); }
+        public static VectorD4 __WX(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.w, V.x); }
+        public static VectorD4 __WY(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.w, V.y); }
+        public static VectorD4 __WZ(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.w, V.z); }
+        public static VectorD4 __WW(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.w, V.w); }
+        public static VectorD4 __W_(VectorD4 V){ return VecOps.MkVectorD4(0, 0, V.w, 0); }
+        public static VectorD4 ___X(VectorD4 V){ return VecOps.MkVectorD4(0, 0, 0, V.x); }
+        public static VectorD4 ___Y(VectorD4 V){ return VecOps.MkVectorD4(0, 0, 0, V.y); }
+        public static VectorD4 ___Z(VectorD4 V){ return VecOps.MkVectorD4(0, 0, 0, V.z); }
+        public static VectorD4 ___W(VectorD4 V){ return VecOps.MkVectorD4(0, 0, 0, V.w); }
         public static Vector2 XX(Vector2 V){ return VecOps.MkVector2(V.x, V.x); }
         public static Vector2 XY(Vector2 V){ return VecOps.MkVector2(V.x, V.y); }
         public static Vector2 X_(Vector2 V){ return VecOps.MkVector2(V.x, 0); }

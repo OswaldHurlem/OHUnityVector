@@ -101,6 +101,11 @@ inline byte Div(byte A, byte B)
     return A/B;
 }
 
+inline double Div(double A, double B)
+{
+    return A/B;
+}
+
 inline byte CeilDiv(byte A, byte B)
 {
     return (A/B) + ((A%B!=0)
@@ -131,6 +136,26 @@ inline byte FloorBF(float x)
 inline byte CeilBF(float x)
 {
     return (byte)ceilf(x);
+}
+
+inline Int32 FloorID(double x)
+{
+    return (Int32)floor(x);
+}
+
+inline Int32 CeilID(double x)
+{
+    return (Int32)ceil(x);
+}
+
+inline byte FloorBD(double x)
+{
+    return (byte)floor(x);
+}
+
+inline byte CeilBD(double x)
+{
+    return (byte)ceil(x);
 }
 
 #include "oh_vectors_unity.h"

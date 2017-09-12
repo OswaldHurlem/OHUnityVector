@@ -119,9 +119,9 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
                 return hashCode;
             }
         }
@@ -251,10 +251,10 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
-                hashCode = (hashCode * 397) ^ z;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
                 return hashCode;
             }
         }
@@ -388,11 +388,11 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
-                hashCode = (hashCode * 397) ^ z;
-                hashCode = (hashCode * 397) ^ w;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
+                hashCode = (hashCode * 397) ^ w.GetHashCode();
                 return hashCode;
             }
         }
@@ -503,9 +503,9 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
                 return hashCode;
             }
         }
@@ -627,10 +627,10 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
-                hashCode = (hashCode * 397) ^ z;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
                 return hashCode;
             }
         }
@@ -759,11 +759,402 @@ namespace OH
         {
             unchecked
             {
-                int hashCode = x;
-                hashCode = (hashCode * 397) ^ x;
-                hashCode = (hashCode * 397) ^ y;
-                hashCode = (hashCode * 397) ^ z;
-                hashCode = (hashCode * 397) ^ w;
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
+                hashCode = (hashCode * 397) ^ w.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    public struct VectorD2 : IEquatable<VectorD2>
+    {
+        // All state
+        public double x, y;
+        
+        // Member functions
+        public double this[int i]
+        {
+            get
+            {
+                switch (i)
+                {
+                    case 0: { return x; }
+                    case 1: { return y; }
+                    default: { return double.MaxValue; }
+                }
+            }
+            set
+            {
+                switch (i)
+                {
+                    case 0: { x = value; break; }
+                    case 1: { y = value; break; }
+                }
+            }
+        }
+
+        public static VectorD2 left = VecOps.MkVectorD2(-1,  0 );
+        public static VectorD2 down = VecOps.MkVectorD2( 0, -1 );
+        public static VectorD2 right = VecOps.MkVectorD2( 1,  0 );
+        public static VectorD2 up    = VecOps.MkVectorD2( 0,  1 );
+        
+        public static Boolean operator==(VectorD2 A, VectorD2 B)
+        {
+            return (A.x == B.x)
+                && (A.y == B.y);
+        }
+
+        public static Boolean operator!=(VectorD2 A, VectorD2 B)
+        {
+            return (A.x != B.x)
+                || (A.y != B.y);
+        }
+
+        public static VectorD2 operator-(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(A.x - B.x),
+                (double)(A.y - B.y));
+        }
+
+        public static VectorD2 operator+(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(A.x + B.x),
+                (double)(A.y + B.y));
+        }
+
+        public static VectorD2 operator-(VectorD2 V)
+        {
+            return VecOps.MkVectorD2(-V.x, -V.y);
+        }
+
+        public static VectorD2 operator*(double A, VectorD2 V)
+        {
+            return VecOps.MkVectorD2(
+                (double)((A * V.x)),
+                (double)((A * V.y)));
+        }
+
+        public static VectorD2 operator/(double A, VectorD2 V)
+        {
+            return VecOps.MkVectorD2(
+                (double)((Arith.Div(A, V.x))),
+                (double)((Arith.Div(A, V.y))));
+        }
+
+        public static VectorD2 operator*(VectorD2 V, double A)
+        {
+            return VecOps.MkVectorD2(
+                (double)((V.x * A)),
+                (double)((V.y * A)));
+        }
+
+        public static VectorD2 operator/(VectorD2 V, double A)
+        {
+            return VecOps.MkVectorD2(
+                (double)((Arith.Div(V.x, A))),
+                (double)((Arith.Div(V.y, A))));
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{{{0}, {1}}}", x, y);
+        }
+
+        public Boolean Equals(VectorD2 other)
+        {
+            return this == other;
+        }
+
+        public override Boolean Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is VectorD2 && Equals((VectorD2)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    public struct VectorD3 : IEquatable<VectorD3>
+    {
+        // All state
+        public double x, y, z;
+        
+        // Member functions
+        public double this[int i]
+        {
+            get
+            {
+                switch (i)
+                {
+                    case 0: { return x; }
+                    case 1: { return y; }
+                    case 2: { return z; }
+                    default: { return double.MaxValue; }
+                }
+            }
+            set
+            {
+                switch (i)
+                {
+                    case 0: { x = value; break; }
+                    case 1: { y = value; break; }
+                    case 2: { z = value; break; }
+                }
+            }
+        }
+
+        public static VectorD3 left  = VecOps.MkVectorD3(-1,  0,  0 );
+        public static VectorD3 down  = VecOps.MkVectorD3( 0, -1,  0 );
+        public static VectorD3 back  = VecOps.MkVectorD3( 0,  0, -1 );
+        public static VectorD3 right   = VecOps.MkVectorD3( 1,  0,  0 );
+        public static VectorD3 up      = VecOps.MkVectorD3( 0,  1,  0 );
+        public static VectorD3 forward = VecOps.MkVectorD3( 0,  0,  1 );
+        
+        public static Boolean operator==(VectorD3 A, VectorD3 B)
+        {
+            return (A.x == B.x)
+                && (A.y == B.y)
+                && (A.z == B.z);
+        }
+
+        public static Boolean operator!=(VectorD3 A, VectorD3 B)
+        {
+            return (A.x != B.x)
+                || (A.y != B.y)
+                || (A.z != B.z);
+        }
+
+        public static VectorD3 operator-(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(A.x - B.x),
+                (double)(A.y - B.y),
+                (double)(A.z - B.z));
+        }
+
+        public static VectorD3 operator+(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(A.x + B.x),
+                (double)(A.y + B.y),
+                (double)(A.z + B.z));
+        }
+
+        public static VectorD3 operator-(VectorD3 V)
+        {
+            return VecOps.MkVectorD3(-V.x, -V.y, -V.z);
+        }
+
+        public static VectorD3 operator*(double A, VectorD3 V)
+        {
+            return VecOps.MkVectorD3(
+                (double)((A * V.x)),
+                (double)((A * V.y)),
+                (double)((A * V.z)));
+        }
+
+        public static VectorD3 operator/(double A, VectorD3 V)
+        {
+            return VecOps.MkVectorD3(
+                (double)((Arith.Div(A, V.x))),
+                (double)((Arith.Div(A, V.y))),
+                (double)((Arith.Div(A, V.z))));
+        }
+
+        public static VectorD3 operator*(VectorD3 V, double A)
+        {
+            return VecOps.MkVectorD3(
+                (double)((V.x * A)),
+                (double)((V.y * A)),
+                (double)((V.z * A)));
+        }
+
+        public static VectorD3 operator/(VectorD3 V, double A)
+        {
+            return VecOps.MkVectorD3(
+                (double)((Arith.Div(V.x, A))),
+                (double)((Arith.Div(V.y, A))),
+                (double)((Arith.Div(V.z, A))));
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{{{0}, {1}, {2}}}", x, y, z);
+        }
+
+        public Boolean Equals(VectorD3 other)
+        {
+            return this == other;
+        }
+
+        public override Boolean Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is VectorD3 && Equals((VectorD3)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    public struct VectorD4 : IEquatable<VectorD4>
+    {
+        // All state
+        public double x, y, z, w;
+        
+        // Member functions
+        public double this[int i]
+        {
+            get
+            {
+                switch (i)
+                {
+                    case 0: { return x; }
+                    case 1: { return y; }
+                    case 2: { return z; }
+                    case 3: { return w; }
+                    default: { return double.MaxValue; }
+                }
+            }
+            set
+            {
+                switch (i)
+                {
+                    case 0: { x = value; break; }
+                    case 1: { y = value; break; }
+                    case 2: { z = value; break; }
+                    case 3: { w = value; break; }
+                }
+            }
+        }
+
+        
+        public static Boolean operator==(VectorD4 A, VectorD4 B)
+        {
+            return (A.x == B.x)
+                && (A.y == B.y)
+                && (A.z == B.z)
+                && (A.w == B.w);
+        }
+
+        public static Boolean operator!=(VectorD4 A, VectorD4 B)
+        {
+            return (A.x != B.x)
+                || (A.y != B.y)
+                || (A.z != B.z)
+                || (A.w != B.w);
+        }
+
+        public static VectorD4 operator-(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(A.x - B.x),
+                (double)(A.y - B.y),
+                (double)(A.z - B.z),
+                (double)(A.w - B.w));
+        }
+
+        public static VectorD4 operator+(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(A.x + B.x),
+                (double)(A.y + B.y),
+                (double)(A.z + B.z),
+                (double)(A.w + B.w));
+        }
+
+        public static VectorD4 operator-(VectorD4 V)
+        {
+            return VecOps.MkVectorD4(-V.x, -V.y, -V.z, -V.w);
+        }
+
+        public static VectorD4 operator*(double A, VectorD4 V)
+        {
+            return VecOps.MkVectorD4(
+                (double)((A * V.x)),
+                (double)((A * V.y)),
+                (double)((A * V.z)),
+                (double)((A * V.w)));
+        }
+
+        public static VectorD4 operator/(double A, VectorD4 V)
+        {
+            return VecOps.MkVectorD4(
+                (double)((Arith.Div(A, V.x))),
+                (double)((Arith.Div(A, V.y))),
+                (double)((Arith.Div(A, V.z))),
+                (double)((Arith.Div(A, V.w))));
+        }
+
+        public static VectorD4 operator*(VectorD4 V, double A)
+        {
+            return VecOps.MkVectorD4(
+                (double)((V.x * A)),
+                (double)((V.y * A)),
+                (double)((V.z * A)),
+                (double)((V.w * A)));
+        }
+
+        public static VectorD4 operator/(VectorD4 V, double A)
+        {
+            return VecOps.MkVectorD4(
+                (double)((Arith.Div(V.x, A))),
+                (double)((Arith.Div(V.y, A))),
+                (double)((Arith.Div(V.z, A))),
+                (double)((Arith.Div(V.w, A))));
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{{{0}, {1}, {2}, {3}}}", x, y, z, w);
+        }
+
+        public Boolean Equals(VectorD4 other)
+        {
+            return this == other;
+        }
+
+        public override Boolean Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is VectorD4 && Equals((VectorD4)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = 0;
+                hashCode = (hashCode * 397) ^ x.GetHashCode();
+                hashCode = (hashCode * 397) ^ y.GetHashCode();
+                hashCode = (hashCode * 397) ^ z.GetHashCode();
+                hashCode = (hashCode * 397) ^ w.GetHashCode();
                 return hashCode;
             }
         }

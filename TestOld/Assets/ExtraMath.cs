@@ -104,6 +104,11 @@ namespace OH
             return (byte)(A / B);
         }
 
+        public static double Div(double A, double B)
+        {
+            return (double)(A / B);
+        }
+
         public static byte CeilDiv(byte A, byte B)
         {
             return (byte)
@@ -136,7 +141,27 @@ namespace OH
 
         public static byte CeilBF(float x)
         {
-            return (byte)Mathf.FloorToInt(x);
+            return (byte)Mathf.CeilToInt(x);
+        }
+
+        public static Int32 FloorID(double x)
+        {
+            return (int)Math.Floor(x);
+        }
+
+        public static Int32 CeilID(double x)
+        {
+            return (int)Math.Ceiling(x);
+        }
+
+        public static byte FloorBD(double x)
+        {
+            return (byte)Math.Floor(x);
+        }
+
+        public static byte CeilBD(double x)
+        {
+            return (byte)Math.Ceiling(x);
         }
 
         public static Int32 Max(Int32 A, Int32 B)

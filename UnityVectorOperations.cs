@@ -42,6 +42,22 @@ namespace OH
             return V;
         }
 
+        public static VectorI2 MkVectorI2D(double x, double y)
+        {
+            VectorI2 V;
+            V.x = Arith.FloorID(x);
+            V.y = Arith.FloorID(y);
+            return V;
+        }
+
+        public static VectorI2 MkVectorI2D(double A)
+        {
+            VectorI2 V;
+            V.x = Arith.FloorID(A);
+            V.y = Arith.FloorID(A);
+            return V;
+        }
+
         public static VectorI2 MkVectorI2F(float x, float y)
         {
             VectorI2 V;
@@ -91,6 +107,24 @@ namespace OH
             V.x = (Int32)(A);
             V.y = (Int32)(A);
             V.z = (Int32)(A);
+            return V;
+        }
+
+        public static VectorI3 MkVectorI3D(double x, double y, double z)
+        {
+            VectorI3 V;
+            V.x = Arith.FloorID(x);
+            V.y = Arith.FloorID(y);
+            V.z = Arith.FloorID(z);
+            return V;
+        }
+
+        public static VectorI3 MkVectorI3D(double A)
+        {
+            VectorI3 V;
+            V.x = Arith.FloorID(A);
+            V.y = Arith.FloorID(A);
+            V.z = Arith.FloorID(A);
             return V;
         }
 
@@ -152,6 +186,26 @@ namespace OH
             return V;
         }
 
+        public static VectorI4 MkVectorI4D(double x, double y, double z, double w)
+        {
+            VectorI4 V;
+            V.x = Arith.FloorID(x);
+            V.y = Arith.FloorID(y);
+            V.z = Arith.FloorID(z);
+            V.w = Arith.FloorID(w);
+            return V;
+        }
+
+        public static VectorI4 MkVectorI4D(double A)
+        {
+            VectorI4 V;
+            V.x = Arith.FloorID(A);
+            V.y = Arith.FloorID(A);
+            V.z = Arith.FloorID(A);
+            V.w = Arith.FloorID(A);
+            return V;
+        }
+
         public static VectorI4 MkVectorI4F(float x, float y, float z, float w)
         {
             VectorI4 V;
@@ -204,6 +258,22 @@ namespace OH
             return V;
         }
 
+        public static VectorB2 MkVectorB2D(double x, double y)
+        {
+            VectorB2 V;
+            V.x = Arith.FloorBD(x);
+            V.y = Arith.FloorBD(y);
+            return V;
+        }
+
+        public static VectorB2 MkVectorB2D(double A)
+        {
+            VectorB2 V;
+            V.x = Arith.FloorBD(A);
+            V.y = Arith.FloorBD(A);
+            return V;
+        }
+
         public static VectorB2 MkVectorB2F(float x, float y)
         {
             VectorB2 V;
@@ -253,6 +323,24 @@ namespace OH
             V.x = (byte)(A);
             V.y = (byte)(A);
             V.z = (byte)(A);
+            return V;
+        }
+
+        public static VectorB3 MkVectorB3D(double x, double y, double z)
+        {
+            VectorB3 V;
+            V.x = Arith.FloorBD(x);
+            V.y = Arith.FloorBD(y);
+            V.z = Arith.FloorBD(z);
+            return V;
+        }
+
+        public static VectorB3 MkVectorB3D(double A)
+        {
+            VectorB3 V;
+            V.x = Arith.FloorBD(A);
+            V.y = Arith.FloorBD(A);
+            V.z = Arith.FloorBD(A);
             return V;
         }
 
@@ -314,6 +402,26 @@ namespace OH
             return V;
         }
 
+        public static VectorB4 MkVectorB4D(double x, double y, double z, double w)
+        {
+            VectorB4 V;
+            V.x = Arith.FloorBD(x);
+            V.y = Arith.FloorBD(y);
+            V.z = Arith.FloorBD(z);
+            V.w = Arith.FloorBD(w);
+            return V;
+        }
+
+        public static VectorB4 MkVectorB4D(double A)
+        {
+            VectorB4 V;
+            V.x = Arith.FloorBD(A);
+            V.y = Arith.FloorBD(A);
+            V.z = Arith.FloorBD(A);
+            V.w = Arith.FloorBD(A);
+            return V;
+        }
+
         public static VectorB4 MkVectorB4F(float x, float y, float z, float w)
         {
             VectorB4 V;
@@ -331,6 +439,222 @@ namespace OH
             V.y = Arith.FloorBF(A);
             V.z = Arith.FloorBF(A);
             V.w = Arith.FloorBF(A);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2I(Int32 x, Int32 y)
+        {
+            VectorD2 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2I(Int32 A)
+        {
+            VectorD2 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2B(byte x, byte y)
+        {
+            VectorD2 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2B(byte A)
+        {
+            VectorD2 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2(double x, double y)
+        {
+            VectorD2 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2(double A)
+        {
+            VectorD2 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2F(float x, float y)
+        {
+            VectorD2 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            return V;
+        }
+
+        public static VectorD2 MkVectorD2F(float A)
+        {
+            VectorD2 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3I(Int32 x, Int32 y, Int32 z)
+        {
+            VectorD3 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3I(Int32 A)
+        {
+            VectorD3 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3B(byte x, byte y, byte z)
+        {
+            VectorD3 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3B(byte A)
+        {
+            VectorD3 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3(double x, double y, double z)
+        {
+            VectorD3 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3(double A)
+        {
+            VectorD3 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3F(float x, float y, float z)
+        {
+            VectorD3 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            return V;
+        }
+
+        public static VectorD3 MkVectorD3F(float A)
+        {
+            VectorD3 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4I(Int32 x, Int32 y, Int32 z, Int32 w)
+        {
+            VectorD4 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            V.w = (double)(w);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4I(Int32 A)
+        {
+            VectorD4 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            V.w = (double)(A);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4B(byte x, byte y, byte z, byte w)
+        {
+            VectorD4 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            V.w = (double)(w);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4B(byte A)
+        {
+            VectorD4 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            V.w = (double)(A);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4(double x, double y, double z, double w)
+        {
+            VectorD4 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            V.w = (double)(w);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4(double A)
+        {
+            VectorD4 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            V.w = (double)(A);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4F(float x, float y, float z, float w)
+        {
+            VectorD4 V;
+            V.x = (double)(x);
+            V.y = (double)(y);
+            V.z = (double)(z);
+            V.w = (double)(w);
+            return V;
+        }
+
+        public static VectorD4 MkVectorD4F(float A)
+        {
+            VectorD4 V;
+            V.x = (double)(A);
+            V.y = (double)(A);
+            V.z = (double)(A);
+            V.w = (double)(A);
             return V;
         }
 
@@ -359,6 +683,22 @@ namespace OH
         }
 
         public static Vector2 MkVector2B(byte A)
+        {
+            Vector2 V;
+            V.x = (float)(A);
+            V.y = (float)(A);
+            return V;
+        }
+
+        public static Vector2 MkVector2D(double x, double y)
+        {
+            Vector2 V;
+            V.x = (float)(x);
+            V.y = (float)(y);
+            return V;
+        }
+
+        public static Vector2 MkVector2D(double A)
         {
             Vector2 V;
             V.x = (float)(A);
@@ -410,6 +750,24 @@ namespace OH
         }
 
         public static Vector3 MkVector3B(byte A)
+        {
+            Vector3 V;
+            V.x = (float)(A);
+            V.y = (float)(A);
+            V.z = (float)(A);
+            return V;
+        }
+
+        public static Vector3 MkVector3D(double x, double y, double z)
+        {
+            Vector3 V;
+            V.x = (float)(x);
+            V.y = (float)(y);
+            V.z = (float)(z);
+            return V;
+        }
+
+        public static Vector3 MkVector3D(double A)
         {
             Vector3 V;
             V.x = (float)(A);
@@ -476,6 +834,26 @@ namespace OH
             return V;
         }
 
+        public static Vector4 MkVector4D(double x, double y, double z, double w)
+        {
+            Vector4 V;
+            V.x = (float)(x);
+            V.y = (float)(y);
+            V.z = (float)(z);
+            V.w = (float)(w);
+            return V;
+        }
+
+        public static Vector4 MkVector4D(double A)
+        {
+            Vector4 V;
+            V.x = (float)(A);
+            V.y = (float)(A);
+            V.z = (float)(A);
+            V.w = (float)(A);
+            return V;
+        }
+
         public static Vector4 MkVector4(float x, float y, float z, float w)
         {
             Vector4 V;
@@ -502,6 +880,11 @@ namespace OH
             return VecOps.MkVectorI2B(V.x, V.y);
         }
 
+        public static VectorI2 MkVectorI2D(VectorD2 V)
+        {
+            return VecOps.MkVectorI2D(V.x, V.y);
+        }
+
         public static VectorI2 MkVectorI2F(Vector2 V)
         {
             return VecOps.MkVectorI2F(V.x, V.y);
@@ -510,6 +893,11 @@ namespace OH
         public static VectorI3 MkVectorI3B(VectorB3 V)
         {
             return VecOps.MkVectorI3B(V.x, V.y, V.z);
+        }
+
+        public static VectorI3 MkVectorI3D(VectorD3 V)
+        {
+            return VecOps.MkVectorI3D(V.x, V.y, V.z);
         }
 
         public static VectorI3 MkVectorI3F(Vector3 V)
@@ -522,6 +910,11 @@ namespace OH
             return VecOps.MkVectorI4B(V.x, V.y, V.z, V.w);
         }
 
+        public static VectorI4 MkVectorI4D(VectorD4 V)
+        {
+            return VecOps.MkVectorI4D(V.x, V.y, V.z, V.w);
+        }
+
         public static VectorI4 MkVectorI4F(Vector4 V)
         {
             return VecOps.MkVectorI4F(V.x, V.y, V.z, V.w);
@@ -530,6 +923,11 @@ namespace OH
         public static VectorB2 MkVectorB2I(VectorI2 V)
         {
             return VecOps.MkVectorB2I(V.x, V.y);
+        }
+
+        public static VectorB2 MkVectorB2D(VectorD2 V)
+        {
+            return VecOps.MkVectorB2D(V.x, V.y);
         }
 
         public static VectorB2 MkVectorB2F(Vector2 V)
@@ -542,6 +940,11 @@ namespace OH
             return VecOps.MkVectorB3I(V.x, V.y, V.z);
         }
 
+        public static VectorB3 MkVectorB3D(VectorD3 V)
+        {
+            return VecOps.MkVectorB3D(V.x, V.y, V.z);
+        }
+
         public static VectorB3 MkVectorB3F(Vector3 V)
         {
             return VecOps.MkVectorB3F(V.x, V.y, V.z);
@@ -552,9 +955,59 @@ namespace OH
             return VecOps.MkVectorB4I(V.x, V.y, V.z, V.w);
         }
 
+        public static VectorB4 MkVectorB4D(VectorD4 V)
+        {
+            return VecOps.MkVectorB4D(V.x, V.y, V.z, V.w);
+        }
+
         public static VectorB4 MkVectorB4F(Vector4 V)
         {
             return VecOps.MkVectorB4F(V.x, V.y, V.z, V.w);
+        }
+
+        public static VectorD2 MkVectorD2I(VectorI2 V)
+        {
+            return VecOps.MkVectorD2I(V.x, V.y);
+        }
+
+        public static VectorD2 MkVectorD2B(VectorB2 V)
+        {
+            return VecOps.MkVectorD2B(V.x, V.y);
+        }
+
+        public static VectorD2 MkVectorD2F(Vector2 V)
+        {
+            return VecOps.MkVectorD2F(V.x, V.y);
+        }
+
+        public static VectorD3 MkVectorD3I(VectorI3 V)
+        {
+            return VecOps.MkVectorD3I(V.x, V.y, V.z);
+        }
+
+        public static VectorD3 MkVectorD3B(VectorB3 V)
+        {
+            return VecOps.MkVectorD3B(V.x, V.y, V.z);
+        }
+
+        public static VectorD3 MkVectorD3F(Vector3 V)
+        {
+            return VecOps.MkVectorD3F(V.x, V.y, V.z);
+        }
+
+        public static VectorD4 MkVectorD4I(VectorI4 V)
+        {
+            return VecOps.MkVectorD4I(V.x, V.y, V.z, V.w);
+        }
+
+        public static VectorD4 MkVectorD4B(VectorB4 V)
+        {
+            return VecOps.MkVectorD4B(V.x, V.y, V.z, V.w);
+        }
+
+        public static VectorD4 MkVectorD4F(Vector4 V)
+        {
+            return VecOps.MkVectorD4F(V.x, V.y, V.z, V.w);
         }
 
         public static Vector2 MkVector2I(VectorI2 V)
@@ -567,6 +1020,11 @@ namespace OH
             return VecOps.MkVector2B(V.x, V.y);
         }
 
+        public static Vector2 MkVector2D(VectorD2 V)
+        {
+            return VecOps.MkVector2D(V.x, V.y);
+        }
+
         public static Vector3 MkVector3I(VectorI3 V)
         {
             return VecOps.MkVector3I(V.x, V.y, V.z);
@@ -575,6 +1033,11 @@ namespace OH
         public static Vector3 MkVector3B(VectorB3 V)
         {
             return VecOps.MkVector3B(V.x, V.y, V.z);
+        }
+
+        public static Vector3 MkVector3D(VectorD3 V)
+        {
+            return VecOps.MkVector3D(V.x, V.y, V.z);
         }
 
         public static Vector4 MkVector4I(VectorI4 V)
@@ -587,10 +1050,25 @@ namespace OH
             return VecOps.MkVector4B(V.x, V.y, V.z, V.w);
         }
 
+        public static Vector4 MkVector4D(VectorD4 V)
+        {
+            return VecOps.MkVector4D(V.x, V.y, V.z, V.w);
+        }
+
         // Constructors from ceiling rather than floor
+        public static VectorI2 CeilVectorI2D(VectorD2 V)
+        {
+            return VecOps.MkVectorI2D(Arith.CeilID(V.x), Arith.CeilID(V.y));
+        }
+
         public static VectorI2 CeilVectorI2F(Vector2 V)
         {
             return VecOps.MkVectorI2F(Arith.CeilIF(V.x), Arith.CeilIF(V.y));
+        }
+
+        public static VectorI3 CeilVectorI3D(VectorD3 V)
+        {
+            return VecOps.MkVectorI3D(Arith.CeilID(V.x), Arith.CeilID(V.y), Arith.CeilID(V.z));
         }
 
         public static VectorI3 CeilVectorI3F(Vector3 V)
@@ -598,9 +1076,19 @@ namespace OH
             return VecOps.MkVectorI3F(Arith.CeilIF(V.x), Arith.CeilIF(V.y), Arith.CeilIF(V.z));
         }
 
+        public static VectorI4 CeilVectorI4D(VectorD4 V)
+        {
+            return VecOps.MkVectorI4D(Arith.CeilID(V.x), Arith.CeilID(V.y), Arith.CeilID(V.z), Arith.CeilID(V.w));
+        }
+
         public static VectorI4 CeilVectorI4F(Vector4 V)
         {
             return VecOps.MkVectorI4F(Arith.CeilIF(V.x), Arith.CeilIF(V.y), Arith.CeilIF(V.z), Arith.CeilIF(V.w));
+        }
+
+        public static VectorB2 CeilVectorB2D(VectorD2 V)
+        {
+            return VecOps.MkVectorB2D(Arith.CeilBD(V.x), Arith.CeilBD(V.y));
         }
 
         public static VectorB2 CeilVectorB2F(Vector2 V)
@@ -608,9 +1096,19 @@ namespace OH
             return VecOps.MkVectorB2F(Arith.CeilBF(V.x), Arith.CeilBF(V.y));
         }
 
+        public static VectorB3 CeilVectorB3D(VectorD3 V)
+        {
+            return VecOps.MkVectorB3D(Arith.CeilBD(V.x), Arith.CeilBD(V.y), Arith.CeilBD(V.z));
+        }
+
         public static VectorB3 CeilVectorB3F(Vector3 V)
         {
             return VecOps.MkVectorB3F(Arith.CeilBF(V.x), Arith.CeilBF(V.y), Arith.CeilBF(V.z));
+        }
+
+        public static VectorB4 CeilVectorB4D(VectorD4 V)
+        {
+            return VecOps.MkVectorB4D(Arith.CeilBD(V.x), Arith.CeilBD(V.y), Arith.CeilBD(V.z), Arith.CeilBD(V.w));
         }
 
         public static VectorB4 CeilVectorB4F(Vector4 V)
@@ -654,6 +1152,27 @@ namespace OH
         }
 
         public static Boolean StrictGt(VectorB4 A, VectorB4 B)
+        {
+            return (A.x > B.x)
+                && (A.y > B.y)
+                && (A.z > B.z)
+                && (A.w > B.w);
+        }
+
+        public static Boolean StrictGt(VectorD2 A, VectorD2 B)
+        {
+            return (A.x > B.x)
+                && (A.y > B.y);
+        }
+
+        public static Boolean StrictGt(VectorD3 A, VectorD3 B)
+        {
+            return (A.x > B.x)
+                && (A.y > B.y)
+                && (A.z > B.z);
+        }
+
+        public static Boolean StrictGt(VectorD4 A, VectorD4 B)
         {
             return (A.x > B.x)
                 && (A.y > B.y)
@@ -724,6 +1243,27 @@ namespace OH
                 && (A.w < B.w);
         }
 
+        public static Boolean StrictLt(VectorD2 A, VectorD2 B)
+        {
+            return (A.x < B.x)
+                && (A.y < B.y);
+        }
+
+        public static Boolean StrictLt(VectorD3 A, VectorD3 B)
+        {
+            return (A.x < B.x)
+                && (A.y < B.y)
+                && (A.z < B.z);
+        }
+
+        public static Boolean StrictLt(VectorD4 A, VectorD4 B)
+        {
+            return (A.x < B.x)
+                && (A.y < B.y)
+                && (A.z < B.z)
+                && (A.w < B.w);
+        }
+
         public static Boolean StrictLt(Vector2 A, Vector2 B)
         {
             return (A.x < B.x)
@@ -787,6 +1327,27 @@ namespace OH
                 && (A.w >= B.w);
         }
 
+        public static Boolean StrictGte(VectorD2 A, VectorD2 B)
+        {
+            return (A.x >= B.x)
+                && (A.y >= B.y);
+        }
+
+        public static Boolean StrictGte(VectorD3 A, VectorD3 B)
+        {
+            return (A.x >= B.x)
+                && (A.y >= B.y)
+                && (A.z >= B.z);
+        }
+
+        public static Boolean StrictGte(VectorD4 A, VectorD4 B)
+        {
+            return (A.x >= B.x)
+                && (A.y >= B.y)
+                && (A.z >= B.z)
+                && (A.w >= B.w);
+        }
+
         public static Boolean StrictGte(Vector2 A, Vector2 B)
         {
             return (A.x >= B.x)
@@ -843,6 +1404,27 @@ namespace OH
         }
 
         public static Boolean StrictLte(VectorB4 A, VectorB4 B)
+        {
+            return (A.x <= B.x)
+                && (A.y <= B.y)
+                && (A.z <= B.z)
+                && (A.w <= B.w);
+        }
+
+        public static Boolean StrictLte(VectorD2 A, VectorD2 B)
+        {
+            return (A.x <= B.x)
+                && (A.y <= B.y);
+        }
+
+        public static Boolean StrictLte(VectorD3 A, VectorD3 B)
+        {
+            return (A.x <= B.x)
+                && (A.y <= B.y)
+                && (A.z <= B.z);
+        }
+
+        public static Boolean StrictLte(VectorD4 A, VectorD4 B)
         {
             return (A.x <= B.x)
                 && (A.y <= B.y)
@@ -920,6 +1502,30 @@ namespace OH
                 (byte)(A.w * B.w));
         }
 
+        public static VectorD2 ElMult(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(A.x * B.x),
+                (double)(A.y * B.y));
+        }
+
+        public static VectorD3 ElMult(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(A.x * B.x),
+                (double)(A.y * B.y),
+                (double)(A.z * B.z));
+        }
+
+        public static VectorD4 ElMult(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(A.x * B.x),
+                (double)(A.y * B.y),
+                (double)(A.z * B.z),
+                (double)(A.w * B.w));
+        }
+
         public static Vector2 ElMult(Vector2 A, Vector2 B)
         {
             return VecOps.MkVector2(
@@ -991,6 +1597,30 @@ namespace OH
                 (byte)(Arith.Div(A.y, B.y)),
                 (byte)(Arith.Div(A.z, B.z)),
                 (byte)(Arith.Div(A.w, B.w)));
+        }
+
+        public static VectorD2 ElDiv(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(Arith.Div(A.x, B.x)),
+                (double)(Arith.Div(A.y, B.y)));
+        }
+
+        public static VectorD3 ElDiv(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(Arith.Div(A.x, B.x)),
+                (double)(Arith.Div(A.y, B.y)),
+                (double)(Arith.Div(A.z, B.z)));
+        }
+
+        public static VectorD4 ElDiv(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(Arith.Div(A.x, B.x)),
+                (double)(Arith.Div(A.y, B.y)),
+                (double)(Arith.Div(A.z, B.z)),
+                (double)(Arith.Div(A.w, B.w)));
         }
 
         public static Vector2 ElDiv(Vector2 A, Vector2 B)
@@ -1115,6 +1745,30 @@ namespace OH
                 (byte)(Arith.Min(A.w, B.w)));
         }
 
+        public static VectorD2 ElMin(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(Arith.Min(A.x, B.x)),
+                (double)(Arith.Min(A.y, B.y)));
+        }
+
+        public static VectorD3 ElMin(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(Arith.Min(A.x, B.x)),
+                (double)(Arith.Min(A.y, B.y)),
+                (double)(Arith.Min(A.z, B.z)));
+        }
+
+        public static VectorD4 ElMin(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(Arith.Min(A.x, B.x)),
+                (double)(Arith.Min(A.y, B.y)),
+                (double)(Arith.Min(A.z, B.z)),
+                (double)(Arith.Min(A.w, B.w)));
+        }
+
         public static Vector2 ElMin(Vector2 A, Vector2 B)
         {
             return VecOps.MkVector2(
@@ -1185,6 +1839,30 @@ namespace OH
                 (byte)(Arith.Max(A.y, B.y)),
                 (byte)(Arith.Max(A.z, B.z)),
                 (byte)(Arith.Max(A.w, B.w)));
+        }
+
+        public static VectorD2 ElMax(VectorD2 A, VectorD2 B)
+        {
+            return VecOps.MkVectorD2(
+                (double)(Arith.Max(A.x, B.x)),
+                (double)(Arith.Max(A.y, B.y)));
+        }
+
+        public static VectorD3 ElMax(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
+                (double)(Arith.Max(A.x, B.x)),
+                (double)(Arith.Max(A.y, B.y)),
+                (double)(Arith.Max(A.z, B.z)));
+        }
+
+        public static VectorD4 ElMax(VectorD4 A, VectorD4 B)
+        {
+            return VecOps.MkVectorD4(
+                (double)(Arith.Max(A.x, B.x)),
+                (double)(Arith.Max(A.y, B.y)),
+                (double)(Arith.Max(A.z, B.z)),
+                (double)(Arith.Max(A.w, B.w)));
         }
 
         public static Vector2 ElMax(Vector2 A, Vector2 B)
@@ -1526,12 +2204,44 @@ namespace OH
                 + (Int32)(A.w * B.w));
         }
 
+        public static double DotP(VectorD2 A, VectorD2 B)
+        {
+            return (double)((A.x * B.x)
+                + (A.y * B.y)
+                + (A.x * B.x)
+                + (A.y * B.y));
+        }
+
+        public static double DotP(VectorD3 A, VectorD3 B)
+        {
+            return (double)((A.x * B.x)
+                + (A.y * B.y)
+                + (A.x * B.x)
+                + (A.z * B.z));
+        }
+
+        public static double DotP(VectorD4 A, VectorD4 B)
+        {
+            return (double)((A.x * B.x)
+                + (A.y * B.y)
+                + (A.x * B.x)
+                + (A.w * B.w));
+        }
+
         public static float DotP(Vector2 A, Vector2 B)
         {
             return (float)((A.x * B.x)
                 + (A.y * B.y)
                 + (A.x * B.x)
                 + (A.y * B.y));
+        }
+
+        public static double DotPD(Vector2 A, Vector2 B)
+        {
+            return (double)((double)(A.x * B.x)
+                + (double)(A.y * B.y)
+                + (double)(A.x * B.x)
+                + (double)(A.y * B.y));
         }
 
         public static float DotP(Vector3 A, Vector3 B)
@@ -1542,12 +2252,28 @@ namespace OH
                 + (A.z * B.z));
         }
 
+        public static double DotPD(Vector3 A, Vector3 B)
+        {
+            return (double)((double)(A.x * B.x)
+                + (double)(A.y * B.y)
+                + (double)(A.x * B.x)
+                + (double)(A.z * B.z));
+        }
+
         public static float DotP(Vector4 A, Vector4 B)
         {
             return (float)((A.x * B.x)
                 + (A.y * B.y)
                 + (A.x * B.x)
                 + (A.w * B.w));
+        }
+
+        public static double DotPD(Vector4 A, Vector4 B)
+        {
+            return (double)((double)(A.x * B.x)
+                + (double)(A.y * B.y)
+                + (double)(A.x * B.x)
+                + (double)(A.w * B.w));
         }
 
         // Square length
@@ -1596,9 +2322,29 @@ namespace OH
             return DotPI(V,V);
         }
 
+        public static double SqLen(VectorD2 V)
+        {
+            return DotP(V,V);
+        }
+
+        public static double SqLen(VectorD3 V)
+        {
+            return DotP(V,V);
+        }
+
+        public static double SqLen(VectorD4 V)
+        {
+            return DotP(V,V);
+        }
+
         public static float SqLen(Vector2 V)
         {
             return DotP(V,V);
+        }
+
+        public static double SqLenD(Vector2 V)
+        {
+            return DotPD(V,V);
         }
 
         public static float SqLen(Vector3 V)
@@ -1606,9 +2352,19 @@ namespace OH
             return DotP(V,V);
         }
 
+        public static double SqLenD(Vector3 V)
+        {
+            return DotPD(V,V);
+        }
+
         public static float SqLen(Vector4 V)
         {
             return DotP(V,V);
+        }
+
+        public static double SqLenD(Vector4 V)
+        {
+            return DotPD(V,V);
         }
 
         // Manhattan length operators (ie sum of components)
@@ -1642,6 +2398,21 @@ namespace OH
             return (byte)(V.x + V.y + V.z + V.w);
         }
 
+        public static double ManhatLength(VectorD2 V)
+        {
+            return (double)(V.x + V.y);
+        }
+
+        public static double ManhatLength(VectorD3 V)
+        {
+            return (double)(V.x + V.y + V.z);
+        }
+
+        public static double ManhatLength(VectorD4 V)
+        {
+            return (double)(V.x + V.y + V.z + V.w);
+        }
+
         public static float ManhatLength(Vector2 V)
         {
             return (float)(V.x + V.y);
@@ -1658,6 +2429,21 @@ namespace OH
         }
 
         // Vector length (as in, euclidean)
+        public static double Len(VectorD2 V)
+        {
+            return Arith.Sqrt(SqLen(V));
+        }
+
+        public static double Len(VectorD3 V)
+        {
+            return Arith.Sqrt(SqLen(V));
+        }
+
+        public static double Len(VectorD4 V)
+        {
+            return Arith.Sqrt(SqLen(V));
+        }
+
         public static float Len(Vector2 V)
         {
             return Arith.Sqrt(SqLen(V));
@@ -1674,6 +2460,21 @@ namespace OH
         }
 
         // Normalized vector
+        public static VectorD2 Norm(VectorD2 V)
+        {
+            return V/Len(V);
+        }
+
+        public static VectorD3 Norm(VectorD3 V)
+        {
+            return V/Len(V);
+        }
+
+        public static VectorD4 Norm(VectorD4 V)
+        {
+            return V/Len(V);
+        }
+
         public static Vector2 Norm(Vector2 V)
         {
             return V/Len(V);
@@ -1735,9 +2536,29 @@ namespace OH
             return (Int32)(V.x * V.y * V.z * V.w);
         }
 
+        public static double Volume(VectorD2 V)
+        {
+            return (double)(V.x * V.y);
+        }
+
+        public static double Volume(VectorD3 V)
+        {
+            return (double)(V.x * V.y * V.z);
+        }
+
+        public static double Volume(VectorD4 V)
+        {
+            return (double)(V.x * V.y * V.z * V.w);
+        }
+
         public static float Volume(Vector2 V)
         {
             return (float)(V.x * V.y);
+        }
+
+        public static double VolumeD(Vector2 V)
+        {
+            return (double)(V.x * V.y);
         }
 
         public static float Volume(Vector3 V)
@@ -1745,9 +2566,19 @@ namespace OH
             return (float)(V.x * V.y * V.z);
         }
 
+        public static double VolumeD(Vector3 V)
+        {
+            return (double)(V.x * V.y * V.z);
+        }
+
         public static float Volume(Vector4 V)
         {
             return (float)(V.x * V.y * V.z * V.w);
+        }
+
+        public static double VolumeD(Vector4 V)
+        {
+            return (double)(V.x * V.y * V.z * V.w);
         }
 
         public static Int32 Pow2Volume(VectorI2 V)
@@ -1799,6 +2630,14 @@ namespace OH
         public static VectorI3 CrossP(VectorI3 A, VectorI3 B)
         {
             return VecOps.MkVectorI3(
+                (A.y * B.z) - (A.z * B.y),
+                -(A.x * B.z) + (A.z * B.x),
+                (A.x * B.y) - (A.y * B.x));
+        }
+
+        public static VectorD3 CrossP(VectorD3 A, VectorD3 B)
+        {
+            return VecOps.MkVectorD3(
                 (A.y * B.z) - (A.z * B.y),
                 -(A.x * B.z) + (A.z * B.x),
                 (A.x * B.y) - (A.y * B.x));
@@ -1861,6 +2700,30 @@ namespace OH
                 (byte)(func(V.w)));
         }
 
+        public static VectorD2 Select(VectorD2 V, Func<double, double> func)
+        {
+            return VecOps.MkVectorD2(
+                (double)(func(V.x)),
+                (double)(func(V.y)));
+        }
+
+        public static VectorD3 Select(VectorD3 V, Func<double, double> func)
+        {
+            return VecOps.MkVectorD3(
+                (double)(func(V.x)),
+                (double)(func(V.y)),
+                (double)(func(V.z)));
+        }
+
+        public static VectorD4 Select(VectorD4 V, Func<double, double> func)
+        {
+            return VecOps.MkVectorD4(
+                (double)(func(V.x)),
+                (double)(func(V.y)),
+                (double)(func(V.z)),
+                (double)(func(V.w)));
+        }
+
         public static Vector2 Select(Vector2 V, Func<float, float> func)
         {
             return VecOps.MkVector2(
@@ -1915,6 +2778,21 @@ namespace OH
             return new[] { V.x, V.y, V.z, V.w };
         }
 
+        public static double[] Members(VectorD2 V)
+        {
+            return new[] { V.x, V.y };
+        }
+
+        public static double[] Members(VectorD3 V)
+        {
+            return new[] { V.x, V.y, V.z };
+        }
+
+        public static double[] Members(VectorD4 V)
+        {
+            return new[] { V.x, V.y, V.z, V.w };
+        }
+
         public static float[] Members(Vector2 V)
         {
             return new[] { V.x, V.y };
@@ -1964,6 +2842,24 @@ namespace OH
         {
             var array = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Take(list, 4));
             return VecOps.MkVectorB4(array[0], array[1], array[2], array[3]);
+        }
+
+        public static VectorD2 ToVectorD2(System.Collections.Generic.IEnumerable<double> list)
+        {
+            var array = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Take(list, 2));
+            return VecOps.MkVectorD2(array[0], array[1]);
+        }
+
+        public static VectorD3 ToVectorD3(System.Collections.Generic.IEnumerable<double> list)
+        {
+            var array = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Take(list, 3));
+            return VecOps.MkVectorD3(array[0], array[1], array[2]);
+        }
+
+        public static VectorD4 ToVectorD4(System.Collections.Generic.IEnumerable<double> list)
+        {
+            var array = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Take(list, 4));
+            return VecOps.MkVectorD4(array[0], array[1], array[2], array[3]);
         }
 
         public static Vector2 ToVector2(System.Collections.Generic.IEnumerable<float> list)

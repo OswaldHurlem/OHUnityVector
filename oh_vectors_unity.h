@@ -35,6 +35,24 @@ union VectorB4
     byte E[4];
 };
 
+union VectorD2
+{
+    struct { double x, y; };
+    double E[2];
+};
+
+union VectorD3
+{
+    struct { double x, y, z; };
+    double E[3];
+};
+
+union VectorD4
+{
+    struct { double x, y, z, w; };
+    double E[4];
+};
+
 union Vector2
 {
     struct { float x, y; };
@@ -68,6 +86,16 @@ union Vector4
 #define VectorB3_right   (VectorB3{  1,  0,  0 })
 #define VectorB3_up      (VectorB3{  0,  1,  0 })
 #define VectorB3_forward (VectorB3{  0,  0,  1 })
+#define VectorD2_left    (VectorD2{ -1,  0 })
+#define VectorD2_down    (VectorD2{  0, -1 })
+#define VectorD2_right   (VectorD2{  1,  0 })
+#define VectorD2_up      (VectorD2{  0,  1 })
+#define VectorD3_left    (VectorD3{ -1,  0,  0 })
+#define VectorD3_down    (VectorD3{  0, -1,  0 })
+#define VectorD3_back    (VectorD3{  0,  0, -1 })
+#define VectorD3_right   (VectorD3{  1,  0,  0 })
+#define VectorD3_up      (VectorD3{  0,  1,  0 })
+#define VectorD3_forward (VectorD3{  0,  0,  1 })
 #define Vector2_left    (Vector2{ -1,  0 })
 #define Vector2_down    (Vector2{  0, -1 })
 #define Vector2_right   (Vector2{  1,  0 })
@@ -109,6 +137,22 @@ inline VectorI2 MkVectorI2B(byte A)
     VectorI2 V;
     V.x = (Int32)(A);
     V.y = (Int32)(A);
+    return V;
+}
+
+inline VectorI2 MkVectorI2D(double x, double y)
+{
+    VectorI2 V;
+    V.x = FloorID(x);
+    V.y = FloorID(y);
+    return V;
+}
+
+inline VectorI2 MkVectorI2D(double A)
+{
+    VectorI2 V;
+    V.x = FloorID(A);
+    V.y = FloorID(A);
     return V;
 }
 
@@ -161,6 +205,24 @@ inline VectorI3 MkVectorI3B(byte A)
     V.x = (Int32)(A);
     V.y = (Int32)(A);
     V.z = (Int32)(A);
+    return V;
+}
+
+inline VectorI3 MkVectorI3D(double x, double y, double z)
+{
+    VectorI3 V;
+    V.x = FloorID(x);
+    V.y = FloorID(y);
+    V.z = FloorID(z);
+    return V;
+}
+
+inline VectorI3 MkVectorI3D(double A)
+{
+    VectorI3 V;
+    V.x = FloorID(A);
+    V.y = FloorID(A);
+    V.z = FloorID(A);
     return V;
 }
 
@@ -222,6 +284,26 @@ inline VectorI4 MkVectorI4B(byte A)
     return V;
 }
 
+inline VectorI4 MkVectorI4D(double x, double y, double z, double w)
+{
+    VectorI4 V;
+    V.x = FloorID(x);
+    V.y = FloorID(y);
+    V.z = FloorID(z);
+    V.w = FloorID(w);
+    return V;
+}
+
+inline VectorI4 MkVectorI4D(double A)
+{
+    VectorI4 V;
+    V.x = FloorID(A);
+    V.y = FloorID(A);
+    V.z = FloorID(A);
+    V.w = FloorID(A);
+    return V;
+}
+
 inline VectorI4 MkVectorI4F(float x, float y, float z, float w)
 {
     VectorI4 V;
@@ -274,6 +356,22 @@ inline VectorB2 MkVectorB2(byte A)
     return V;
 }
 
+inline VectorB2 MkVectorB2D(double x, double y)
+{
+    VectorB2 V;
+    V.x = FloorBD(x);
+    V.y = FloorBD(y);
+    return V;
+}
+
+inline VectorB2 MkVectorB2D(double A)
+{
+    VectorB2 V;
+    V.x = FloorBD(A);
+    V.y = FloorBD(A);
+    return V;
+}
+
 inline VectorB2 MkVectorB2F(float x, float y)
 {
     VectorB2 V;
@@ -323,6 +421,24 @@ inline VectorB3 MkVectorB3(byte A)
     V.x = (byte)(A);
     V.y = (byte)(A);
     V.z = (byte)(A);
+    return V;
+}
+
+inline VectorB3 MkVectorB3D(double x, double y, double z)
+{
+    VectorB3 V;
+    V.x = FloorBD(x);
+    V.y = FloorBD(y);
+    V.z = FloorBD(z);
+    return V;
+}
+
+inline VectorB3 MkVectorB3D(double A)
+{
+    VectorB3 V;
+    V.x = FloorBD(A);
+    V.y = FloorBD(A);
+    V.z = FloorBD(A);
     return V;
 }
 
@@ -384,6 +500,26 @@ inline VectorB4 MkVectorB4(byte A)
     return V;
 }
 
+inline VectorB4 MkVectorB4D(double x, double y, double z, double w)
+{
+    VectorB4 V;
+    V.x = FloorBD(x);
+    V.y = FloorBD(y);
+    V.z = FloorBD(z);
+    V.w = FloorBD(w);
+    return V;
+}
+
+inline VectorB4 MkVectorB4D(double A)
+{
+    VectorB4 V;
+    V.x = FloorBD(A);
+    V.y = FloorBD(A);
+    V.z = FloorBD(A);
+    V.w = FloorBD(A);
+    return V;
+}
+
 inline VectorB4 MkVectorB4F(float x, float y, float z, float w)
 {
     VectorB4 V;
@@ -401,6 +537,222 @@ inline VectorB4 MkVectorB4F(float A)
     V.y = FloorBF(A);
     V.z = FloorBF(A);
     V.w = FloorBF(A);
+    return V;
+}
+
+inline VectorD2 MkVectorD2I(Int32 x, Int32 y)
+{
+    VectorD2 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    return V;
+}
+
+inline VectorD2 MkVectorD2I(Int32 A)
+{
+    VectorD2 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    return V;
+}
+
+inline VectorD2 MkVectorD2B(byte x, byte y)
+{
+    VectorD2 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    return V;
+}
+
+inline VectorD2 MkVectorD2B(byte A)
+{
+    VectorD2 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    return V;
+}
+
+inline VectorD2 MkVectorD2(double x, double y)
+{
+    VectorD2 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    return V;
+}
+
+inline VectorD2 MkVectorD2(double A)
+{
+    VectorD2 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    return V;
+}
+
+inline VectorD2 MkVectorD2F(float x, float y)
+{
+    VectorD2 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    return V;
+}
+
+inline VectorD2 MkVectorD2F(float A)
+{
+    VectorD2 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    return V;
+}
+
+inline VectorD3 MkVectorD3I(Int32 x, Int32 y, Int32 z)
+{
+    VectorD3 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    return V;
+}
+
+inline VectorD3 MkVectorD3I(Int32 A)
+{
+    VectorD3 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    return V;
+}
+
+inline VectorD3 MkVectorD3B(byte x, byte y, byte z)
+{
+    VectorD3 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    return V;
+}
+
+inline VectorD3 MkVectorD3B(byte A)
+{
+    VectorD3 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    return V;
+}
+
+inline VectorD3 MkVectorD3(double x, double y, double z)
+{
+    VectorD3 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    return V;
+}
+
+inline VectorD3 MkVectorD3(double A)
+{
+    VectorD3 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    return V;
+}
+
+inline VectorD3 MkVectorD3F(float x, float y, float z)
+{
+    VectorD3 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    return V;
+}
+
+inline VectorD3 MkVectorD3F(float A)
+{
+    VectorD3 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    return V;
+}
+
+inline VectorD4 MkVectorD4I(Int32 x, Int32 y, Int32 z, Int32 w)
+{
+    VectorD4 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    V.w = (double)(w);
+    return V;
+}
+
+inline VectorD4 MkVectorD4I(Int32 A)
+{
+    VectorD4 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    V.w = (double)(A);
+    return V;
+}
+
+inline VectorD4 MkVectorD4B(byte x, byte y, byte z, byte w)
+{
+    VectorD4 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    V.w = (double)(w);
+    return V;
+}
+
+inline VectorD4 MkVectorD4B(byte A)
+{
+    VectorD4 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    V.w = (double)(A);
+    return V;
+}
+
+inline VectorD4 MkVectorD4(double x, double y, double z, double w)
+{
+    VectorD4 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    V.w = (double)(w);
+    return V;
+}
+
+inline VectorD4 MkVectorD4(double A)
+{
+    VectorD4 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    V.w = (double)(A);
+    return V;
+}
+
+inline VectorD4 MkVectorD4F(float x, float y, float z, float w)
+{
+    VectorD4 V;
+    V.x = (double)(x);
+    V.y = (double)(y);
+    V.z = (double)(z);
+    V.w = (double)(w);
+    return V;
+}
+
+inline VectorD4 MkVectorD4F(float A)
+{
+    VectorD4 V;
+    V.x = (double)(A);
+    V.y = (double)(A);
+    V.z = (double)(A);
+    V.w = (double)(A);
     return V;
 }
 
@@ -429,6 +781,22 @@ inline Vector2 MkVector2B(byte x, byte y)
 }
 
 inline Vector2 MkVector2B(byte A)
+{
+    Vector2 V;
+    V.x = (float)(A);
+    V.y = (float)(A);
+    return V;
+}
+
+inline Vector2 MkVector2D(double x, double y)
+{
+    Vector2 V;
+    V.x = (float)(x);
+    V.y = (float)(y);
+    return V;
+}
+
+inline Vector2 MkVector2D(double A)
 {
     Vector2 V;
     V.x = (float)(A);
@@ -480,6 +848,24 @@ inline Vector3 MkVector3B(byte x, byte y, byte z)
 }
 
 inline Vector3 MkVector3B(byte A)
+{
+    Vector3 V;
+    V.x = (float)(A);
+    V.y = (float)(A);
+    V.z = (float)(A);
+    return V;
+}
+
+inline Vector3 MkVector3D(double x, double y, double z)
+{
+    Vector3 V;
+    V.x = (float)(x);
+    V.y = (float)(y);
+    V.z = (float)(z);
+    return V;
+}
+
+inline Vector3 MkVector3D(double A)
 {
     Vector3 V;
     V.x = (float)(A);
@@ -546,6 +932,26 @@ inline Vector4 MkVector4B(byte A)
     return V;
 }
 
+inline Vector4 MkVector4D(double x, double y, double z, double w)
+{
+    Vector4 V;
+    V.x = (float)(x);
+    V.y = (float)(y);
+    V.z = (float)(z);
+    V.w = (float)(w);
+    return V;
+}
+
+inline Vector4 MkVector4D(double A)
+{
+    Vector4 V;
+    V.x = (float)(A);
+    V.y = (float)(A);
+    V.z = (float)(A);
+    V.w = (float)(A);
+    return V;
+}
+
 inline Vector4 MkVector4(float x, float y, float z, float w)
 {
     Vector4 V;
@@ -572,6 +978,11 @@ inline VectorI2 MkVectorI2B(VectorB2 V)
     return MkVectorI2B(V.x, V.y);
 }
 
+inline VectorI2 MkVectorI2D(VectorD2 V)
+{
+    return MkVectorI2D(V.x, V.y);
+}
+
 inline VectorI2 MkVectorI2F(Vector2 V)
 {
     return MkVectorI2F(V.x, V.y);
@@ -580,6 +991,11 @@ inline VectorI2 MkVectorI2F(Vector2 V)
 inline VectorI3 MkVectorI3B(VectorB3 V)
 {
     return MkVectorI3B(V.x, V.y, V.z);
+}
+
+inline VectorI3 MkVectorI3D(VectorD3 V)
+{
+    return MkVectorI3D(V.x, V.y, V.z);
 }
 
 inline VectorI3 MkVectorI3F(Vector3 V)
@@ -592,6 +1008,11 @@ inline VectorI4 MkVectorI4B(VectorB4 V)
     return MkVectorI4B(V.x, V.y, V.z, V.w);
 }
 
+inline VectorI4 MkVectorI4D(VectorD4 V)
+{
+    return MkVectorI4D(V.x, V.y, V.z, V.w);
+}
+
 inline VectorI4 MkVectorI4F(Vector4 V)
 {
     return MkVectorI4F(V.x, V.y, V.z, V.w);
@@ -600,6 +1021,11 @@ inline VectorI4 MkVectorI4F(Vector4 V)
 inline VectorB2 MkVectorB2I(VectorI2 V)
 {
     return MkVectorB2I(V.x, V.y);
+}
+
+inline VectorB2 MkVectorB2D(VectorD2 V)
+{
+    return MkVectorB2D(V.x, V.y);
 }
 
 inline VectorB2 MkVectorB2F(Vector2 V)
@@ -612,6 +1038,11 @@ inline VectorB3 MkVectorB3I(VectorI3 V)
     return MkVectorB3I(V.x, V.y, V.z);
 }
 
+inline VectorB3 MkVectorB3D(VectorD3 V)
+{
+    return MkVectorB3D(V.x, V.y, V.z);
+}
+
 inline VectorB3 MkVectorB3F(Vector3 V)
 {
     return MkVectorB3F(V.x, V.y, V.z);
@@ -622,9 +1053,59 @@ inline VectorB4 MkVectorB4I(VectorI4 V)
     return MkVectorB4I(V.x, V.y, V.z, V.w);
 }
 
+inline VectorB4 MkVectorB4D(VectorD4 V)
+{
+    return MkVectorB4D(V.x, V.y, V.z, V.w);
+}
+
 inline VectorB4 MkVectorB4F(Vector4 V)
 {
     return MkVectorB4F(V.x, V.y, V.z, V.w);
+}
+
+inline VectorD2 MkVectorD2I(VectorI2 V)
+{
+    return MkVectorD2I(V.x, V.y);
+}
+
+inline VectorD2 MkVectorD2B(VectorB2 V)
+{
+    return MkVectorD2B(V.x, V.y);
+}
+
+inline VectorD2 MkVectorD2F(Vector2 V)
+{
+    return MkVectorD2F(V.x, V.y);
+}
+
+inline VectorD3 MkVectorD3I(VectorI3 V)
+{
+    return MkVectorD3I(V.x, V.y, V.z);
+}
+
+inline VectorD3 MkVectorD3B(VectorB3 V)
+{
+    return MkVectorD3B(V.x, V.y, V.z);
+}
+
+inline VectorD3 MkVectorD3F(Vector3 V)
+{
+    return MkVectorD3F(V.x, V.y, V.z);
+}
+
+inline VectorD4 MkVectorD4I(VectorI4 V)
+{
+    return MkVectorD4I(V.x, V.y, V.z, V.w);
+}
+
+inline VectorD4 MkVectorD4B(VectorB4 V)
+{
+    return MkVectorD4B(V.x, V.y, V.z, V.w);
+}
+
+inline VectorD4 MkVectorD4F(Vector4 V)
+{
+    return MkVectorD4F(V.x, V.y, V.z, V.w);
 }
 
 inline Vector2 MkVector2I(VectorI2 V)
@@ -637,6 +1118,11 @@ inline Vector2 MkVector2B(VectorB2 V)
     return MkVector2B(V.x, V.y);
 }
 
+inline Vector2 MkVector2D(VectorD2 V)
+{
+    return MkVector2D(V.x, V.y);
+}
+
 inline Vector3 MkVector3I(VectorI3 V)
 {
     return MkVector3I(V.x, V.y, V.z);
@@ -645,6 +1131,11 @@ inline Vector3 MkVector3I(VectorI3 V)
 inline Vector3 MkVector3B(VectorB3 V)
 {
     return MkVector3B(V.x, V.y, V.z);
+}
+
+inline Vector3 MkVector3D(VectorD3 V)
+{
+    return MkVector3D(V.x, V.y, V.z);
 }
 
 inline Vector4 MkVector4I(VectorI4 V)
@@ -657,10 +1148,25 @@ inline Vector4 MkVector4B(VectorB4 V)
     return MkVector4B(V.x, V.y, V.z, V.w);
 }
 
+inline Vector4 MkVector4D(VectorD4 V)
+{
+    return MkVector4D(V.x, V.y, V.z, V.w);
+}
+
 // Constructors from ceiling rather than floor
+inline VectorI2 CeilVectorI2D(VectorD2 V)
+{
+    return MkVectorI2D(CeilID(V.x), CeilID(V.y));
+}
+
 inline VectorI2 CeilVectorI2F(Vector2 V)
 {
     return MkVectorI2F(CeilIF(V.x), CeilIF(V.y));
+}
+
+inline VectorI3 CeilVectorI3D(VectorD3 V)
+{
+    return MkVectorI3D(CeilID(V.x), CeilID(V.y), CeilID(V.z));
 }
 
 inline VectorI3 CeilVectorI3F(Vector3 V)
@@ -668,9 +1174,19 @@ inline VectorI3 CeilVectorI3F(Vector3 V)
     return MkVectorI3F(CeilIF(V.x), CeilIF(V.y), CeilIF(V.z));
 }
 
+inline VectorI4 CeilVectorI4D(VectorD4 V)
+{
+    return MkVectorI4D(CeilID(V.x), CeilID(V.y), CeilID(V.z), CeilID(V.w));
+}
+
 inline VectorI4 CeilVectorI4F(Vector4 V)
 {
     return MkVectorI4F(CeilIF(V.x), CeilIF(V.y), CeilIF(V.z), CeilIF(V.w));
+}
+
+inline VectorB2 CeilVectorB2D(VectorD2 V)
+{
+    return MkVectorB2D(CeilBD(V.x), CeilBD(V.y));
 }
 
 inline VectorB2 CeilVectorB2F(Vector2 V)
@@ -678,9 +1194,19 @@ inline VectorB2 CeilVectorB2F(Vector2 V)
     return MkVectorB2F(CeilBF(V.x), CeilBF(V.y));
 }
 
+inline VectorB3 CeilVectorB3D(VectorD3 V)
+{
+    return MkVectorB3D(CeilBD(V.x), CeilBD(V.y), CeilBD(V.z));
+}
+
 inline VectorB3 CeilVectorB3F(Vector3 V)
 {
     return MkVectorB3F(CeilBF(V.x), CeilBF(V.y), CeilBF(V.z));
+}
+
+inline VectorB4 CeilVectorB4D(VectorD4 V)
+{
+    return MkVectorB4D(CeilBD(V.x), CeilBD(V.y), CeilBD(V.z), CeilBD(V.w));
 }
 
 inline VectorB4 CeilVectorB4F(Vector4 V)
@@ -724,6 +1250,27 @@ inline Boolean operator==(VectorB3 A, VectorB3 B)
 }
 
 inline Boolean operator==(VectorB4 A, VectorB4 B)
+{
+    return (A.x == B.x)
+        && (A.y == B.y)
+        && (A.z == B.z)
+        && (A.w == B.w);
+}
+
+inline Boolean operator==(VectorD2 A, VectorD2 B)
+{
+    return (A.x == B.x)
+        && (A.y == B.y);
+}
+
+inline Boolean operator==(VectorD3 A, VectorD3 B)
+{
+    return (A.x == B.x)
+        && (A.y == B.y)
+        && (A.z == B.z);
+}
+
+inline Boolean operator==(VectorD4 A, VectorD4 B)
 {
     return (A.x == B.x)
         && (A.y == B.y)
@@ -795,6 +1342,27 @@ inline Boolean operator!=(VectorB4 A, VectorB4 B)
         || (A.w != B.w);
 }
 
+inline Boolean operator!=(VectorD2 A, VectorD2 B)
+{
+    return (A.x != B.x)
+        || (A.y != B.y);
+}
+
+inline Boolean operator!=(VectorD3 A, VectorD3 B)
+{
+    return (A.x != B.x)
+        || (A.y != B.y)
+        || (A.z != B.z);
+}
+
+inline Boolean operator!=(VectorD4 A, VectorD4 B)
+{
+    return (A.x != B.x)
+        || (A.y != B.y)
+        || (A.z != B.z)
+        || (A.w != B.w);
+}
+
 inline Boolean operator!=(Vector2 A, Vector2 B)
 {
     return (A.x != B.x)
@@ -852,6 +1420,27 @@ inline Boolean StrictGt(VectorB3 A, VectorB3 B)
 }
 
 inline Boolean StrictGt(VectorB4 A, VectorB4 B)
+{
+    return (A.x > B.x)
+        && (A.y > B.y)
+        && (A.z > B.z)
+        && (A.w > B.w);
+}
+
+inline Boolean StrictGt(VectorD2 A, VectorD2 B)
+{
+    return (A.x > B.x)
+        && (A.y > B.y);
+}
+
+inline Boolean StrictGt(VectorD3 A, VectorD3 B)
+{
+    return (A.x > B.x)
+        && (A.y > B.y)
+        && (A.z > B.z);
+}
+
+inline Boolean StrictGt(VectorD4 A, VectorD4 B)
 {
     return (A.x > B.x)
         && (A.y > B.y)
@@ -922,6 +1511,27 @@ inline Boolean StrictLt(VectorB4 A, VectorB4 B)
         && (A.w < B.w);
 }
 
+inline Boolean StrictLt(VectorD2 A, VectorD2 B)
+{
+    return (A.x < B.x)
+        && (A.y < B.y);
+}
+
+inline Boolean StrictLt(VectorD3 A, VectorD3 B)
+{
+    return (A.x < B.x)
+        && (A.y < B.y)
+        && (A.z < B.z);
+}
+
+inline Boolean StrictLt(VectorD4 A, VectorD4 B)
+{
+    return (A.x < B.x)
+        && (A.y < B.y)
+        && (A.z < B.z)
+        && (A.w < B.w);
+}
+
 inline Boolean StrictLt(Vector2 A, Vector2 B)
 {
     return (A.x < B.x)
@@ -985,6 +1595,27 @@ inline Boolean StrictGte(VectorB4 A, VectorB4 B)
         && (A.w >= B.w);
 }
 
+inline Boolean StrictGte(VectorD2 A, VectorD2 B)
+{
+    return (A.x >= B.x)
+        && (A.y >= B.y);
+}
+
+inline Boolean StrictGte(VectorD3 A, VectorD3 B)
+{
+    return (A.x >= B.x)
+        && (A.y >= B.y)
+        && (A.z >= B.z);
+}
+
+inline Boolean StrictGte(VectorD4 A, VectorD4 B)
+{
+    return (A.x >= B.x)
+        && (A.y >= B.y)
+        && (A.z >= B.z)
+        && (A.w >= B.w);
+}
+
 inline Boolean StrictGte(Vector2 A, Vector2 B)
 {
     return (A.x >= B.x)
@@ -1041,6 +1672,27 @@ inline Boolean StrictLte(VectorB3 A, VectorB3 B)
 }
 
 inline Boolean StrictLte(VectorB4 A, VectorB4 B)
+{
+    return (A.x <= B.x)
+        && (A.y <= B.y)
+        && (A.z <= B.z)
+        && (A.w <= B.w);
+}
+
+inline Boolean StrictLte(VectorD2 A, VectorD2 B)
+{
+    return (A.x <= B.x)
+        && (A.y <= B.y);
+}
+
+inline Boolean StrictLte(VectorD3 A, VectorD3 B)
+{
+    return (A.x <= B.x)
+        && (A.y <= B.y)
+        && (A.z <= B.z);
+}
+
+inline Boolean StrictLte(VectorD4 A, VectorD4 B)
 {
     return (A.x <= B.x)
         && (A.y <= B.y)
@@ -1118,6 +1770,30 @@ inline VectorB4 operator+(VectorB4 A, VectorB4 B)
         (byte)(A.w + B.w));
 }
 
+inline VectorD2 operator+(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(A.x + B.x),
+        (double)(A.y + B.y));
+}
+
+inline VectorD3 operator+(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(A.x + B.x),
+        (double)(A.y + B.y),
+        (double)(A.z + B.z));
+}
+
+inline VectorD4 operator+(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(A.x + B.x),
+        (double)(A.y + B.y),
+        (double)(A.z + B.z),
+        (double)(A.w + B.w));
+}
+
 inline Vector2 operator+(Vector2 A, Vector2 B)
 {
     return MkVector2(
@@ -1189,6 +1865,30 @@ inline VectorB4 operator-(VectorB4 A, VectorB4 B)
         (byte)(A.y - B.y),
         (byte)(A.z - B.z),
         (byte)(A.w - B.w));
+}
+
+inline VectorD2 operator-(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(A.x - B.x),
+        (double)(A.y - B.y));
+}
+
+inline VectorD3 operator-(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(A.x - B.x),
+        (double)(A.y - B.y),
+        (double)(A.z - B.z));
+}
+
+inline VectorD4 operator-(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(A.x - B.x),
+        (double)(A.y - B.y),
+        (double)(A.z - B.z),
+        (double)(A.w - B.w));
 }
 
 inline Vector2 operator-(Vector2 A, Vector2 B)
@@ -1264,6 +1964,30 @@ inline VectorB4 ElMult(VectorB4 A, VectorB4 B)
         (byte)(A.w * B.w));
 }
 
+inline VectorD2 ElMult(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(A.x * B.x),
+        (double)(A.y * B.y));
+}
+
+inline VectorD3 ElMult(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(A.x * B.x),
+        (double)(A.y * B.y),
+        (double)(A.z * B.z));
+}
+
+inline VectorD4 ElMult(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(A.x * B.x),
+        (double)(A.y * B.y),
+        (double)(A.z * B.z),
+        (double)(A.w * B.w));
+}
+
 inline Vector2 ElMult(Vector2 A, Vector2 B)
 {
     return MkVector2(
@@ -1335,6 +2059,30 @@ inline VectorB4 ElDiv(VectorB4 A, VectorB4 B)
         (byte)(Div(A.y, B.y)),
         (byte)(Div(A.z, B.z)),
         (byte)(Div(A.w, B.w)));
+}
+
+inline VectorD2 ElDiv(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(Div(A.x, B.x)),
+        (double)(Div(A.y, B.y)));
+}
+
+inline VectorD3 ElDiv(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(Div(A.x, B.x)),
+        (double)(Div(A.y, B.y)),
+        (double)(Div(A.z, B.z)));
+}
+
+inline VectorD4 ElDiv(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(Div(A.x, B.x)),
+        (double)(Div(A.y, B.y)),
+        (double)(Div(A.z, B.z)),
+        (double)(Div(A.w, B.w)));
 }
 
 inline Vector2 ElDiv(Vector2 A, Vector2 B)
@@ -1459,6 +2207,30 @@ inline VectorB4 ElMin(VectorB4 A, VectorB4 B)
         (byte)(Min(A.w, B.w)));
 }
 
+inline VectorD2 ElMin(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(Min(A.x, B.x)),
+        (double)(Min(A.y, B.y)));
+}
+
+inline VectorD3 ElMin(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(Min(A.x, B.x)),
+        (double)(Min(A.y, B.y)),
+        (double)(Min(A.z, B.z)));
+}
+
+inline VectorD4 ElMin(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(Min(A.x, B.x)),
+        (double)(Min(A.y, B.y)),
+        (double)(Min(A.z, B.z)),
+        (double)(Min(A.w, B.w)));
+}
+
 inline Vector2 ElMin(Vector2 A, Vector2 B)
 {
     return MkVector2(
@@ -1529,6 +2301,30 @@ inline VectorB4 ElMax(VectorB4 A, VectorB4 B)
         (byte)(Max(A.y, B.y)),
         (byte)(Max(A.z, B.z)),
         (byte)(Max(A.w, B.w)));
+}
+
+inline VectorD2 ElMax(VectorD2 A, VectorD2 B)
+{
+    return MkVectorD2(
+        (double)(Max(A.x, B.x)),
+        (double)(Max(A.y, B.y)));
+}
+
+inline VectorD3 ElMax(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
+        (double)(Max(A.x, B.x)),
+        (double)(Max(A.y, B.y)),
+        (double)(Max(A.z, B.z)));
+}
+
+inline VectorD4 ElMax(VectorD4 A, VectorD4 B)
+{
+    return MkVectorD4(
+        (double)(Max(A.x, B.x)),
+        (double)(Max(A.y, B.y)),
+        (double)(Max(A.z, B.z)),
+        (double)(Max(A.w, B.w)));
 }
 
 inline Vector2 ElMax(Vector2 A, Vector2 B)
@@ -1813,6 +2609,21 @@ inline VectorI4 operator-(VectorI4 V)
     return MkVectorI4(-V.x, -V.y, -V.z, -V.w);
 }
 
+inline VectorD2 operator-(VectorD2 V)
+{
+    return MkVectorD2(-V.x, -V.y);
+}
+
+inline VectorD3 operator-(VectorD3 V)
+{
+    return MkVectorD3(-V.x, -V.y, -V.z);
+}
+
+inline VectorD4 operator-(VectorD4 V)
+{
+    return MkVectorD4(-V.x, -V.y, -V.z, -V.w);
+}
+
 inline Vector2 operator-(Vector2 V)
 {
     return MkVector2(-V.x, -V.y);
@@ -1875,6 +2686,30 @@ inline VectorB4 operator*(byte A, VectorB4 V)
         (byte)((A * V.y)),
         (byte)((A * V.z)),
         (byte)((A * V.w)));
+}
+
+inline VectorD2 operator*(double A, VectorD2 V)
+{
+    return MkVectorD2(
+        (double)((A * V.x)),
+        (double)((A * V.y)));
+}
+
+inline VectorD3 operator*(double A, VectorD3 V)
+{
+    return MkVectorD3(
+        (double)((A * V.x)),
+        (double)((A * V.y)),
+        (double)((A * V.z)));
+}
+
+inline VectorD4 operator*(double A, VectorD4 V)
+{
+    return MkVectorD4(
+        (double)((A * V.x)),
+        (double)((A * V.y)),
+        (double)((A * V.z)),
+        (double)((A * V.w)));
 }
 
 inline Vector2 operator*(float A, Vector2 V)
@@ -1949,6 +2784,30 @@ inline VectorB4 operator/(byte A, VectorB4 V)
         (byte)((Div(A, V.w))));
 }
 
+inline VectorD2 operator/(double A, VectorD2 V)
+{
+    return MkVectorD2(
+        (double)((Div(A, V.x))),
+        (double)((Div(A, V.y))));
+}
+
+inline VectorD3 operator/(double A, VectorD3 V)
+{
+    return MkVectorD3(
+        (double)((Div(A, V.x))),
+        (double)((Div(A, V.y))),
+        (double)((Div(A, V.z))));
+}
+
+inline VectorD4 operator/(double A, VectorD4 V)
+{
+    return MkVectorD4(
+        (double)((Div(A, V.x))),
+        (double)((Div(A, V.y))),
+        (double)((Div(A, V.z))),
+        (double)((Div(A, V.w))));
+}
+
 inline Vector2 operator/(float A, Vector2 V)
 {
     return MkVector2(
@@ -2019,6 +2878,30 @@ inline VectorB4 operator*(VectorB4 V, byte A)
         (byte)((V.y * A)),
         (byte)((V.z * A)),
         (byte)((V.w * A)));
+}
+
+inline VectorD2 operator*(VectorD2 V, double A)
+{
+    return MkVectorD2(
+        (double)((V.x * A)),
+        (double)((V.y * A)));
+}
+
+inline VectorD3 operator*(VectorD3 V, double A)
+{
+    return MkVectorD3(
+        (double)((V.x * A)),
+        (double)((V.y * A)),
+        (double)((V.z * A)));
+}
+
+inline VectorD4 operator*(VectorD4 V, double A)
+{
+    return MkVectorD4(
+        (double)((V.x * A)),
+        (double)((V.y * A)),
+        (double)((V.z * A)),
+        (double)((V.w * A)));
 }
 
 inline Vector2 operator*(Vector2 V, float A)
@@ -2093,6 +2976,30 @@ inline VectorB4 operator/(VectorB4 V, byte A)
         (byte)((Div(V.w, A))));
 }
 
+inline VectorD2 operator/(VectorD2 V, double A)
+{
+    return MkVectorD2(
+        (double)((Div(V.x, A))),
+        (double)((Div(V.y, A))));
+}
+
+inline VectorD3 operator/(VectorD3 V, double A)
+{
+    return MkVectorD3(
+        (double)((Div(V.x, A))),
+        (double)((Div(V.y, A))),
+        (double)((Div(V.z, A))));
+}
+
+inline VectorD4 operator/(VectorD4 V, double A)
+{
+    return MkVectorD4(
+        (double)((Div(V.x, A))),
+        (double)((Div(V.y, A))),
+        (double)((Div(V.z, A))),
+        (double)((Div(V.w, A))));
+}
+
 inline Vector2 operator/(Vector2 V, float A)
 {
     return MkVector2(
@@ -2154,6 +3061,24 @@ inline VectorB4& operator+=(VectorB4& A, VectorB4 B)
     return A;
 }
 
+inline VectorD2& operator+=(VectorD2& A, VectorD2 B)
+{
+    A = A + B;
+    return A;
+}
+
+inline VectorD3& operator+=(VectorD3& A, VectorD3 B)
+{
+    A = A + B;
+    return A;
+}
+
+inline VectorD4& operator+=(VectorD4& A, VectorD4 B)
+{
+    A = A + B;
+    return A;
+}
+
 inline Vector2& operator+=(Vector2& A, Vector2 B)
 {
     A = A + B;
@@ -2203,6 +3128,24 @@ inline VectorB3& operator-=(VectorB3& A, VectorB3 B)
 }
 
 inline VectorB4& operator-=(VectorB4& A, VectorB4 B)
+{
+    A = A - B;
+    return A;
+}
+
+inline VectorD2& operator-=(VectorD2& A, VectorD2 B)
+{
+    A = A - B;
+    return A;
+}
+
+inline VectorD3& operator-=(VectorD3& A, VectorD3 B)
+{
+    A = A - B;
+    return A;
+}
+
+inline VectorD4& operator-=(VectorD4& A, VectorD4 B)
 {
     A = A - B;
     return A;
@@ -2262,6 +3205,24 @@ inline VectorB4& operator*=(VectorB4& V, byte A)
     return V;
 }
 
+inline VectorD2& operator*=(VectorD2& V, double A)
+{
+    V = V * A;
+    return V;
+}
+
+inline VectorD3& operator*=(VectorD3& V, double A)
+{
+    V = V * A;
+    return V;
+}
+
+inline VectorD4& operator*=(VectorD4& V, double A)
+{
+    V = V * A;
+    return V;
+}
+
 inline Vector2& operator*=(Vector2& V, float A)
 {
     V = V * A;
@@ -2311,6 +3272,24 @@ inline VectorB3& operator/=(VectorB3& V, byte A)
 }
 
 inline VectorB4& operator/=(VectorB4& V, byte A)
+{
+    V = V / A;
+    return V;
+}
+
+inline VectorD2& operator/=(VectorD2& V, double A)
+{
+    V = V / A;
+    return V;
+}
+
+inline VectorD3& operator/=(VectorD3& V, double A)
+{
+    V = V / A;
+    return V;
+}
+
+inline VectorD4& operator/=(VectorD4& V, double A)
 {
     V = V / A;
     return V;
@@ -2407,12 +3386,44 @@ inline Int32 DotPI(VectorB4 A, VectorB4 B)
         + (Int32)(A.w * B.w));
 }
 
+inline double DotP(VectorD2 A, VectorD2 B)
+{
+    return (double)((A.x * B.x)
+        + (A.y * B.y)
+        + (A.x * B.x)
+        + (A.y * B.y));
+}
+
+inline double DotP(VectorD3 A, VectorD3 B)
+{
+    return (double)((A.x * B.x)
+        + (A.y * B.y)
+        + (A.x * B.x)
+        + (A.z * B.z));
+}
+
+inline double DotP(VectorD4 A, VectorD4 B)
+{
+    return (double)((A.x * B.x)
+        + (A.y * B.y)
+        + (A.x * B.x)
+        + (A.w * B.w));
+}
+
 inline float DotP(Vector2 A, Vector2 B)
 {
     return (float)((A.x * B.x)
         + (A.y * B.y)
         + (A.x * B.x)
         + (A.y * B.y));
+}
+
+inline double DotPD(Vector2 A, Vector2 B)
+{
+    return (double)((double)(A.x * B.x)
+        + (double)(A.y * B.y)
+        + (double)(A.x * B.x)
+        + (double)(A.y * B.y));
 }
 
 inline float DotP(Vector3 A, Vector3 B)
@@ -2423,12 +3434,28 @@ inline float DotP(Vector3 A, Vector3 B)
         + (A.z * B.z));
 }
 
+inline double DotPD(Vector3 A, Vector3 B)
+{
+    return (double)((double)(A.x * B.x)
+        + (double)(A.y * B.y)
+        + (double)(A.x * B.x)
+        + (double)(A.z * B.z));
+}
+
 inline float DotP(Vector4 A, Vector4 B)
 {
     return (float)((A.x * B.x)
         + (A.y * B.y)
         + (A.x * B.x)
         + (A.w * B.w));
+}
+
+inline double DotPD(Vector4 A, Vector4 B)
+{
+    return (double)((double)(A.x * B.x)
+        + (double)(A.y * B.y)
+        + (double)(A.x * B.x)
+        + (double)(A.w * B.w));
 }
 
 // Square length
@@ -2477,9 +3504,29 @@ inline Int32 SqLenI(VectorB4 V)
     return DotPI(V,V);
 }
 
+inline double SqLen(VectorD2 V)
+{
+    return DotP(V,V);
+}
+
+inline double SqLen(VectorD3 V)
+{
+    return DotP(V,V);
+}
+
+inline double SqLen(VectorD4 V)
+{
+    return DotP(V,V);
+}
+
 inline float SqLen(Vector2 V)
 {
     return DotP(V,V);
+}
+
+inline double SqLenD(Vector2 V)
+{
+    return DotPD(V,V);
 }
 
 inline float SqLen(Vector3 V)
@@ -2487,9 +3534,19 @@ inline float SqLen(Vector3 V)
     return DotP(V,V);
 }
 
+inline double SqLenD(Vector3 V)
+{
+    return DotPD(V,V);
+}
+
 inline float SqLen(Vector4 V)
 {
     return DotP(V,V);
+}
+
+inline double SqLenD(Vector4 V)
+{
+    return DotPD(V,V);
 }
 
 // Manhattan length operators (ie sum of components)
@@ -2523,6 +3580,21 @@ inline byte ManhatLength(VectorB4 V)
     return (byte)(V.x + V.y + V.z + V.w);
 }
 
+inline double ManhatLength(VectorD2 V)
+{
+    return (double)(V.x + V.y);
+}
+
+inline double ManhatLength(VectorD3 V)
+{
+    return (double)(V.x + V.y + V.z);
+}
+
+inline double ManhatLength(VectorD4 V)
+{
+    return (double)(V.x + V.y + V.z + V.w);
+}
+
 inline float ManhatLength(Vector2 V)
 {
     return (float)(V.x + V.y);
@@ -2539,6 +3611,21 @@ inline float ManhatLength(Vector4 V)
 }
 
 // Vector length (as in, euclidean)
+inline double Len(VectorD2 V)
+{
+    return Sqrt(SqLen(V));
+}
+
+inline double Len(VectorD3 V)
+{
+    return Sqrt(SqLen(V));
+}
+
+inline double Len(VectorD4 V)
+{
+    return Sqrt(SqLen(V));
+}
+
 inline float Len(Vector2 V)
 {
     return Sqrt(SqLen(V));
@@ -2555,6 +3642,21 @@ inline float Len(Vector4 V)
 }
 
 // Normalized vector
+inline VectorD2 Norm(VectorD2 V)
+{
+    return V/Len(V);
+}
+
+inline VectorD3 Norm(VectorD3 V)
+{
+    return V/Len(V);
+}
+
+inline VectorD4 Norm(VectorD4 V)
+{
+    return V/Len(V);
+}
+
 inline Vector2 Norm(Vector2 V)
 {
     return V/Len(V);
@@ -2616,9 +3718,29 @@ inline Int32 VolumeI(VectorB4 V)
     return (Int32)(V.x * V.y * V.z * V.w);
 }
 
+inline double Volume(VectorD2 V)
+{
+    return (double)(V.x * V.y);
+}
+
+inline double Volume(VectorD3 V)
+{
+    return (double)(V.x * V.y * V.z);
+}
+
+inline double Volume(VectorD4 V)
+{
+    return (double)(V.x * V.y * V.z * V.w);
+}
+
 inline float Volume(Vector2 V)
 {
     return (float)(V.x * V.y);
+}
+
+inline double VolumeD(Vector2 V)
+{
+    return (double)(V.x * V.y);
 }
 
 inline float Volume(Vector3 V)
@@ -2626,9 +3748,19 @@ inline float Volume(Vector3 V)
     return (float)(V.x * V.y * V.z);
 }
 
+inline double VolumeD(Vector3 V)
+{
+    return (double)(V.x * V.y * V.z);
+}
+
 inline float Volume(Vector4 V)
 {
     return (float)(V.x * V.y * V.z * V.w);
+}
+
+inline double VolumeD(Vector4 V)
+{
+    return (double)(V.x * V.y * V.z * V.w);
 }
 
 inline Int32 Pow2Volume(VectorI2 V)
@@ -2680,6 +3812,14 @@ inline Int32 Pow2VolumeI(VectorB4 V)
 inline VectorI3 CrossP(VectorI3 A, VectorI3 B)
 {
     return MkVectorI3(
+        (A.y * B.z) - (A.z * B.y),
+        -(A.x * B.z) + (A.z * B.x),
+        (A.x * B.y) - (A.y * B.x));
+}
+
+inline VectorD3 CrossP(VectorD3 A, VectorD3 B)
+{
+    return MkVectorD3(
         (A.y * B.z) - (A.z * B.y),
         -(A.x * B.z) + (A.z * B.x),
         (A.x * B.y) - (A.y * B.x));
@@ -5132,6 +6272,1225 @@ inline VectorB4 Swizz___X(VectorB4 V){ return MkVectorB4(0, 0, 0, V.x); }
 inline VectorB4 Swizz___Y(VectorB4 V){ return MkVectorB4(0, 0, 0, V.y); }
 inline VectorB4 Swizz___Z(VectorB4 V){ return MkVectorB4(0, 0, 0, V.z); }
 inline VectorB4 Swizz___W(VectorB4 V){ return MkVectorB4(0, 0, 0, V.w); }
+inline VectorD2 SwizzXX(VectorD2 V){ return MkVectorD2(V.x, V.x); }
+inline VectorD2 SwizzXY(VectorD2 V){ return MkVectorD2(V.x, V.y); }
+inline VectorD2 SwizzX_(VectorD2 V){ return MkVectorD2(V.x, 0); }
+inline VectorD2 SwizzYX(VectorD2 V){ return MkVectorD2(V.y, V.x); }
+inline VectorD2 SwizzYY(VectorD2 V){ return MkVectorD2(V.y, V.y); }
+inline VectorD2 SwizzY_(VectorD2 V){ return MkVectorD2(V.y, 0); }
+inline VectorD2 Swizz_X(VectorD2 V){ return MkVectorD2(0, V.x); }
+inline VectorD2 Swizz_Y(VectorD2 V){ return MkVectorD2(0, V.y); }
+inline VectorD3 SwizzXXX(VectorD2 V){ return MkVectorD3(V.x, V.x, V.x); }
+inline VectorD3 SwizzXXY(VectorD2 V){ return MkVectorD3(V.x, V.x, V.y); }
+inline VectorD3 SwizzXX_(VectorD2 V){ return MkVectorD3(V.x, V.x, 0); }
+inline VectorD3 SwizzXYX(VectorD2 V){ return MkVectorD3(V.x, V.y, V.x); }
+inline VectorD3 SwizzXYY(VectorD2 V){ return MkVectorD3(V.x, V.y, V.y); }
+inline VectorD3 SwizzXY_(VectorD2 V){ return MkVectorD3(V.x, V.y, 0); }
+inline VectorD3 SwizzX_X(VectorD2 V){ return MkVectorD3(V.x, 0, V.x); }
+inline VectorD3 SwizzX_Y(VectorD2 V){ return MkVectorD3(V.x, 0, V.y); }
+inline VectorD3 SwizzX__(VectorD2 V){ return MkVectorD3(V.x, 0, 0); }
+inline VectorD3 SwizzYXX(VectorD2 V){ return MkVectorD3(V.y, V.x, V.x); }
+inline VectorD3 SwizzYXY(VectorD2 V){ return MkVectorD3(V.y, V.x, V.y); }
+inline VectorD3 SwizzYX_(VectorD2 V){ return MkVectorD3(V.y, V.x, 0); }
+inline VectorD3 SwizzYYX(VectorD2 V){ return MkVectorD3(V.y, V.y, V.x); }
+inline VectorD3 SwizzYYY(VectorD2 V){ return MkVectorD3(V.y, V.y, V.y); }
+inline VectorD3 SwizzYY_(VectorD2 V){ return MkVectorD3(V.y, V.y, 0); }
+inline VectorD3 SwizzY_X(VectorD2 V){ return MkVectorD3(V.y, 0, V.x); }
+inline VectorD3 SwizzY_Y(VectorD2 V){ return MkVectorD3(V.y, 0, V.y); }
+inline VectorD3 SwizzY__(VectorD2 V){ return MkVectorD3(V.y, 0, 0); }
+inline VectorD3 Swizz_XX(VectorD2 V){ return MkVectorD3(0, V.x, V.x); }
+inline VectorD3 Swizz_XY(VectorD2 V){ return MkVectorD3(0, V.x, V.y); }
+inline VectorD3 Swizz_X_(VectorD2 V){ return MkVectorD3(0, V.x, 0); }
+inline VectorD3 Swizz_YX(VectorD2 V){ return MkVectorD3(0, V.y, V.x); }
+inline VectorD3 Swizz_YY(VectorD2 V){ return MkVectorD3(0, V.y, V.y); }
+inline VectorD3 Swizz_Y_(VectorD2 V){ return MkVectorD3(0, V.y, 0); }
+inline VectorD3 Swizz__X(VectorD2 V){ return MkVectorD3(0, 0, V.x); }
+inline VectorD3 Swizz__Y(VectorD2 V){ return MkVectorD3(0, 0, V.y); }
+inline VectorD4 SwizzXXXX(VectorD2 V){ return MkVectorD4(V.x, V.x, V.x, V.x); }
+inline VectorD4 SwizzXXXY(VectorD2 V){ return MkVectorD4(V.x, V.x, V.x, V.y); }
+inline VectorD4 SwizzXXX_(VectorD2 V){ return MkVectorD4(V.x, V.x, V.x, 0); }
+inline VectorD4 SwizzXXYX(VectorD2 V){ return MkVectorD4(V.x, V.x, V.y, V.x); }
+inline VectorD4 SwizzXXYY(VectorD2 V){ return MkVectorD4(V.x, V.x, V.y, V.y); }
+inline VectorD4 SwizzXXY_(VectorD2 V){ return MkVectorD4(V.x, V.x, V.y, 0); }
+inline VectorD4 SwizzXX_X(VectorD2 V){ return MkVectorD4(V.x, V.x, 0, V.x); }
+inline VectorD4 SwizzXX_Y(VectorD2 V){ return MkVectorD4(V.x, V.x, 0, V.y); }
+inline VectorD4 SwizzXX__(VectorD2 V){ return MkVectorD4(V.x, V.x, 0, 0); }
+inline VectorD4 SwizzXYXX(VectorD2 V){ return MkVectorD4(V.x, V.y, V.x, V.x); }
+inline VectorD4 SwizzXYXY(VectorD2 V){ return MkVectorD4(V.x, V.y, V.x, V.y); }
+inline VectorD4 SwizzXYX_(VectorD2 V){ return MkVectorD4(V.x, V.y, V.x, 0); }
+inline VectorD4 SwizzXYYX(VectorD2 V){ return MkVectorD4(V.x, V.y, V.y, V.x); }
+inline VectorD4 SwizzXYYY(VectorD2 V){ return MkVectorD4(V.x, V.y, V.y, V.y); }
+inline VectorD4 SwizzXYY_(VectorD2 V){ return MkVectorD4(V.x, V.y, V.y, 0); }
+inline VectorD4 SwizzXY_X(VectorD2 V){ return MkVectorD4(V.x, V.y, 0, V.x); }
+inline VectorD4 SwizzXY_Y(VectorD2 V){ return MkVectorD4(V.x, V.y, 0, V.y); }
+inline VectorD4 SwizzXY__(VectorD2 V){ return MkVectorD4(V.x, V.y, 0, 0); }
+inline VectorD4 SwizzX_XX(VectorD2 V){ return MkVectorD4(V.x, 0, V.x, V.x); }
+inline VectorD4 SwizzX_XY(VectorD2 V){ return MkVectorD4(V.x, 0, V.x, V.y); }
+inline VectorD4 SwizzX_X_(VectorD2 V){ return MkVectorD4(V.x, 0, V.x, 0); }
+inline VectorD4 SwizzX_YX(VectorD2 V){ return MkVectorD4(V.x, 0, V.y, V.x); }
+inline VectorD4 SwizzX_YY(VectorD2 V){ return MkVectorD4(V.x, 0, V.y, V.y); }
+inline VectorD4 SwizzX_Y_(VectorD2 V){ return MkVectorD4(V.x, 0, V.y, 0); }
+inline VectorD4 SwizzX__X(VectorD2 V){ return MkVectorD4(V.x, 0, 0, V.x); }
+inline VectorD4 SwizzX__Y(VectorD2 V){ return MkVectorD4(V.x, 0, 0, V.y); }
+inline VectorD4 SwizzX___(VectorD2 V){ return MkVectorD4(V.x, 0, 0, 0); }
+inline VectorD4 SwizzYXXX(VectorD2 V){ return MkVectorD4(V.y, V.x, V.x, V.x); }
+inline VectorD4 SwizzYXXY(VectorD2 V){ return MkVectorD4(V.y, V.x, V.x, V.y); }
+inline VectorD4 SwizzYXX_(VectorD2 V){ return MkVectorD4(V.y, V.x, V.x, 0); }
+inline VectorD4 SwizzYXYX(VectorD2 V){ return MkVectorD4(V.y, V.x, V.y, V.x); }
+inline VectorD4 SwizzYXYY(VectorD2 V){ return MkVectorD4(V.y, V.x, V.y, V.y); }
+inline VectorD4 SwizzYXY_(VectorD2 V){ return MkVectorD4(V.y, V.x, V.y, 0); }
+inline VectorD4 SwizzYX_X(VectorD2 V){ return MkVectorD4(V.y, V.x, 0, V.x); }
+inline VectorD4 SwizzYX_Y(VectorD2 V){ return MkVectorD4(V.y, V.x, 0, V.y); }
+inline VectorD4 SwizzYX__(VectorD2 V){ return MkVectorD4(V.y, V.x, 0, 0); }
+inline VectorD4 SwizzYYXX(VectorD2 V){ return MkVectorD4(V.y, V.y, V.x, V.x); }
+inline VectorD4 SwizzYYXY(VectorD2 V){ return MkVectorD4(V.y, V.y, V.x, V.y); }
+inline VectorD4 SwizzYYX_(VectorD2 V){ return MkVectorD4(V.y, V.y, V.x, 0); }
+inline VectorD4 SwizzYYYX(VectorD2 V){ return MkVectorD4(V.y, V.y, V.y, V.x); }
+inline VectorD4 SwizzYYYY(VectorD2 V){ return MkVectorD4(V.y, V.y, V.y, V.y); }
+inline VectorD4 SwizzYYY_(VectorD2 V){ return MkVectorD4(V.y, V.y, V.y, 0); }
+inline VectorD4 SwizzYY_X(VectorD2 V){ return MkVectorD4(V.y, V.y, 0, V.x); }
+inline VectorD4 SwizzYY_Y(VectorD2 V){ return MkVectorD4(V.y, V.y, 0, V.y); }
+inline VectorD4 SwizzYY__(VectorD2 V){ return MkVectorD4(V.y, V.y, 0, 0); }
+inline VectorD4 SwizzY_XX(VectorD2 V){ return MkVectorD4(V.y, 0, V.x, V.x); }
+inline VectorD4 SwizzY_XY(VectorD2 V){ return MkVectorD4(V.y, 0, V.x, V.y); }
+inline VectorD4 SwizzY_X_(VectorD2 V){ return MkVectorD4(V.y, 0, V.x, 0); }
+inline VectorD4 SwizzY_YX(VectorD2 V){ return MkVectorD4(V.y, 0, V.y, V.x); }
+inline VectorD4 SwizzY_YY(VectorD2 V){ return MkVectorD4(V.y, 0, V.y, V.y); }
+inline VectorD4 SwizzY_Y_(VectorD2 V){ return MkVectorD4(V.y, 0, V.y, 0); }
+inline VectorD4 SwizzY__X(VectorD2 V){ return MkVectorD4(V.y, 0, 0, V.x); }
+inline VectorD4 SwizzY__Y(VectorD2 V){ return MkVectorD4(V.y, 0, 0, V.y); }
+inline VectorD4 SwizzY___(VectorD2 V){ return MkVectorD4(V.y, 0, 0, 0); }
+inline VectorD4 Swizz_XXX(VectorD2 V){ return MkVectorD4(0, V.x, V.x, V.x); }
+inline VectorD4 Swizz_XXY(VectorD2 V){ return MkVectorD4(0, V.x, V.x, V.y); }
+inline VectorD4 Swizz_XX_(VectorD2 V){ return MkVectorD4(0, V.x, V.x, 0); }
+inline VectorD4 Swizz_XYX(VectorD2 V){ return MkVectorD4(0, V.x, V.y, V.x); }
+inline VectorD4 Swizz_XYY(VectorD2 V){ return MkVectorD4(0, V.x, V.y, V.y); }
+inline VectorD4 Swizz_XY_(VectorD2 V){ return MkVectorD4(0, V.x, V.y, 0); }
+inline VectorD4 Swizz_X_X(VectorD2 V){ return MkVectorD4(0, V.x, 0, V.x); }
+inline VectorD4 Swizz_X_Y(VectorD2 V){ return MkVectorD4(0, V.x, 0, V.y); }
+inline VectorD4 Swizz_X__(VectorD2 V){ return MkVectorD4(0, V.x, 0, 0); }
+inline VectorD4 Swizz_YXX(VectorD2 V){ return MkVectorD4(0, V.y, V.x, V.x); }
+inline VectorD4 Swizz_YXY(VectorD2 V){ return MkVectorD4(0, V.y, V.x, V.y); }
+inline VectorD4 Swizz_YX_(VectorD2 V){ return MkVectorD4(0, V.y, V.x, 0); }
+inline VectorD4 Swizz_YYX(VectorD2 V){ return MkVectorD4(0, V.y, V.y, V.x); }
+inline VectorD4 Swizz_YYY(VectorD2 V){ return MkVectorD4(0, V.y, V.y, V.y); }
+inline VectorD4 Swizz_YY_(VectorD2 V){ return MkVectorD4(0, V.y, V.y, 0); }
+inline VectorD4 Swizz_Y_X(VectorD2 V){ return MkVectorD4(0, V.y, 0, V.x); }
+inline VectorD4 Swizz_Y_Y(VectorD2 V){ return MkVectorD4(0, V.y, 0, V.y); }
+inline VectorD4 Swizz_Y__(VectorD2 V){ return MkVectorD4(0, V.y, 0, 0); }
+inline VectorD4 Swizz__XX(VectorD2 V){ return MkVectorD4(0, 0, V.x, V.x); }
+inline VectorD4 Swizz__XY(VectorD2 V){ return MkVectorD4(0, 0, V.x, V.y); }
+inline VectorD4 Swizz__X_(VectorD2 V){ return MkVectorD4(0, 0, V.x, 0); }
+inline VectorD4 Swizz__YX(VectorD2 V){ return MkVectorD4(0, 0, V.y, V.x); }
+inline VectorD4 Swizz__YY(VectorD2 V){ return MkVectorD4(0, 0, V.y, V.y); }
+inline VectorD4 Swizz__Y_(VectorD2 V){ return MkVectorD4(0, 0, V.y, 0); }
+inline VectorD4 Swizz___X(VectorD2 V){ return MkVectorD4(0, 0, 0, V.x); }
+inline VectorD4 Swizz___Y(VectorD2 V){ return MkVectorD4(0, 0, 0, V.y); }
+inline VectorD2 SwizzXX(VectorD3 V){ return MkVectorD2(V.x, V.x); }
+inline VectorD2 SwizzXY(VectorD3 V){ return MkVectorD2(V.x, V.y); }
+inline VectorD2 SwizzXZ(VectorD3 V){ return MkVectorD2(V.x, V.z); }
+inline VectorD2 SwizzX_(VectorD3 V){ return MkVectorD2(V.x, 0); }
+inline VectorD2 SwizzYX(VectorD3 V){ return MkVectorD2(V.y, V.x); }
+inline VectorD2 SwizzYY(VectorD3 V){ return MkVectorD2(V.y, V.y); }
+inline VectorD2 SwizzYZ(VectorD3 V){ return MkVectorD2(V.y, V.z); }
+inline VectorD2 SwizzY_(VectorD3 V){ return MkVectorD2(V.y, 0); }
+inline VectorD2 SwizzZX(VectorD3 V){ return MkVectorD2(V.z, V.x); }
+inline VectorD2 SwizzZY(VectorD3 V){ return MkVectorD2(V.z, V.y); }
+inline VectorD2 SwizzZZ(VectorD3 V){ return MkVectorD2(V.z, V.z); }
+inline VectorD2 SwizzZ_(VectorD3 V){ return MkVectorD2(V.z, 0); }
+inline VectorD2 Swizz_X(VectorD3 V){ return MkVectorD2(0, V.x); }
+inline VectorD2 Swizz_Y(VectorD3 V){ return MkVectorD2(0, V.y); }
+inline VectorD2 Swizz_Z(VectorD3 V){ return MkVectorD2(0, V.z); }
+inline VectorD3 SwizzXXX(VectorD3 V){ return MkVectorD3(V.x, V.x, V.x); }
+inline VectorD3 SwizzXXY(VectorD3 V){ return MkVectorD3(V.x, V.x, V.y); }
+inline VectorD3 SwizzXXZ(VectorD3 V){ return MkVectorD3(V.x, V.x, V.z); }
+inline VectorD3 SwizzXX_(VectorD3 V){ return MkVectorD3(V.x, V.x, 0); }
+inline VectorD3 SwizzXYX(VectorD3 V){ return MkVectorD3(V.x, V.y, V.x); }
+inline VectorD3 SwizzXYY(VectorD3 V){ return MkVectorD3(V.x, V.y, V.y); }
+inline VectorD3 SwizzXYZ(VectorD3 V){ return MkVectorD3(V.x, V.y, V.z); }
+inline VectorD3 SwizzXY_(VectorD3 V){ return MkVectorD3(V.x, V.y, 0); }
+inline VectorD3 SwizzXZX(VectorD3 V){ return MkVectorD3(V.x, V.z, V.x); }
+inline VectorD3 SwizzXZY(VectorD3 V){ return MkVectorD3(V.x, V.z, V.y); }
+inline VectorD3 SwizzXZZ(VectorD3 V){ return MkVectorD3(V.x, V.z, V.z); }
+inline VectorD3 SwizzXZ_(VectorD3 V){ return MkVectorD3(V.x, V.z, 0); }
+inline VectorD3 SwizzX_X(VectorD3 V){ return MkVectorD3(V.x, 0, V.x); }
+inline VectorD3 SwizzX_Y(VectorD3 V){ return MkVectorD3(V.x, 0, V.y); }
+inline VectorD3 SwizzX_Z(VectorD3 V){ return MkVectorD3(V.x, 0, V.z); }
+inline VectorD3 SwizzX__(VectorD3 V){ return MkVectorD3(V.x, 0, 0); }
+inline VectorD3 SwizzYXX(VectorD3 V){ return MkVectorD3(V.y, V.x, V.x); }
+inline VectorD3 SwizzYXY(VectorD3 V){ return MkVectorD3(V.y, V.x, V.y); }
+inline VectorD3 SwizzYXZ(VectorD3 V){ return MkVectorD3(V.y, V.x, V.z); }
+inline VectorD3 SwizzYX_(VectorD3 V){ return MkVectorD3(V.y, V.x, 0); }
+inline VectorD3 SwizzYYX(VectorD3 V){ return MkVectorD3(V.y, V.y, V.x); }
+inline VectorD3 SwizzYYY(VectorD3 V){ return MkVectorD3(V.y, V.y, V.y); }
+inline VectorD3 SwizzYYZ(VectorD3 V){ return MkVectorD3(V.y, V.y, V.z); }
+inline VectorD3 SwizzYY_(VectorD3 V){ return MkVectorD3(V.y, V.y, 0); }
+inline VectorD3 SwizzYZX(VectorD3 V){ return MkVectorD3(V.y, V.z, V.x); }
+inline VectorD3 SwizzYZY(VectorD3 V){ return MkVectorD3(V.y, V.z, V.y); }
+inline VectorD3 SwizzYZZ(VectorD3 V){ return MkVectorD3(V.y, V.z, V.z); }
+inline VectorD3 SwizzYZ_(VectorD3 V){ return MkVectorD3(V.y, V.z, 0); }
+inline VectorD3 SwizzY_X(VectorD3 V){ return MkVectorD3(V.y, 0, V.x); }
+inline VectorD3 SwizzY_Y(VectorD3 V){ return MkVectorD3(V.y, 0, V.y); }
+inline VectorD3 SwizzY_Z(VectorD3 V){ return MkVectorD3(V.y, 0, V.z); }
+inline VectorD3 SwizzY__(VectorD3 V){ return MkVectorD3(V.y, 0, 0); }
+inline VectorD3 SwizzZXX(VectorD3 V){ return MkVectorD3(V.z, V.x, V.x); }
+inline VectorD3 SwizzZXY(VectorD3 V){ return MkVectorD3(V.z, V.x, V.y); }
+inline VectorD3 SwizzZXZ(VectorD3 V){ return MkVectorD3(V.z, V.x, V.z); }
+inline VectorD3 SwizzZX_(VectorD3 V){ return MkVectorD3(V.z, V.x, 0); }
+inline VectorD3 SwizzZYX(VectorD3 V){ return MkVectorD3(V.z, V.y, V.x); }
+inline VectorD3 SwizzZYY(VectorD3 V){ return MkVectorD3(V.z, V.y, V.y); }
+inline VectorD3 SwizzZYZ(VectorD3 V){ return MkVectorD3(V.z, V.y, V.z); }
+inline VectorD3 SwizzZY_(VectorD3 V){ return MkVectorD3(V.z, V.y, 0); }
+inline VectorD3 SwizzZZX(VectorD3 V){ return MkVectorD3(V.z, V.z, V.x); }
+inline VectorD3 SwizzZZY(VectorD3 V){ return MkVectorD3(V.z, V.z, V.y); }
+inline VectorD3 SwizzZZZ(VectorD3 V){ return MkVectorD3(V.z, V.z, V.z); }
+inline VectorD3 SwizzZZ_(VectorD3 V){ return MkVectorD3(V.z, V.z, 0); }
+inline VectorD3 SwizzZ_X(VectorD3 V){ return MkVectorD3(V.z, 0, V.x); }
+inline VectorD3 SwizzZ_Y(VectorD3 V){ return MkVectorD3(V.z, 0, V.y); }
+inline VectorD3 SwizzZ_Z(VectorD3 V){ return MkVectorD3(V.z, 0, V.z); }
+inline VectorD3 SwizzZ__(VectorD3 V){ return MkVectorD3(V.z, 0, 0); }
+inline VectorD3 Swizz_XX(VectorD3 V){ return MkVectorD3(0, V.x, V.x); }
+inline VectorD3 Swizz_XY(VectorD3 V){ return MkVectorD3(0, V.x, V.y); }
+inline VectorD3 Swizz_XZ(VectorD3 V){ return MkVectorD3(0, V.x, V.z); }
+inline VectorD3 Swizz_X_(VectorD3 V){ return MkVectorD3(0, V.x, 0); }
+inline VectorD3 Swizz_YX(VectorD3 V){ return MkVectorD3(0, V.y, V.x); }
+inline VectorD3 Swizz_YY(VectorD3 V){ return MkVectorD3(0, V.y, V.y); }
+inline VectorD3 Swizz_YZ(VectorD3 V){ return MkVectorD3(0, V.y, V.z); }
+inline VectorD3 Swizz_Y_(VectorD3 V){ return MkVectorD3(0, V.y, 0); }
+inline VectorD3 Swizz_ZX(VectorD3 V){ return MkVectorD3(0, V.z, V.x); }
+inline VectorD3 Swizz_ZY(VectorD3 V){ return MkVectorD3(0, V.z, V.y); }
+inline VectorD3 Swizz_ZZ(VectorD3 V){ return MkVectorD3(0, V.z, V.z); }
+inline VectorD3 Swizz_Z_(VectorD3 V){ return MkVectorD3(0, V.z, 0); }
+inline VectorD3 Swizz__X(VectorD3 V){ return MkVectorD3(0, 0, V.x); }
+inline VectorD3 Swizz__Y(VectorD3 V){ return MkVectorD3(0, 0, V.y); }
+inline VectorD3 Swizz__Z(VectorD3 V){ return MkVectorD3(0, 0, V.z); }
+inline VectorD4 SwizzXXXX(VectorD3 V){ return MkVectorD4(V.x, V.x, V.x, V.x); }
+inline VectorD4 SwizzXXXY(VectorD3 V){ return MkVectorD4(V.x, V.x, V.x, V.y); }
+inline VectorD4 SwizzXXXZ(VectorD3 V){ return MkVectorD4(V.x, V.x, V.x, V.z); }
+inline VectorD4 SwizzXXX_(VectorD3 V){ return MkVectorD4(V.x, V.x, V.x, 0); }
+inline VectorD4 SwizzXXYX(VectorD3 V){ return MkVectorD4(V.x, V.x, V.y, V.x); }
+inline VectorD4 SwizzXXYY(VectorD3 V){ return MkVectorD4(V.x, V.x, V.y, V.y); }
+inline VectorD4 SwizzXXYZ(VectorD3 V){ return MkVectorD4(V.x, V.x, V.y, V.z); }
+inline VectorD4 SwizzXXY_(VectorD3 V){ return MkVectorD4(V.x, V.x, V.y, 0); }
+inline VectorD4 SwizzXXZX(VectorD3 V){ return MkVectorD4(V.x, V.x, V.z, V.x); }
+inline VectorD4 SwizzXXZY(VectorD3 V){ return MkVectorD4(V.x, V.x, V.z, V.y); }
+inline VectorD4 SwizzXXZZ(VectorD3 V){ return MkVectorD4(V.x, V.x, V.z, V.z); }
+inline VectorD4 SwizzXXZ_(VectorD3 V){ return MkVectorD4(V.x, V.x, V.z, 0); }
+inline VectorD4 SwizzXX_X(VectorD3 V){ return MkVectorD4(V.x, V.x, 0, V.x); }
+inline VectorD4 SwizzXX_Y(VectorD3 V){ return MkVectorD4(V.x, V.x, 0, V.y); }
+inline VectorD4 SwizzXX_Z(VectorD3 V){ return MkVectorD4(V.x, V.x, 0, V.z); }
+inline VectorD4 SwizzXX__(VectorD3 V){ return MkVectorD4(V.x, V.x, 0, 0); }
+inline VectorD4 SwizzXYXX(VectorD3 V){ return MkVectorD4(V.x, V.y, V.x, V.x); }
+inline VectorD4 SwizzXYXY(VectorD3 V){ return MkVectorD4(V.x, V.y, V.x, V.y); }
+inline VectorD4 SwizzXYXZ(VectorD3 V){ return MkVectorD4(V.x, V.y, V.x, V.z); }
+inline VectorD4 SwizzXYX_(VectorD3 V){ return MkVectorD4(V.x, V.y, V.x, 0); }
+inline VectorD4 SwizzXYYX(VectorD3 V){ return MkVectorD4(V.x, V.y, V.y, V.x); }
+inline VectorD4 SwizzXYYY(VectorD3 V){ return MkVectorD4(V.x, V.y, V.y, V.y); }
+inline VectorD4 SwizzXYYZ(VectorD3 V){ return MkVectorD4(V.x, V.y, V.y, V.z); }
+inline VectorD4 SwizzXYY_(VectorD3 V){ return MkVectorD4(V.x, V.y, V.y, 0); }
+inline VectorD4 SwizzXYZX(VectorD3 V){ return MkVectorD4(V.x, V.y, V.z, V.x); }
+inline VectorD4 SwizzXYZY(VectorD3 V){ return MkVectorD4(V.x, V.y, V.z, V.y); }
+inline VectorD4 SwizzXYZZ(VectorD3 V){ return MkVectorD4(V.x, V.y, V.z, V.z); }
+inline VectorD4 SwizzXYZ_(VectorD3 V){ return MkVectorD4(V.x, V.y, V.z, 0); }
+inline VectorD4 SwizzXY_X(VectorD3 V){ return MkVectorD4(V.x, V.y, 0, V.x); }
+inline VectorD4 SwizzXY_Y(VectorD3 V){ return MkVectorD4(V.x, V.y, 0, V.y); }
+inline VectorD4 SwizzXY_Z(VectorD3 V){ return MkVectorD4(V.x, V.y, 0, V.z); }
+inline VectorD4 SwizzXY__(VectorD3 V){ return MkVectorD4(V.x, V.y, 0, 0); }
+inline VectorD4 SwizzXZXX(VectorD3 V){ return MkVectorD4(V.x, V.z, V.x, V.x); }
+inline VectorD4 SwizzXZXY(VectorD3 V){ return MkVectorD4(V.x, V.z, V.x, V.y); }
+inline VectorD4 SwizzXZXZ(VectorD3 V){ return MkVectorD4(V.x, V.z, V.x, V.z); }
+inline VectorD4 SwizzXZX_(VectorD3 V){ return MkVectorD4(V.x, V.z, V.x, 0); }
+inline VectorD4 SwizzXZYX(VectorD3 V){ return MkVectorD4(V.x, V.z, V.y, V.x); }
+inline VectorD4 SwizzXZYY(VectorD3 V){ return MkVectorD4(V.x, V.z, V.y, V.y); }
+inline VectorD4 SwizzXZYZ(VectorD3 V){ return MkVectorD4(V.x, V.z, V.y, V.z); }
+inline VectorD4 SwizzXZY_(VectorD3 V){ return MkVectorD4(V.x, V.z, V.y, 0); }
+inline VectorD4 SwizzXZZX(VectorD3 V){ return MkVectorD4(V.x, V.z, V.z, V.x); }
+inline VectorD4 SwizzXZZY(VectorD3 V){ return MkVectorD4(V.x, V.z, V.z, V.y); }
+inline VectorD4 SwizzXZZZ(VectorD3 V){ return MkVectorD4(V.x, V.z, V.z, V.z); }
+inline VectorD4 SwizzXZZ_(VectorD3 V){ return MkVectorD4(V.x, V.z, V.z, 0); }
+inline VectorD4 SwizzXZ_X(VectorD3 V){ return MkVectorD4(V.x, V.z, 0, V.x); }
+inline VectorD4 SwizzXZ_Y(VectorD3 V){ return MkVectorD4(V.x, V.z, 0, V.y); }
+inline VectorD4 SwizzXZ_Z(VectorD3 V){ return MkVectorD4(V.x, V.z, 0, V.z); }
+inline VectorD4 SwizzXZ__(VectorD3 V){ return MkVectorD4(V.x, V.z, 0, 0); }
+inline VectorD4 SwizzX_XX(VectorD3 V){ return MkVectorD4(V.x, 0, V.x, V.x); }
+inline VectorD4 SwizzX_XY(VectorD3 V){ return MkVectorD4(V.x, 0, V.x, V.y); }
+inline VectorD4 SwizzX_XZ(VectorD3 V){ return MkVectorD4(V.x, 0, V.x, V.z); }
+inline VectorD4 SwizzX_X_(VectorD3 V){ return MkVectorD4(V.x, 0, V.x, 0); }
+inline VectorD4 SwizzX_YX(VectorD3 V){ return MkVectorD4(V.x, 0, V.y, V.x); }
+inline VectorD4 SwizzX_YY(VectorD3 V){ return MkVectorD4(V.x, 0, V.y, V.y); }
+inline VectorD4 SwizzX_YZ(VectorD3 V){ return MkVectorD4(V.x, 0, V.y, V.z); }
+inline VectorD4 SwizzX_Y_(VectorD3 V){ return MkVectorD4(V.x, 0, V.y, 0); }
+inline VectorD4 SwizzX_ZX(VectorD3 V){ return MkVectorD4(V.x, 0, V.z, V.x); }
+inline VectorD4 SwizzX_ZY(VectorD3 V){ return MkVectorD4(V.x, 0, V.z, V.y); }
+inline VectorD4 SwizzX_ZZ(VectorD3 V){ return MkVectorD4(V.x, 0, V.z, V.z); }
+inline VectorD4 SwizzX_Z_(VectorD3 V){ return MkVectorD4(V.x, 0, V.z, 0); }
+inline VectorD4 SwizzX__X(VectorD3 V){ return MkVectorD4(V.x, 0, 0, V.x); }
+inline VectorD4 SwizzX__Y(VectorD3 V){ return MkVectorD4(V.x, 0, 0, V.y); }
+inline VectorD4 SwizzX__Z(VectorD3 V){ return MkVectorD4(V.x, 0, 0, V.z); }
+inline VectorD4 SwizzX___(VectorD3 V){ return MkVectorD4(V.x, 0, 0, 0); }
+inline VectorD4 SwizzYXXX(VectorD3 V){ return MkVectorD4(V.y, V.x, V.x, V.x); }
+inline VectorD4 SwizzYXXY(VectorD3 V){ return MkVectorD4(V.y, V.x, V.x, V.y); }
+inline VectorD4 SwizzYXXZ(VectorD3 V){ return MkVectorD4(V.y, V.x, V.x, V.z); }
+inline VectorD4 SwizzYXX_(VectorD3 V){ return MkVectorD4(V.y, V.x, V.x, 0); }
+inline VectorD4 SwizzYXYX(VectorD3 V){ return MkVectorD4(V.y, V.x, V.y, V.x); }
+inline VectorD4 SwizzYXYY(VectorD3 V){ return MkVectorD4(V.y, V.x, V.y, V.y); }
+inline VectorD4 SwizzYXYZ(VectorD3 V){ return MkVectorD4(V.y, V.x, V.y, V.z); }
+inline VectorD4 SwizzYXY_(VectorD3 V){ return MkVectorD4(V.y, V.x, V.y, 0); }
+inline VectorD4 SwizzYXZX(VectorD3 V){ return MkVectorD4(V.y, V.x, V.z, V.x); }
+inline VectorD4 SwizzYXZY(VectorD3 V){ return MkVectorD4(V.y, V.x, V.z, V.y); }
+inline VectorD4 SwizzYXZZ(VectorD3 V){ return MkVectorD4(V.y, V.x, V.z, V.z); }
+inline VectorD4 SwizzYXZ_(VectorD3 V){ return MkVectorD4(V.y, V.x, V.z, 0); }
+inline VectorD4 SwizzYX_X(VectorD3 V){ return MkVectorD4(V.y, V.x, 0, V.x); }
+inline VectorD4 SwizzYX_Y(VectorD3 V){ return MkVectorD4(V.y, V.x, 0, V.y); }
+inline VectorD4 SwizzYX_Z(VectorD3 V){ return MkVectorD4(V.y, V.x, 0, V.z); }
+inline VectorD4 SwizzYX__(VectorD3 V){ return MkVectorD4(V.y, V.x, 0, 0); }
+inline VectorD4 SwizzYYXX(VectorD3 V){ return MkVectorD4(V.y, V.y, V.x, V.x); }
+inline VectorD4 SwizzYYXY(VectorD3 V){ return MkVectorD4(V.y, V.y, V.x, V.y); }
+inline VectorD4 SwizzYYXZ(VectorD3 V){ return MkVectorD4(V.y, V.y, V.x, V.z); }
+inline VectorD4 SwizzYYX_(VectorD3 V){ return MkVectorD4(V.y, V.y, V.x, 0); }
+inline VectorD4 SwizzYYYX(VectorD3 V){ return MkVectorD4(V.y, V.y, V.y, V.x); }
+inline VectorD4 SwizzYYYY(VectorD3 V){ return MkVectorD4(V.y, V.y, V.y, V.y); }
+inline VectorD4 SwizzYYYZ(VectorD3 V){ return MkVectorD4(V.y, V.y, V.y, V.z); }
+inline VectorD4 SwizzYYY_(VectorD3 V){ return MkVectorD4(V.y, V.y, V.y, 0); }
+inline VectorD4 SwizzYYZX(VectorD3 V){ return MkVectorD4(V.y, V.y, V.z, V.x); }
+inline VectorD4 SwizzYYZY(VectorD3 V){ return MkVectorD4(V.y, V.y, V.z, V.y); }
+inline VectorD4 SwizzYYZZ(VectorD3 V){ return MkVectorD4(V.y, V.y, V.z, V.z); }
+inline VectorD4 SwizzYYZ_(VectorD3 V){ return MkVectorD4(V.y, V.y, V.z, 0); }
+inline VectorD4 SwizzYY_X(VectorD3 V){ return MkVectorD4(V.y, V.y, 0, V.x); }
+inline VectorD4 SwizzYY_Y(VectorD3 V){ return MkVectorD4(V.y, V.y, 0, V.y); }
+inline VectorD4 SwizzYY_Z(VectorD3 V){ return MkVectorD4(V.y, V.y, 0, V.z); }
+inline VectorD4 SwizzYY__(VectorD3 V){ return MkVectorD4(V.y, V.y, 0, 0); }
+inline VectorD4 SwizzYZXX(VectorD3 V){ return MkVectorD4(V.y, V.z, V.x, V.x); }
+inline VectorD4 SwizzYZXY(VectorD3 V){ return MkVectorD4(V.y, V.z, V.x, V.y); }
+inline VectorD4 SwizzYZXZ(VectorD3 V){ return MkVectorD4(V.y, V.z, V.x, V.z); }
+inline VectorD4 SwizzYZX_(VectorD3 V){ return MkVectorD4(V.y, V.z, V.x, 0); }
+inline VectorD4 SwizzYZYX(VectorD3 V){ return MkVectorD4(V.y, V.z, V.y, V.x); }
+inline VectorD4 SwizzYZYY(VectorD3 V){ return MkVectorD4(V.y, V.z, V.y, V.y); }
+inline VectorD4 SwizzYZYZ(VectorD3 V){ return MkVectorD4(V.y, V.z, V.y, V.z); }
+inline VectorD4 SwizzYZY_(VectorD3 V){ return MkVectorD4(V.y, V.z, V.y, 0); }
+inline VectorD4 SwizzYZZX(VectorD3 V){ return MkVectorD4(V.y, V.z, V.z, V.x); }
+inline VectorD4 SwizzYZZY(VectorD3 V){ return MkVectorD4(V.y, V.z, V.z, V.y); }
+inline VectorD4 SwizzYZZZ(VectorD3 V){ return MkVectorD4(V.y, V.z, V.z, V.z); }
+inline VectorD4 SwizzYZZ_(VectorD3 V){ return MkVectorD4(V.y, V.z, V.z, 0); }
+inline VectorD4 SwizzYZ_X(VectorD3 V){ return MkVectorD4(V.y, V.z, 0, V.x); }
+inline VectorD4 SwizzYZ_Y(VectorD3 V){ return MkVectorD4(V.y, V.z, 0, V.y); }
+inline VectorD4 SwizzYZ_Z(VectorD3 V){ return MkVectorD4(V.y, V.z, 0, V.z); }
+inline VectorD4 SwizzYZ__(VectorD3 V){ return MkVectorD4(V.y, V.z, 0, 0); }
+inline VectorD4 SwizzY_XX(VectorD3 V){ return MkVectorD4(V.y, 0, V.x, V.x); }
+inline VectorD4 SwizzY_XY(VectorD3 V){ return MkVectorD4(V.y, 0, V.x, V.y); }
+inline VectorD4 SwizzY_XZ(VectorD3 V){ return MkVectorD4(V.y, 0, V.x, V.z); }
+inline VectorD4 SwizzY_X_(VectorD3 V){ return MkVectorD4(V.y, 0, V.x, 0); }
+inline VectorD4 SwizzY_YX(VectorD3 V){ return MkVectorD4(V.y, 0, V.y, V.x); }
+inline VectorD4 SwizzY_YY(VectorD3 V){ return MkVectorD4(V.y, 0, V.y, V.y); }
+inline VectorD4 SwizzY_YZ(VectorD3 V){ return MkVectorD4(V.y, 0, V.y, V.z); }
+inline VectorD4 SwizzY_Y_(VectorD3 V){ return MkVectorD4(V.y, 0, V.y, 0); }
+inline VectorD4 SwizzY_ZX(VectorD3 V){ return MkVectorD4(V.y, 0, V.z, V.x); }
+inline VectorD4 SwizzY_ZY(VectorD3 V){ return MkVectorD4(V.y, 0, V.z, V.y); }
+inline VectorD4 SwizzY_ZZ(VectorD3 V){ return MkVectorD4(V.y, 0, V.z, V.z); }
+inline VectorD4 SwizzY_Z_(VectorD3 V){ return MkVectorD4(V.y, 0, V.z, 0); }
+inline VectorD4 SwizzY__X(VectorD3 V){ return MkVectorD4(V.y, 0, 0, V.x); }
+inline VectorD4 SwizzY__Y(VectorD3 V){ return MkVectorD4(V.y, 0, 0, V.y); }
+inline VectorD4 SwizzY__Z(VectorD3 V){ return MkVectorD4(V.y, 0, 0, V.z); }
+inline VectorD4 SwizzY___(VectorD3 V){ return MkVectorD4(V.y, 0, 0, 0); }
+inline VectorD4 SwizzZXXX(VectorD3 V){ return MkVectorD4(V.z, V.x, V.x, V.x); }
+inline VectorD4 SwizzZXXY(VectorD3 V){ return MkVectorD4(V.z, V.x, V.x, V.y); }
+inline VectorD4 SwizzZXXZ(VectorD3 V){ return MkVectorD4(V.z, V.x, V.x, V.z); }
+inline VectorD4 SwizzZXX_(VectorD3 V){ return MkVectorD4(V.z, V.x, V.x, 0); }
+inline VectorD4 SwizzZXYX(VectorD3 V){ return MkVectorD4(V.z, V.x, V.y, V.x); }
+inline VectorD4 SwizzZXYY(VectorD3 V){ return MkVectorD4(V.z, V.x, V.y, V.y); }
+inline VectorD4 SwizzZXYZ(VectorD3 V){ return MkVectorD4(V.z, V.x, V.y, V.z); }
+inline VectorD4 SwizzZXY_(VectorD3 V){ return MkVectorD4(V.z, V.x, V.y, 0); }
+inline VectorD4 SwizzZXZX(VectorD3 V){ return MkVectorD4(V.z, V.x, V.z, V.x); }
+inline VectorD4 SwizzZXZY(VectorD3 V){ return MkVectorD4(V.z, V.x, V.z, V.y); }
+inline VectorD4 SwizzZXZZ(VectorD3 V){ return MkVectorD4(V.z, V.x, V.z, V.z); }
+inline VectorD4 SwizzZXZ_(VectorD3 V){ return MkVectorD4(V.z, V.x, V.z, 0); }
+inline VectorD4 SwizzZX_X(VectorD3 V){ return MkVectorD4(V.z, V.x, 0, V.x); }
+inline VectorD4 SwizzZX_Y(VectorD3 V){ return MkVectorD4(V.z, V.x, 0, V.y); }
+inline VectorD4 SwizzZX_Z(VectorD3 V){ return MkVectorD4(V.z, V.x, 0, V.z); }
+inline VectorD4 SwizzZX__(VectorD3 V){ return MkVectorD4(V.z, V.x, 0, 0); }
+inline VectorD4 SwizzZYXX(VectorD3 V){ return MkVectorD4(V.z, V.y, V.x, V.x); }
+inline VectorD4 SwizzZYXY(VectorD3 V){ return MkVectorD4(V.z, V.y, V.x, V.y); }
+inline VectorD4 SwizzZYXZ(VectorD3 V){ return MkVectorD4(V.z, V.y, V.x, V.z); }
+inline VectorD4 SwizzZYX_(VectorD3 V){ return MkVectorD4(V.z, V.y, V.x, 0); }
+inline VectorD4 SwizzZYYX(VectorD3 V){ return MkVectorD4(V.z, V.y, V.y, V.x); }
+inline VectorD4 SwizzZYYY(VectorD3 V){ return MkVectorD4(V.z, V.y, V.y, V.y); }
+inline VectorD4 SwizzZYYZ(VectorD3 V){ return MkVectorD4(V.z, V.y, V.y, V.z); }
+inline VectorD4 SwizzZYY_(VectorD3 V){ return MkVectorD4(V.z, V.y, V.y, 0); }
+inline VectorD4 SwizzZYZX(VectorD3 V){ return MkVectorD4(V.z, V.y, V.z, V.x); }
+inline VectorD4 SwizzZYZY(VectorD3 V){ return MkVectorD4(V.z, V.y, V.z, V.y); }
+inline VectorD4 SwizzZYZZ(VectorD3 V){ return MkVectorD4(V.z, V.y, V.z, V.z); }
+inline VectorD4 SwizzZYZ_(VectorD3 V){ return MkVectorD4(V.z, V.y, V.z, 0); }
+inline VectorD4 SwizzZY_X(VectorD3 V){ return MkVectorD4(V.z, V.y, 0, V.x); }
+inline VectorD4 SwizzZY_Y(VectorD3 V){ return MkVectorD4(V.z, V.y, 0, V.y); }
+inline VectorD4 SwizzZY_Z(VectorD3 V){ return MkVectorD4(V.z, V.y, 0, V.z); }
+inline VectorD4 SwizzZY__(VectorD3 V){ return MkVectorD4(V.z, V.y, 0, 0); }
+inline VectorD4 SwizzZZXX(VectorD3 V){ return MkVectorD4(V.z, V.z, V.x, V.x); }
+inline VectorD4 SwizzZZXY(VectorD3 V){ return MkVectorD4(V.z, V.z, V.x, V.y); }
+inline VectorD4 SwizzZZXZ(VectorD3 V){ return MkVectorD4(V.z, V.z, V.x, V.z); }
+inline VectorD4 SwizzZZX_(VectorD3 V){ return MkVectorD4(V.z, V.z, V.x, 0); }
+inline VectorD4 SwizzZZYX(VectorD3 V){ return MkVectorD4(V.z, V.z, V.y, V.x); }
+inline VectorD4 SwizzZZYY(VectorD3 V){ return MkVectorD4(V.z, V.z, V.y, V.y); }
+inline VectorD4 SwizzZZYZ(VectorD3 V){ return MkVectorD4(V.z, V.z, V.y, V.z); }
+inline VectorD4 SwizzZZY_(VectorD3 V){ return MkVectorD4(V.z, V.z, V.y, 0); }
+inline VectorD4 SwizzZZZX(VectorD3 V){ return MkVectorD4(V.z, V.z, V.z, V.x); }
+inline VectorD4 SwizzZZZY(VectorD3 V){ return MkVectorD4(V.z, V.z, V.z, V.y); }
+inline VectorD4 SwizzZZZZ(VectorD3 V){ return MkVectorD4(V.z, V.z, V.z, V.z); }
+inline VectorD4 SwizzZZZ_(VectorD3 V){ return MkVectorD4(V.z, V.z, V.z, 0); }
+inline VectorD4 SwizzZZ_X(VectorD3 V){ return MkVectorD4(V.z, V.z, 0, V.x); }
+inline VectorD4 SwizzZZ_Y(VectorD3 V){ return MkVectorD4(V.z, V.z, 0, V.y); }
+inline VectorD4 SwizzZZ_Z(VectorD3 V){ return MkVectorD4(V.z, V.z, 0, V.z); }
+inline VectorD4 SwizzZZ__(VectorD3 V){ return MkVectorD4(V.z, V.z, 0, 0); }
+inline VectorD4 SwizzZ_XX(VectorD3 V){ return MkVectorD4(V.z, 0, V.x, V.x); }
+inline VectorD4 SwizzZ_XY(VectorD3 V){ return MkVectorD4(V.z, 0, V.x, V.y); }
+inline VectorD4 SwizzZ_XZ(VectorD3 V){ return MkVectorD4(V.z, 0, V.x, V.z); }
+inline VectorD4 SwizzZ_X_(VectorD3 V){ return MkVectorD4(V.z, 0, V.x, 0); }
+inline VectorD4 SwizzZ_YX(VectorD3 V){ return MkVectorD4(V.z, 0, V.y, V.x); }
+inline VectorD4 SwizzZ_YY(VectorD3 V){ return MkVectorD4(V.z, 0, V.y, V.y); }
+inline VectorD4 SwizzZ_YZ(VectorD3 V){ return MkVectorD4(V.z, 0, V.y, V.z); }
+inline VectorD4 SwizzZ_Y_(VectorD3 V){ return MkVectorD4(V.z, 0, V.y, 0); }
+inline VectorD4 SwizzZ_ZX(VectorD3 V){ return MkVectorD4(V.z, 0, V.z, V.x); }
+inline VectorD4 SwizzZ_ZY(VectorD3 V){ return MkVectorD4(V.z, 0, V.z, V.y); }
+inline VectorD4 SwizzZ_ZZ(VectorD3 V){ return MkVectorD4(V.z, 0, V.z, V.z); }
+inline VectorD4 SwizzZ_Z_(VectorD3 V){ return MkVectorD4(V.z, 0, V.z, 0); }
+inline VectorD4 SwizzZ__X(VectorD3 V){ return MkVectorD4(V.z, 0, 0, V.x); }
+inline VectorD4 SwizzZ__Y(VectorD3 V){ return MkVectorD4(V.z, 0, 0, V.y); }
+inline VectorD4 SwizzZ__Z(VectorD3 V){ return MkVectorD4(V.z, 0, 0, V.z); }
+inline VectorD4 SwizzZ___(VectorD3 V){ return MkVectorD4(V.z, 0, 0, 0); }
+inline VectorD4 Swizz_XXX(VectorD3 V){ return MkVectorD4(0, V.x, V.x, V.x); }
+inline VectorD4 Swizz_XXY(VectorD3 V){ return MkVectorD4(0, V.x, V.x, V.y); }
+inline VectorD4 Swizz_XXZ(VectorD3 V){ return MkVectorD4(0, V.x, V.x, V.z); }
+inline VectorD4 Swizz_XX_(VectorD3 V){ return MkVectorD4(0, V.x, V.x, 0); }
+inline VectorD4 Swizz_XYX(VectorD3 V){ return MkVectorD4(0, V.x, V.y, V.x); }
+inline VectorD4 Swizz_XYY(VectorD3 V){ return MkVectorD4(0, V.x, V.y, V.y); }
+inline VectorD4 Swizz_XYZ(VectorD3 V){ return MkVectorD4(0, V.x, V.y, V.z); }
+inline VectorD4 Swizz_XY_(VectorD3 V){ return MkVectorD4(0, V.x, V.y, 0); }
+inline VectorD4 Swizz_XZX(VectorD3 V){ return MkVectorD4(0, V.x, V.z, V.x); }
+inline VectorD4 Swizz_XZY(VectorD3 V){ return MkVectorD4(0, V.x, V.z, V.y); }
+inline VectorD4 Swizz_XZZ(VectorD3 V){ return MkVectorD4(0, V.x, V.z, V.z); }
+inline VectorD4 Swizz_XZ_(VectorD3 V){ return MkVectorD4(0, V.x, V.z, 0); }
+inline VectorD4 Swizz_X_X(VectorD3 V){ return MkVectorD4(0, V.x, 0, V.x); }
+inline VectorD4 Swizz_X_Y(VectorD3 V){ return MkVectorD4(0, V.x, 0, V.y); }
+inline VectorD4 Swizz_X_Z(VectorD3 V){ return MkVectorD4(0, V.x, 0, V.z); }
+inline VectorD4 Swizz_X__(VectorD3 V){ return MkVectorD4(0, V.x, 0, 0); }
+inline VectorD4 Swizz_YXX(VectorD3 V){ return MkVectorD4(0, V.y, V.x, V.x); }
+inline VectorD4 Swizz_YXY(VectorD3 V){ return MkVectorD4(0, V.y, V.x, V.y); }
+inline VectorD4 Swizz_YXZ(VectorD3 V){ return MkVectorD4(0, V.y, V.x, V.z); }
+inline VectorD4 Swizz_YX_(VectorD3 V){ return MkVectorD4(0, V.y, V.x, 0); }
+inline VectorD4 Swizz_YYX(VectorD3 V){ return MkVectorD4(0, V.y, V.y, V.x); }
+inline VectorD4 Swizz_YYY(VectorD3 V){ return MkVectorD4(0, V.y, V.y, V.y); }
+inline VectorD4 Swizz_YYZ(VectorD3 V){ return MkVectorD4(0, V.y, V.y, V.z); }
+inline VectorD4 Swizz_YY_(VectorD3 V){ return MkVectorD4(0, V.y, V.y, 0); }
+inline VectorD4 Swizz_YZX(VectorD3 V){ return MkVectorD4(0, V.y, V.z, V.x); }
+inline VectorD4 Swizz_YZY(VectorD3 V){ return MkVectorD4(0, V.y, V.z, V.y); }
+inline VectorD4 Swizz_YZZ(VectorD3 V){ return MkVectorD4(0, V.y, V.z, V.z); }
+inline VectorD4 Swizz_YZ_(VectorD3 V){ return MkVectorD4(0, V.y, V.z, 0); }
+inline VectorD4 Swizz_Y_X(VectorD3 V){ return MkVectorD4(0, V.y, 0, V.x); }
+inline VectorD4 Swizz_Y_Y(VectorD3 V){ return MkVectorD4(0, V.y, 0, V.y); }
+inline VectorD4 Swizz_Y_Z(VectorD3 V){ return MkVectorD4(0, V.y, 0, V.z); }
+inline VectorD4 Swizz_Y__(VectorD3 V){ return MkVectorD4(0, V.y, 0, 0); }
+inline VectorD4 Swizz_ZXX(VectorD3 V){ return MkVectorD4(0, V.z, V.x, V.x); }
+inline VectorD4 Swizz_ZXY(VectorD3 V){ return MkVectorD4(0, V.z, V.x, V.y); }
+inline VectorD4 Swizz_ZXZ(VectorD3 V){ return MkVectorD4(0, V.z, V.x, V.z); }
+inline VectorD4 Swizz_ZX_(VectorD3 V){ return MkVectorD4(0, V.z, V.x, 0); }
+inline VectorD4 Swizz_ZYX(VectorD3 V){ return MkVectorD4(0, V.z, V.y, V.x); }
+inline VectorD4 Swizz_ZYY(VectorD3 V){ return MkVectorD4(0, V.z, V.y, V.y); }
+inline VectorD4 Swizz_ZYZ(VectorD3 V){ return MkVectorD4(0, V.z, V.y, V.z); }
+inline VectorD4 Swizz_ZY_(VectorD3 V){ return MkVectorD4(0, V.z, V.y, 0); }
+inline VectorD4 Swizz_ZZX(VectorD3 V){ return MkVectorD4(0, V.z, V.z, V.x); }
+inline VectorD4 Swizz_ZZY(VectorD3 V){ return MkVectorD4(0, V.z, V.z, V.y); }
+inline VectorD4 Swizz_ZZZ(VectorD3 V){ return MkVectorD4(0, V.z, V.z, V.z); }
+inline VectorD4 Swizz_ZZ_(VectorD3 V){ return MkVectorD4(0, V.z, V.z, 0); }
+inline VectorD4 Swizz_Z_X(VectorD3 V){ return MkVectorD4(0, V.z, 0, V.x); }
+inline VectorD4 Swizz_Z_Y(VectorD3 V){ return MkVectorD4(0, V.z, 0, V.y); }
+inline VectorD4 Swizz_Z_Z(VectorD3 V){ return MkVectorD4(0, V.z, 0, V.z); }
+inline VectorD4 Swizz_Z__(VectorD3 V){ return MkVectorD4(0, V.z, 0, 0); }
+inline VectorD4 Swizz__XX(VectorD3 V){ return MkVectorD4(0, 0, V.x, V.x); }
+inline VectorD4 Swizz__XY(VectorD3 V){ return MkVectorD4(0, 0, V.x, V.y); }
+inline VectorD4 Swizz__XZ(VectorD3 V){ return MkVectorD4(0, 0, V.x, V.z); }
+inline VectorD4 Swizz__X_(VectorD3 V){ return MkVectorD4(0, 0, V.x, 0); }
+inline VectorD4 Swizz__YX(VectorD3 V){ return MkVectorD4(0, 0, V.y, V.x); }
+inline VectorD4 Swizz__YY(VectorD3 V){ return MkVectorD4(0, 0, V.y, V.y); }
+inline VectorD4 Swizz__YZ(VectorD3 V){ return MkVectorD4(0, 0, V.y, V.z); }
+inline VectorD4 Swizz__Y_(VectorD3 V){ return MkVectorD4(0, 0, V.y, 0); }
+inline VectorD4 Swizz__ZX(VectorD3 V){ return MkVectorD4(0, 0, V.z, V.x); }
+inline VectorD4 Swizz__ZY(VectorD3 V){ return MkVectorD4(0, 0, V.z, V.y); }
+inline VectorD4 Swizz__ZZ(VectorD3 V){ return MkVectorD4(0, 0, V.z, V.z); }
+inline VectorD4 Swizz__Z_(VectorD3 V){ return MkVectorD4(0, 0, V.z, 0); }
+inline VectorD4 Swizz___X(VectorD3 V){ return MkVectorD4(0, 0, 0, V.x); }
+inline VectorD4 Swizz___Y(VectorD3 V){ return MkVectorD4(0, 0, 0, V.y); }
+inline VectorD4 Swizz___Z(VectorD3 V){ return MkVectorD4(0, 0, 0, V.z); }
+inline VectorD2 SwizzXX(VectorD4 V){ return MkVectorD2(V.x, V.x); }
+inline VectorD2 SwizzXY(VectorD4 V){ return MkVectorD2(V.x, V.y); }
+inline VectorD2 SwizzXZ(VectorD4 V){ return MkVectorD2(V.x, V.z); }
+inline VectorD2 SwizzXW(VectorD4 V){ return MkVectorD2(V.x, V.w); }
+inline VectorD2 SwizzX_(VectorD4 V){ return MkVectorD2(V.x, 0); }
+inline VectorD2 SwizzYX(VectorD4 V){ return MkVectorD2(V.y, V.x); }
+inline VectorD2 SwizzYY(VectorD4 V){ return MkVectorD2(V.y, V.y); }
+inline VectorD2 SwizzYZ(VectorD4 V){ return MkVectorD2(V.y, V.z); }
+inline VectorD2 SwizzYW(VectorD4 V){ return MkVectorD2(V.y, V.w); }
+inline VectorD2 SwizzY_(VectorD4 V){ return MkVectorD2(V.y, 0); }
+inline VectorD2 SwizzZX(VectorD4 V){ return MkVectorD2(V.z, V.x); }
+inline VectorD2 SwizzZY(VectorD4 V){ return MkVectorD2(V.z, V.y); }
+inline VectorD2 SwizzZZ(VectorD4 V){ return MkVectorD2(V.z, V.z); }
+inline VectorD2 SwizzZW(VectorD4 V){ return MkVectorD2(V.z, V.w); }
+inline VectorD2 SwizzZ_(VectorD4 V){ return MkVectorD2(V.z, 0); }
+inline VectorD2 SwizzWX(VectorD4 V){ return MkVectorD2(V.w, V.x); }
+inline VectorD2 SwizzWY(VectorD4 V){ return MkVectorD2(V.w, V.y); }
+inline VectorD2 SwizzWZ(VectorD4 V){ return MkVectorD2(V.w, V.z); }
+inline VectorD2 SwizzWW(VectorD4 V){ return MkVectorD2(V.w, V.w); }
+inline VectorD2 SwizzW_(VectorD4 V){ return MkVectorD2(V.w, 0); }
+inline VectorD2 Swizz_X(VectorD4 V){ return MkVectorD2(0, V.x); }
+inline VectorD2 Swizz_Y(VectorD4 V){ return MkVectorD2(0, V.y); }
+inline VectorD2 Swizz_Z(VectorD4 V){ return MkVectorD2(0, V.z); }
+inline VectorD2 Swizz_W(VectorD4 V){ return MkVectorD2(0, V.w); }
+inline VectorD3 SwizzXXX(VectorD4 V){ return MkVectorD3(V.x, V.x, V.x); }
+inline VectorD3 SwizzXXY(VectorD4 V){ return MkVectorD3(V.x, V.x, V.y); }
+inline VectorD3 SwizzXXZ(VectorD4 V){ return MkVectorD3(V.x, V.x, V.z); }
+inline VectorD3 SwizzXXW(VectorD4 V){ return MkVectorD3(V.x, V.x, V.w); }
+inline VectorD3 SwizzXX_(VectorD4 V){ return MkVectorD3(V.x, V.x, 0); }
+inline VectorD3 SwizzXYX(VectorD4 V){ return MkVectorD3(V.x, V.y, V.x); }
+inline VectorD3 SwizzXYY(VectorD4 V){ return MkVectorD3(V.x, V.y, V.y); }
+inline VectorD3 SwizzXYZ(VectorD4 V){ return MkVectorD3(V.x, V.y, V.z); }
+inline VectorD3 SwizzXYW(VectorD4 V){ return MkVectorD3(V.x, V.y, V.w); }
+inline VectorD3 SwizzXY_(VectorD4 V){ return MkVectorD3(V.x, V.y, 0); }
+inline VectorD3 SwizzXZX(VectorD4 V){ return MkVectorD3(V.x, V.z, V.x); }
+inline VectorD3 SwizzXZY(VectorD4 V){ return MkVectorD3(V.x, V.z, V.y); }
+inline VectorD3 SwizzXZZ(VectorD4 V){ return MkVectorD3(V.x, V.z, V.z); }
+inline VectorD3 SwizzXZW(VectorD4 V){ return MkVectorD3(V.x, V.z, V.w); }
+inline VectorD3 SwizzXZ_(VectorD4 V){ return MkVectorD3(V.x, V.z, 0); }
+inline VectorD3 SwizzXWX(VectorD4 V){ return MkVectorD3(V.x, V.w, V.x); }
+inline VectorD3 SwizzXWY(VectorD4 V){ return MkVectorD3(V.x, V.w, V.y); }
+inline VectorD3 SwizzXWZ(VectorD4 V){ return MkVectorD3(V.x, V.w, V.z); }
+inline VectorD3 SwizzXWW(VectorD4 V){ return MkVectorD3(V.x, V.w, V.w); }
+inline VectorD3 SwizzXW_(VectorD4 V){ return MkVectorD3(V.x, V.w, 0); }
+inline VectorD3 SwizzX_X(VectorD4 V){ return MkVectorD3(V.x, 0, V.x); }
+inline VectorD3 SwizzX_Y(VectorD4 V){ return MkVectorD3(V.x, 0, V.y); }
+inline VectorD3 SwizzX_Z(VectorD4 V){ return MkVectorD3(V.x, 0, V.z); }
+inline VectorD3 SwizzX_W(VectorD4 V){ return MkVectorD3(V.x, 0, V.w); }
+inline VectorD3 SwizzX__(VectorD4 V){ return MkVectorD3(V.x, 0, 0); }
+inline VectorD3 SwizzYXX(VectorD4 V){ return MkVectorD3(V.y, V.x, V.x); }
+inline VectorD3 SwizzYXY(VectorD4 V){ return MkVectorD3(V.y, V.x, V.y); }
+inline VectorD3 SwizzYXZ(VectorD4 V){ return MkVectorD3(V.y, V.x, V.z); }
+inline VectorD3 SwizzYXW(VectorD4 V){ return MkVectorD3(V.y, V.x, V.w); }
+inline VectorD3 SwizzYX_(VectorD4 V){ return MkVectorD3(V.y, V.x, 0); }
+inline VectorD3 SwizzYYX(VectorD4 V){ return MkVectorD3(V.y, V.y, V.x); }
+inline VectorD3 SwizzYYY(VectorD4 V){ return MkVectorD3(V.y, V.y, V.y); }
+inline VectorD3 SwizzYYZ(VectorD4 V){ return MkVectorD3(V.y, V.y, V.z); }
+inline VectorD3 SwizzYYW(VectorD4 V){ return MkVectorD3(V.y, V.y, V.w); }
+inline VectorD3 SwizzYY_(VectorD4 V){ return MkVectorD3(V.y, V.y, 0); }
+inline VectorD3 SwizzYZX(VectorD4 V){ return MkVectorD3(V.y, V.z, V.x); }
+inline VectorD3 SwizzYZY(VectorD4 V){ return MkVectorD3(V.y, V.z, V.y); }
+inline VectorD3 SwizzYZZ(VectorD4 V){ return MkVectorD3(V.y, V.z, V.z); }
+inline VectorD3 SwizzYZW(VectorD4 V){ return MkVectorD3(V.y, V.z, V.w); }
+inline VectorD3 SwizzYZ_(VectorD4 V){ return MkVectorD3(V.y, V.z, 0); }
+inline VectorD3 SwizzYWX(VectorD4 V){ return MkVectorD3(V.y, V.w, V.x); }
+inline VectorD3 SwizzYWY(VectorD4 V){ return MkVectorD3(V.y, V.w, V.y); }
+inline VectorD3 SwizzYWZ(VectorD4 V){ return MkVectorD3(V.y, V.w, V.z); }
+inline VectorD3 SwizzYWW(VectorD4 V){ return MkVectorD3(V.y, V.w, V.w); }
+inline VectorD3 SwizzYW_(VectorD4 V){ return MkVectorD3(V.y, V.w, 0); }
+inline VectorD3 SwizzY_X(VectorD4 V){ return MkVectorD3(V.y, 0, V.x); }
+inline VectorD3 SwizzY_Y(VectorD4 V){ return MkVectorD3(V.y, 0, V.y); }
+inline VectorD3 SwizzY_Z(VectorD4 V){ return MkVectorD3(V.y, 0, V.z); }
+inline VectorD3 SwizzY_W(VectorD4 V){ return MkVectorD3(V.y, 0, V.w); }
+inline VectorD3 SwizzY__(VectorD4 V){ return MkVectorD3(V.y, 0, 0); }
+inline VectorD3 SwizzZXX(VectorD4 V){ return MkVectorD3(V.z, V.x, V.x); }
+inline VectorD3 SwizzZXY(VectorD4 V){ return MkVectorD3(V.z, V.x, V.y); }
+inline VectorD3 SwizzZXZ(VectorD4 V){ return MkVectorD3(V.z, V.x, V.z); }
+inline VectorD3 SwizzZXW(VectorD4 V){ return MkVectorD3(V.z, V.x, V.w); }
+inline VectorD3 SwizzZX_(VectorD4 V){ return MkVectorD3(V.z, V.x, 0); }
+inline VectorD3 SwizzZYX(VectorD4 V){ return MkVectorD3(V.z, V.y, V.x); }
+inline VectorD3 SwizzZYY(VectorD4 V){ return MkVectorD3(V.z, V.y, V.y); }
+inline VectorD3 SwizzZYZ(VectorD4 V){ return MkVectorD3(V.z, V.y, V.z); }
+inline VectorD3 SwizzZYW(VectorD4 V){ return MkVectorD3(V.z, V.y, V.w); }
+inline VectorD3 SwizzZY_(VectorD4 V){ return MkVectorD3(V.z, V.y, 0); }
+inline VectorD3 SwizzZZX(VectorD4 V){ return MkVectorD3(V.z, V.z, V.x); }
+inline VectorD3 SwizzZZY(VectorD4 V){ return MkVectorD3(V.z, V.z, V.y); }
+inline VectorD3 SwizzZZZ(VectorD4 V){ return MkVectorD3(V.z, V.z, V.z); }
+inline VectorD3 SwizzZZW(VectorD4 V){ return MkVectorD3(V.z, V.z, V.w); }
+inline VectorD3 SwizzZZ_(VectorD4 V){ return MkVectorD3(V.z, V.z, 0); }
+inline VectorD3 SwizzZWX(VectorD4 V){ return MkVectorD3(V.z, V.w, V.x); }
+inline VectorD3 SwizzZWY(VectorD4 V){ return MkVectorD3(V.z, V.w, V.y); }
+inline VectorD3 SwizzZWZ(VectorD4 V){ return MkVectorD3(V.z, V.w, V.z); }
+inline VectorD3 SwizzZWW(VectorD4 V){ return MkVectorD3(V.z, V.w, V.w); }
+inline VectorD3 SwizzZW_(VectorD4 V){ return MkVectorD3(V.z, V.w, 0); }
+inline VectorD3 SwizzZ_X(VectorD4 V){ return MkVectorD3(V.z, 0, V.x); }
+inline VectorD3 SwizzZ_Y(VectorD4 V){ return MkVectorD3(V.z, 0, V.y); }
+inline VectorD3 SwizzZ_Z(VectorD4 V){ return MkVectorD3(V.z, 0, V.z); }
+inline VectorD3 SwizzZ_W(VectorD4 V){ return MkVectorD3(V.z, 0, V.w); }
+inline VectorD3 SwizzZ__(VectorD4 V){ return MkVectorD3(V.z, 0, 0); }
+inline VectorD3 SwizzWXX(VectorD4 V){ return MkVectorD3(V.w, V.x, V.x); }
+inline VectorD3 SwizzWXY(VectorD4 V){ return MkVectorD3(V.w, V.x, V.y); }
+inline VectorD3 SwizzWXZ(VectorD4 V){ return MkVectorD3(V.w, V.x, V.z); }
+inline VectorD3 SwizzWXW(VectorD4 V){ return MkVectorD3(V.w, V.x, V.w); }
+inline VectorD3 SwizzWX_(VectorD4 V){ return MkVectorD3(V.w, V.x, 0); }
+inline VectorD3 SwizzWYX(VectorD4 V){ return MkVectorD3(V.w, V.y, V.x); }
+inline VectorD3 SwizzWYY(VectorD4 V){ return MkVectorD3(V.w, V.y, V.y); }
+inline VectorD3 SwizzWYZ(VectorD4 V){ return MkVectorD3(V.w, V.y, V.z); }
+inline VectorD3 SwizzWYW(VectorD4 V){ return MkVectorD3(V.w, V.y, V.w); }
+inline VectorD3 SwizzWY_(VectorD4 V){ return MkVectorD3(V.w, V.y, 0); }
+inline VectorD3 SwizzWZX(VectorD4 V){ return MkVectorD3(V.w, V.z, V.x); }
+inline VectorD3 SwizzWZY(VectorD4 V){ return MkVectorD3(V.w, V.z, V.y); }
+inline VectorD3 SwizzWZZ(VectorD4 V){ return MkVectorD3(V.w, V.z, V.z); }
+inline VectorD3 SwizzWZW(VectorD4 V){ return MkVectorD3(V.w, V.z, V.w); }
+inline VectorD3 SwizzWZ_(VectorD4 V){ return MkVectorD3(V.w, V.z, 0); }
+inline VectorD3 SwizzWWX(VectorD4 V){ return MkVectorD3(V.w, V.w, V.x); }
+inline VectorD3 SwizzWWY(VectorD4 V){ return MkVectorD3(V.w, V.w, V.y); }
+inline VectorD3 SwizzWWZ(VectorD4 V){ return MkVectorD3(V.w, V.w, V.z); }
+inline VectorD3 SwizzWWW(VectorD4 V){ return MkVectorD3(V.w, V.w, V.w); }
+inline VectorD3 SwizzWW_(VectorD4 V){ return MkVectorD3(V.w, V.w, 0); }
+inline VectorD3 SwizzW_X(VectorD4 V){ return MkVectorD3(V.w, 0, V.x); }
+inline VectorD3 SwizzW_Y(VectorD4 V){ return MkVectorD3(V.w, 0, V.y); }
+inline VectorD3 SwizzW_Z(VectorD4 V){ return MkVectorD3(V.w, 0, V.z); }
+inline VectorD3 SwizzW_W(VectorD4 V){ return MkVectorD3(V.w, 0, V.w); }
+inline VectorD3 SwizzW__(VectorD4 V){ return MkVectorD3(V.w, 0, 0); }
+inline VectorD3 Swizz_XX(VectorD4 V){ return MkVectorD3(0, V.x, V.x); }
+inline VectorD3 Swizz_XY(VectorD4 V){ return MkVectorD3(0, V.x, V.y); }
+inline VectorD3 Swizz_XZ(VectorD4 V){ return MkVectorD3(0, V.x, V.z); }
+inline VectorD3 Swizz_XW(VectorD4 V){ return MkVectorD3(0, V.x, V.w); }
+inline VectorD3 Swizz_X_(VectorD4 V){ return MkVectorD3(0, V.x, 0); }
+inline VectorD3 Swizz_YX(VectorD4 V){ return MkVectorD3(0, V.y, V.x); }
+inline VectorD3 Swizz_YY(VectorD4 V){ return MkVectorD3(0, V.y, V.y); }
+inline VectorD3 Swizz_YZ(VectorD4 V){ return MkVectorD3(0, V.y, V.z); }
+inline VectorD3 Swizz_YW(VectorD4 V){ return MkVectorD3(0, V.y, V.w); }
+inline VectorD3 Swizz_Y_(VectorD4 V){ return MkVectorD3(0, V.y, 0); }
+inline VectorD3 Swizz_ZX(VectorD4 V){ return MkVectorD3(0, V.z, V.x); }
+inline VectorD3 Swizz_ZY(VectorD4 V){ return MkVectorD3(0, V.z, V.y); }
+inline VectorD3 Swizz_ZZ(VectorD4 V){ return MkVectorD3(0, V.z, V.z); }
+inline VectorD3 Swizz_ZW(VectorD4 V){ return MkVectorD3(0, V.z, V.w); }
+inline VectorD3 Swizz_Z_(VectorD4 V){ return MkVectorD3(0, V.z, 0); }
+inline VectorD3 Swizz_WX(VectorD4 V){ return MkVectorD3(0, V.w, V.x); }
+inline VectorD3 Swizz_WY(VectorD4 V){ return MkVectorD3(0, V.w, V.y); }
+inline VectorD3 Swizz_WZ(VectorD4 V){ return MkVectorD3(0, V.w, V.z); }
+inline VectorD3 Swizz_WW(VectorD4 V){ return MkVectorD3(0, V.w, V.w); }
+inline VectorD3 Swizz_W_(VectorD4 V){ return MkVectorD3(0, V.w, 0); }
+inline VectorD3 Swizz__X(VectorD4 V){ return MkVectorD3(0, 0, V.x); }
+inline VectorD3 Swizz__Y(VectorD4 V){ return MkVectorD3(0, 0, V.y); }
+inline VectorD3 Swizz__Z(VectorD4 V){ return MkVectorD3(0, 0, V.z); }
+inline VectorD3 Swizz__W(VectorD4 V){ return MkVectorD3(0, 0, V.w); }
+inline VectorD4 SwizzXXXX(VectorD4 V){ return MkVectorD4(V.x, V.x, V.x, V.x); }
+inline VectorD4 SwizzXXXY(VectorD4 V){ return MkVectorD4(V.x, V.x, V.x, V.y); }
+inline VectorD4 SwizzXXXZ(VectorD4 V){ return MkVectorD4(V.x, V.x, V.x, V.z); }
+inline VectorD4 SwizzXXXW(VectorD4 V){ return MkVectorD4(V.x, V.x, V.x, V.w); }
+inline VectorD4 SwizzXXX_(VectorD4 V){ return MkVectorD4(V.x, V.x, V.x, 0); }
+inline VectorD4 SwizzXXYX(VectorD4 V){ return MkVectorD4(V.x, V.x, V.y, V.x); }
+inline VectorD4 SwizzXXYY(VectorD4 V){ return MkVectorD4(V.x, V.x, V.y, V.y); }
+inline VectorD4 SwizzXXYZ(VectorD4 V){ return MkVectorD4(V.x, V.x, V.y, V.z); }
+inline VectorD4 SwizzXXYW(VectorD4 V){ return MkVectorD4(V.x, V.x, V.y, V.w); }
+inline VectorD4 SwizzXXY_(VectorD4 V){ return MkVectorD4(V.x, V.x, V.y, 0); }
+inline VectorD4 SwizzXXZX(VectorD4 V){ return MkVectorD4(V.x, V.x, V.z, V.x); }
+inline VectorD4 SwizzXXZY(VectorD4 V){ return MkVectorD4(V.x, V.x, V.z, V.y); }
+inline VectorD4 SwizzXXZZ(VectorD4 V){ return MkVectorD4(V.x, V.x, V.z, V.z); }
+inline VectorD4 SwizzXXZW(VectorD4 V){ return MkVectorD4(V.x, V.x, V.z, V.w); }
+inline VectorD4 SwizzXXZ_(VectorD4 V){ return MkVectorD4(V.x, V.x, V.z, 0); }
+inline VectorD4 SwizzXXWX(VectorD4 V){ return MkVectorD4(V.x, V.x, V.w, V.x); }
+inline VectorD4 SwizzXXWY(VectorD4 V){ return MkVectorD4(V.x, V.x, V.w, V.y); }
+inline VectorD4 SwizzXXWZ(VectorD4 V){ return MkVectorD4(V.x, V.x, V.w, V.z); }
+inline VectorD4 SwizzXXWW(VectorD4 V){ return MkVectorD4(V.x, V.x, V.w, V.w); }
+inline VectorD4 SwizzXXW_(VectorD4 V){ return MkVectorD4(V.x, V.x, V.w, 0); }
+inline VectorD4 SwizzXX_X(VectorD4 V){ return MkVectorD4(V.x, V.x, 0, V.x); }
+inline VectorD4 SwizzXX_Y(VectorD4 V){ return MkVectorD4(V.x, V.x, 0, V.y); }
+inline VectorD4 SwizzXX_Z(VectorD4 V){ return MkVectorD4(V.x, V.x, 0, V.z); }
+inline VectorD4 SwizzXX_W(VectorD4 V){ return MkVectorD4(V.x, V.x, 0, V.w); }
+inline VectorD4 SwizzXX__(VectorD4 V){ return MkVectorD4(V.x, V.x, 0, 0); }
+inline VectorD4 SwizzXYXX(VectorD4 V){ return MkVectorD4(V.x, V.y, V.x, V.x); }
+inline VectorD4 SwizzXYXY(VectorD4 V){ return MkVectorD4(V.x, V.y, V.x, V.y); }
+inline VectorD4 SwizzXYXZ(VectorD4 V){ return MkVectorD4(V.x, V.y, V.x, V.z); }
+inline VectorD4 SwizzXYXW(VectorD4 V){ return MkVectorD4(V.x, V.y, V.x, V.w); }
+inline VectorD4 SwizzXYX_(VectorD4 V){ return MkVectorD4(V.x, V.y, V.x, 0); }
+inline VectorD4 SwizzXYYX(VectorD4 V){ return MkVectorD4(V.x, V.y, V.y, V.x); }
+inline VectorD4 SwizzXYYY(VectorD4 V){ return MkVectorD4(V.x, V.y, V.y, V.y); }
+inline VectorD4 SwizzXYYZ(VectorD4 V){ return MkVectorD4(V.x, V.y, V.y, V.z); }
+inline VectorD4 SwizzXYYW(VectorD4 V){ return MkVectorD4(V.x, V.y, V.y, V.w); }
+inline VectorD4 SwizzXYY_(VectorD4 V){ return MkVectorD4(V.x, V.y, V.y, 0); }
+inline VectorD4 SwizzXYZX(VectorD4 V){ return MkVectorD4(V.x, V.y, V.z, V.x); }
+inline VectorD4 SwizzXYZY(VectorD4 V){ return MkVectorD4(V.x, V.y, V.z, V.y); }
+inline VectorD4 SwizzXYZZ(VectorD4 V){ return MkVectorD4(V.x, V.y, V.z, V.z); }
+inline VectorD4 SwizzXYZW(VectorD4 V){ return MkVectorD4(V.x, V.y, V.z, V.w); }
+inline VectorD4 SwizzXYZ_(VectorD4 V){ return MkVectorD4(V.x, V.y, V.z, 0); }
+inline VectorD4 SwizzXYWX(VectorD4 V){ return MkVectorD4(V.x, V.y, V.w, V.x); }
+inline VectorD4 SwizzXYWY(VectorD4 V){ return MkVectorD4(V.x, V.y, V.w, V.y); }
+inline VectorD4 SwizzXYWZ(VectorD4 V){ return MkVectorD4(V.x, V.y, V.w, V.z); }
+inline VectorD4 SwizzXYWW(VectorD4 V){ return MkVectorD4(V.x, V.y, V.w, V.w); }
+inline VectorD4 SwizzXYW_(VectorD4 V){ return MkVectorD4(V.x, V.y, V.w, 0); }
+inline VectorD4 SwizzXY_X(VectorD4 V){ return MkVectorD4(V.x, V.y, 0, V.x); }
+inline VectorD4 SwizzXY_Y(VectorD4 V){ return MkVectorD4(V.x, V.y, 0, V.y); }
+inline VectorD4 SwizzXY_Z(VectorD4 V){ return MkVectorD4(V.x, V.y, 0, V.z); }
+inline VectorD4 SwizzXY_W(VectorD4 V){ return MkVectorD4(V.x, V.y, 0, V.w); }
+inline VectorD4 SwizzXY__(VectorD4 V){ return MkVectorD4(V.x, V.y, 0, 0); }
+inline VectorD4 SwizzXZXX(VectorD4 V){ return MkVectorD4(V.x, V.z, V.x, V.x); }
+inline VectorD4 SwizzXZXY(VectorD4 V){ return MkVectorD4(V.x, V.z, V.x, V.y); }
+inline VectorD4 SwizzXZXZ(VectorD4 V){ return MkVectorD4(V.x, V.z, V.x, V.z); }
+inline VectorD4 SwizzXZXW(VectorD4 V){ return MkVectorD4(V.x, V.z, V.x, V.w); }
+inline VectorD4 SwizzXZX_(VectorD4 V){ return MkVectorD4(V.x, V.z, V.x, 0); }
+inline VectorD4 SwizzXZYX(VectorD4 V){ return MkVectorD4(V.x, V.z, V.y, V.x); }
+inline VectorD4 SwizzXZYY(VectorD4 V){ return MkVectorD4(V.x, V.z, V.y, V.y); }
+inline VectorD4 SwizzXZYZ(VectorD4 V){ return MkVectorD4(V.x, V.z, V.y, V.z); }
+inline VectorD4 SwizzXZYW(VectorD4 V){ return MkVectorD4(V.x, V.z, V.y, V.w); }
+inline VectorD4 SwizzXZY_(VectorD4 V){ return MkVectorD4(V.x, V.z, V.y, 0); }
+inline VectorD4 SwizzXZZX(VectorD4 V){ return MkVectorD4(V.x, V.z, V.z, V.x); }
+inline VectorD4 SwizzXZZY(VectorD4 V){ return MkVectorD4(V.x, V.z, V.z, V.y); }
+inline VectorD4 SwizzXZZZ(VectorD4 V){ return MkVectorD4(V.x, V.z, V.z, V.z); }
+inline VectorD4 SwizzXZZW(VectorD4 V){ return MkVectorD4(V.x, V.z, V.z, V.w); }
+inline VectorD4 SwizzXZZ_(VectorD4 V){ return MkVectorD4(V.x, V.z, V.z, 0); }
+inline VectorD4 SwizzXZWX(VectorD4 V){ return MkVectorD4(V.x, V.z, V.w, V.x); }
+inline VectorD4 SwizzXZWY(VectorD4 V){ return MkVectorD4(V.x, V.z, V.w, V.y); }
+inline VectorD4 SwizzXZWZ(VectorD4 V){ return MkVectorD4(V.x, V.z, V.w, V.z); }
+inline VectorD4 SwizzXZWW(VectorD4 V){ return MkVectorD4(V.x, V.z, V.w, V.w); }
+inline VectorD4 SwizzXZW_(VectorD4 V){ return MkVectorD4(V.x, V.z, V.w, 0); }
+inline VectorD4 SwizzXZ_X(VectorD4 V){ return MkVectorD4(V.x, V.z, 0, V.x); }
+inline VectorD4 SwizzXZ_Y(VectorD4 V){ return MkVectorD4(V.x, V.z, 0, V.y); }
+inline VectorD4 SwizzXZ_Z(VectorD4 V){ return MkVectorD4(V.x, V.z, 0, V.z); }
+inline VectorD4 SwizzXZ_W(VectorD4 V){ return MkVectorD4(V.x, V.z, 0, V.w); }
+inline VectorD4 SwizzXZ__(VectorD4 V){ return MkVectorD4(V.x, V.z, 0, 0); }
+inline VectorD4 SwizzXWXX(VectorD4 V){ return MkVectorD4(V.x, V.w, V.x, V.x); }
+inline VectorD4 SwizzXWXY(VectorD4 V){ return MkVectorD4(V.x, V.w, V.x, V.y); }
+inline VectorD4 SwizzXWXZ(VectorD4 V){ return MkVectorD4(V.x, V.w, V.x, V.z); }
+inline VectorD4 SwizzXWXW(VectorD4 V){ return MkVectorD4(V.x, V.w, V.x, V.w); }
+inline VectorD4 SwizzXWX_(VectorD4 V){ return MkVectorD4(V.x, V.w, V.x, 0); }
+inline VectorD4 SwizzXWYX(VectorD4 V){ return MkVectorD4(V.x, V.w, V.y, V.x); }
+inline VectorD4 SwizzXWYY(VectorD4 V){ return MkVectorD4(V.x, V.w, V.y, V.y); }
+inline VectorD4 SwizzXWYZ(VectorD4 V){ return MkVectorD4(V.x, V.w, V.y, V.z); }
+inline VectorD4 SwizzXWYW(VectorD4 V){ return MkVectorD4(V.x, V.w, V.y, V.w); }
+inline VectorD4 SwizzXWY_(VectorD4 V){ return MkVectorD4(V.x, V.w, V.y, 0); }
+inline VectorD4 SwizzXWZX(VectorD4 V){ return MkVectorD4(V.x, V.w, V.z, V.x); }
+inline VectorD4 SwizzXWZY(VectorD4 V){ return MkVectorD4(V.x, V.w, V.z, V.y); }
+inline VectorD4 SwizzXWZZ(VectorD4 V){ return MkVectorD4(V.x, V.w, V.z, V.z); }
+inline VectorD4 SwizzXWZW(VectorD4 V){ return MkVectorD4(V.x, V.w, V.z, V.w); }
+inline VectorD4 SwizzXWZ_(VectorD4 V){ return MkVectorD4(V.x, V.w, V.z, 0); }
+inline VectorD4 SwizzXWWX(VectorD4 V){ return MkVectorD4(V.x, V.w, V.w, V.x); }
+inline VectorD4 SwizzXWWY(VectorD4 V){ return MkVectorD4(V.x, V.w, V.w, V.y); }
+inline VectorD4 SwizzXWWZ(VectorD4 V){ return MkVectorD4(V.x, V.w, V.w, V.z); }
+inline VectorD4 SwizzXWWW(VectorD4 V){ return MkVectorD4(V.x, V.w, V.w, V.w); }
+inline VectorD4 SwizzXWW_(VectorD4 V){ return MkVectorD4(V.x, V.w, V.w, 0); }
+inline VectorD4 SwizzXW_X(VectorD4 V){ return MkVectorD4(V.x, V.w, 0, V.x); }
+inline VectorD4 SwizzXW_Y(VectorD4 V){ return MkVectorD4(V.x, V.w, 0, V.y); }
+inline VectorD4 SwizzXW_Z(VectorD4 V){ return MkVectorD4(V.x, V.w, 0, V.z); }
+inline VectorD4 SwizzXW_W(VectorD4 V){ return MkVectorD4(V.x, V.w, 0, V.w); }
+inline VectorD4 SwizzXW__(VectorD4 V){ return MkVectorD4(V.x, V.w, 0, 0); }
+inline VectorD4 SwizzX_XX(VectorD4 V){ return MkVectorD4(V.x, 0, V.x, V.x); }
+inline VectorD4 SwizzX_XY(VectorD4 V){ return MkVectorD4(V.x, 0, V.x, V.y); }
+inline VectorD4 SwizzX_XZ(VectorD4 V){ return MkVectorD4(V.x, 0, V.x, V.z); }
+inline VectorD4 SwizzX_XW(VectorD4 V){ return MkVectorD4(V.x, 0, V.x, V.w); }
+inline VectorD4 SwizzX_X_(VectorD4 V){ return MkVectorD4(V.x, 0, V.x, 0); }
+inline VectorD4 SwizzX_YX(VectorD4 V){ return MkVectorD4(V.x, 0, V.y, V.x); }
+inline VectorD4 SwizzX_YY(VectorD4 V){ return MkVectorD4(V.x, 0, V.y, V.y); }
+inline VectorD4 SwizzX_YZ(VectorD4 V){ return MkVectorD4(V.x, 0, V.y, V.z); }
+inline VectorD4 SwizzX_YW(VectorD4 V){ return MkVectorD4(V.x, 0, V.y, V.w); }
+inline VectorD4 SwizzX_Y_(VectorD4 V){ return MkVectorD4(V.x, 0, V.y, 0); }
+inline VectorD4 SwizzX_ZX(VectorD4 V){ return MkVectorD4(V.x, 0, V.z, V.x); }
+inline VectorD4 SwizzX_ZY(VectorD4 V){ return MkVectorD4(V.x, 0, V.z, V.y); }
+inline VectorD4 SwizzX_ZZ(VectorD4 V){ return MkVectorD4(V.x, 0, V.z, V.z); }
+inline VectorD4 SwizzX_ZW(VectorD4 V){ return MkVectorD4(V.x, 0, V.z, V.w); }
+inline VectorD4 SwizzX_Z_(VectorD4 V){ return MkVectorD4(V.x, 0, V.z, 0); }
+inline VectorD4 SwizzX_WX(VectorD4 V){ return MkVectorD4(V.x, 0, V.w, V.x); }
+inline VectorD4 SwizzX_WY(VectorD4 V){ return MkVectorD4(V.x, 0, V.w, V.y); }
+inline VectorD4 SwizzX_WZ(VectorD4 V){ return MkVectorD4(V.x, 0, V.w, V.z); }
+inline VectorD4 SwizzX_WW(VectorD4 V){ return MkVectorD4(V.x, 0, V.w, V.w); }
+inline VectorD4 SwizzX_W_(VectorD4 V){ return MkVectorD4(V.x, 0, V.w, 0); }
+inline VectorD4 SwizzX__X(VectorD4 V){ return MkVectorD4(V.x, 0, 0, V.x); }
+inline VectorD4 SwizzX__Y(VectorD4 V){ return MkVectorD4(V.x, 0, 0, V.y); }
+inline VectorD4 SwizzX__Z(VectorD4 V){ return MkVectorD4(V.x, 0, 0, V.z); }
+inline VectorD4 SwizzX__W(VectorD4 V){ return MkVectorD4(V.x, 0, 0, V.w); }
+inline VectorD4 SwizzX___(VectorD4 V){ return MkVectorD4(V.x, 0, 0, 0); }
+inline VectorD4 SwizzYXXX(VectorD4 V){ return MkVectorD4(V.y, V.x, V.x, V.x); }
+inline VectorD4 SwizzYXXY(VectorD4 V){ return MkVectorD4(V.y, V.x, V.x, V.y); }
+inline VectorD4 SwizzYXXZ(VectorD4 V){ return MkVectorD4(V.y, V.x, V.x, V.z); }
+inline VectorD4 SwizzYXXW(VectorD4 V){ return MkVectorD4(V.y, V.x, V.x, V.w); }
+inline VectorD4 SwizzYXX_(VectorD4 V){ return MkVectorD4(V.y, V.x, V.x, 0); }
+inline VectorD4 SwizzYXYX(VectorD4 V){ return MkVectorD4(V.y, V.x, V.y, V.x); }
+inline VectorD4 SwizzYXYY(VectorD4 V){ return MkVectorD4(V.y, V.x, V.y, V.y); }
+inline VectorD4 SwizzYXYZ(VectorD4 V){ return MkVectorD4(V.y, V.x, V.y, V.z); }
+inline VectorD4 SwizzYXYW(VectorD4 V){ return MkVectorD4(V.y, V.x, V.y, V.w); }
+inline VectorD4 SwizzYXY_(VectorD4 V){ return MkVectorD4(V.y, V.x, V.y, 0); }
+inline VectorD4 SwizzYXZX(VectorD4 V){ return MkVectorD4(V.y, V.x, V.z, V.x); }
+inline VectorD4 SwizzYXZY(VectorD4 V){ return MkVectorD4(V.y, V.x, V.z, V.y); }
+inline VectorD4 SwizzYXZZ(VectorD4 V){ return MkVectorD4(V.y, V.x, V.z, V.z); }
+inline VectorD4 SwizzYXZW(VectorD4 V){ return MkVectorD4(V.y, V.x, V.z, V.w); }
+inline VectorD4 SwizzYXZ_(VectorD4 V){ return MkVectorD4(V.y, V.x, V.z, 0); }
+inline VectorD4 SwizzYXWX(VectorD4 V){ return MkVectorD4(V.y, V.x, V.w, V.x); }
+inline VectorD4 SwizzYXWY(VectorD4 V){ return MkVectorD4(V.y, V.x, V.w, V.y); }
+inline VectorD4 SwizzYXWZ(VectorD4 V){ return MkVectorD4(V.y, V.x, V.w, V.z); }
+inline VectorD4 SwizzYXWW(VectorD4 V){ return MkVectorD4(V.y, V.x, V.w, V.w); }
+inline VectorD4 SwizzYXW_(VectorD4 V){ return MkVectorD4(V.y, V.x, V.w, 0); }
+inline VectorD4 SwizzYX_X(VectorD4 V){ return MkVectorD4(V.y, V.x, 0, V.x); }
+inline VectorD4 SwizzYX_Y(VectorD4 V){ return MkVectorD4(V.y, V.x, 0, V.y); }
+inline VectorD4 SwizzYX_Z(VectorD4 V){ return MkVectorD4(V.y, V.x, 0, V.z); }
+inline VectorD4 SwizzYX_W(VectorD4 V){ return MkVectorD4(V.y, V.x, 0, V.w); }
+inline VectorD4 SwizzYX__(VectorD4 V){ return MkVectorD4(V.y, V.x, 0, 0); }
+inline VectorD4 SwizzYYXX(VectorD4 V){ return MkVectorD4(V.y, V.y, V.x, V.x); }
+inline VectorD4 SwizzYYXY(VectorD4 V){ return MkVectorD4(V.y, V.y, V.x, V.y); }
+inline VectorD4 SwizzYYXZ(VectorD4 V){ return MkVectorD4(V.y, V.y, V.x, V.z); }
+inline VectorD4 SwizzYYXW(VectorD4 V){ return MkVectorD4(V.y, V.y, V.x, V.w); }
+inline VectorD4 SwizzYYX_(VectorD4 V){ return MkVectorD4(V.y, V.y, V.x, 0); }
+inline VectorD4 SwizzYYYX(VectorD4 V){ return MkVectorD4(V.y, V.y, V.y, V.x); }
+inline VectorD4 SwizzYYYY(VectorD4 V){ return MkVectorD4(V.y, V.y, V.y, V.y); }
+inline VectorD4 SwizzYYYZ(VectorD4 V){ return MkVectorD4(V.y, V.y, V.y, V.z); }
+inline VectorD4 SwizzYYYW(VectorD4 V){ return MkVectorD4(V.y, V.y, V.y, V.w); }
+inline VectorD4 SwizzYYY_(VectorD4 V){ return MkVectorD4(V.y, V.y, V.y, 0); }
+inline VectorD4 SwizzYYZX(VectorD4 V){ return MkVectorD4(V.y, V.y, V.z, V.x); }
+inline VectorD4 SwizzYYZY(VectorD4 V){ return MkVectorD4(V.y, V.y, V.z, V.y); }
+inline VectorD4 SwizzYYZZ(VectorD4 V){ return MkVectorD4(V.y, V.y, V.z, V.z); }
+inline VectorD4 SwizzYYZW(VectorD4 V){ return MkVectorD4(V.y, V.y, V.z, V.w); }
+inline VectorD4 SwizzYYZ_(VectorD4 V){ return MkVectorD4(V.y, V.y, V.z, 0); }
+inline VectorD4 SwizzYYWX(VectorD4 V){ return MkVectorD4(V.y, V.y, V.w, V.x); }
+inline VectorD4 SwizzYYWY(VectorD4 V){ return MkVectorD4(V.y, V.y, V.w, V.y); }
+inline VectorD4 SwizzYYWZ(VectorD4 V){ return MkVectorD4(V.y, V.y, V.w, V.z); }
+inline VectorD4 SwizzYYWW(VectorD4 V){ return MkVectorD4(V.y, V.y, V.w, V.w); }
+inline VectorD4 SwizzYYW_(VectorD4 V){ return MkVectorD4(V.y, V.y, V.w, 0); }
+inline VectorD4 SwizzYY_X(VectorD4 V){ return MkVectorD4(V.y, V.y, 0, V.x); }
+inline VectorD4 SwizzYY_Y(VectorD4 V){ return MkVectorD4(V.y, V.y, 0, V.y); }
+inline VectorD4 SwizzYY_Z(VectorD4 V){ return MkVectorD4(V.y, V.y, 0, V.z); }
+inline VectorD4 SwizzYY_W(VectorD4 V){ return MkVectorD4(V.y, V.y, 0, V.w); }
+inline VectorD4 SwizzYY__(VectorD4 V){ return MkVectorD4(V.y, V.y, 0, 0); }
+inline VectorD4 SwizzYZXX(VectorD4 V){ return MkVectorD4(V.y, V.z, V.x, V.x); }
+inline VectorD4 SwizzYZXY(VectorD4 V){ return MkVectorD4(V.y, V.z, V.x, V.y); }
+inline VectorD4 SwizzYZXZ(VectorD4 V){ return MkVectorD4(V.y, V.z, V.x, V.z); }
+inline VectorD4 SwizzYZXW(VectorD4 V){ return MkVectorD4(V.y, V.z, V.x, V.w); }
+inline VectorD4 SwizzYZX_(VectorD4 V){ return MkVectorD4(V.y, V.z, V.x, 0); }
+inline VectorD4 SwizzYZYX(VectorD4 V){ return MkVectorD4(V.y, V.z, V.y, V.x); }
+inline VectorD4 SwizzYZYY(VectorD4 V){ return MkVectorD4(V.y, V.z, V.y, V.y); }
+inline VectorD4 SwizzYZYZ(VectorD4 V){ return MkVectorD4(V.y, V.z, V.y, V.z); }
+inline VectorD4 SwizzYZYW(VectorD4 V){ return MkVectorD4(V.y, V.z, V.y, V.w); }
+inline VectorD4 SwizzYZY_(VectorD4 V){ return MkVectorD4(V.y, V.z, V.y, 0); }
+inline VectorD4 SwizzYZZX(VectorD4 V){ return MkVectorD4(V.y, V.z, V.z, V.x); }
+inline VectorD4 SwizzYZZY(VectorD4 V){ return MkVectorD4(V.y, V.z, V.z, V.y); }
+inline VectorD4 SwizzYZZZ(VectorD4 V){ return MkVectorD4(V.y, V.z, V.z, V.z); }
+inline VectorD4 SwizzYZZW(VectorD4 V){ return MkVectorD4(V.y, V.z, V.z, V.w); }
+inline VectorD4 SwizzYZZ_(VectorD4 V){ return MkVectorD4(V.y, V.z, V.z, 0); }
+inline VectorD4 SwizzYZWX(VectorD4 V){ return MkVectorD4(V.y, V.z, V.w, V.x); }
+inline VectorD4 SwizzYZWY(VectorD4 V){ return MkVectorD4(V.y, V.z, V.w, V.y); }
+inline VectorD4 SwizzYZWZ(VectorD4 V){ return MkVectorD4(V.y, V.z, V.w, V.z); }
+inline VectorD4 SwizzYZWW(VectorD4 V){ return MkVectorD4(V.y, V.z, V.w, V.w); }
+inline VectorD4 SwizzYZW_(VectorD4 V){ return MkVectorD4(V.y, V.z, V.w, 0); }
+inline VectorD4 SwizzYZ_X(VectorD4 V){ return MkVectorD4(V.y, V.z, 0, V.x); }
+inline VectorD4 SwizzYZ_Y(VectorD4 V){ return MkVectorD4(V.y, V.z, 0, V.y); }
+inline VectorD4 SwizzYZ_Z(VectorD4 V){ return MkVectorD4(V.y, V.z, 0, V.z); }
+inline VectorD4 SwizzYZ_W(VectorD4 V){ return MkVectorD4(V.y, V.z, 0, V.w); }
+inline VectorD4 SwizzYZ__(VectorD4 V){ return MkVectorD4(V.y, V.z, 0, 0); }
+inline VectorD4 SwizzYWXX(VectorD4 V){ return MkVectorD4(V.y, V.w, V.x, V.x); }
+inline VectorD4 SwizzYWXY(VectorD4 V){ return MkVectorD4(V.y, V.w, V.x, V.y); }
+inline VectorD4 SwizzYWXZ(VectorD4 V){ return MkVectorD4(V.y, V.w, V.x, V.z); }
+inline VectorD4 SwizzYWXW(VectorD4 V){ return MkVectorD4(V.y, V.w, V.x, V.w); }
+inline VectorD4 SwizzYWX_(VectorD4 V){ return MkVectorD4(V.y, V.w, V.x, 0); }
+inline VectorD4 SwizzYWYX(VectorD4 V){ return MkVectorD4(V.y, V.w, V.y, V.x); }
+inline VectorD4 SwizzYWYY(VectorD4 V){ return MkVectorD4(V.y, V.w, V.y, V.y); }
+inline VectorD4 SwizzYWYZ(VectorD4 V){ return MkVectorD4(V.y, V.w, V.y, V.z); }
+inline VectorD4 SwizzYWYW(VectorD4 V){ return MkVectorD4(V.y, V.w, V.y, V.w); }
+inline VectorD4 SwizzYWY_(VectorD4 V){ return MkVectorD4(V.y, V.w, V.y, 0); }
+inline VectorD4 SwizzYWZX(VectorD4 V){ return MkVectorD4(V.y, V.w, V.z, V.x); }
+inline VectorD4 SwizzYWZY(VectorD4 V){ return MkVectorD4(V.y, V.w, V.z, V.y); }
+inline VectorD4 SwizzYWZZ(VectorD4 V){ return MkVectorD4(V.y, V.w, V.z, V.z); }
+inline VectorD4 SwizzYWZW(VectorD4 V){ return MkVectorD4(V.y, V.w, V.z, V.w); }
+inline VectorD4 SwizzYWZ_(VectorD4 V){ return MkVectorD4(V.y, V.w, V.z, 0); }
+inline VectorD4 SwizzYWWX(VectorD4 V){ return MkVectorD4(V.y, V.w, V.w, V.x); }
+inline VectorD4 SwizzYWWY(VectorD4 V){ return MkVectorD4(V.y, V.w, V.w, V.y); }
+inline VectorD4 SwizzYWWZ(VectorD4 V){ return MkVectorD4(V.y, V.w, V.w, V.z); }
+inline VectorD4 SwizzYWWW(VectorD4 V){ return MkVectorD4(V.y, V.w, V.w, V.w); }
+inline VectorD4 SwizzYWW_(VectorD4 V){ return MkVectorD4(V.y, V.w, V.w, 0); }
+inline VectorD4 SwizzYW_X(VectorD4 V){ return MkVectorD4(V.y, V.w, 0, V.x); }
+inline VectorD4 SwizzYW_Y(VectorD4 V){ return MkVectorD4(V.y, V.w, 0, V.y); }
+inline VectorD4 SwizzYW_Z(VectorD4 V){ return MkVectorD4(V.y, V.w, 0, V.z); }
+inline VectorD4 SwizzYW_W(VectorD4 V){ return MkVectorD4(V.y, V.w, 0, V.w); }
+inline VectorD4 SwizzYW__(VectorD4 V){ return MkVectorD4(V.y, V.w, 0, 0); }
+inline VectorD4 SwizzY_XX(VectorD4 V){ return MkVectorD4(V.y, 0, V.x, V.x); }
+inline VectorD4 SwizzY_XY(VectorD4 V){ return MkVectorD4(V.y, 0, V.x, V.y); }
+inline VectorD4 SwizzY_XZ(VectorD4 V){ return MkVectorD4(V.y, 0, V.x, V.z); }
+inline VectorD4 SwizzY_XW(VectorD4 V){ return MkVectorD4(V.y, 0, V.x, V.w); }
+inline VectorD4 SwizzY_X_(VectorD4 V){ return MkVectorD4(V.y, 0, V.x, 0); }
+inline VectorD4 SwizzY_YX(VectorD4 V){ return MkVectorD4(V.y, 0, V.y, V.x); }
+inline VectorD4 SwizzY_YY(VectorD4 V){ return MkVectorD4(V.y, 0, V.y, V.y); }
+inline VectorD4 SwizzY_YZ(VectorD4 V){ return MkVectorD4(V.y, 0, V.y, V.z); }
+inline VectorD4 SwizzY_YW(VectorD4 V){ return MkVectorD4(V.y, 0, V.y, V.w); }
+inline VectorD4 SwizzY_Y_(VectorD4 V){ return MkVectorD4(V.y, 0, V.y, 0); }
+inline VectorD4 SwizzY_ZX(VectorD4 V){ return MkVectorD4(V.y, 0, V.z, V.x); }
+inline VectorD4 SwizzY_ZY(VectorD4 V){ return MkVectorD4(V.y, 0, V.z, V.y); }
+inline VectorD4 SwizzY_ZZ(VectorD4 V){ return MkVectorD4(V.y, 0, V.z, V.z); }
+inline VectorD4 SwizzY_ZW(VectorD4 V){ return MkVectorD4(V.y, 0, V.z, V.w); }
+inline VectorD4 SwizzY_Z_(VectorD4 V){ return MkVectorD4(V.y, 0, V.z, 0); }
+inline VectorD4 SwizzY_WX(VectorD4 V){ return MkVectorD4(V.y, 0, V.w, V.x); }
+inline VectorD4 SwizzY_WY(VectorD4 V){ return MkVectorD4(V.y, 0, V.w, V.y); }
+inline VectorD4 SwizzY_WZ(VectorD4 V){ return MkVectorD4(V.y, 0, V.w, V.z); }
+inline VectorD4 SwizzY_WW(VectorD4 V){ return MkVectorD4(V.y, 0, V.w, V.w); }
+inline VectorD4 SwizzY_W_(VectorD4 V){ return MkVectorD4(V.y, 0, V.w, 0); }
+inline VectorD4 SwizzY__X(VectorD4 V){ return MkVectorD4(V.y, 0, 0, V.x); }
+inline VectorD4 SwizzY__Y(VectorD4 V){ return MkVectorD4(V.y, 0, 0, V.y); }
+inline VectorD4 SwizzY__Z(VectorD4 V){ return MkVectorD4(V.y, 0, 0, V.z); }
+inline VectorD4 SwizzY__W(VectorD4 V){ return MkVectorD4(V.y, 0, 0, V.w); }
+inline VectorD4 SwizzY___(VectorD4 V){ return MkVectorD4(V.y, 0, 0, 0); }
+inline VectorD4 SwizzZXXX(VectorD4 V){ return MkVectorD4(V.z, V.x, V.x, V.x); }
+inline VectorD4 SwizzZXXY(VectorD4 V){ return MkVectorD4(V.z, V.x, V.x, V.y); }
+inline VectorD4 SwizzZXXZ(VectorD4 V){ return MkVectorD4(V.z, V.x, V.x, V.z); }
+inline VectorD4 SwizzZXXW(VectorD4 V){ return MkVectorD4(V.z, V.x, V.x, V.w); }
+inline VectorD4 SwizzZXX_(VectorD4 V){ return MkVectorD4(V.z, V.x, V.x, 0); }
+inline VectorD4 SwizzZXYX(VectorD4 V){ return MkVectorD4(V.z, V.x, V.y, V.x); }
+inline VectorD4 SwizzZXYY(VectorD4 V){ return MkVectorD4(V.z, V.x, V.y, V.y); }
+inline VectorD4 SwizzZXYZ(VectorD4 V){ return MkVectorD4(V.z, V.x, V.y, V.z); }
+inline VectorD4 SwizzZXYW(VectorD4 V){ return MkVectorD4(V.z, V.x, V.y, V.w); }
+inline VectorD4 SwizzZXY_(VectorD4 V){ return MkVectorD4(V.z, V.x, V.y, 0); }
+inline VectorD4 SwizzZXZX(VectorD4 V){ return MkVectorD4(V.z, V.x, V.z, V.x); }
+inline VectorD4 SwizzZXZY(VectorD4 V){ return MkVectorD4(V.z, V.x, V.z, V.y); }
+inline VectorD4 SwizzZXZZ(VectorD4 V){ return MkVectorD4(V.z, V.x, V.z, V.z); }
+inline VectorD4 SwizzZXZW(VectorD4 V){ return MkVectorD4(V.z, V.x, V.z, V.w); }
+inline VectorD4 SwizzZXZ_(VectorD4 V){ return MkVectorD4(V.z, V.x, V.z, 0); }
+inline VectorD4 SwizzZXWX(VectorD4 V){ return MkVectorD4(V.z, V.x, V.w, V.x); }
+inline VectorD4 SwizzZXWY(VectorD4 V){ return MkVectorD4(V.z, V.x, V.w, V.y); }
+inline VectorD4 SwizzZXWZ(VectorD4 V){ return MkVectorD4(V.z, V.x, V.w, V.z); }
+inline VectorD4 SwizzZXWW(VectorD4 V){ return MkVectorD4(V.z, V.x, V.w, V.w); }
+inline VectorD4 SwizzZXW_(VectorD4 V){ return MkVectorD4(V.z, V.x, V.w, 0); }
+inline VectorD4 SwizzZX_X(VectorD4 V){ return MkVectorD4(V.z, V.x, 0, V.x); }
+inline VectorD4 SwizzZX_Y(VectorD4 V){ return MkVectorD4(V.z, V.x, 0, V.y); }
+inline VectorD4 SwizzZX_Z(VectorD4 V){ return MkVectorD4(V.z, V.x, 0, V.z); }
+inline VectorD4 SwizzZX_W(VectorD4 V){ return MkVectorD4(V.z, V.x, 0, V.w); }
+inline VectorD4 SwizzZX__(VectorD4 V){ return MkVectorD4(V.z, V.x, 0, 0); }
+inline VectorD4 SwizzZYXX(VectorD4 V){ return MkVectorD4(V.z, V.y, V.x, V.x); }
+inline VectorD4 SwizzZYXY(VectorD4 V){ return MkVectorD4(V.z, V.y, V.x, V.y); }
+inline VectorD4 SwizzZYXZ(VectorD4 V){ return MkVectorD4(V.z, V.y, V.x, V.z); }
+inline VectorD4 SwizzZYXW(VectorD4 V){ return MkVectorD4(V.z, V.y, V.x, V.w); }
+inline VectorD4 SwizzZYX_(VectorD4 V){ return MkVectorD4(V.z, V.y, V.x, 0); }
+inline VectorD4 SwizzZYYX(VectorD4 V){ return MkVectorD4(V.z, V.y, V.y, V.x); }
+inline VectorD4 SwizzZYYY(VectorD4 V){ return MkVectorD4(V.z, V.y, V.y, V.y); }
+inline VectorD4 SwizzZYYZ(VectorD4 V){ return MkVectorD4(V.z, V.y, V.y, V.z); }
+inline VectorD4 SwizzZYYW(VectorD4 V){ return MkVectorD4(V.z, V.y, V.y, V.w); }
+inline VectorD4 SwizzZYY_(VectorD4 V){ return MkVectorD4(V.z, V.y, V.y, 0); }
+inline VectorD4 SwizzZYZX(VectorD4 V){ return MkVectorD4(V.z, V.y, V.z, V.x); }
+inline VectorD4 SwizzZYZY(VectorD4 V){ return MkVectorD4(V.z, V.y, V.z, V.y); }
+inline VectorD4 SwizzZYZZ(VectorD4 V){ return MkVectorD4(V.z, V.y, V.z, V.z); }
+inline VectorD4 SwizzZYZW(VectorD4 V){ return MkVectorD4(V.z, V.y, V.z, V.w); }
+inline VectorD4 SwizzZYZ_(VectorD4 V){ return MkVectorD4(V.z, V.y, V.z, 0); }
+inline VectorD4 SwizzZYWX(VectorD4 V){ return MkVectorD4(V.z, V.y, V.w, V.x); }
+inline VectorD4 SwizzZYWY(VectorD4 V){ return MkVectorD4(V.z, V.y, V.w, V.y); }
+inline VectorD4 SwizzZYWZ(VectorD4 V){ return MkVectorD4(V.z, V.y, V.w, V.z); }
+inline VectorD4 SwizzZYWW(VectorD4 V){ return MkVectorD4(V.z, V.y, V.w, V.w); }
+inline VectorD4 SwizzZYW_(VectorD4 V){ return MkVectorD4(V.z, V.y, V.w, 0); }
+inline VectorD4 SwizzZY_X(VectorD4 V){ return MkVectorD4(V.z, V.y, 0, V.x); }
+inline VectorD4 SwizzZY_Y(VectorD4 V){ return MkVectorD4(V.z, V.y, 0, V.y); }
+inline VectorD4 SwizzZY_Z(VectorD4 V){ return MkVectorD4(V.z, V.y, 0, V.z); }
+inline VectorD4 SwizzZY_W(VectorD4 V){ return MkVectorD4(V.z, V.y, 0, V.w); }
+inline VectorD4 SwizzZY__(VectorD4 V){ return MkVectorD4(V.z, V.y, 0, 0); }
+inline VectorD4 SwizzZZXX(VectorD4 V){ return MkVectorD4(V.z, V.z, V.x, V.x); }
+inline VectorD4 SwizzZZXY(VectorD4 V){ return MkVectorD4(V.z, V.z, V.x, V.y); }
+inline VectorD4 SwizzZZXZ(VectorD4 V){ return MkVectorD4(V.z, V.z, V.x, V.z); }
+inline VectorD4 SwizzZZXW(VectorD4 V){ return MkVectorD4(V.z, V.z, V.x, V.w); }
+inline VectorD4 SwizzZZX_(VectorD4 V){ return MkVectorD4(V.z, V.z, V.x, 0); }
+inline VectorD4 SwizzZZYX(VectorD4 V){ return MkVectorD4(V.z, V.z, V.y, V.x); }
+inline VectorD4 SwizzZZYY(VectorD4 V){ return MkVectorD4(V.z, V.z, V.y, V.y); }
+inline VectorD4 SwizzZZYZ(VectorD4 V){ return MkVectorD4(V.z, V.z, V.y, V.z); }
+inline VectorD4 SwizzZZYW(VectorD4 V){ return MkVectorD4(V.z, V.z, V.y, V.w); }
+inline VectorD4 SwizzZZY_(VectorD4 V){ return MkVectorD4(V.z, V.z, V.y, 0); }
+inline VectorD4 SwizzZZZX(VectorD4 V){ return MkVectorD4(V.z, V.z, V.z, V.x); }
+inline VectorD4 SwizzZZZY(VectorD4 V){ return MkVectorD4(V.z, V.z, V.z, V.y); }
+inline VectorD4 SwizzZZZZ(VectorD4 V){ return MkVectorD4(V.z, V.z, V.z, V.z); }
+inline VectorD4 SwizzZZZW(VectorD4 V){ return MkVectorD4(V.z, V.z, V.z, V.w); }
+inline VectorD4 SwizzZZZ_(VectorD4 V){ return MkVectorD4(V.z, V.z, V.z, 0); }
+inline VectorD4 SwizzZZWX(VectorD4 V){ return MkVectorD4(V.z, V.z, V.w, V.x); }
+inline VectorD4 SwizzZZWY(VectorD4 V){ return MkVectorD4(V.z, V.z, V.w, V.y); }
+inline VectorD4 SwizzZZWZ(VectorD4 V){ return MkVectorD4(V.z, V.z, V.w, V.z); }
+inline VectorD4 SwizzZZWW(VectorD4 V){ return MkVectorD4(V.z, V.z, V.w, V.w); }
+inline VectorD4 SwizzZZW_(VectorD4 V){ return MkVectorD4(V.z, V.z, V.w, 0); }
+inline VectorD4 SwizzZZ_X(VectorD4 V){ return MkVectorD4(V.z, V.z, 0, V.x); }
+inline VectorD4 SwizzZZ_Y(VectorD4 V){ return MkVectorD4(V.z, V.z, 0, V.y); }
+inline VectorD4 SwizzZZ_Z(VectorD4 V){ return MkVectorD4(V.z, V.z, 0, V.z); }
+inline VectorD4 SwizzZZ_W(VectorD4 V){ return MkVectorD4(V.z, V.z, 0, V.w); }
+inline VectorD4 SwizzZZ__(VectorD4 V){ return MkVectorD4(V.z, V.z, 0, 0); }
+inline VectorD4 SwizzZWXX(VectorD4 V){ return MkVectorD4(V.z, V.w, V.x, V.x); }
+inline VectorD4 SwizzZWXY(VectorD4 V){ return MkVectorD4(V.z, V.w, V.x, V.y); }
+inline VectorD4 SwizzZWXZ(VectorD4 V){ return MkVectorD4(V.z, V.w, V.x, V.z); }
+inline VectorD4 SwizzZWXW(VectorD4 V){ return MkVectorD4(V.z, V.w, V.x, V.w); }
+inline VectorD4 SwizzZWX_(VectorD4 V){ return MkVectorD4(V.z, V.w, V.x, 0); }
+inline VectorD4 SwizzZWYX(VectorD4 V){ return MkVectorD4(V.z, V.w, V.y, V.x); }
+inline VectorD4 SwizzZWYY(VectorD4 V){ return MkVectorD4(V.z, V.w, V.y, V.y); }
+inline VectorD4 SwizzZWYZ(VectorD4 V){ return MkVectorD4(V.z, V.w, V.y, V.z); }
+inline VectorD4 SwizzZWYW(VectorD4 V){ return MkVectorD4(V.z, V.w, V.y, V.w); }
+inline VectorD4 SwizzZWY_(VectorD4 V){ return MkVectorD4(V.z, V.w, V.y, 0); }
+inline VectorD4 SwizzZWZX(VectorD4 V){ return MkVectorD4(V.z, V.w, V.z, V.x); }
+inline VectorD4 SwizzZWZY(VectorD4 V){ return MkVectorD4(V.z, V.w, V.z, V.y); }
+inline VectorD4 SwizzZWZZ(VectorD4 V){ return MkVectorD4(V.z, V.w, V.z, V.z); }
+inline VectorD4 SwizzZWZW(VectorD4 V){ return MkVectorD4(V.z, V.w, V.z, V.w); }
+inline VectorD4 SwizzZWZ_(VectorD4 V){ return MkVectorD4(V.z, V.w, V.z, 0); }
+inline VectorD4 SwizzZWWX(VectorD4 V){ return MkVectorD4(V.z, V.w, V.w, V.x); }
+inline VectorD4 SwizzZWWY(VectorD4 V){ return MkVectorD4(V.z, V.w, V.w, V.y); }
+inline VectorD4 SwizzZWWZ(VectorD4 V){ return MkVectorD4(V.z, V.w, V.w, V.z); }
+inline VectorD4 SwizzZWWW(VectorD4 V){ return MkVectorD4(V.z, V.w, V.w, V.w); }
+inline VectorD4 SwizzZWW_(VectorD4 V){ return MkVectorD4(V.z, V.w, V.w, 0); }
+inline VectorD4 SwizzZW_X(VectorD4 V){ return MkVectorD4(V.z, V.w, 0, V.x); }
+inline VectorD4 SwizzZW_Y(VectorD4 V){ return MkVectorD4(V.z, V.w, 0, V.y); }
+inline VectorD4 SwizzZW_Z(VectorD4 V){ return MkVectorD4(V.z, V.w, 0, V.z); }
+inline VectorD4 SwizzZW_W(VectorD4 V){ return MkVectorD4(V.z, V.w, 0, V.w); }
+inline VectorD4 SwizzZW__(VectorD4 V){ return MkVectorD4(V.z, V.w, 0, 0); }
+inline VectorD4 SwizzZ_XX(VectorD4 V){ return MkVectorD4(V.z, 0, V.x, V.x); }
+inline VectorD4 SwizzZ_XY(VectorD4 V){ return MkVectorD4(V.z, 0, V.x, V.y); }
+inline VectorD4 SwizzZ_XZ(VectorD4 V){ return MkVectorD4(V.z, 0, V.x, V.z); }
+inline VectorD4 SwizzZ_XW(VectorD4 V){ return MkVectorD4(V.z, 0, V.x, V.w); }
+inline VectorD4 SwizzZ_X_(VectorD4 V){ return MkVectorD4(V.z, 0, V.x, 0); }
+inline VectorD4 SwizzZ_YX(VectorD4 V){ return MkVectorD4(V.z, 0, V.y, V.x); }
+inline VectorD4 SwizzZ_YY(VectorD4 V){ return MkVectorD4(V.z, 0, V.y, V.y); }
+inline VectorD4 SwizzZ_YZ(VectorD4 V){ return MkVectorD4(V.z, 0, V.y, V.z); }
+inline VectorD4 SwizzZ_YW(VectorD4 V){ return MkVectorD4(V.z, 0, V.y, V.w); }
+inline VectorD4 SwizzZ_Y_(VectorD4 V){ return MkVectorD4(V.z, 0, V.y, 0); }
+inline VectorD4 SwizzZ_ZX(VectorD4 V){ return MkVectorD4(V.z, 0, V.z, V.x); }
+inline VectorD4 SwizzZ_ZY(VectorD4 V){ return MkVectorD4(V.z, 0, V.z, V.y); }
+inline VectorD4 SwizzZ_ZZ(VectorD4 V){ return MkVectorD4(V.z, 0, V.z, V.z); }
+inline VectorD4 SwizzZ_ZW(VectorD4 V){ return MkVectorD4(V.z, 0, V.z, V.w); }
+inline VectorD4 SwizzZ_Z_(VectorD4 V){ return MkVectorD4(V.z, 0, V.z, 0); }
+inline VectorD4 SwizzZ_WX(VectorD4 V){ return MkVectorD4(V.z, 0, V.w, V.x); }
+inline VectorD4 SwizzZ_WY(VectorD4 V){ return MkVectorD4(V.z, 0, V.w, V.y); }
+inline VectorD4 SwizzZ_WZ(VectorD4 V){ return MkVectorD4(V.z, 0, V.w, V.z); }
+inline VectorD4 SwizzZ_WW(VectorD4 V){ return MkVectorD4(V.z, 0, V.w, V.w); }
+inline VectorD4 SwizzZ_W_(VectorD4 V){ return MkVectorD4(V.z, 0, V.w, 0); }
+inline VectorD4 SwizzZ__X(VectorD4 V){ return MkVectorD4(V.z, 0, 0, V.x); }
+inline VectorD4 SwizzZ__Y(VectorD4 V){ return MkVectorD4(V.z, 0, 0, V.y); }
+inline VectorD4 SwizzZ__Z(VectorD4 V){ return MkVectorD4(V.z, 0, 0, V.z); }
+inline VectorD4 SwizzZ__W(VectorD4 V){ return MkVectorD4(V.z, 0, 0, V.w); }
+inline VectorD4 SwizzZ___(VectorD4 V){ return MkVectorD4(V.z, 0, 0, 0); }
+inline VectorD4 SwizzWXXX(VectorD4 V){ return MkVectorD4(V.w, V.x, V.x, V.x); }
+inline VectorD4 SwizzWXXY(VectorD4 V){ return MkVectorD4(V.w, V.x, V.x, V.y); }
+inline VectorD4 SwizzWXXZ(VectorD4 V){ return MkVectorD4(V.w, V.x, V.x, V.z); }
+inline VectorD4 SwizzWXXW(VectorD4 V){ return MkVectorD4(V.w, V.x, V.x, V.w); }
+inline VectorD4 SwizzWXX_(VectorD4 V){ return MkVectorD4(V.w, V.x, V.x, 0); }
+inline VectorD4 SwizzWXYX(VectorD4 V){ return MkVectorD4(V.w, V.x, V.y, V.x); }
+inline VectorD4 SwizzWXYY(VectorD4 V){ return MkVectorD4(V.w, V.x, V.y, V.y); }
+inline VectorD4 SwizzWXYZ(VectorD4 V){ return MkVectorD4(V.w, V.x, V.y, V.z); }
+inline VectorD4 SwizzWXYW(VectorD4 V){ return MkVectorD4(V.w, V.x, V.y, V.w); }
+inline VectorD4 SwizzWXY_(VectorD4 V){ return MkVectorD4(V.w, V.x, V.y, 0); }
+inline VectorD4 SwizzWXZX(VectorD4 V){ return MkVectorD4(V.w, V.x, V.z, V.x); }
+inline VectorD4 SwizzWXZY(VectorD4 V){ return MkVectorD4(V.w, V.x, V.z, V.y); }
+inline VectorD4 SwizzWXZZ(VectorD4 V){ return MkVectorD4(V.w, V.x, V.z, V.z); }
+inline VectorD4 SwizzWXZW(VectorD4 V){ return MkVectorD4(V.w, V.x, V.z, V.w); }
+inline VectorD4 SwizzWXZ_(VectorD4 V){ return MkVectorD4(V.w, V.x, V.z, 0); }
+inline VectorD4 SwizzWXWX(VectorD4 V){ return MkVectorD4(V.w, V.x, V.w, V.x); }
+inline VectorD4 SwizzWXWY(VectorD4 V){ return MkVectorD4(V.w, V.x, V.w, V.y); }
+inline VectorD4 SwizzWXWZ(VectorD4 V){ return MkVectorD4(V.w, V.x, V.w, V.z); }
+inline VectorD4 SwizzWXWW(VectorD4 V){ return MkVectorD4(V.w, V.x, V.w, V.w); }
+inline VectorD4 SwizzWXW_(VectorD4 V){ return MkVectorD4(V.w, V.x, V.w, 0); }
+inline VectorD4 SwizzWX_X(VectorD4 V){ return MkVectorD4(V.w, V.x, 0, V.x); }
+inline VectorD4 SwizzWX_Y(VectorD4 V){ return MkVectorD4(V.w, V.x, 0, V.y); }
+inline VectorD4 SwizzWX_Z(VectorD4 V){ return MkVectorD4(V.w, V.x, 0, V.z); }
+inline VectorD4 SwizzWX_W(VectorD4 V){ return MkVectorD4(V.w, V.x, 0, V.w); }
+inline VectorD4 SwizzWX__(VectorD4 V){ return MkVectorD4(V.w, V.x, 0, 0); }
+inline VectorD4 SwizzWYXX(VectorD4 V){ return MkVectorD4(V.w, V.y, V.x, V.x); }
+inline VectorD4 SwizzWYXY(VectorD4 V){ return MkVectorD4(V.w, V.y, V.x, V.y); }
+inline VectorD4 SwizzWYXZ(VectorD4 V){ return MkVectorD4(V.w, V.y, V.x, V.z); }
+inline VectorD4 SwizzWYXW(VectorD4 V){ return MkVectorD4(V.w, V.y, V.x, V.w); }
+inline VectorD4 SwizzWYX_(VectorD4 V){ return MkVectorD4(V.w, V.y, V.x, 0); }
+inline VectorD4 SwizzWYYX(VectorD4 V){ return MkVectorD4(V.w, V.y, V.y, V.x); }
+inline VectorD4 SwizzWYYY(VectorD4 V){ return MkVectorD4(V.w, V.y, V.y, V.y); }
+inline VectorD4 SwizzWYYZ(VectorD4 V){ return MkVectorD4(V.w, V.y, V.y, V.z); }
+inline VectorD4 SwizzWYYW(VectorD4 V){ return MkVectorD4(V.w, V.y, V.y, V.w); }
+inline VectorD4 SwizzWYY_(VectorD4 V){ return MkVectorD4(V.w, V.y, V.y, 0); }
+inline VectorD4 SwizzWYZX(VectorD4 V){ return MkVectorD4(V.w, V.y, V.z, V.x); }
+inline VectorD4 SwizzWYZY(VectorD4 V){ return MkVectorD4(V.w, V.y, V.z, V.y); }
+inline VectorD4 SwizzWYZZ(VectorD4 V){ return MkVectorD4(V.w, V.y, V.z, V.z); }
+inline VectorD4 SwizzWYZW(VectorD4 V){ return MkVectorD4(V.w, V.y, V.z, V.w); }
+inline VectorD4 SwizzWYZ_(VectorD4 V){ return MkVectorD4(V.w, V.y, V.z, 0); }
+inline VectorD4 SwizzWYWX(VectorD4 V){ return MkVectorD4(V.w, V.y, V.w, V.x); }
+inline VectorD4 SwizzWYWY(VectorD4 V){ return MkVectorD4(V.w, V.y, V.w, V.y); }
+inline VectorD4 SwizzWYWZ(VectorD4 V){ return MkVectorD4(V.w, V.y, V.w, V.z); }
+inline VectorD4 SwizzWYWW(VectorD4 V){ return MkVectorD4(V.w, V.y, V.w, V.w); }
+inline VectorD4 SwizzWYW_(VectorD4 V){ return MkVectorD4(V.w, V.y, V.w, 0); }
+inline VectorD4 SwizzWY_X(VectorD4 V){ return MkVectorD4(V.w, V.y, 0, V.x); }
+inline VectorD4 SwizzWY_Y(VectorD4 V){ return MkVectorD4(V.w, V.y, 0, V.y); }
+inline VectorD4 SwizzWY_Z(VectorD4 V){ return MkVectorD4(V.w, V.y, 0, V.z); }
+inline VectorD4 SwizzWY_W(VectorD4 V){ return MkVectorD4(V.w, V.y, 0, V.w); }
+inline VectorD4 SwizzWY__(VectorD4 V){ return MkVectorD4(V.w, V.y, 0, 0); }
+inline VectorD4 SwizzWZXX(VectorD4 V){ return MkVectorD4(V.w, V.z, V.x, V.x); }
+inline VectorD4 SwizzWZXY(VectorD4 V){ return MkVectorD4(V.w, V.z, V.x, V.y); }
+inline VectorD4 SwizzWZXZ(VectorD4 V){ return MkVectorD4(V.w, V.z, V.x, V.z); }
+inline VectorD4 SwizzWZXW(VectorD4 V){ return MkVectorD4(V.w, V.z, V.x, V.w); }
+inline VectorD4 SwizzWZX_(VectorD4 V){ return MkVectorD4(V.w, V.z, V.x, 0); }
+inline VectorD4 SwizzWZYX(VectorD4 V){ return MkVectorD4(V.w, V.z, V.y, V.x); }
+inline VectorD4 SwizzWZYY(VectorD4 V){ return MkVectorD4(V.w, V.z, V.y, V.y); }
+inline VectorD4 SwizzWZYZ(VectorD4 V){ return MkVectorD4(V.w, V.z, V.y, V.z); }
+inline VectorD4 SwizzWZYW(VectorD4 V){ return MkVectorD4(V.w, V.z, V.y, V.w); }
+inline VectorD4 SwizzWZY_(VectorD4 V){ return MkVectorD4(V.w, V.z, V.y, 0); }
+inline VectorD4 SwizzWZZX(VectorD4 V){ return MkVectorD4(V.w, V.z, V.z, V.x); }
+inline VectorD4 SwizzWZZY(VectorD4 V){ return MkVectorD4(V.w, V.z, V.z, V.y); }
+inline VectorD4 SwizzWZZZ(VectorD4 V){ return MkVectorD4(V.w, V.z, V.z, V.z); }
+inline VectorD4 SwizzWZZW(VectorD4 V){ return MkVectorD4(V.w, V.z, V.z, V.w); }
+inline VectorD4 SwizzWZZ_(VectorD4 V){ return MkVectorD4(V.w, V.z, V.z, 0); }
+inline VectorD4 SwizzWZWX(VectorD4 V){ return MkVectorD4(V.w, V.z, V.w, V.x); }
+inline VectorD4 SwizzWZWY(VectorD4 V){ return MkVectorD4(V.w, V.z, V.w, V.y); }
+inline VectorD4 SwizzWZWZ(VectorD4 V){ return MkVectorD4(V.w, V.z, V.w, V.z); }
+inline VectorD4 SwizzWZWW(VectorD4 V){ return MkVectorD4(V.w, V.z, V.w, V.w); }
+inline VectorD4 SwizzWZW_(VectorD4 V){ return MkVectorD4(V.w, V.z, V.w, 0); }
+inline VectorD4 SwizzWZ_X(VectorD4 V){ return MkVectorD4(V.w, V.z, 0, V.x); }
+inline VectorD4 SwizzWZ_Y(VectorD4 V){ return MkVectorD4(V.w, V.z, 0, V.y); }
+inline VectorD4 SwizzWZ_Z(VectorD4 V){ return MkVectorD4(V.w, V.z, 0, V.z); }
+inline VectorD4 SwizzWZ_W(VectorD4 V){ return MkVectorD4(V.w, V.z, 0, V.w); }
+inline VectorD4 SwizzWZ__(VectorD4 V){ return MkVectorD4(V.w, V.z, 0, 0); }
+inline VectorD4 SwizzWWXX(VectorD4 V){ return MkVectorD4(V.w, V.w, V.x, V.x); }
+inline VectorD4 SwizzWWXY(VectorD4 V){ return MkVectorD4(V.w, V.w, V.x, V.y); }
+inline VectorD4 SwizzWWXZ(VectorD4 V){ return MkVectorD4(V.w, V.w, V.x, V.z); }
+inline VectorD4 SwizzWWXW(VectorD4 V){ return MkVectorD4(V.w, V.w, V.x, V.w); }
+inline VectorD4 SwizzWWX_(VectorD4 V){ return MkVectorD4(V.w, V.w, V.x, 0); }
+inline VectorD4 SwizzWWYX(VectorD4 V){ return MkVectorD4(V.w, V.w, V.y, V.x); }
+inline VectorD4 SwizzWWYY(VectorD4 V){ return MkVectorD4(V.w, V.w, V.y, V.y); }
+inline VectorD4 SwizzWWYZ(VectorD4 V){ return MkVectorD4(V.w, V.w, V.y, V.z); }
+inline VectorD4 SwizzWWYW(VectorD4 V){ return MkVectorD4(V.w, V.w, V.y, V.w); }
+inline VectorD4 SwizzWWY_(VectorD4 V){ return MkVectorD4(V.w, V.w, V.y, 0); }
+inline VectorD4 SwizzWWZX(VectorD4 V){ return MkVectorD4(V.w, V.w, V.z, V.x); }
+inline VectorD4 SwizzWWZY(VectorD4 V){ return MkVectorD4(V.w, V.w, V.z, V.y); }
+inline VectorD4 SwizzWWZZ(VectorD4 V){ return MkVectorD4(V.w, V.w, V.z, V.z); }
+inline VectorD4 SwizzWWZW(VectorD4 V){ return MkVectorD4(V.w, V.w, V.z, V.w); }
+inline VectorD4 SwizzWWZ_(VectorD4 V){ return MkVectorD4(V.w, V.w, V.z, 0); }
+inline VectorD4 SwizzWWWX(VectorD4 V){ return MkVectorD4(V.w, V.w, V.w, V.x); }
+inline VectorD4 SwizzWWWY(VectorD4 V){ return MkVectorD4(V.w, V.w, V.w, V.y); }
+inline VectorD4 SwizzWWWZ(VectorD4 V){ return MkVectorD4(V.w, V.w, V.w, V.z); }
+inline VectorD4 SwizzWWWW(VectorD4 V){ return MkVectorD4(V.w, V.w, V.w, V.w); }
+inline VectorD4 SwizzWWW_(VectorD4 V){ return MkVectorD4(V.w, V.w, V.w, 0); }
+inline VectorD4 SwizzWW_X(VectorD4 V){ return MkVectorD4(V.w, V.w, 0, V.x); }
+inline VectorD4 SwizzWW_Y(VectorD4 V){ return MkVectorD4(V.w, V.w, 0, V.y); }
+inline VectorD4 SwizzWW_Z(VectorD4 V){ return MkVectorD4(V.w, V.w, 0, V.z); }
+inline VectorD4 SwizzWW_W(VectorD4 V){ return MkVectorD4(V.w, V.w, 0, V.w); }
+inline VectorD4 SwizzWW__(VectorD4 V){ return MkVectorD4(V.w, V.w, 0, 0); }
+inline VectorD4 SwizzW_XX(VectorD4 V){ return MkVectorD4(V.w, 0, V.x, V.x); }
+inline VectorD4 SwizzW_XY(VectorD4 V){ return MkVectorD4(V.w, 0, V.x, V.y); }
+inline VectorD4 SwizzW_XZ(VectorD4 V){ return MkVectorD4(V.w, 0, V.x, V.z); }
+inline VectorD4 SwizzW_XW(VectorD4 V){ return MkVectorD4(V.w, 0, V.x, V.w); }
+inline VectorD4 SwizzW_X_(VectorD4 V){ return MkVectorD4(V.w, 0, V.x, 0); }
+inline VectorD4 SwizzW_YX(VectorD4 V){ return MkVectorD4(V.w, 0, V.y, V.x); }
+inline VectorD4 SwizzW_YY(VectorD4 V){ return MkVectorD4(V.w, 0, V.y, V.y); }
+inline VectorD4 SwizzW_YZ(VectorD4 V){ return MkVectorD4(V.w, 0, V.y, V.z); }
+inline VectorD4 SwizzW_YW(VectorD4 V){ return MkVectorD4(V.w, 0, V.y, V.w); }
+inline VectorD4 SwizzW_Y_(VectorD4 V){ return MkVectorD4(V.w, 0, V.y, 0); }
+inline VectorD4 SwizzW_ZX(VectorD4 V){ return MkVectorD4(V.w, 0, V.z, V.x); }
+inline VectorD4 SwizzW_ZY(VectorD4 V){ return MkVectorD4(V.w, 0, V.z, V.y); }
+inline VectorD4 SwizzW_ZZ(VectorD4 V){ return MkVectorD4(V.w, 0, V.z, V.z); }
+inline VectorD4 SwizzW_ZW(VectorD4 V){ return MkVectorD4(V.w, 0, V.z, V.w); }
+inline VectorD4 SwizzW_Z_(VectorD4 V){ return MkVectorD4(V.w, 0, V.z, 0); }
+inline VectorD4 SwizzW_WX(VectorD4 V){ return MkVectorD4(V.w, 0, V.w, V.x); }
+inline VectorD4 SwizzW_WY(VectorD4 V){ return MkVectorD4(V.w, 0, V.w, V.y); }
+inline VectorD4 SwizzW_WZ(VectorD4 V){ return MkVectorD4(V.w, 0, V.w, V.z); }
+inline VectorD4 SwizzW_WW(VectorD4 V){ return MkVectorD4(V.w, 0, V.w, V.w); }
+inline VectorD4 SwizzW_W_(VectorD4 V){ return MkVectorD4(V.w, 0, V.w, 0); }
+inline VectorD4 SwizzW__X(VectorD4 V){ return MkVectorD4(V.w, 0, 0, V.x); }
+inline VectorD4 SwizzW__Y(VectorD4 V){ return MkVectorD4(V.w, 0, 0, V.y); }
+inline VectorD4 SwizzW__Z(VectorD4 V){ return MkVectorD4(V.w, 0, 0, V.z); }
+inline VectorD4 SwizzW__W(VectorD4 V){ return MkVectorD4(V.w, 0, 0, V.w); }
+inline VectorD4 SwizzW___(VectorD4 V){ return MkVectorD4(V.w, 0, 0, 0); }
+inline VectorD4 Swizz_XXX(VectorD4 V){ return MkVectorD4(0, V.x, V.x, V.x); }
+inline VectorD4 Swizz_XXY(VectorD4 V){ return MkVectorD4(0, V.x, V.x, V.y); }
+inline VectorD4 Swizz_XXZ(VectorD4 V){ return MkVectorD4(0, V.x, V.x, V.z); }
+inline VectorD4 Swizz_XXW(VectorD4 V){ return MkVectorD4(0, V.x, V.x, V.w); }
+inline VectorD4 Swizz_XX_(VectorD4 V){ return MkVectorD4(0, V.x, V.x, 0); }
+inline VectorD4 Swizz_XYX(VectorD4 V){ return MkVectorD4(0, V.x, V.y, V.x); }
+inline VectorD4 Swizz_XYY(VectorD4 V){ return MkVectorD4(0, V.x, V.y, V.y); }
+inline VectorD4 Swizz_XYZ(VectorD4 V){ return MkVectorD4(0, V.x, V.y, V.z); }
+inline VectorD4 Swizz_XYW(VectorD4 V){ return MkVectorD4(0, V.x, V.y, V.w); }
+inline VectorD4 Swizz_XY_(VectorD4 V){ return MkVectorD4(0, V.x, V.y, 0); }
+inline VectorD4 Swizz_XZX(VectorD4 V){ return MkVectorD4(0, V.x, V.z, V.x); }
+inline VectorD4 Swizz_XZY(VectorD4 V){ return MkVectorD4(0, V.x, V.z, V.y); }
+inline VectorD4 Swizz_XZZ(VectorD4 V){ return MkVectorD4(0, V.x, V.z, V.z); }
+inline VectorD4 Swizz_XZW(VectorD4 V){ return MkVectorD4(0, V.x, V.z, V.w); }
+inline VectorD4 Swizz_XZ_(VectorD4 V){ return MkVectorD4(0, V.x, V.z, 0); }
+inline VectorD4 Swizz_XWX(VectorD4 V){ return MkVectorD4(0, V.x, V.w, V.x); }
+inline VectorD4 Swizz_XWY(VectorD4 V){ return MkVectorD4(0, V.x, V.w, V.y); }
+inline VectorD4 Swizz_XWZ(VectorD4 V){ return MkVectorD4(0, V.x, V.w, V.z); }
+inline VectorD4 Swizz_XWW(VectorD4 V){ return MkVectorD4(0, V.x, V.w, V.w); }
+inline VectorD4 Swizz_XW_(VectorD4 V){ return MkVectorD4(0, V.x, V.w, 0); }
+inline VectorD4 Swizz_X_X(VectorD4 V){ return MkVectorD4(0, V.x, 0, V.x); }
+inline VectorD4 Swizz_X_Y(VectorD4 V){ return MkVectorD4(0, V.x, 0, V.y); }
+inline VectorD4 Swizz_X_Z(VectorD4 V){ return MkVectorD4(0, V.x, 0, V.z); }
+inline VectorD4 Swizz_X_W(VectorD4 V){ return MkVectorD4(0, V.x, 0, V.w); }
+inline VectorD4 Swizz_X__(VectorD4 V){ return MkVectorD4(0, V.x, 0, 0); }
+inline VectorD4 Swizz_YXX(VectorD4 V){ return MkVectorD4(0, V.y, V.x, V.x); }
+inline VectorD4 Swizz_YXY(VectorD4 V){ return MkVectorD4(0, V.y, V.x, V.y); }
+inline VectorD4 Swizz_YXZ(VectorD4 V){ return MkVectorD4(0, V.y, V.x, V.z); }
+inline VectorD4 Swizz_YXW(VectorD4 V){ return MkVectorD4(0, V.y, V.x, V.w); }
+inline VectorD4 Swizz_YX_(VectorD4 V){ return MkVectorD4(0, V.y, V.x, 0); }
+inline VectorD4 Swizz_YYX(VectorD4 V){ return MkVectorD4(0, V.y, V.y, V.x); }
+inline VectorD4 Swizz_YYY(VectorD4 V){ return MkVectorD4(0, V.y, V.y, V.y); }
+inline VectorD4 Swizz_YYZ(VectorD4 V){ return MkVectorD4(0, V.y, V.y, V.z); }
+inline VectorD4 Swizz_YYW(VectorD4 V){ return MkVectorD4(0, V.y, V.y, V.w); }
+inline VectorD4 Swizz_YY_(VectorD4 V){ return MkVectorD4(0, V.y, V.y, 0); }
+inline VectorD4 Swizz_YZX(VectorD4 V){ return MkVectorD4(0, V.y, V.z, V.x); }
+inline VectorD4 Swizz_YZY(VectorD4 V){ return MkVectorD4(0, V.y, V.z, V.y); }
+inline VectorD4 Swizz_YZZ(VectorD4 V){ return MkVectorD4(0, V.y, V.z, V.z); }
+inline VectorD4 Swizz_YZW(VectorD4 V){ return MkVectorD4(0, V.y, V.z, V.w); }
+inline VectorD4 Swizz_YZ_(VectorD4 V){ return MkVectorD4(0, V.y, V.z, 0); }
+inline VectorD4 Swizz_YWX(VectorD4 V){ return MkVectorD4(0, V.y, V.w, V.x); }
+inline VectorD4 Swizz_YWY(VectorD4 V){ return MkVectorD4(0, V.y, V.w, V.y); }
+inline VectorD4 Swizz_YWZ(VectorD4 V){ return MkVectorD4(0, V.y, V.w, V.z); }
+inline VectorD4 Swizz_YWW(VectorD4 V){ return MkVectorD4(0, V.y, V.w, V.w); }
+inline VectorD4 Swizz_YW_(VectorD4 V){ return MkVectorD4(0, V.y, V.w, 0); }
+inline VectorD4 Swizz_Y_X(VectorD4 V){ return MkVectorD4(0, V.y, 0, V.x); }
+inline VectorD4 Swizz_Y_Y(VectorD4 V){ return MkVectorD4(0, V.y, 0, V.y); }
+inline VectorD4 Swizz_Y_Z(VectorD4 V){ return MkVectorD4(0, V.y, 0, V.z); }
+inline VectorD4 Swizz_Y_W(VectorD4 V){ return MkVectorD4(0, V.y, 0, V.w); }
+inline VectorD4 Swizz_Y__(VectorD4 V){ return MkVectorD4(0, V.y, 0, 0); }
+inline VectorD4 Swizz_ZXX(VectorD4 V){ return MkVectorD4(0, V.z, V.x, V.x); }
+inline VectorD4 Swizz_ZXY(VectorD4 V){ return MkVectorD4(0, V.z, V.x, V.y); }
+inline VectorD4 Swizz_ZXZ(VectorD4 V){ return MkVectorD4(0, V.z, V.x, V.z); }
+inline VectorD4 Swizz_ZXW(VectorD4 V){ return MkVectorD4(0, V.z, V.x, V.w); }
+inline VectorD4 Swizz_ZX_(VectorD4 V){ return MkVectorD4(0, V.z, V.x, 0); }
+inline VectorD4 Swizz_ZYX(VectorD4 V){ return MkVectorD4(0, V.z, V.y, V.x); }
+inline VectorD4 Swizz_ZYY(VectorD4 V){ return MkVectorD4(0, V.z, V.y, V.y); }
+inline VectorD4 Swizz_ZYZ(VectorD4 V){ return MkVectorD4(0, V.z, V.y, V.z); }
+inline VectorD4 Swizz_ZYW(VectorD4 V){ return MkVectorD4(0, V.z, V.y, V.w); }
+inline VectorD4 Swizz_ZY_(VectorD4 V){ return MkVectorD4(0, V.z, V.y, 0); }
+inline VectorD4 Swizz_ZZX(VectorD4 V){ return MkVectorD4(0, V.z, V.z, V.x); }
+inline VectorD4 Swizz_ZZY(VectorD4 V){ return MkVectorD4(0, V.z, V.z, V.y); }
+inline VectorD4 Swizz_ZZZ(VectorD4 V){ return MkVectorD4(0, V.z, V.z, V.z); }
+inline VectorD4 Swizz_ZZW(VectorD4 V){ return MkVectorD4(0, V.z, V.z, V.w); }
+inline VectorD4 Swizz_ZZ_(VectorD4 V){ return MkVectorD4(0, V.z, V.z, 0); }
+inline VectorD4 Swizz_ZWX(VectorD4 V){ return MkVectorD4(0, V.z, V.w, V.x); }
+inline VectorD4 Swizz_ZWY(VectorD4 V){ return MkVectorD4(0, V.z, V.w, V.y); }
+inline VectorD4 Swizz_ZWZ(VectorD4 V){ return MkVectorD4(0, V.z, V.w, V.z); }
+inline VectorD4 Swizz_ZWW(VectorD4 V){ return MkVectorD4(0, V.z, V.w, V.w); }
+inline VectorD4 Swizz_ZW_(VectorD4 V){ return MkVectorD4(0, V.z, V.w, 0); }
+inline VectorD4 Swizz_Z_X(VectorD4 V){ return MkVectorD4(0, V.z, 0, V.x); }
+inline VectorD4 Swizz_Z_Y(VectorD4 V){ return MkVectorD4(0, V.z, 0, V.y); }
+inline VectorD4 Swizz_Z_Z(VectorD4 V){ return MkVectorD4(0, V.z, 0, V.z); }
+inline VectorD4 Swizz_Z_W(VectorD4 V){ return MkVectorD4(0, V.z, 0, V.w); }
+inline VectorD4 Swizz_Z__(VectorD4 V){ return MkVectorD4(0, V.z, 0, 0); }
+inline VectorD4 Swizz_WXX(VectorD4 V){ return MkVectorD4(0, V.w, V.x, V.x); }
+inline VectorD4 Swizz_WXY(VectorD4 V){ return MkVectorD4(0, V.w, V.x, V.y); }
+inline VectorD4 Swizz_WXZ(VectorD4 V){ return MkVectorD4(0, V.w, V.x, V.z); }
+inline VectorD4 Swizz_WXW(VectorD4 V){ return MkVectorD4(0, V.w, V.x, V.w); }
+inline VectorD4 Swizz_WX_(VectorD4 V){ return MkVectorD4(0, V.w, V.x, 0); }
+inline VectorD4 Swizz_WYX(VectorD4 V){ return MkVectorD4(0, V.w, V.y, V.x); }
+inline VectorD4 Swizz_WYY(VectorD4 V){ return MkVectorD4(0, V.w, V.y, V.y); }
+inline VectorD4 Swizz_WYZ(VectorD4 V){ return MkVectorD4(0, V.w, V.y, V.z); }
+inline VectorD4 Swizz_WYW(VectorD4 V){ return MkVectorD4(0, V.w, V.y, V.w); }
+inline VectorD4 Swizz_WY_(VectorD4 V){ return MkVectorD4(0, V.w, V.y, 0); }
+inline VectorD4 Swizz_WZX(VectorD4 V){ return MkVectorD4(0, V.w, V.z, V.x); }
+inline VectorD4 Swizz_WZY(VectorD4 V){ return MkVectorD4(0, V.w, V.z, V.y); }
+inline VectorD4 Swizz_WZZ(VectorD4 V){ return MkVectorD4(0, V.w, V.z, V.z); }
+inline VectorD4 Swizz_WZW(VectorD4 V){ return MkVectorD4(0, V.w, V.z, V.w); }
+inline VectorD4 Swizz_WZ_(VectorD4 V){ return MkVectorD4(0, V.w, V.z, 0); }
+inline VectorD4 Swizz_WWX(VectorD4 V){ return MkVectorD4(0, V.w, V.w, V.x); }
+inline VectorD4 Swizz_WWY(VectorD4 V){ return MkVectorD4(0, V.w, V.w, V.y); }
+inline VectorD4 Swizz_WWZ(VectorD4 V){ return MkVectorD4(0, V.w, V.w, V.z); }
+inline VectorD4 Swizz_WWW(VectorD4 V){ return MkVectorD4(0, V.w, V.w, V.w); }
+inline VectorD4 Swizz_WW_(VectorD4 V){ return MkVectorD4(0, V.w, V.w, 0); }
+inline VectorD4 Swizz_W_X(VectorD4 V){ return MkVectorD4(0, V.w, 0, V.x); }
+inline VectorD4 Swizz_W_Y(VectorD4 V){ return MkVectorD4(0, V.w, 0, V.y); }
+inline VectorD4 Swizz_W_Z(VectorD4 V){ return MkVectorD4(0, V.w, 0, V.z); }
+inline VectorD4 Swizz_W_W(VectorD4 V){ return MkVectorD4(0, V.w, 0, V.w); }
+inline VectorD4 Swizz_W__(VectorD4 V){ return MkVectorD4(0, V.w, 0, 0); }
+inline VectorD4 Swizz__XX(VectorD4 V){ return MkVectorD4(0, 0, V.x, V.x); }
+inline VectorD4 Swizz__XY(VectorD4 V){ return MkVectorD4(0, 0, V.x, V.y); }
+inline VectorD4 Swizz__XZ(VectorD4 V){ return MkVectorD4(0, 0, V.x, V.z); }
+inline VectorD4 Swizz__XW(VectorD4 V){ return MkVectorD4(0, 0, V.x, V.w); }
+inline VectorD4 Swizz__X_(VectorD4 V){ return MkVectorD4(0, 0, V.x, 0); }
+inline VectorD4 Swizz__YX(VectorD4 V){ return MkVectorD4(0, 0, V.y, V.x); }
+inline VectorD4 Swizz__YY(VectorD4 V){ return MkVectorD4(0, 0, V.y, V.y); }
+inline VectorD4 Swizz__YZ(VectorD4 V){ return MkVectorD4(0, 0, V.y, V.z); }
+inline VectorD4 Swizz__YW(VectorD4 V){ return MkVectorD4(0, 0, V.y, V.w); }
+inline VectorD4 Swizz__Y_(VectorD4 V){ return MkVectorD4(0, 0, V.y, 0); }
+inline VectorD4 Swizz__ZX(VectorD4 V){ return MkVectorD4(0, 0, V.z, V.x); }
+inline VectorD4 Swizz__ZY(VectorD4 V){ return MkVectorD4(0, 0, V.z, V.y); }
+inline VectorD4 Swizz__ZZ(VectorD4 V){ return MkVectorD4(0, 0, V.z, V.z); }
+inline VectorD4 Swizz__ZW(VectorD4 V){ return MkVectorD4(0, 0, V.z, V.w); }
+inline VectorD4 Swizz__Z_(VectorD4 V){ return MkVectorD4(0, 0, V.z, 0); }
+inline VectorD4 Swizz__WX(VectorD4 V){ return MkVectorD4(0, 0, V.w, V.x); }
+inline VectorD4 Swizz__WY(VectorD4 V){ return MkVectorD4(0, 0, V.w, V.y); }
+inline VectorD4 Swizz__WZ(VectorD4 V){ return MkVectorD4(0, 0, V.w, V.z); }
+inline VectorD4 Swizz__WW(VectorD4 V){ return MkVectorD4(0, 0, V.w, V.w); }
+inline VectorD4 Swizz__W_(VectorD4 V){ return MkVectorD4(0, 0, V.w, 0); }
+inline VectorD4 Swizz___X(VectorD4 V){ return MkVectorD4(0, 0, 0, V.x); }
+inline VectorD4 Swizz___Y(VectorD4 V){ return MkVectorD4(0, 0, 0, V.y); }
+inline VectorD4 Swizz___Z(VectorD4 V){ return MkVectorD4(0, 0, 0, V.z); }
+inline VectorD4 Swizz___W(VectorD4 V){ return MkVectorD4(0, 0, 0, V.w); }
 inline Vector2 SwizzXX(Vector2 V){ return MkVector2(V.x, V.x); }
 inline Vector2 SwizzXY(Vector2 V){ return MkVector2(V.x, V.y); }
 inline Vector2 SwizzX_(Vector2 V){ return MkVector2(V.x, 0); }

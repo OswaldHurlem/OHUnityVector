@@ -94,9 +94,9 @@ i32 = makePrimitive({'C' : 'Int32', 'C#' : 'Int32'},   usedInVecs = True, isFloa
     declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = i64,  functionSuffixByLanguage = {'C':'I', 'C#':'I'}, useForCtors = True)
 u8 = makePrimitive({'C' : 'byte', 'C#' : 'byte'},      usedInVecs = True, isFloatType = False, 
     declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = i32,  functionSuffixByLanguage = {'C':'B', 'C#':'B'}, useForCtors = True)
-#f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, usedInVecs = True, isFloatType = True,  
-#    declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = None, functionSuffixByLanguage = {'C':'D', 'C#':'D'}, useForCtors = True)
-f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, isFloatType = True)
+f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, usedInVecs = True, isFloatType = True,  
+    declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = None, functionSuffixByLanguage = {'C':'D', 'C#':'D'}, useForCtors = True)
+# f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, isFloatType = True)
 f32 = makePrimitive({'C' : 'float', 'C#' : 'float'},   usedInVecs = True, isFloatType = True,  
     declareVecsInLangs = {'C':True, 'C#':False}, castUpTo = f64,  functionSuffixByLanguage = {'C':'F', 'C#':'F'}, useForCtors = True)
 
@@ -782,9 +782,9 @@ for vector in vecList:
         OUT("unchecked")
         OUT("{")
         if pushIndent(1):
-            OUT("int hashCode = x;")
+            OUT("int hashCode = 0;")
             for ss in vector.subs:
-                OUT("hashCode = (hashCode * 397) ^ #{ss};")
+                OUT("hashCode = (hashCode * 397) ^ #{ss}.GetHashCode();")
             OUT("return hashCode;")
         popIndent()
         OUT("}")
