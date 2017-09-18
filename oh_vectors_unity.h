@@ -3317,8 +3317,6 @@ inline Vector4& operator/=(Vector4& V, float A)
 inline Int32 DotP(VectorI2 A, VectorI2 B)
 {
     return (Int32)((A.x * B.x)
-        + (A.y * B.y)
-        + (A.x * B.x)
         + (A.y * B.y));
 }
 
@@ -3326,7 +3324,6 @@ inline Int32 DotP(VectorI3 A, VectorI3 B)
 {
     return (Int32)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
         + (A.z * B.z));
 }
 
@@ -3334,23 +3331,19 @@ inline Int32 DotP(VectorI4 A, VectorI4 B)
 {
     return (Int32)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
+        + (A.z * B.z)
         + (A.w * B.w));
 }
 
 inline byte DotP(VectorB2 A, VectorB2 B)
 {
     return (byte)((A.x * B.x)
-        + (A.y * B.y)
-        + (A.x * B.x)
         + (A.y * B.y));
 }
 
 inline Int32 DotPI(VectorB2 A, VectorB2 B)
 {
     return (Int32)((Int32)(A.x * B.x)
-        + (Int32)(A.y * B.y)
-        + (Int32)(A.x * B.x)
         + (Int32)(A.y * B.y));
 }
 
@@ -3358,7 +3351,6 @@ inline byte DotP(VectorB3 A, VectorB3 B)
 {
     return (byte)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
         + (A.z * B.z));
 }
 
@@ -3366,7 +3358,6 @@ inline Int32 DotPI(VectorB3 A, VectorB3 B)
 {
     return (Int32)((Int32)(A.x * B.x)
         + (Int32)(A.y * B.y)
-        + (Int32)(A.x * B.x)
         + (Int32)(A.z * B.z));
 }
 
@@ -3374,7 +3365,7 @@ inline byte DotP(VectorB4 A, VectorB4 B)
 {
     return (byte)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
+        + (A.z * B.z)
         + (A.w * B.w));
 }
 
@@ -3382,15 +3373,13 @@ inline Int32 DotPI(VectorB4 A, VectorB4 B)
 {
     return (Int32)((Int32)(A.x * B.x)
         + (Int32)(A.y * B.y)
-        + (Int32)(A.x * B.x)
+        + (Int32)(A.z * B.z)
         + (Int32)(A.w * B.w));
 }
 
 inline double DotP(VectorD2 A, VectorD2 B)
 {
     return (double)((A.x * B.x)
-        + (A.y * B.y)
-        + (A.x * B.x)
         + (A.y * B.y));
 }
 
@@ -3398,7 +3387,6 @@ inline double DotP(VectorD3 A, VectorD3 B)
 {
     return (double)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
         + (A.z * B.z));
 }
 
@@ -3406,23 +3394,19 @@ inline double DotP(VectorD4 A, VectorD4 B)
 {
     return (double)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
+        + (A.z * B.z)
         + (A.w * B.w));
 }
 
 inline float DotP(Vector2 A, Vector2 B)
 {
     return (float)((A.x * B.x)
-        + (A.y * B.y)
-        + (A.x * B.x)
         + (A.y * B.y));
 }
 
 inline double DotPD(Vector2 A, Vector2 B)
 {
     return (double)((double)(A.x * B.x)
-        + (double)(A.y * B.y)
-        + (double)(A.x * B.x)
         + (double)(A.y * B.y));
 }
 
@@ -3430,7 +3414,6 @@ inline float DotP(Vector3 A, Vector3 B)
 {
     return (float)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
         + (A.z * B.z));
 }
 
@@ -3438,7 +3421,6 @@ inline double DotPD(Vector3 A, Vector3 B)
 {
     return (double)((double)(A.x * B.x)
         + (double)(A.y * B.y)
-        + (double)(A.x * B.x)
         + (double)(A.z * B.z));
 }
 
@@ -3446,7 +3428,7 @@ inline float DotP(Vector4 A, Vector4 B)
 {
     return (float)((A.x * B.x)
         + (A.y * B.y)
-        + (A.x * B.x)
+        + (A.z * B.z)
         + (A.w * B.w));
 }
 
@@ -3454,7 +3436,7 @@ inline double DotPD(Vector4 A, Vector4 B)
 {
     return (double)((double)(A.x * B.x)
         + (double)(A.y * B.y)
-        + (double)(A.x * B.x)
+        + (double)(A.z * B.z)
         + (double)(A.w * B.w));
 }
 

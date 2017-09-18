@@ -2136,8 +2136,6 @@ namespace OH
         public static Int32 DotP(VectorI2 A, VectorI2 B)
         {
             return (Int32)((A.x * B.x)
-                + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.y * B.y));
         }
 
@@ -2145,7 +2143,6 @@ namespace OH
         {
             return (Int32)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.z * B.z));
         }
 
@@ -2153,23 +2150,19 @@ namespace OH
         {
             return (Int32)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
+                + (A.z * B.z)
                 + (A.w * B.w));
         }
 
         public static byte DotP(VectorB2 A, VectorB2 B)
         {
             return (byte)((A.x * B.x)
-                + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.y * B.y));
         }
 
         public static Int32 DotPI(VectorB2 A, VectorB2 B)
         {
             return (Int32)((Int32)(A.x * B.x)
-                + (Int32)(A.y * B.y)
-                + (Int32)(A.x * B.x)
                 + (Int32)(A.y * B.y));
         }
 
@@ -2177,7 +2170,6 @@ namespace OH
         {
             return (byte)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.z * B.z));
         }
 
@@ -2185,7 +2177,6 @@ namespace OH
         {
             return (Int32)((Int32)(A.x * B.x)
                 + (Int32)(A.y * B.y)
-                + (Int32)(A.x * B.x)
                 + (Int32)(A.z * B.z));
         }
 
@@ -2193,7 +2184,7 @@ namespace OH
         {
             return (byte)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
+                + (A.z * B.z)
                 + (A.w * B.w));
         }
 
@@ -2201,15 +2192,13 @@ namespace OH
         {
             return (Int32)((Int32)(A.x * B.x)
                 + (Int32)(A.y * B.y)
-                + (Int32)(A.x * B.x)
+                + (Int32)(A.z * B.z)
                 + (Int32)(A.w * B.w));
         }
 
         public static double DotP(VectorD2 A, VectorD2 B)
         {
             return (double)((A.x * B.x)
-                + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.y * B.y));
         }
 
@@ -2217,7 +2206,6 @@ namespace OH
         {
             return (double)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.z * B.z));
         }
 
@@ -2225,23 +2213,19 @@ namespace OH
         {
             return (double)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
+                + (A.z * B.z)
                 + (A.w * B.w));
         }
 
         public static float DotP(Vector2 A, Vector2 B)
         {
             return (float)((A.x * B.x)
-                + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.y * B.y));
         }
 
         public static double DotPD(Vector2 A, Vector2 B)
         {
             return (double)((double)(A.x * B.x)
-                + (double)(A.y * B.y)
-                + (double)(A.x * B.x)
                 + (double)(A.y * B.y));
         }
 
@@ -2249,7 +2233,6 @@ namespace OH
         {
             return (float)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
                 + (A.z * B.z));
         }
 
@@ -2257,7 +2240,6 @@ namespace OH
         {
             return (double)((double)(A.x * B.x)
                 + (double)(A.y * B.y)
-                + (double)(A.x * B.x)
                 + (double)(A.z * B.z));
         }
 
@@ -2265,7 +2247,7 @@ namespace OH
         {
             return (float)((A.x * B.x)
                 + (A.y * B.y)
-                + (A.x * B.x)
+                + (A.z * B.z)
                 + (A.w * B.w));
         }
 
@@ -2273,7 +2255,7 @@ namespace OH
         {
             return (double)((double)(A.x * B.x)
                 + (double)(A.y * B.y)
-                + (double)(A.x * B.x)
+                + (double)(A.z * B.z)
                 + (double)(A.w * B.w));
         }
 

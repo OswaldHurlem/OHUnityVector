@@ -350,7 +350,7 @@ def dotProduct(vector, safetyCast = None):
     pushIndent(1)
     OUT("return (#{returnType})(#{terms[0]}")
     pushIndent(1)
-    for t in terms[1::-1]:
+    for t in terms[1:-1]:
         OUT("+ #{t}")
     OUT("+ #{terms[-1]});")
     popIndent()
