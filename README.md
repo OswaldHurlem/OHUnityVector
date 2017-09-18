@@ -19,8 +19,9 @@ The vector types, and most functions, are implemented in both C++ and C#, with i
 * All functions are pure! All functions look like functions! Say goodbye to Unity's impure .Normalize() function and sqrt-concealing .normalized property.
 * Implemented as both extension methods and non-extension methods.
     * With the upgraded Mono Runtime, `using static OH.VecOps;` lets you call vector operations without giving the class name.
-    * `using OH;` gives you all functions as extension methods.
+    * `using OH.Ext;` gives you all functions as extension methods.
     * Mix and match to choose how much work Intellisense has to do. Or use both so that it's just like UFCS!
+* Compact inspector for all vector types.
 
 ## Usage
 Copy UnityVector*.cs into your Assets folder. You will need to provide implementations for a few simple math functions. Mine can be found in ExtraMath.cs.
@@ -29,7 +30,6 @@ To use the python script, you must have Interpy installed.
 
 ## TODO
 * Reimplement remaining Unity Vector functions.
-* Add custom inspectors.
 * Convert integer vectors to array indices.
 * Improve flexibility of code generator.
 * Unit tests using some established Vector library??
