@@ -32,6 +32,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEditor;
 
 namespace OH
 {'''
@@ -56,6 +57,7 @@ settingsByLanguage = {
         'outputFile_ext' : r'UnityVectorExtensions.cs',
         'outputFile_swizzle' : r'UnityVectorSwizzles.cs',
         'outputFile_swizzle_ext' : r'UnityVectorSwizzleExtensions.cs',
+        'outputFile_inspector' : r'UnityVectorInspectors.cs',
         'funcPrefix' : 'public static ',
         'firstParamModifier' : 'this ',
         'booleanName' : 'Boolean',
@@ -688,7 +690,7 @@ pushIndent(1)
 for vector in vecList:
     if not vector.declare:
         continue
-    OUT("[StructLayout(LayoutKind.Sequential, Pack=0)]")
+    OUT("[StructLayout(LayoutKind.Sequential, Pack=0), Serializable]")
     OUT("public struct #{vector.name} : IEquatable<#{vector.name}>")
     OUT("{")
     pushIndent(1)
@@ -909,20 +911,34 @@ if settingsByLanguage['C#'].get('extMethodClassName'):
     className = settingsByLanguage['C#']['extMethodClassName']
     firstParamModifier = settingsByLanguage['C#']['firstParamModifier']
     switchToFileIfSpecified('C#', '_ext')
-    OUT("public static partial class #{className}")
+    OUT('namespace Ext')
     OUT('{')
     if pushIndent(1):
-        outputStaticClassFunctionsCSharp()
+        OUT("public static partial class #{className}")
+        OUT('{')
+        if pushIndent(1):
+            outputStaticClassFunctionsCSharp()
+        popIndent()
+        OUT('}')
     popIndent()
     OUT('}')
     switchToFileIfSpecified('C#', '_swizzle_ext')
-    OUT("public static partial class #{className}")
+    OUT('namespace Ext')
     OUT('{')
     if pushIndent(1):
-        for vector in vecList:
-            outputSwizzles(vector)
+        OUT("public static partial class #{className}")
+        OUT('{')
+        if pushIndent(1):
+            for vector in vecList:
+                outputSwizzles(vector)
+        popIndent()
+        OUT('}')
     popIndent()
     OUT('}')
 
-popIndent()
-OUT("}")
+switchToFileIfSpecified('C#','_inspector')
+for vector in vecList:
+    OUT("[CustomPropertyDrawer(typeof(#{vector.name}))]")
+OUT("public partial class UnityVectorDrawer : PropertyDrawer { }")
+
+closeCurrentFile()

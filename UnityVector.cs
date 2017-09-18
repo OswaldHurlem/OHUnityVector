@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEditor;
 
 namespace OH
 {
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorI2 : IEquatable<VectorI2>
     {
         // All state
@@ -127,7 +128,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorI3 : IEquatable<VectorI3>
     {
         // All state
@@ -260,7 +261,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorI4 : IEquatable<VectorI4>
     {
         // All state
@@ -398,7 +399,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorB2 : IEquatable<VectorB2>
     {
         // All state
@@ -511,7 +512,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorB3 : IEquatable<VectorB3>
     {
         // All state
@@ -636,7 +637,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorB4 : IEquatable<VectorB4>
     {
         // All state
@@ -769,7 +770,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorD2 : IEquatable<VectorD2>
     {
         // All state
@@ -889,7 +890,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorD3 : IEquatable<VectorD3>
     {
         // All state
@@ -1022,7 +1023,7 @@ namespace OH
         }
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack=0)]
+    [StructLayout(LayoutKind.Sequential, Pack=0), Serializable]
     public struct VectorD4 : IEquatable<VectorD4>
     {
         // All state
