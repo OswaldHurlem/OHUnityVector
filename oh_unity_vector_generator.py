@@ -32,7 +32,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEditor;
 
 namespace OH
 {'''
@@ -937,8 +936,12 @@ if settingsByLanguage['C#'].get('extMethodClassName'):
     OUT('}')
 
 switchToFileIfSpecified('C#','_inspector')
-for vector in vecList:
-    OUT("[CustomPropertyDrawer(typeof(#{vector.name}))]")
-OUT("public partial class UnityVectorDrawer : PropertyDrawer { }")
+OUT('#if UNITY_EDITOR')
+OUT('using UnityEditor;')
+if pushIndent(1):
+    for vector in vecList:
+        OUT("[CustomPropertyDrawer(typeof(#{vector.name}))]")
+    OUT("public partial class UnityVectorDrawer : PropertyDrawer { }")
+OUT('#endif')
 
 closeCurrentFile()
