@@ -942,6 +942,7 @@ if pushIndent(1):
     for vector in vecList:
         OUT("[CustomPropertyDrawer(typeof(#{vector.name}))]")
     OUT("public partial class UnityVectorDrawer : PropertyDrawer { }")
+popIndent()
 OUT('#endif')
 
 closeCurrentFile()
