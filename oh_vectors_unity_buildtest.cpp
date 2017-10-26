@@ -162,6 +162,19 @@ inline Byte CeilBD(Double x)
 
 #include "oh_vectors_unity.h"
 
+double Example(VectorB2 byteVector)
+{
+    auto six = MkVectorB2(6); // (6, 6)
+
+    return Volume(
+        MkVectorD4B(
+            SwizzXXYY(
+                ElRem(byteVector, six)
+                )
+            )
+        );
+}
+
 Int32 main()
 {
 

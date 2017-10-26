@@ -3,7 +3,6 @@ import itertools
 
 '''
 MAJOR TODOS
-- Inspectors
 - Certain Bounds/Ray/Rect functionality, especially:
     - Rectangle overlap
     - Enumerate corners of rectangle
@@ -12,8 +11,6 @@ MAJOR TODOS
     - Point in integer rect to index
     - Point in integer rect to set of indices to sample from
 - Certain Vector3 functions:
-    - (0,0,0) and (1,1,1) vectors
-    - Infinity vectors
     - Angle in degrees
     - Lerp/Delerp
     - Project (onto plane)
