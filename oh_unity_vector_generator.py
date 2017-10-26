@@ -887,6 +887,15 @@ def outputStaticClassFunctionsCSharp():
         OUT("return #{nameCtor(vector, vector.prim, 0)}(#{termStr});")
         popIndent()
         OUT("}\n")
+    if (firstParamModifier == ""):
+        for vector in vecList:
+            OUT("public static void VisitElements(ref #{vector.name} V, Visitor<#{vector.prim.name}> visitor)")
+            OUT("{")
+            if pushIndent(1):
+                for ss in vector.subs:
+                    OUT("visitor(ref V.#{ss});")
+            popIndent()
+            OUT("}\n")
 
 if settingsByLanguage['C#'].get('stdCallClassName'):
     className = settingsByLanguage['C#']['stdCallClassName']

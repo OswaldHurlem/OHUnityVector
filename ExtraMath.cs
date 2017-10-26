@@ -6,6 +6,8 @@ using UnityEngine;
 
 namespace OH
 {
+    public delegate void Visitor<T>(ref T val);
+
     public static class Arith
     {
         public static Int32 Pow2Rem(Int32 A, Int32 Pow2)

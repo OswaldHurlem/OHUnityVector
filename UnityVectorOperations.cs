@@ -2862,5 +2862,89 @@ namespace OH
             return VecOps.MkVector4(array[0], array[1], array[2], array[3]);
         }
 
+        public static void VisitElements(ref VectorI2 V, Visitor<Int32> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+        }
+
+        public static void VisitElements(ref VectorI3 V, Visitor<Int32> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+        }
+
+        public static void VisitElements(ref VectorI4 V, Visitor<Int32> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+            visitor(ref V.w);
+        }
+
+        public static void VisitElements(ref VectorB2 V, Visitor<byte> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+        }
+
+        public static void VisitElements(ref VectorB3 V, Visitor<byte> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+        }
+
+        public static void VisitElements(ref VectorB4 V, Visitor<byte> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+            visitor(ref V.w);
+        }
+
+        public static void VisitElements(ref VectorD2 V, Visitor<double> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+        }
+
+        public static void VisitElements(ref VectorD3 V, Visitor<double> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+        }
+
+        public static void VisitElements(ref VectorD4 V, Visitor<double> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+            visitor(ref V.w);
+        }
+
+        public static void VisitElements(ref Vector2 V, Visitor<float> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+        }
+
+        public static void VisitElements(ref Vector3 V, Visitor<float> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+        }
+
+        public static void VisitElements(ref Vector4 V, Visitor<float> visitor)
+        {
+            visitor(ref V.x);
+            visitor(ref V.y);
+            visitor(ref V.z);
+            visitor(ref V.w);
+        }
+
     }
 }
