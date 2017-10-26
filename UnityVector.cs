@@ -35,10 +35,14 @@ namespace OH
             }
         }
 
-        public static VectorI2 left = VecOps.MkVectorI2(-1,  0 );
-        public static VectorI2 down = VecOps.MkVectorI2( 0, -1 );
-        public static VectorI2 right = VecOps.MkVectorI2( 1,  0 );
-        public static VectorI2 up    = VecOps.MkVectorI2( 0,  1 );
+        public static VectorI2 left = OHV.MkVectorI2(-1,  0 );
+        public static VectorI2 down = OHV.MkVectorI2( 0, -1 );
+        public static VectorI2 right = OHV.MkVectorI2( 1,  0 );
+        public static VectorI2 up    = OHV.MkVectorI2( 0,  1 );
+        public static VectorI2 one = OHV.MkVectorI2(1);
+        public static VectorI2 zero = OHV.MkVectorI2(0);
+        public static VectorI2 MinValue = OHV.MkVectorI2(Int32.MinValue);
+        public static VectorI2 MaxValue = OHV.MkVectorI2(Int32.MaxValue);
         
         public static Boolean operator==(VectorI2 A, VectorI2 B)
         {
@@ -54,47 +58,47 @@ namespace OH
 
         public static VectorI2 operator-(VectorI2 A, VectorI2 B)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)(A.x - B.x),
                 (Int32)(A.y - B.y));
         }
 
         public static VectorI2 operator+(VectorI2 A, VectorI2 B)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)(A.x + B.x),
                 (Int32)(A.y + B.y));
         }
 
         public static VectorI2 operator-(VectorI2 V)
         {
-            return VecOps.MkVectorI2(-V.x, -V.y);
+            return OHV.MkVectorI2(-V.x, -V.y);
         }
 
         public static VectorI2 operator*(Int32 A, VectorI2 V)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)((A * V.x)),
                 (Int32)((A * V.y)));
         }
 
         public static VectorI2 operator/(Int32 A, VectorI2 V)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)((Arith.Div(A, V.x))),
                 (Int32)((Arith.Div(A, V.y))));
         }
 
         public static VectorI2 operator*(VectorI2 V, Int32 A)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)((V.x * A)),
                 (Int32)((V.y * A)));
         }
 
         public static VectorI2 operator/(VectorI2 V, Int32 A)
         {
-            return VecOps.MkVectorI2(
+            return OHV.MkVectorI2(
                 (Int32)((Arith.Div(V.x, A))),
                 (Int32)((Arith.Div(V.y, A))));
         }
@@ -157,12 +161,16 @@ namespace OH
             }
         }
 
-        public static VectorI3 left  = VecOps.MkVectorI3(-1,  0,  0 );
-        public static VectorI3 down  = VecOps.MkVectorI3( 0, -1,  0 );
-        public static VectorI3 back  = VecOps.MkVectorI3( 0,  0, -1 );
-        public static VectorI3 right   = VecOps.MkVectorI3( 1,  0,  0 );
-        public static VectorI3 up      = VecOps.MkVectorI3( 0,  1,  0 );
-        public static VectorI3 forward = VecOps.MkVectorI3( 0,  0,  1 );
+        public static VectorI3 left  = OHV.MkVectorI3(-1,  0,  0 );
+        public static VectorI3 down  = OHV.MkVectorI3( 0, -1,  0 );
+        public static VectorI3 back  = OHV.MkVectorI3( 0,  0, -1 );
+        public static VectorI3 right   = OHV.MkVectorI3( 1,  0,  0 );
+        public static VectorI3 up      = OHV.MkVectorI3( 0,  1,  0 );
+        public static VectorI3 forward = OHV.MkVectorI3( 0,  0,  1 );
+        public static VectorI3 one = OHV.MkVectorI3(1);
+        public static VectorI3 zero = OHV.MkVectorI3(0);
+        public static VectorI3 MinValue = OHV.MkVectorI3(Int32.MinValue);
+        public static VectorI3 MaxValue = OHV.MkVectorI3(Int32.MaxValue);
         
         public static Boolean operator==(VectorI3 A, VectorI3 B)
         {
@@ -180,7 +188,7 @@ namespace OH
 
         public static VectorI3 operator-(VectorI3 A, VectorI3 B)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)(A.x - B.x),
                 (Int32)(A.y - B.y),
                 (Int32)(A.z - B.z));
@@ -188,7 +196,7 @@ namespace OH
 
         public static VectorI3 operator+(VectorI3 A, VectorI3 B)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)(A.x + B.x),
                 (Int32)(A.y + B.y),
                 (Int32)(A.z + B.z));
@@ -196,12 +204,12 @@ namespace OH
 
         public static VectorI3 operator-(VectorI3 V)
         {
-            return VecOps.MkVectorI3(-V.x, -V.y, -V.z);
+            return OHV.MkVectorI3(-V.x, -V.y, -V.z);
         }
 
         public static VectorI3 operator*(Int32 A, VectorI3 V)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)((A * V.x)),
                 (Int32)((A * V.y)),
                 (Int32)((A * V.z)));
@@ -209,7 +217,7 @@ namespace OH
 
         public static VectorI3 operator/(Int32 A, VectorI3 V)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)((Arith.Div(A, V.x))),
                 (Int32)((Arith.Div(A, V.y))),
                 (Int32)((Arith.Div(A, V.z))));
@@ -217,7 +225,7 @@ namespace OH
 
         public static VectorI3 operator*(VectorI3 V, Int32 A)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)((V.x * A)),
                 (Int32)((V.y * A)),
                 (Int32)((V.z * A)));
@@ -225,7 +233,7 @@ namespace OH
 
         public static VectorI3 operator/(VectorI3 V, Int32 A)
         {
-            return VecOps.MkVectorI3(
+            return OHV.MkVectorI3(
                 (Int32)((Arith.Div(V.x, A))),
                 (Int32)((Arith.Div(V.y, A))),
                 (Int32)((Arith.Div(V.z, A))));
@@ -292,6 +300,10 @@ namespace OH
             }
         }
 
+        public static VectorI4 one = OHV.MkVectorI4(1);
+        public static VectorI4 zero = OHV.MkVectorI4(0);
+        public static VectorI4 MinValue = OHV.MkVectorI4(Int32.MinValue);
+        public static VectorI4 MaxValue = OHV.MkVectorI4(Int32.MaxValue);
         
         public static Boolean operator==(VectorI4 A, VectorI4 B)
         {
@@ -311,7 +323,7 @@ namespace OH
 
         public static VectorI4 operator-(VectorI4 A, VectorI4 B)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)(A.x - B.x),
                 (Int32)(A.y - B.y),
                 (Int32)(A.z - B.z),
@@ -320,7 +332,7 @@ namespace OH
 
         public static VectorI4 operator+(VectorI4 A, VectorI4 B)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)(A.x + B.x),
                 (Int32)(A.y + B.y),
                 (Int32)(A.z + B.z),
@@ -329,12 +341,12 @@ namespace OH
 
         public static VectorI4 operator-(VectorI4 V)
         {
-            return VecOps.MkVectorI4(-V.x, -V.y, -V.z, -V.w);
+            return OHV.MkVectorI4(-V.x, -V.y, -V.z, -V.w);
         }
 
         public static VectorI4 operator*(Int32 A, VectorI4 V)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)((A * V.x)),
                 (Int32)((A * V.y)),
                 (Int32)((A * V.z)),
@@ -343,7 +355,7 @@ namespace OH
 
         public static VectorI4 operator/(Int32 A, VectorI4 V)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)((Arith.Div(A, V.x))),
                 (Int32)((Arith.Div(A, V.y))),
                 (Int32)((Arith.Div(A, V.z))),
@@ -352,7 +364,7 @@ namespace OH
 
         public static VectorI4 operator*(VectorI4 V, Int32 A)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)((V.x * A)),
                 (Int32)((V.y * A)),
                 (Int32)((V.z * A)),
@@ -361,7 +373,7 @@ namespace OH
 
         public static VectorI4 operator/(VectorI4 V, Int32 A)
         {
-            return VecOps.MkVectorI4(
+            return OHV.MkVectorI4(
                 (Int32)((Arith.Div(V.x, A))),
                 (Int32)((Arith.Div(V.y, A))),
                 (Int32)((Arith.Div(V.z, A))),
@@ -402,10 +414,10 @@ namespace OH
     public struct VectorB2 : IEquatable<VectorB2>
     {
         // All state
-        public byte x, y;
+        public Byte x, y;
         
         // Member functions
-        public byte this[int i]
+        public Byte this[int i]
         {
             get
             {
@@ -413,7 +425,7 @@ namespace OH
                 {
                     case 0: { return x; }
                     case 1: { return y; }
-                    default: { return byte.MaxValue; }
+                    default: { return Byte.MaxValue; }
                 }
             }
             set
@@ -426,8 +438,12 @@ namespace OH
             }
         }
 
-        public static VectorB2 right = VecOps.MkVectorB2( 1,  0 );
-        public static VectorB2 up    = VecOps.MkVectorB2( 0,  1 );
+        public static VectorB2 right = OHV.MkVectorB2( 1,  0 );
+        public static VectorB2 up    = OHV.MkVectorB2( 0,  1 );
+        public static VectorB2 one = OHV.MkVectorB2(1);
+        public static VectorB2 zero = OHV.MkVectorB2(0);
+        public static VectorB2 MinValue = OHV.MkVectorB2(0);
+        public static VectorB2 MaxValue = OHV.MkVectorB2(Byte.MaxValue);
         
         public static Boolean operator==(VectorB2 A, VectorB2 B)
         {
@@ -443,44 +459,44 @@ namespace OH
 
         public static VectorB2 operator-(VectorB2 A, VectorB2 B)
         {
-            return VecOps.MkVectorB2(
-                (byte)(A.x - B.x),
-                (byte)(A.y - B.y));
+            return OHV.MkVectorB2(
+                (Byte)(A.x - B.x),
+                (Byte)(A.y - B.y));
         }
 
         public static VectorB2 operator+(VectorB2 A, VectorB2 B)
         {
-            return VecOps.MkVectorB2(
-                (byte)(A.x + B.x),
-                (byte)(A.y + B.y));
+            return OHV.MkVectorB2(
+                (Byte)(A.x + B.x),
+                (Byte)(A.y + B.y));
         }
 
-        public static VectorB2 operator*(byte A, VectorB2 V)
+        public static VectorB2 operator*(Byte A, VectorB2 V)
         {
-            return VecOps.MkVectorB2(
-                (byte)((A * V.x)),
-                (byte)((A * V.y)));
+            return OHV.MkVectorB2(
+                (Byte)((A * V.x)),
+                (Byte)((A * V.y)));
         }
 
-        public static VectorB2 operator/(byte A, VectorB2 V)
+        public static VectorB2 operator/(Byte A, VectorB2 V)
         {
-            return VecOps.MkVectorB2(
-                (byte)((Arith.Div(A, V.x))),
-                (byte)((Arith.Div(A, V.y))));
+            return OHV.MkVectorB2(
+                (Byte)((Arith.Div(A, V.x))),
+                (Byte)((Arith.Div(A, V.y))));
         }
 
-        public static VectorB2 operator*(VectorB2 V, byte A)
+        public static VectorB2 operator*(VectorB2 V, Byte A)
         {
-            return VecOps.MkVectorB2(
-                (byte)((V.x * A)),
-                (byte)((V.y * A)));
+            return OHV.MkVectorB2(
+                (Byte)((V.x * A)),
+                (Byte)((V.y * A)));
         }
 
-        public static VectorB2 operator/(VectorB2 V, byte A)
+        public static VectorB2 operator/(VectorB2 V, Byte A)
         {
-            return VecOps.MkVectorB2(
-                (byte)((Arith.Div(V.x, A))),
-                (byte)((Arith.Div(V.y, A))));
+            return OHV.MkVectorB2(
+                (Byte)((Arith.Div(V.x, A))),
+                (Byte)((Arith.Div(V.y, A))));
         }
 
         public override string ToString()
@@ -515,10 +531,10 @@ namespace OH
     public struct VectorB3 : IEquatable<VectorB3>
     {
         // All state
-        public byte x, y, z;
+        public Byte x, y, z;
         
         // Member functions
-        public byte this[int i]
+        public Byte this[int i]
         {
             get
             {
@@ -527,7 +543,7 @@ namespace OH
                     case 0: { return x; }
                     case 1: { return y; }
                     case 2: { return z; }
-                    default: { return byte.MaxValue; }
+                    default: { return Byte.MaxValue; }
                 }
             }
             set
@@ -541,9 +557,13 @@ namespace OH
             }
         }
 
-        public static VectorB3 right   = VecOps.MkVectorB3( 1,  0,  0 );
-        public static VectorB3 up      = VecOps.MkVectorB3( 0,  1,  0 );
-        public static VectorB3 forward = VecOps.MkVectorB3( 0,  0,  1 );
+        public static VectorB3 right   = OHV.MkVectorB3( 1,  0,  0 );
+        public static VectorB3 up      = OHV.MkVectorB3( 0,  1,  0 );
+        public static VectorB3 forward = OHV.MkVectorB3( 0,  0,  1 );
+        public static VectorB3 one = OHV.MkVectorB3(1);
+        public static VectorB3 zero = OHV.MkVectorB3(0);
+        public static VectorB3 MinValue = OHV.MkVectorB3(0);
+        public static VectorB3 MaxValue = OHV.MkVectorB3(Byte.MaxValue);
         
         public static Boolean operator==(VectorB3 A, VectorB3 B)
         {
@@ -561,50 +581,50 @@ namespace OH
 
         public static VectorB3 operator-(VectorB3 A, VectorB3 B)
         {
-            return VecOps.MkVectorB3(
-                (byte)(A.x - B.x),
-                (byte)(A.y - B.y),
-                (byte)(A.z - B.z));
+            return OHV.MkVectorB3(
+                (Byte)(A.x - B.x),
+                (Byte)(A.y - B.y),
+                (Byte)(A.z - B.z));
         }
 
         public static VectorB3 operator+(VectorB3 A, VectorB3 B)
         {
-            return VecOps.MkVectorB3(
-                (byte)(A.x + B.x),
-                (byte)(A.y + B.y),
-                (byte)(A.z + B.z));
+            return OHV.MkVectorB3(
+                (Byte)(A.x + B.x),
+                (Byte)(A.y + B.y),
+                (Byte)(A.z + B.z));
         }
 
-        public static VectorB3 operator*(byte A, VectorB3 V)
+        public static VectorB3 operator*(Byte A, VectorB3 V)
         {
-            return VecOps.MkVectorB3(
-                (byte)((A * V.x)),
-                (byte)((A * V.y)),
-                (byte)((A * V.z)));
+            return OHV.MkVectorB3(
+                (Byte)((A * V.x)),
+                (Byte)((A * V.y)),
+                (Byte)((A * V.z)));
         }
 
-        public static VectorB3 operator/(byte A, VectorB3 V)
+        public static VectorB3 operator/(Byte A, VectorB3 V)
         {
-            return VecOps.MkVectorB3(
-                (byte)((Arith.Div(A, V.x))),
-                (byte)((Arith.Div(A, V.y))),
-                (byte)((Arith.Div(A, V.z))));
+            return OHV.MkVectorB3(
+                (Byte)((Arith.Div(A, V.x))),
+                (Byte)((Arith.Div(A, V.y))),
+                (Byte)((Arith.Div(A, V.z))));
         }
 
-        public static VectorB3 operator*(VectorB3 V, byte A)
+        public static VectorB3 operator*(VectorB3 V, Byte A)
         {
-            return VecOps.MkVectorB3(
-                (byte)((V.x * A)),
-                (byte)((V.y * A)),
-                (byte)((V.z * A)));
+            return OHV.MkVectorB3(
+                (Byte)((V.x * A)),
+                (Byte)((V.y * A)),
+                (Byte)((V.z * A)));
         }
 
-        public static VectorB3 operator/(VectorB3 V, byte A)
+        public static VectorB3 operator/(VectorB3 V, Byte A)
         {
-            return VecOps.MkVectorB3(
-                (byte)((Arith.Div(V.x, A))),
-                (byte)((Arith.Div(V.y, A))),
-                (byte)((Arith.Div(V.z, A))));
+            return OHV.MkVectorB3(
+                (Byte)((Arith.Div(V.x, A))),
+                (Byte)((Arith.Div(V.y, A))),
+                (Byte)((Arith.Div(V.z, A))));
         }
 
         public override string ToString()
@@ -640,10 +660,10 @@ namespace OH
     public struct VectorB4 : IEquatable<VectorB4>
     {
         // All state
-        public byte x, y, z, w;
+        public Byte x, y, z, w;
         
         // Member functions
-        public byte this[int i]
+        public Byte this[int i]
         {
             get
             {
@@ -653,7 +673,7 @@ namespace OH
                     case 1: { return y; }
                     case 2: { return z; }
                     case 3: { return w; }
-                    default: { return byte.MaxValue; }
+                    default: { return Byte.MaxValue; }
                 }
             }
             set
@@ -668,6 +688,10 @@ namespace OH
             }
         }
 
+        public static VectorB4 one = OHV.MkVectorB4(1);
+        public static VectorB4 zero = OHV.MkVectorB4(0);
+        public static VectorB4 MinValue = OHV.MkVectorB4(0);
+        public static VectorB4 MaxValue = OHV.MkVectorB4(Byte.MaxValue);
         
         public static Boolean operator==(VectorB4 A, VectorB4 B)
         {
@@ -687,56 +711,56 @@ namespace OH
 
         public static VectorB4 operator-(VectorB4 A, VectorB4 B)
         {
-            return VecOps.MkVectorB4(
-                (byte)(A.x - B.x),
-                (byte)(A.y - B.y),
-                (byte)(A.z - B.z),
-                (byte)(A.w - B.w));
+            return OHV.MkVectorB4(
+                (Byte)(A.x - B.x),
+                (Byte)(A.y - B.y),
+                (Byte)(A.z - B.z),
+                (Byte)(A.w - B.w));
         }
 
         public static VectorB4 operator+(VectorB4 A, VectorB4 B)
         {
-            return VecOps.MkVectorB4(
-                (byte)(A.x + B.x),
-                (byte)(A.y + B.y),
-                (byte)(A.z + B.z),
-                (byte)(A.w + B.w));
+            return OHV.MkVectorB4(
+                (Byte)(A.x + B.x),
+                (Byte)(A.y + B.y),
+                (Byte)(A.z + B.z),
+                (Byte)(A.w + B.w));
         }
 
-        public static VectorB4 operator*(byte A, VectorB4 V)
+        public static VectorB4 operator*(Byte A, VectorB4 V)
         {
-            return VecOps.MkVectorB4(
-                (byte)((A * V.x)),
-                (byte)((A * V.y)),
-                (byte)((A * V.z)),
-                (byte)((A * V.w)));
+            return OHV.MkVectorB4(
+                (Byte)((A * V.x)),
+                (Byte)((A * V.y)),
+                (Byte)((A * V.z)),
+                (Byte)((A * V.w)));
         }
 
-        public static VectorB4 operator/(byte A, VectorB4 V)
+        public static VectorB4 operator/(Byte A, VectorB4 V)
         {
-            return VecOps.MkVectorB4(
-                (byte)((Arith.Div(A, V.x))),
-                (byte)((Arith.Div(A, V.y))),
-                (byte)((Arith.Div(A, V.z))),
-                (byte)((Arith.Div(A, V.w))));
+            return OHV.MkVectorB4(
+                (Byte)((Arith.Div(A, V.x))),
+                (Byte)((Arith.Div(A, V.y))),
+                (Byte)((Arith.Div(A, V.z))),
+                (Byte)((Arith.Div(A, V.w))));
         }
 
-        public static VectorB4 operator*(VectorB4 V, byte A)
+        public static VectorB4 operator*(VectorB4 V, Byte A)
         {
-            return VecOps.MkVectorB4(
-                (byte)((V.x * A)),
-                (byte)((V.y * A)),
-                (byte)((V.z * A)),
-                (byte)((V.w * A)));
+            return OHV.MkVectorB4(
+                (Byte)((V.x * A)),
+                (Byte)((V.y * A)),
+                (Byte)((V.z * A)),
+                (Byte)((V.w * A)));
         }
 
-        public static VectorB4 operator/(VectorB4 V, byte A)
+        public static VectorB4 operator/(VectorB4 V, Byte A)
         {
-            return VecOps.MkVectorB4(
-                (byte)((Arith.Div(V.x, A))),
-                (byte)((Arith.Div(V.y, A))),
-                (byte)((Arith.Div(V.z, A))),
-                (byte)((Arith.Div(V.w, A))));
+            return OHV.MkVectorB4(
+                (Byte)((Arith.Div(V.x, A))),
+                (Byte)((Arith.Div(V.y, A))),
+                (Byte)((Arith.Div(V.z, A))),
+                (Byte)((Arith.Div(V.w, A))));
         }
 
         public override string ToString()
@@ -773,10 +797,10 @@ namespace OH
     public struct VectorD2 : IEquatable<VectorD2>
     {
         // All state
-        public double x, y;
+        public Double x, y;
         
         // Member functions
-        public double this[int i]
+        public Double this[int i]
         {
             get
             {
@@ -784,7 +808,7 @@ namespace OH
                 {
                     case 0: { return x; }
                     case 1: { return y; }
-                    default: { return double.MaxValue; }
+                    default: { return Double.MaxValue; }
                 }
             }
             set
@@ -797,10 +821,14 @@ namespace OH
             }
         }
 
-        public static VectorD2 left = VecOps.MkVectorD2(-1,  0 );
-        public static VectorD2 down = VecOps.MkVectorD2( 0, -1 );
-        public static VectorD2 right = VecOps.MkVectorD2( 1,  0 );
-        public static VectorD2 up    = VecOps.MkVectorD2( 0,  1 );
+        public static VectorD2 left = OHV.MkVectorD2(-1,  0 );
+        public static VectorD2 down = OHV.MkVectorD2( 0, -1 );
+        public static VectorD2 right = OHV.MkVectorD2( 1,  0 );
+        public static VectorD2 up    = OHV.MkVectorD2( 0,  1 );
+        public static VectorD2 one = OHV.MkVectorD2(1);
+        public static VectorD2 zero = OHV.MkVectorD2(0);
+        public static VectorD2 negativeInfinity = OHV.MkVectorD2(Double.NegativeInfinity);
+        public static VectorD2 positiveInfinity = OHV.MkVectorD2(Double.PositiveInfinity);
         
         public static Boolean operator==(VectorD2 A, VectorD2 B)
         {
@@ -816,49 +844,49 @@ namespace OH
 
         public static VectorD2 operator-(VectorD2 A, VectorD2 B)
         {
-            return VecOps.MkVectorD2(
-                (double)(A.x - B.x),
-                (double)(A.y - B.y));
+            return OHV.MkVectorD2(
+                (Double)(A.x - B.x),
+                (Double)(A.y - B.y));
         }
 
         public static VectorD2 operator+(VectorD2 A, VectorD2 B)
         {
-            return VecOps.MkVectorD2(
-                (double)(A.x + B.x),
-                (double)(A.y + B.y));
+            return OHV.MkVectorD2(
+                (Double)(A.x + B.x),
+                (Double)(A.y + B.y));
         }
 
         public static VectorD2 operator-(VectorD2 V)
         {
-            return VecOps.MkVectorD2(-V.x, -V.y);
+            return OHV.MkVectorD2(-V.x, -V.y);
         }
 
-        public static VectorD2 operator*(double A, VectorD2 V)
+        public static VectorD2 operator*(Double A, VectorD2 V)
         {
-            return VecOps.MkVectorD2(
-                (double)((A * V.x)),
-                (double)((A * V.y)));
+            return OHV.MkVectorD2(
+                (Double)((A * V.x)),
+                (Double)((A * V.y)));
         }
 
-        public static VectorD2 operator/(double A, VectorD2 V)
+        public static VectorD2 operator/(Double A, VectorD2 V)
         {
-            return VecOps.MkVectorD2(
-                (double)((Arith.Div(A, V.x))),
-                (double)((Arith.Div(A, V.y))));
+            return OHV.MkVectorD2(
+                (Double)((Arith.Div(A, V.x))),
+                (Double)((Arith.Div(A, V.y))));
         }
 
-        public static VectorD2 operator*(VectorD2 V, double A)
+        public static VectorD2 operator*(VectorD2 V, Double A)
         {
-            return VecOps.MkVectorD2(
-                (double)((V.x * A)),
-                (double)((V.y * A)));
+            return OHV.MkVectorD2(
+                (Double)((V.x * A)),
+                (Double)((V.y * A)));
         }
 
-        public static VectorD2 operator/(VectorD2 V, double A)
+        public static VectorD2 operator/(VectorD2 V, Double A)
         {
-            return VecOps.MkVectorD2(
-                (double)((Arith.Div(V.x, A))),
-                (double)((Arith.Div(V.y, A))));
+            return OHV.MkVectorD2(
+                (Double)((Arith.Div(V.x, A))),
+                (Double)((Arith.Div(V.y, A))));
         }
 
         public override string ToString()
@@ -893,10 +921,10 @@ namespace OH
     public struct VectorD3 : IEquatable<VectorD3>
     {
         // All state
-        public double x, y, z;
+        public Double x, y, z;
         
         // Member functions
-        public double this[int i]
+        public Double this[int i]
         {
             get
             {
@@ -905,7 +933,7 @@ namespace OH
                     case 0: { return x; }
                     case 1: { return y; }
                     case 2: { return z; }
-                    default: { return double.MaxValue; }
+                    default: { return Double.MaxValue; }
                 }
             }
             set
@@ -919,12 +947,16 @@ namespace OH
             }
         }
 
-        public static VectorD3 left  = VecOps.MkVectorD3(-1,  0,  0 );
-        public static VectorD3 down  = VecOps.MkVectorD3( 0, -1,  0 );
-        public static VectorD3 back  = VecOps.MkVectorD3( 0,  0, -1 );
-        public static VectorD3 right   = VecOps.MkVectorD3( 1,  0,  0 );
-        public static VectorD3 up      = VecOps.MkVectorD3( 0,  1,  0 );
-        public static VectorD3 forward = VecOps.MkVectorD3( 0,  0,  1 );
+        public static VectorD3 left  = OHV.MkVectorD3(-1,  0,  0 );
+        public static VectorD3 down  = OHV.MkVectorD3( 0, -1,  0 );
+        public static VectorD3 back  = OHV.MkVectorD3( 0,  0, -1 );
+        public static VectorD3 right   = OHV.MkVectorD3( 1,  0,  0 );
+        public static VectorD3 up      = OHV.MkVectorD3( 0,  1,  0 );
+        public static VectorD3 forward = OHV.MkVectorD3( 0,  0,  1 );
+        public static VectorD3 one = OHV.MkVectorD3(1);
+        public static VectorD3 zero = OHV.MkVectorD3(0);
+        public static VectorD3 negativeInfinity = OHV.MkVectorD3(Double.NegativeInfinity);
+        public static VectorD3 positiveInfinity = OHV.MkVectorD3(Double.PositiveInfinity);
         
         public static Boolean operator==(VectorD3 A, VectorD3 B)
         {
@@ -942,55 +974,55 @@ namespace OH
 
         public static VectorD3 operator-(VectorD3 A, VectorD3 B)
         {
-            return VecOps.MkVectorD3(
-                (double)(A.x - B.x),
-                (double)(A.y - B.y),
-                (double)(A.z - B.z));
+            return OHV.MkVectorD3(
+                (Double)(A.x - B.x),
+                (Double)(A.y - B.y),
+                (Double)(A.z - B.z));
         }
 
         public static VectorD3 operator+(VectorD3 A, VectorD3 B)
         {
-            return VecOps.MkVectorD3(
-                (double)(A.x + B.x),
-                (double)(A.y + B.y),
-                (double)(A.z + B.z));
+            return OHV.MkVectorD3(
+                (Double)(A.x + B.x),
+                (Double)(A.y + B.y),
+                (Double)(A.z + B.z));
         }
 
         public static VectorD3 operator-(VectorD3 V)
         {
-            return VecOps.MkVectorD3(-V.x, -V.y, -V.z);
+            return OHV.MkVectorD3(-V.x, -V.y, -V.z);
         }
 
-        public static VectorD3 operator*(double A, VectorD3 V)
+        public static VectorD3 operator*(Double A, VectorD3 V)
         {
-            return VecOps.MkVectorD3(
-                (double)((A * V.x)),
-                (double)((A * V.y)),
-                (double)((A * V.z)));
+            return OHV.MkVectorD3(
+                (Double)((A * V.x)),
+                (Double)((A * V.y)),
+                (Double)((A * V.z)));
         }
 
-        public static VectorD3 operator/(double A, VectorD3 V)
+        public static VectorD3 operator/(Double A, VectorD3 V)
         {
-            return VecOps.MkVectorD3(
-                (double)((Arith.Div(A, V.x))),
-                (double)((Arith.Div(A, V.y))),
-                (double)((Arith.Div(A, V.z))));
+            return OHV.MkVectorD3(
+                (Double)((Arith.Div(A, V.x))),
+                (Double)((Arith.Div(A, V.y))),
+                (Double)((Arith.Div(A, V.z))));
         }
 
-        public static VectorD3 operator*(VectorD3 V, double A)
+        public static VectorD3 operator*(VectorD3 V, Double A)
         {
-            return VecOps.MkVectorD3(
-                (double)((V.x * A)),
-                (double)((V.y * A)),
-                (double)((V.z * A)));
+            return OHV.MkVectorD3(
+                (Double)((V.x * A)),
+                (Double)((V.y * A)),
+                (Double)((V.z * A)));
         }
 
-        public static VectorD3 operator/(VectorD3 V, double A)
+        public static VectorD3 operator/(VectorD3 V, Double A)
         {
-            return VecOps.MkVectorD3(
-                (double)((Arith.Div(V.x, A))),
-                (double)((Arith.Div(V.y, A))),
-                (double)((Arith.Div(V.z, A))));
+            return OHV.MkVectorD3(
+                (Double)((Arith.Div(V.x, A))),
+                (Double)((Arith.Div(V.y, A))),
+                (Double)((Arith.Div(V.z, A))));
         }
 
         public override string ToString()
@@ -1026,10 +1058,10 @@ namespace OH
     public struct VectorD4 : IEquatable<VectorD4>
     {
         // All state
-        public double x, y, z, w;
+        public Double x, y, z, w;
         
         // Member functions
-        public double this[int i]
+        public Double this[int i]
         {
             get
             {
@@ -1039,7 +1071,7 @@ namespace OH
                     case 1: { return y; }
                     case 2: { return z; }
                     case 3: { return w; }
-                    default: { return double.MaxValue; }
+                    default: { return Double.MaxValue; }
                 }
             }
             set
@@ -1054,6 +1086,10 @@ namespace OH
             }
         }
 
+        public static VectorD4 one = OHV.MkVectorD4(1);
+        public static VectorD4 zero = OHV.MkVectorD4(0);
+        public static VectorD4 negativeInfinity = OHV.MkVectorD4(Double.NegativeInfinity);
+        public static VectorD4 positiveInfinity = OHV.MkVectorD4(Double.PositiveInfinity);
         
         public static Boolean operator==(VectorD4 A, VectorD4 B)
         {
@@ -1073,61 +1109,61 @@ namespace OH
 
         public static VectorD4 operator-(VectorD4 A, VectorD4 B)
         {
-            return VecOps.MkVectorD4(
-                (double)(A.x - B.x),
-                (double)(A.y - B.y),
-                (double)(A.z - B.z),
-                (double)(A.w - B.w));
+            return OHV.MkVectorD4(
+                (Double)(A.x - B.x),
+                (Double)(A.y - B.y),
+                (Double)(A.z - B.z),
+                (Double)(A.w - B.w));
         }
 
         public static VectorD4 operator+(VectorD4 A, VectorD4 B)
         {
-            return VecOps.MkVectorD4(
-                (double)(A.x + B.x),
-                (double)(A.y + B.y),
-                (double)(A.z + B.z),
-                (double)(A.w + B.w));
+            return OHV.MkVectorD4(
+                (Double)(A.x + B.x),
+                (Double)(A.y + B.y),
+                (Double)(A.z + B.z),
+                (Double)(A.w + B.w));
         }
 
         public static VectorD4 operator-(VectorD4 V)
         {
-            return VecOps.MkVectorD4(-V.x, -V.y, -V.z, -V.w);
+            return OHV.MkVectorD4(-V.x, -V.y, -V.z, -V.w);
         }
 
-        public static VectorD4 operator*(double A, VectorD4 V)
+        public static VectorD4 operator*(Double A, VectorD4 V)
         {
-            return VecOps.MkVectorD4(
-                (double)((A * V.x)),
-                (double)((A * V.y)),
-                (double)((A * V.z)),
-                (double)((A * V.w)));
+            return OHV.MkVectorD4(
+                (Double)((A * V.x)),
+                (Double)((A * V.y)),
+                (Double)((A * V.z)),
+                (Double)((A * V.w)));
         }
 
-        public static VectorD4 operator/(double A, VectorD4 V)
+        public static VectorD4 operator/(Double A, VectorD4 V)
         {
-            return VecOps.MkVectorD4(
-                (double)((Arith.Div(A, V.x))),
-                (double)((Arith.Div(A, V.y))),
-                (double)((Arith.Div(A, V.z))),
-                (double)((Arith.Div(A, V.w))));
+            return OHV.MkVectorD4(
+                (Double)((Arith.Div(A, V.x))),
+                (Double)((Arith.Div(A, V.y))),
+                (Double)((Arith.Div(A, V.z))),
+                (Double)((Arith.Div(A, V.w))));
         }
 
-        public static VectorD4 operator*(VectorD4 V, double A)
+        public static VectorD4 operator*(VectorD4 V, Double A)
         {
-            return VecOps.MkVectorD4(
-                (double)((V.x * A)),
-                (double)((V.y * A)),
-                (double)((V.z * A)),
-                (double)((V.w * A)));
+            return OHV.MkVectorD4(
+                (Double)((V.x * A)),
+                (Double)((V.y * A)),
+                (Double)((V.z * A)),
+                (Double)((V.w * A)));
         }
 
-        public static VectorD4 operator/(VectorD4 V, double A)
+        public static VectorD4 operator/(VectorD4 V, Double A)
         {
-            return VecOps.MkVectorD4(
-                (double)((Arith.Div(V.x, A))),
-                (double)((Arith.Div(V.y, A))),
-                (double)((Arith.Div(V.z, A))),
-                (double)((Arith.Div(V.w, A))));
+            return OHV.MkVectorD4(
+                (Double)((Arith.Div(V.x, A))),
+                (Double)((Arith.Div(V.y, A))),
+                (Double)((Arith.Div(V.z, A))),
+                (Double)((Arith.Div(V.w, A))));
         }
 
         public override string ToString()

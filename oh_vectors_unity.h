@@ -19,93 +19,141 @@ union VectorI4
 
 union VectorB2
 {
-    struct { byte x, y; };
-    byte E[2];
+    struct { Byte x, y; };
+    Byte E[2];
 };
 
 union VectorB3
 {
-    struct { byte x, y, z; };
-    byte E[3];
+    struct { Byte x, y, z; };
+    Byte E[3];
 };
 
 union VectorB4
 {
-    struct { byte x, y, z, w; };
-    byte E[4];
+    struct { Byte x, y, z, w; };
+    Byte E[4];
 };
 
 union VectorD2
 {
-    struct { double x, y; };
-    double E[2];
+    struct { Double x, y; };
+    Double E[2];
 };
 
 union VectorD3
 {
-    struct { double x, y, z; };
-    double E[3];
+    struct { Double x, y, z; };
+    Double E[3];
 };
 
 union VectorD4
 {
-    struct { double x, y, z, w; };
-    double E[4];
+    struct { Double x, y, z, w; };
+    Double E[4];
 };
 
 union Vector2
 {
-    struct { float x, y; };
-    float E[2];
+    struct { Single x, y; };
+    Single E[2];
 };
 
 union Vector3
 {
-    struct { float x, y, z; };
-    float E[3];
+    struct { Single x, y, z; };
+    Single E[3];
 };
 
 union Vector4
 {
-    struct { float x, y, z, w; };
-    float E[4];
+    struct { Single x, y, z, w; };
+    Single E[4];
 };
 
 #define VectorI2_left    (VectorI2{ -1,  0 })
 #define VectorI2_down    (VectorI2{  0, -1 })
 #define VectorI2_right   (VectorI2{  1,  0 })
 #define VectorI2_up      (VectorI2{  0,  1 })
+#define VectorI2_one MkVectorI2(1);
+#define VectorI2_zero MkVectorI2(0);
+#define VectorI2_MinValue MkVectorI2(INT32_MIN);
+#define VectorI2_MaxValue MkVectorI2(INT32_MAX);
 #define VectorI3_left    (VectorI3{ -1,  0,  0 })
 #define VectorI3_down    (VectorI3{  0, -1,  0 })
 #define VectorI3_back    (VectorI3{  0,  0, -1 })
 #define VectorI3_right   (VectorI3{  1,  0,  0 })
 #define VectorI3_up      (VectorI3{  0,  1,  0 })
 #define VectorI3_forward (VectorI3{  0,  0,  1 })
+#define VectorI3_one MkVectorI3(1);
+#define VectorI3_zero MkVectorI3(0);
+#define VectorI3_MinValue MkVectorI3(INT32_MIN);
+#define VectorI3_MaxValue MkVectorI3(INT32_MAX);
+#define VectorI4_one MkVectorI4(1);
+#define VectorI4_zero MkVectorI4(0);
+#define VectorI4_MinValue MkVectorI4(INT32_MIN);
+#define VectorI4_MaxValue MkVectorI4(INT32_MAX);
 #define VectorB2_right   (VectorB2{  1,  0 })
 #define VectorB2_up      (VectorB2{  0,  1 })
+#define VectorB2_one MkVectorB2(1);
+#define VectorB2_zero MkVectorB2(0);
+#define VectorB2_MinValue MkVectorB2(0);
+#define VectorB2_MaxValue MkVectorB2(UINT8_MAX);
 #define VectorB3_right   (VectorB3{  1,  0,  0 })
 #define VectorB3_up      (VectorB3{  0,  1,  0 })
 #define VectorB3_forward (VectorB3{  0,  0,  1 })
+#define VectorB3_one MkVectorB3(1);
+#define VectorB3_zero MkVectorB3(0);
+#define VectorB3_MinValue MkVectorB3(0);
+#define VectorB3_MaxValue MkVectorB3(UINT8_MAX);
+#define VectorB4_one MkVectorB4(1);
+#define VectorB4_zero MkVectorB4(0);
+#define VectorB4_MinValue MkVectorB4(0);
+#define VectorB4_MaxValue MkVectorB4(UINT8_MAX);
 #define VectorD2_left    (VectorD2{ -1,  0 })
 #define VectorD2_down    (VectorD2{  0, -1 })
 #define VectorD2_right   (VectorD2{  1,  0 })
 #define VectorD2_up      (VectorD2{  0,  1 })
+#define VectorD2_one MkVectorD2(1);
+#define VectorD2_zero MkVectorD2(0);
+#define VectorD2_negativeInfinity MkVectorD2(-INFINITY);
+#define VectorD2_positiveInfinity MkVectorD2(INFINITY);
 #define VectorD3_left    (VectorD3{ -1,  0,  0 })
 #define VectorD3_down    (VectorD3{  0, -1,  0 })
 #define VectorD3_back    (VectorD3{  0,  0, -1 })
 #define VectorD3_right   (VectorD3{  1,  0,  0 })
 #define VectorD3_up      (VectorD3{  0,  1,  0 })
 #define VectorD3_forward (VectorD3{  0,  0,  1 })
+#define VectorD3_one MkVectorD3(1);
+#define VectorD3_zero MkVectorD3(0);
+#define VectorD3_negativeInfinity MkVectorD3(-INFINITY);
+#define VectorD3_positiveInfinity MkVectorD3(INFINITY);
+#define VectorD4_one MkVectorD4(1);
+#define VectorD4_zero MkVectorD4(0);
+#define VectorD4_negativeInfinity MkVectorD4(-INFINITY);
+#define VectorD4_positiveInfinity MkVectorD4(INFINITY);
 #define Vector2_left    (Vector2{ -1,  0 })
 #define Vector2_down    (Vector2{  0, -1 })
 #define Vector2_right   (Vector2{  1,  0 })
 #define Vector2_up      (Vector2{  0,  1 })
+#define Vector2_one MkVector2(1);
+#define Vector2_zero MkVector2(0);
+#define Vector2_negativeInfinity MkVector2(-INFINITY);
+#define Vector2_positiveInfinity MkVector2(INFINITY);
 #define Vector3_left    (Vector3{ -1,  0,  0 })
 #define Vector3_down    (Vector3{  0, -1,  0 })
 #define Vector3_back    (Vector3{  0,  0, -1 })
 #define Vector3_right   (Vector3{  1,  0,  0 })
 #define Vector3_up      (Vector3{  0,  1,  0 })
 #define Vector3_forward (Vector3{  0,  0,  1 })
+#define Vector3_one MkVector3(1);
+#define Vector3_zero MkVector3(0);
+#define Vector3_negativeInfinity MkVector3(-INFINITY);
+#define Vector3_positiveInfinity MkVector3(INFINITY);
+#define Vector4_one MkVector4(1);
+#define Vector4_zero MkVector4(0);
+#define Vector4_negativeInfinity MkVector4(-INFINITY);
+#define Vector4_positiveInfinity MkVector4(INFINITY);
 
 // Constructors from primitives. Float converts to int using floor
 inline VectorI2 MkVectorI2(Int32 x, Int32 y)
@@ -124,7 +172,7 @@ inline VectorI2 MkVectorI2(Int32 A)
     return V;
 }
 
-inline VectorI2 MkVectorI2B(byte x, byte y)
+inline VectorI2 MkVectorI2B(Byte x, Byte y)
 {
     VectorI2 V;
     V.x = (Int32)(x);
@@ -132,7 +180,7 @@ inline VectorI2 MkVectorI2B(byte x, byte y)
     return V;
 }
 
-inline VectorI2 MkVectorI2B(byte A)
+inline VectorI2 MkVectorI2B(Byte A)
 {
     VectorI2 V;
     V.x = (Int32)(A);
@@ -140,7 +188,7 @@ inline VectorI2 MkVectorI2B(byte A)
     return V;
 }
 
-inline VectorI2 MkVectorI2D(double x, double y)
+inline VectorI2 MkVectorI2D(Double x, Double y)
 {
     VectorI2 V;
     V.x = FloorID(x);
@@ -148,7 +196,7 @@ inline VectorI2 MkVectorI2D(double x, double y)
     return V;
 }
 
-inline VectorI2 MkVectorI2D(double A)
+inline VectorI2 MkVectorI2D(Double A)
 {
     VectorI2 V;
     V.x = FloorID(A);
@@ -156,7 +204,7 @@ inline VectorI2 MkVectorI2D(double A)
     return V;
 }
 
-inline VectorI2 MkVectorI2F(float x, float y)
+inline VectorI2 MkVectorI2F(Single x, Single y)
 {
     VectorI2 V;
     V.x = FloorIF(x);
@@ -164,7 +212,7 @@ inline VectorI2 MkVectorI2F(float x, float y)
     return V;
 }
 
-inline VectorI2 MkVectorI2F(float A)
+inline VectorI2 MkVectorI2F(Single A)
 {
     VectorI2 V;
     V.x = FloorIF(A);
@@ -190,7 +238,7 @@ inline VectorI3 MkVectorI3(Int32 A)
     return V;
 }
 
-inline VectorI3 MkVectorI3B(byte x, byte y, byte z)
+inline VectorI3 MkVectorI3B(Byte x, Byte y, Byte z)
 {
     VectorI3 V;
     V.x = (Int32)(x);
@@ -199,7 +247,7 @@ inline VectorI3 MkVectorI3B(byte x, byte y, byte z)
     return V;
 }
 
-inline VectorI3 MkVectorI3B(byte A)
+inline VectorI3 MkVectorI3B(Byte A)
 {
     VectorI3 V;
     V.x = (Int32)(A);
@@ -208,7 +256,7 @@ inline VectorI3 MkVectorI3B(byte A)
     return V;
 }
 
-inline VectorI3 MkVectorI3D(double x, double y, double z)
+inline VectorI3 MkVectorI3D(Double x, Double y, Double z)
 {
     VectorI3 V;
     V.x = FloorID(x);
@@ -217,7 +265,7 @@ inline VectorI3 MkVectorI3D(double x, double y, double z)
     return V;
 }
 
-inline VectorI3 MkVectorI3D(double A)
+inline VectorI3 MkVectorI3D(Double A)
 {
     VectorI3 V;
     V.x = FloorID(A);
@@ -226,7 +274,7 @@ inline VectorI3 MkVectorI3D(double A)
     return V;
 }
 
-inline VectorI3 MkVectorI3F(float x, float y, float z)
+inline VectorI3 MkVectorI3F(Single x, Single y, Single z)
 {
     VectorI3 V;
     V.x = FloorIF(x);
@@ -235,7 +283,7 @@ inline VectorI3 MkVectorI3F(float x, float y, float z)
     return V;
 }
 
-inline VectorI3 MkVectorI3F(float A)
+inline VectorI3 MkVectorI3F(Single A)
 {
     VectorI3 V;
     V.x = FloorIF(A);
@@ -264,7 +312,7 @@ inline VectorI4 MkVectorI4(Int32 A)
     return V;
 }
 
-inline VectorI4 MkVectorI4B(byte x, byte y, byte z, byte w)
+inline VectorI4 MkVectorI4B(Byte x, Byte y, Byte z, Byte w)
 {
     VectorI4 V;
     V.x = (Int32)(x);
@@ -274,7 +322,7 @@ inline VectorI4 MkVectorI4B(byte x, byte y, byte z, byte w)
     return V;
 }
 
-inline VectorI4 MkVectorI4B(byte A)
+inline VectorI4 MkVectorI4B(Byte A)
 {
     VectorI4 V;
     V.x = (Int32)(A);
@@ -284,7 +332,7 @@ inline VectorI4 MkVectorI4B(byte A)
     return V;
 }
 
-inline VectorI4 MkVectorI4D(double x, double y, double z, double w)
+inline VectorI4 MkVectorI4D(Double x, Double y, Double z, Double w)
 {
     VectorI4 V;
     V.x = FloorID(x);
@@ -294,7 +342,7 @@ inline VectorI4 MkVectorI4D(double x, double y, double z, double w)
     return V;
 }
 
-inline VectorI4 MkVectorI4D(double A)
+inline VectorI4 MkVectorI4D(Double A)
 {
     VectorI4 V;
     V.x = FloorID(A);
@@ -304,7 +352,7 @@ inline VectorI4 MkVectorI4D(double A)
     return V;
 }
 
-inline VectorI4 MkVectorI4F(float x, float y, float z, float w)
+inline VectorI4 MkVectorI4F(Single x, Single y, Single z, Single w)
 {
     VectorI4 V;
     V.x = FloorIF(x);
@@ -314,7 +362,7 @@ inline VectorI4 MkVectorI4F(float x, float y, float z, float w)
     return V;
 }
 
-inline VectorI4 MkVectorI4F(float A)
+inline VectorI4 MkVectorI4F(Single A)
 {
     VectorI4 V;
     V.x = FloorIF(A);
@@ -327,36 +375,36 @@ inline VectorI4 MkVectorI4F(float A)
 inline VectorB2 MkVectorB2I(Int32 x, Int32 y)
 {
     VectorB2 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
     return V;
 }
 
 inline VectorB2 MkVectorB2I(Int32 A)
 {
     VectorB2 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
     return V;
 }
 
-inline VectorB2 MkVectorB2(byte x, byte y)
+inline VectorB2 MkVectorB2(Byte x, Byte y)
 {
     VectorB2 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
     return V;
 }
 
-inline VectorB2 MkVectorB2(byte A)
+inline VectorB2 MkVectorB2(Byte A)
 {
     VectorB2 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
     return V;
 }
 
-inline VectorB2 MkVectorB2D(double x, double y)
+inline VectorB2 MkVectorB2D(Double x, Double y)
 {
     VectorB2 V;
     V.x = FloorBD(x);
@@ -364,7 +412,7 @@ inline VectorB2 MkVectorB2D(double x, double y)
     return V;
 }
 
-inline VectorB2 MkVectorB2D(double A)
+inline VectorB2 MkVectorB2D(Double A)
 {
     VectorB2 V;
     V.x = FloorBD(A);
@@ -372,7 +420,7 @@ inline VectorB2 MkVectorB2D(double A)
     return V;
 }
 
-inline VectorB2 MkVectorB2F(float x, float y)
+inline VectorB2 MkVectorB2F(Single x, Single y)
 {
     VectorB2 V;
     V.x = FloorBF(x);
@@ -380,7 +428,7 @@ inline VectorB2 MkVectorB2F(float x, float y)
     return V;
 }
 
-inline VectorB2 MkVectorB2F(float A)
+inline VectorB2 MkVectorB2F(Single A)
 {
     VectorB2 V;
     V.x = FloorBF(A);
@@ -391,40 +439,40 @@ inline VectorB2 MkVectorB2F(float A)
 inline VectorB3 MkVectorB3I(Int32 x, Int32 y, Int32 z)
 {
     VectorB3 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
-    V.z = (byte)(z);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
+    V.z = (Byte)(z);
     return V;
 }
 
 inline VectorB3 MkVectorB3I(Int32 A)
 {
     VectorB3 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
-    V.z = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
+    V.z = (Byte)(A);
     return V;
 }
 
-inline VectorB3 MkVectorB3(byte x, byte y, byte z)
+inline VectorB3 MkVectorB3(Byte x, Byte y, Byte z)
 {
     VectorB3 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
-    V.z = (byte)(z);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
+    V.z = (Byte)(z);
     return V;
 }
 
-inline VectorB3 MkVectorB3(byte A)
+inline VectorB3 MkVectorB3(Byte A)
 {
     VectorB3 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
-    V.z = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
+    V.z = (Byte)(A);
     return V;
 }
 
-inline VectorB3 MkVectorB3D(double x, double y, double z)
+inline VectorB3 MkVectorB3D(Double x, Double y, Double z)
 {
     VectorB3 V;
     V.x = FloorBD(x);
@@ -433,7 +481,7 @@ inline VectorB3 MkVectorB3D(double x, double y, double z)
     return V;
 }
 
-inline VectorB3 MkVectorB3D(double A)
+inline VectorB3 MkVectorB3D(Double A)
 {
     VectorB3 V;
     V.x = FloorBD(A);
@@ -442,7 +490,7 @@ inline VectorB3 MkVectorB3D(double A)
     return V;
 }
 
-inline VectorB3 MkVectorB3F(float x, float y, float z)
+inline VectorB3 MkVectorB3F(Single x, Single y, Single z)
 {
     VectorB3 V;
     V.x = FloorBF(x);
@@ -451,7 +499,7 @@ inline VectorB3 MkVectorB3F(float x, float y, float z)
     return V;
 }
 
-inline VectorB3 MkVectorB3F(float A)
+inline VectorB3 MkVectorB3F(Single A)
 {
     VectorB3 V;
     V.x = FloorBF(A);
@@ -463,44 +511,44 @@ inline VectorB3 MkVectorB3F(float A)
 inline VectorB4 MkVectorB4I(Int32 x, Int32 y, Int32 z, Int32 w)
 {
     VectorB4 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
-    V.z = (byte)(z);
-    V.w = (byte)(w);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
+    V.z = (Byte)(z);
+    V.w = (Byte)(w);
     return V;
 }
 
 inline VectorB4 MkVectorB4I(Int32 A)
 {
     VectorB4 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
-    V.z = (byte)(A);
-    V.w = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
+    V.z = (Byte)(A);
+    V.w = (Byte)(A);
     return V;
 }
 
-inline VectorB4 MkVectorB4(byte x, byte y, byte z, byte w)
+inline VectorB4 MkVectorB4(Byte x, Byte y, Byte z, Byte w)
 {
     VectorB4 V;
-    V.x = (byte)(x);
-    V.y = (byte)(y);
-    V.z = (byte)(z);
-    V.w = (byte)(w);
+    V.x = (Byte)(x);
+    V.y = (Byte)(y);
+    V.z = (Byte)(z);
+    V.w = (Byte)(w);
     return V;
 }
 
-inline VectorB4 MkVectorB4(byte A)
+inline VectorB4 MkVectorB4(Byte A)
 {
     VectorB4 V;
-    V.x = (byte)(A);
-    V.y = (byte)(A);
-    V.z = (byte)(A);
-    V.w = (byte)(A);
+    V.x = (Byte)(A);
+    V.y = (Byte)(A);
+    V.z = (Byte)(A);
+    V.w = (Byte)(A);
     return V;
 }
 
-inline VectorB4 MkVectorB4D(double x, double y, double z, double w)
+inline VectorB4 MkVectorB4D(Double x, Double y, Double z, Double w)
 {
     VectorB4 V;
     V.x = FloorBD(x);
@@ -510,7 +558,7 @@ inline VectorB4 MkVectorB4D(double x, double y, double z, double w)
     return V;
 }
 
-inline VectorB4 MkVectorB4D(double A)
+inline VectorB4 MkVectorB4D(Double A)
 {
     VectorB4 V;
     V.x = FloorBD(A);
@@ -520,7 +568,7 @@ inline VectorB4 MkVectorB4D(double A)
     return V;
 }
 
-inline VectorB4 MkVectorB4F(float x, float y, float z, float w)
+inline VectorB4 MkVectorB4F(Single x, Single y, Single z, Single w)
 {
     VectorB4 V;
     V.x = FloorBF(x);
@@ -530,7 +578,7 @@ inline VectorB4 MkVectorB4F(float x, float y, float z, float w)
     return V;
 }
 
-inline VectorB4 MkVectorB4F(float A)
+inline VectorB4 MkVectorB4F(Single A)
 {
     VectorB4 V;
     V.x = FloorBF(A);
@@ -543,432 +591,432 @@ inline VectorB4 MkVectorB4F(float A)
 inline VectorD2 MkVectorD2I(Int32 x, Int32 y)
 {
     VectorD2 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
     return V;
 }
 
 inline VectorD2 MkVectorD2I(Int32 A)
 {
     VectorD2 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
     return V;
 }
 
-inline VectorD2 MkVectorD2B(byte x, byte y)
+inline VectorD2 MkVectorD2B(Byte x, Byte y)
 {
     VectorD2 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
     return V;
 }
 
-inline VectorD2 MkVectorD2B(byte A)
+inline VectorD2 MkVectorD2B(Byte A)
 {
     VectorD2 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
     return V;
 }
 
-inline VectorD2 MkVectorD2(double x, double y)
+inline VectorD2 MkVectorD2(Double x, Double y)
 {
     VectorD2 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
     return V;
 }
 
-inline VectorD2 MkVectorD2(double A)
+inline VectorD2 MkVectorD2(Double A)
 {
     VectorD2 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
     return V;
 }
 
-inline VectorD2 MkVectorD2F(float x, float y)
+inline VectorD2 MkVectorD2F(Single x, Single y)
 {
     VectorD2 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
     return V;
 }
 
-inline VectorD2 MkVectorD2F(float A)
+inline VectorD2 MkVectorD2F(Single A)
 {
     VectorD2 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
     return V;
 }
 
 inline VectorD3 MkVectorD3I(Int32 x, Int32 y, Int32 z)
 {
     VectorD3 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
     return V;
 }
 
 inline VectorD3 MkVectorD3I(Int32 A)
 {
     VectorD3 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
     return V;
 }
 
-inline VectorD3 MkVectorD3B(byte x, byte y, byte z)
+inline VectorD3 MkVectorD3B(Byte x, Byte y, Byte z)
 {
     VectorD3 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
     return V;
 }
 
-inline VectorD3 MkVectorD3B(byte A)
+inline VectorD3 MkVectorD3B(Byte A)
 {
     VectorD3 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
     return V;
 }
 
-inline VectorD3 MkVectorD3(double x, double y, double z)
+inline VectorD3 MkVectorD3(Double x, Double y, Double z)
 {
     VectorD3 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
     return V;
 }
 
-inline VectorD3 MkVectorD3(double A)
+inline VectorD3 MkVectorD3(Double A)
 {
     VectorD3 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
     return V;
 }
 
-inline VectorD3 MkVectorD3F(float x, float y, float z)
+inline VectorD3 MkVectorD3F(Single x, Single y, Single z)
 {
     VectorD3 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
     return V;
 }
 
-inline VectorD3 MkVectorD3F(float A)
+inline VectorD3 MkVectorD3F(Single A)
 {
     VectorD3 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
     return V;
 }
 
 inline VectorD4 MkVectorD4I(Int32 x, Int32 y, Int32 z, Int32 w)
 {
     VectorD4 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
-    V.w = (double)(w);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
+    V.w = (Double)(w);
     return V;
 }
 
 inline VectorD4 MkVectorD4I(Int32 A)
 {
     VectorD4 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
-    V.w = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
+    V.w = (Double)(A);
     return V;
 }
 
-inline VectorD4 MkVectorD4B(byte x, byte y, byte z, byte w)
+inline VectorD4 MkVectorD4B(Byte x, Byte y, Byte z, Byte w)
 {
     VectorD4 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
-    V.w = (double)(w);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
+    V.w = (Double)(w);
     return V;
 }
 
-inline VectorD4 MkVectorD4B(byte A)
+inline VectorD4 MkVectorD4B(Byte A)
 {
     VectorD4 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
-    V.w = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
+    V.w = (Double)(A);
     return V;
 }
 
-inline VectorD4 MkVectorD4(double x, double y, double z, double w)
+inline VectorD4 MkVectorD4(Double x, Double y, Double z, Double w)
 {
     VectorD4 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
-    V.w = (double)(w);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
+    V.w = (Double)(w);
     return V;
 }
 
-inline VectorD4 MkVectorD4(double A)
+inline VectorD4 MkVectorD4(Double A)
 {
     VectorD4 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
-    V.w = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
+    V.w = (Double)(A);
     return V;
 }
 
-inline VectorD4 MkVectorD4F(float x, float y, float z, float w)
+inline VectorD4 MkVectorD4F(Single x, Single y, Single z, Single w)
 {
     VectorD4 V;
-    V.x = (double)(x);
-    V.y = (double)(y);
-    V.z = (double)(z);
-    V.w = (double)(w);
+    V.x = (Double)(x);
+    V.y = (Double)(y);
+    V.z = (Double)(z);
+    V.w = (Double)(w);
     return V;
 }
 
-inline VectorD4 MkVectorD4F(float A)
+inline VectorD4 MkVectorD4F(Single A)
 {
     VectorD4 V;
-    V.x = (double)(A);
-    V.y = (double)(A);
-    V.z = (double)(A);
-    V.w = (double)(A);
+    V.x = (Double)(A);
+    V.y = (Double)(A);
+    V.z = (Double)(A);
+    V.w = (Double)(A);
     return V;
 }
 
 inline Vector2 MkVector2I(Int32 x, Int32 y)
 {
     Vector2 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
     return V;
 }
 
 inline Vector2 MkVector2I(Int32 A)
 {
     Vector2 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
     return V;
 }
 
-inline Vector2 MkVector2B(byte x, byte y)
+inline Vector2 MkVector2B(Byte x, Byte y)
 {
     Vector2 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
     return V;
 }
 
-inline Vector2 MkVector2B(byte A)
+inline Vector2 MkVector2B(Byte A)
 {
     Vector2 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
     return V;
 }
 
-inline Vector2 MkVector2D(double x, double y)
+inline Vector2 MkVector2D(Double x, Double y)
 {
     Vector2 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
     return V;
 }
 
-inline Vector2 MkVector2D(double A)
+inline Vector2 MkVector2D(Double A)
 {
     Vector2 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
     return V;
 }
 
-inline Vector2 MkVector2(float x, float y)
+inline Vector2 MkVector2(Single x, Single y)
 {
     Vector2 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
     return V;
 }
 
-inline Vector2 MkVector2(float A)
+inline Vector2 MkVector2(Single A)
 {
     Vector2 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
     return V;
 }
 
 inline Vector3 MkVector3I(Int32 x, Int32 y, Int32 z)
 {
     Vector3 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
     return V;
 }
 
 inline Vector3 MkVector3I(Int32 A)
 {
     Vector3 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
     return V;
 }
 
-inline Vector3 MkVector3B(byte x, byte y, byte z)
+inline Vector3 MkVector3B(Byte x, Byte y, Byte z)
 {
     Vector3 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
     return V;
 }
 
-inline Vector3 MkVector3B(byte A)
+inline Vector3 MkVector3B(Byte A)
 {
     Vector3 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
     return V;
 }
 
-inline Vector3 MkVector3D(double x, double y, double z)
+inline Vector3 MkVector3D(Double x, Double y, Double z)
 {
     Vector3 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
     return V;
 }
 
-inline Vector3 MkVector3D(double A)
+inline Vector3 MkVector3D(Double A)
 {
     Vector3 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
     return V;
 }
 
-inline Vector3 MkVector3(float x, float y, float z)
+inline Vector3 MkVector3(Single x, Single y, Single z)
 {
     Vector3 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
     return V;
 }
 
-inline Vector3 MkVector3(float A)
+inline Vector3 MkVector3(Single A)
 {
     Vector3 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
     return V;
 }
 
 inline Vector4 MkVector4I(Int32 x, Int32 y, Int32 z, Int32 w)
 {
     Vector4 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
-    V.w = (float)(w);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
+    V.w = (Single)(w);
     return V;
 }
 
 inline Vector4 MkVector4I(Int32 A)
 {
     Vector4 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
-    V.w = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
+    V.w = (Single)(A);
     return V;
 }
 
-inline Vector4 MkVector4B(byte x, byte y, byte z, byte w)
+inline Vector4 MkVector4B(Byte x, Byte y, Byte z, Byte w)
 {
     Vector4 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
-    V.w = (float)(w);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
+    V.w = (Single)(w);
     return V;
 }
 
-inline Vector4 MkVector4B(byte A)
+inline Vector4 MkVector4B(Byte A)
 {
     Vector4 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
-    V.w = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
+    V.w = (Single)(A);
     return V;
 }
 
-inline Vector4 MkVector4D(double x, double y, double z, double w)
+inline Vector4 MkVector4D(Double x, Double y, Double z, Double w)
 {
     Vector4 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
-    V.w = (float)(w);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
+    V.w = (Single)(w);
     return V;
 }
 
-inline Vector4 MkVector4D(double A)
+inline Vector4 MkVector4D(Double A)
 {
     Vector4 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
-    V.w = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
+    V.w = (Single)(A);
     return V;
 }
 
-inline Vector4 MkVector4(float x, float y, float z, float w)
+inline Vector4 MkVector4(Single x, Single y, Single z, Single w)
 {
     Vector4 V;
-    V.x = (float)(x);
-    V.y = (float)(y);
-    V.z = (float)(z);
-    V.w = (float)(w);
+    V.x = (Single)(x);
+    V.y = (Single)(y);
+    V.z = (Single)(z);
+    V.w = (Single)(w);
     return V;
 }
 
-inline Vector4 MkVector4(float A)
+inline Vector4 MkVector4(Single A)
 {
     Vector4 V;
-    V.x = (float)(A);
-    V.y = (float)(A);
-    V.z = (float)(A);
-    V.w = (float)(A);
+    V.x = (Single)(A);
+    V.y = (Single)(A);
+    V.z = (Single)(A);
+    V.w = (Single)(A);
     return V;
 }
 
@@ -1749,73 +1797,73 @@ inline VectorI4 operator+(VectorI4 A, VectorI4 B)
 inline VectorB2 operator+(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(A.x + B.x),
-        (byte)(A.y + B.y));
+        (Byte)(A.x + B.x),
+        (Byte)(A.y + B.y));
 }
 
 inline VectorB3 operator+(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(A.x + B.x),
-        (byte)(A.y + B.y),
-        (byte)(A.z + B.z));
+        (Byte)(A.x + B.x),
+        (Byte)(A.y + B.y),
+        (Byte)(A.z + B.z));
 }
 
 inline VectorB4 operator+(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(A.x + B.x),
-        (byte)(A.y + B.y),
-        (byte)(A.z + B.z),
-        (byte)(A.w + B.w));
+        (Byte)(A.x + B.x),
+        (Byte)(A.y + B.y),
+        (Byte)(A.z + B.z),
+        (Byte)(A.w + B.w));
 }
 
 inline VectorD2 operator+(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(A.x + B.x),
-        (double)(A.y + B.y));
+        (Double)(A.x + B.x),
+        (Double)(A.y + B.y));
 }
 
 inline VectorD3 operator+(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(A.x + B.x),
-        (double)(A.y + B.y),
-        (double)(A.z + B.z));
+        (Double)(A.x + B.x),
+        (Double)(A.y + B.y),
+        (Double)(A.z + B.z));
 }
 
 inline VectorD4 operator+(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(A.x + B.x),
-        (double)(A.y + B.y),
-        (double)(A.z + B.z),
-        (double)(A.w + B.w));
+        (Double)(A.x + B.x),
+        (Double)(A.y + B.y),
+        (Double)(A.z + B.z),
+        (Double)(A.w + B.w));
 }
 
 inline Vector2 operator+(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(A.x + B.x),
-        (float)(A.y + B.y));
+        (Single)(A.x + B.x),
+        (Single)(A.y + B.y));
 }
 
 inline Vector3 operator+(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(A.x + B.x),
-        (float)(A.y + B.y),
-        (float)(A.z + B.z));
+        (Single)(A.x + B.x),
+        (Single)(A.y + B.y),
+        (Single)(A.z + B.z));
 }
 
 inline Vector4 operator+(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(A.x + B.x),
-        (float)(A.y + B.y),
-        (float)(A.z + B.z),
-        (float)(A.w + B.w));
+        (Single)(A.x + B.x),
+        (Single)(A.y + B.y),
+        (Single)(A.z + B.z),
+        (Single)(A.w + B.w));
 }
 
 // Subtraction operator
@@ -1846,73 +1894,73 @@ inline VectorI4 operator-(VectorI4 A, VectorI4 B)
 inline VectorB2 operator-(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(A.x - B.x),
-        (byte)(A.y - B.y));
+        (Byte)(A.x - B.x),
+        (Byte)(A.y - B.y));
 }
 
 inline VectorB3 operator-(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(A.x - B.x),
-        (byte)(A.y - B.y),
-        (byte)(A.z - B.z));
+        (Byte)(A.x - B.x),
+        (Byte)(A.y - B.y),
+        (Byte)(A.z - B.z));
 }
 
 inline VectorB4 operator-(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(A.x - B.x),
-        (byte)(A.y - B.y),
-        (byte)(A.z - B.z),
-        (byte)(A.w - B.w));
+        (Byte)(A.x - B.x),
+        (Byte)(A.y - B.y),
+        (Byte)(A.z - B.z),
+        (Byte)(A.w - B.w));
 }
 
 inline VectorD2 operator-(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(A.x - B.x),
-        (double)(A.y - B.y));
+        (Double)(A.x - B.x),
+        (Double)(A.y - B.y));
 }
 
 inline VectorD3 operator-(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(A.x - B.x),
-        (double)(A.y - B.y),
-        (double)(A.z - B.z));
+        (Double)(A.x - B.x),
+        (Double)(A.y - B.y),
+        (Double)(A.z - B.z));
 }
 
 inline VectorD4 operator-(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(A.x - B.x),
-        (double)(A.y - B.y),
-        (double)(A.z - B.z),
-        (double)(A.w - B.w));
+        (Double)(A.x - B.x),
+        (Double)(A.y - B.y),
+        (Double)(A.z - B.z),
+        (Double)(A.w - B.w));
 }
 
 inline Vector2 operator-(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(A.x - B.x),
-        (float)(A.y - B.y));
+        (Single)(A.x - B.x),
+        (Single)(A.y - B.y));
 }
 
 inline Vector3 operator-(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(A.x - B.x),
-        (float)(A.y - B.y),
-        (float)(A.z - B.z));
+        (Single)(A.x - B.x),
+        (Single)(A.y - B.y),
+        (Single)(A.z - B.z));
 }
 
 inline Vector4 operator-(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(A.x - B.x),
-        (float)(A.y - B.y),
-        (float)(A.z - B.z),
-        (float)(A.w - B.w));
+        (Single)(A.x - B.x),
+        (Single)(A.y - B.y),
+        (Single)(A.z - B.z),
+        (Single)(A.w - B.w));
 }
 
 // Elementwise multiplication (equivalent to Scale() in Unity)
@@ -1943,73 +1991,73 @@ inline VectorI4 ElMult(VectorI4 A, VectorI4 B)
 inline VectorB2 ElMult(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(A.x * B.x),
-        (byte)(A.y * B.y));
+        (Byte)(A.x * B.x),
+        (Byte)(A.y * B.y));
 }
 
 inline VectorB3 ElMult(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(A.x * B.x),
-        (byte)(A.y * B.y),
-        (byte)(A.z * B.z));
+        (Byte)(A.x * B.x),
+        (Byte)(A.y * B.y),
+        (Byte)(A.z * B.z));
 }
 
 inline VectorB4 ElMult(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(A.x * B.x),
-        (byte)(A.y * B.y),
-        (byte)(A.z * B.z),
-        (byte)(A.w * B.w));
+        (Byte)(A.x * B.x),
+        (Byte)(A.y * B.y),
+        (Byte)(A.z * B.z),
+        (Byte)(A.w * B.w));
 }
 
 inline VectorD2 ElMult(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(A.x * B.x),
-        (double)(A.y * B.y));
+        (Double)(A.x * B.x),
+        (Double)(A.y * B.y));
 }
 
 inline VectorD3 ElMult(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(A.x * B.x),
-        (double)(A.y * B.y),
-        (double)(A.z * B.z));
+        (Double)(A.x * B.x),
+        (Double)(A.y * B.y),
+        (Double)(A.z * B.z));
 }
 
 inline VectorD4 ElMult(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(A.x * B.x),
-        (double)(A.y * B.y),
-        (double)(A.z * B.z),
-        (double)(A.w * B.w));
+        (Double)(A.x * B.x),
+        (Double)(A.y * B.y),
+        (Double)(A.z * B.z),
+        (Double)(A.w * B.w));
 }
 
 inline Vector2 ElMult(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(A.x * B.x),
-        (float)(A.y * B.y));
+        (Single)(A.x * B.x),
+        (Single)(A.y * B.y));
 }
 
 inline Vector3 ElMult(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(A.x * B.x),
-        (float)(A.y * B.y),
-        (float)(A.z * B.z));
+        (Single)(A.x * B.x),
+        (Single)(A.y * B.y),
+        (Single)(A.z * B.z));
 }
 
 inline Vector4 ElMult(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(A.x * B.x),
-        (float)(A.y * B.y),
-        (float)(A.z * B.z),
-        (float)(A.w * B.w));
+        (Single)(A.x * B.x),
+        (Single)(A.y * B.y),
+        (Single)(A.z * B.z),
+        (Single)(A.w * B.w));
 }
 
 // Elementwise division. Uses floor.
@@ -2040,73 +2088,73 @@ inline VectorI4 ElDiv(VectorI4 A, VectorI4 B)
 inline VectorB2 ElDiv(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Div(A.x, B.x)),
-        (byte)(Div(A.y, B.y)));
+        (Byte)(Div(A.x, B.x)),
+        (Byte)(Div(A.y, B.y)));
 }
 
 inline VectorB3 ElDiv(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Div(A.x, B.x)),
-        (byte)(Div(A.y, B.y)),
-        (byte)(Div(A.z, B.z)));
+        (Byte)(Div(A.x, B.x)),
+        (Byte)(Div(A.y, B.y)),
+        (Byte)(Div(A.z, B.z)));
 }
 
 inline VectorB4 ElDiv(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Div(A.x, B.x)),
-        (byte)(Div(A.y, B.y)),
-        (byte)(Div(A.z, B.z)),
-        (byte)(Div(A.w, B.w)));
+        (Byte)(Div(A.x, B.x)),
+        (Byte)(Div(A.y, B.y)),
+        (Byte)(Div(A.z, B.z)),
+        (Byte)(Div(A.w, B.w)));
 }
 
 inline VectorD2 ElDiv(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(Div(A.x, B.x)),
-        (double)(Div(A.y, B.y)));
+        (Double)(Div(A.x, B.x)),
+        (Double)(Div(A.y, B.y)));
 }
 
 inline VectorD3 ElDiv(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(Div(A.x, B.x)),
-        (double)(Div(A.y, B.y)),
-        (double)(Div(A.z, B.z)));
+        (Double)(Div(A.x, B.x)),
+        (Double)(Div(A.y, B.y)),
+        (Double)(Div(A.z, B.z)));
 }
 
 inline VectorD4 ElDiv(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(Div(A.x, B.x)),
-        (double)(Div(A.y, B.y)),
-        (double)(Div(A.z, B.z)),
-        (double)(Div(A.w, B.w)));
+        (Double)(Div(A.x, B.x)),
+        (Double)(Div(A.y, B.y)),
+        (Double)(Div(A.z, B.z)),
+        (Double)(Div(A.w, B.w)));
 }
 
 inline Vector2 ElDiv(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(Div(A.x, B.x)),
-        (float)(Div(A.y, B.y)));
+        (Single)(Div(A.x, B.x)),
+        (Single)(Div(A.y, B.y)));
 }
 
 inline Vector3 ElDiv(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(Div(A.x, B.x)),
-        (float)(Div(A.y, B.y)),
-        (float)(Div(A.z, B.z)));
+        (Single)(Div(A.x, B.x)),
+        (Single)(Div(A.y, B.y)),
+        (Single)(Div(A.z, B.z)));
 }
 
 inline Vector4 ElDiv(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(Div(A.x, B.x)),
-        (float)(Div(A.y, B.y)),
-        (float)(Div(A.z, B.z)),
-        (float)(Div(A.w, B.w)));
+        (Single)(Div(A.x, B.x)),
+        (Single)(Div(A.y, B.y)),
+        (Single)(Div(A.z, B.z)),
+        (Single)(Div(A.w, B.w)));
 }
 
 // Elementwise division that uses ceiling instead of floor
@@ -2137,25 +2185,25 @@ inline VectorI4 ElCeilDiv(VectorI4 A, VectorI4 B)
 inline VectorB2 ElCeilDiv(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(CeilDiv(A.x, B.x)),
-        (byte)(CeilDiv(A.y, B.y)));
+        (Byte)(CeilDiv(A.x, B.x)),
+        (Byte)(CeilDiv(A.y, B.y)));
 }
 
 inline VectorB3 ElCeilDiv(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(CeilDiv(A.x, B.x)),
-        (byte)(CeilDiv(A.y, B.y)),
-        (byte)(CeilDiv(A.z, B.z)));
+        (Byte)(CeilDiv(A.x, B.x)),
+        (Byte)(CeilDiv(A.y, B.y)),
+        (Byte)(CeilDiv(A.z, B.z)));
 }
 
 inline VectorB4 ElCeilDiv(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(CeilDiv(A.x, B.x)),
-        (byte)(CeilDiv(A.y, B.y)),
-        (byte)(CeilDiv(A.z, B.z)),
-        (byte)(CeilDiv(A.w, B.w)));
+        (Byte)(CeilDiv(A.x, B.x)),
+        (Byte)(CeilDiv(A.y, B.y)),
+        (Byte)(CeilDiv(A.z, B.z)),
+        (Byte)(CeilDiv(A.w, B.w)));
 }
 
 // Elementwise min/max
@@ -2186,73 +2234,73 @@ inline VectorI4 ElMin(VectorI4 A, VectorI4 B)
 inline VectorB2 ElMin(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Min(A.x, B.x)),
-        (byte)(Min(A.y, B.y)));
+        (Byte)(Min(A.x, B.x)),
+        (Byte)(Min(A.y, B.y)));
 }
 
 inline VectorB3 ElMin(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Min(A.x, B.x)),
-        (byte)(Min(A.y, B.y)),
-        (byte)(Min(A.z, B.z)));
+        (Byte)(Min(A.x, B.x)),
+        (Byte)(Min(A.y, B.y)),
+        (Byte)(Min(A.z, B.z)));
 }
 
 inline VectorB4 ElMin(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Min(A.x, B.x)),
-        (byte)(Min(A.y, B.y)),
-        (byte)(Min(A.z, B.z)),
-        (byte)(Min(A.w, B.w)));
+        (Byte)(Min(A.x, B.x)),
+        (Byte)(Min(A.y, B.y)),
+        (Byte)(Min(A.z, B.z)),
+        (Byte)(Min(A.w, B.w)));
 }
 
 inline VectorD2 ElMin(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(Min(A.x, B.x)),
-        (double)(Min(A.y, B.y)));
+        (Double)(Min(A.x, B.x)),
+        (Double)(Min(A.y, B.y)));
 }
 
 inline VectorD3 ElMin(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(Min(A.x, B.x)),
-        (double)(Min(A.y, B.y)),
-        (double)(Min(A.z, B.z)));
+        (Double)(Min(A.x, B.x)),
+        (Double)(Min(A.y, B.y)),
+        (Double)(Min(A.z, B.z)));
 }
 
 inline VectorD4 ElMin(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(Min(A.x, B.x)),
-        (double)(Min(A.y, B.y)),
-        (double)(Min(A.z, B.z)),
-        (double)(Min(A.w, B.w)));
+        (Double)(Min(A.x, B.x)),
+        (Double)(Min(A.y, B.y)),
+        (Double)(Min(A.z, B.z)),
+        (Double)(Min(A.w, B.w)));
 }
 
 inline Vector2 ElMin(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(Min(A.x, B.x)),
-        (float)(Min(A.y, B.y)));
+        (Single)(Min(A.x, B.x)),
+        (Single)(Min(A.y, B.y)));
 }
 
 inline Vector3 ElMin(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(Min(A.x, B.x)),
-        (float)(Min(A.y, B.y)),
-        (float)(Min(A.z, B.z)));
+        (Single)(Min(A.x, B.x)),
+        (Single)(Min(A.y, B.y)),
+        (Single)(Min(A.z, B.z)));
 }
 
 inline Vector4 ElMin(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(Min(A.x, B.x)),
-        (float)(Min(A.y, B.y)),
-        (float)(Min(A.z, B.z)),
-        (float)(Min(A.w, B.w)));
+        (Single)(Min(A.x, B.x)),
+        (Single)(Min(A.y, B.y)),
+        (Single)(Min(A.z, B.z)),
+        (Single)(Min(A.w, B.w)));
 }
 
 inline VectorI2 ElMax(VectorI2 A, VectorI2 B)
@@ -2282,73 +2330,73 @@ inline VectorI4 ElMax(VectorI4 A, VectorI4 B)
 inline VectorB2 ElMax(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Max(A.x, B.x)),
-        (byte)(Max(A.y, B.y)));
+        (Byte)(Max(A.x, B.x)),
+        (Byte)(Max(A.y, B.y)));
 }
 
 inline VectorB3 ElMax(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Max(A.x, B.x)),
-        (byte)(Max(A.y, B.y)),
-        (byte)(Max(A.z, B.z)));
+        (Byte)(Max(A.x, B.x)),
+        (Byte)(Max(A.y, B.y)),
+        (Byte)(Max(A.z, B.z)));
 }
 
 inline VectorB4 ElMax(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Max(A.x, B.x)),
-        (byte)(Max(A.y, B.y)),
-        (byte)(Max(A.z, B.z)),
-        (byte)(Max(A.w, B.w)));
+        (Byte)(Max(A.x, B.x)),
+        (Byte)(Max(A.y, B.y)),
+        (Byte)(Max(A.z, B.z)),
+        (Byte)(Max(A.w, B.w)));
 }
 
 inline VectorD2 ElMax(VectorD2 A, VectorD2 B)
 {
     return MkVectorD2(
-        (double)(Max(A.x, B.x)),
-        (double)(Max(A.y, B.y)));
+        (Double)(Max(A.x, B.x)),
+        (Double)(Max(A.y, B.y)));
 }
 
 inline VectorD3 ElMax(VectorD3 A, VectorD3 B)
 {
     return MkVectorD3(
-        (double)(Max(A.x, B.x)),
-        (double)(Max(A.y, B.y)),
-        (double)(Max(A.z, B.z)));
+        (Double)(Max(A.x, B.x)),
+        (Double)(Max(A.y, B.y)),
+        (Double)(Max(A.z, B.z)));
 }
 
 inline VectorD4 ElMax(VectorD4 A, VectorD4 B)
 {
     return MkVectorD4(
-        (double)(Max(A.x, B.x)),
-        (double)(Max(A.y, B.y)),
-        (double)(Max(A.z, B.z)),
-        (double)(Max(A.w, B.w)));
+        (Double)(Max(A.x, B.x)),
+        (Double)(Max(A.y, B.y)),
+        (Double)(Max(A.z, B.z)),
+        (Double)(Max(A.w, B.w)));
 }
 
 inline Vector2 ElMax(Vector2 A, Vector2 B)
 {
     return MkVector2(
-        (float)(Max(A.x, B.x)),
-        (float)(Max(A.y, B.y)));
+        (Single)(Max(A.x, B.x)),
+        (Single)(Max(A.y, B.y)));
 }
 
 inline Vector3 ElMax(Vector3 A, Vector3 B)
 {
     return MkVector3(
-        (float)(Max(A.x, B.x)),
-        (float)(Max(A.y, B.y)),
-        (float)(Max(A.z, B.z)));
+        (Single)(Max(A.x, B.x)),
+        (Single)(Max(A.y, B.y)),
+        (Single)(Max(A.z, B.z)));
 }
 
 inline Vector4 ElMax(Vector4 A, Vector4 B)
 {
     return MkVector4(
-        (float)(Max(A.x, B.x)),
-        (float)(Max(A.y, B.y)),
-        (float)(Max(A.z, B.z)),
-        (float)(Max(A.w, B.w)));
+        (Single)(Max(A.x, B.x)),
+        (Single)(Max(A.y, B.y)),
+        (Single)(Max(A.z, B.z)),
+        (Single)(Max(A.w, B.w)));
 }
 
 // Elementwise remainder. Uses floor.
@@ -2379,25 +2427,25 @@ inline VectorI4 ElRem(VectorI4 A, VectorI4 B)
 inline VectorB2 ElRem(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Rem(A.x, B.x)),
-        (byte)(Rem(A.y, B.y)));
+        (Byte)(Rem(A.x, B.x)),
+        (Byte)(Rem(A.y, B.y)));
 }
 
 inline VectorB3 ElRem(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Rem(A.x, B.x)),
-        (byte)(Rem(A.y, B.y)),
-        (byte)(Rem(A.z, B.z)));
+        (Byte)(Rem(A.x, B.x)),
+        (Byte)(Rem(A.y, B.y)),
+        (Byte)(Rem(A.z, B.z)));
 }
 
 inline VectorB4 ElRem(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Rem(A.x, B.x)),
-        (byte)(Rem(A.y, B.y)),
-        (byte)(Rem(A.z, B.z)),
-        (byte)(Rem(A.w, B.w)));
+        (Byte)(Rem(A.x, B.x)),
+        (Byte)(Rem(A.y, B.y)),
+        (Byte)(Rem(A.z, B.z)),
+        (Byte)(Rem(A.w, B.w)));
 }
 
 // Elementwise multiplication/division/remainder by 2^B_i
@@ -2428,25 +2476,25 @@ inline VectorI4 ElPow2Div(VectorI4 A, VectorI4 B)
 inline VectorB2 ElPow2Div(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Pow2Div(A.x, B.x)),
-        (byte)(Pow2Div(A.y, B.y)));
+        (Byte)(Pow2Div(A.x, B.x)),
+        (Byte)(Pow2Div(A.y, B.y)));
 }
 
 inline VectorB3 ElPow2Div(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Pow2Div(A.x, B.x)),
-        (byte)(Pow2Div(A.y, B.y)),
-        (byte)(Pow2Div(A.z, B.z)));
+        (Byte)(Pow2Div(A.x, B.x)),
+        (Byte)(Pow2Div(A.y, B.y)),
+        (Byte)(Pow2Div(A.z, B.z)));
 }
 
 inline VectorB4 ElPow2Div(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Pow2Div(A.x, B.x)),
-        (byte)(Pow2Div(A.y, B.y)),
-        (byte)(Pow2Div(A.z, B.z)),
-        (byte)(Pow2Div(A.w, B.w)));
+        (Byte)(Pow2Div(A.x, B.x)),
+        (Byte)(Pow2Div(A.y, B.y)),
+        (Byte)(Pow2Div(A.z, B.z)),
+        (Byte)(Pow2Div(A.w, B.w)));
 }
 
 inline VectorI2 ElPow2Mult(VectorI2 A, VectorI2 B)
@@ -2476,25 +2524,25 @@ inline VectorI4 ElPow2Mult(VectorI4 A, VectorI4 B)
 inline VectorB2 ElPow2Mult(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Pow2Mult(A.x, B.x)),
-        (byte)(Pow2Mult(A.y, B.y)));
+        (Byte)(Pow2Mult(A.x, B.x)),
+        (Byte)(Pow2Mult(A.y, B.y)));
 }
 
 inline VectorB3 ElPow2Mult(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Pow2Mult(A.x, B.x)),
-        (byte)(Pow2Mult(A.y, B.y)),
-        (byte)(Pow2Mult(A.z, B.z)));
+        (Byte)(Pow2Mult(A.x, B.x)),
+        (Byte)(Pow2Mult(A.y, B.y)),
+        (Byte)(Pow2Mult(A.z, B.z)));
 }
 
 inline VectorB4 ElPow2Mult(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Pow2Mult(A.x, B.x)),
-        (byte)(Pow2Mult(A.y, B.y)),
-        (byte)(Pow2Mult(A.z, B.z)),
-        (byte)(Pow2Mult(A.w, B.w)));
+        (Byte)(Pow2Mult(A.x, B.x)),
+        (Byte)(Pow2Mult(A.y, B.y)),
+        (Byte)(Pow2Mult(A.z, B.z)),
+        (Byte)(Pow2Mult(A.w, B.w)));
 }
 
 inline VectorI2 ElPow2Rem(VectorI2 A, VectorI2 B)
@@ -2524,25 +2572,25 @@ inline VectorI4 ElPow2Rem(VectorI4 A, VectorI4 B)
 inline VectorB2 ElPow2Rem(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Pow2Rem(A.x, B.x)),
-        (byte)(Pow2Rem(A.y, B.y)));
+        (Byte)(Pow2Rem(A.x, B.x)),
+        (Byte)(Pow2Rem(A.y, B.y)));
 }
 
 inline VectorB3 ElPow2Rem(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Pow2Rem(A.x, B.x)),
-        (byte)(Pow2Rem(A.y, B.y)),
-        (byte)(Pow2Rem(A.z, B.z)));
+        (Byte)(Pow2Rem(A.x, B.x)),
+        (Byte)(Pow2Rem(A.y, B.y)),
+        (Byte)(Pow2Rem(A.z, B.z)));
 }
 
 inline VectorB4 ElPow2Rem(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Pow2Rem(A.x, B.x)),
-        (byte)(Pow2Rem(A.y, B.y)),
-        (byte)(Pow2Rem(A.z, B.z)),
-        (byte)(Pow2Rem(A.w, B.w)));
+        (Byte)(Pow2Rem(A.x, B.x)),
+        (Byte)(Pow2Rem(A.y, B.y)),
+        (Byte)(Pow2Rem(A.z, B.z)),
+        (Byte)(Pow2Rem(A.w, B.w)));
 }
 
 inline VectorI2 ElPow2CeilDiv(VectorI2 A, VectorI2 B)
@@ -2572,25 +2620,25 @@ inline VectorI4 ElPow2CeilDiv(VectorI4 A, VectorI4 B)
 inline VectorB2 ElPow2CeilDiv(VectorB2 A, VectorB2 B)
 {
     return MkVectorB2(
-        (byte)(Pow2CeilDiv(A.x, B.x)),
-        (byte)(Pow2CeilDiv(A.y, B.y)));
+        (Byte)(Pow2CeilDiv(A.x, B.x)),
+        (Byte)(Pow2CeilDiv(A.y, B.y)));
 }
 
 inline VectorB3 ElPow2CeilDiv(VectorB3 A, VectorB3 B)
 {
     return MkVectorB3(
-        (byte)(Pow2CeilDiv(A.x, B.x)),
-        (byte)(Pow2CeilDiv(A.y, B.y)),
-        (byte)(Pow2CeilDiv(A.z, B.z)));
+        (Byte)(Pow2CeilDiv(A.x, B.x)),
+        (Byte)(Pow2CeilDiv(A.y, B.y)),
+        (Byte)(Pow2CeilDiv(A.z, B.z)));
 }
 
 inline VectorB4 ElPow2CeilDiv(VectorB4 A, VectorB4 B)
 {
     return MkVectorB4(
-        (byte)(Pow2CeilDiv(A.x, B.x)),
-        (byte)(Pow2CeilDiv(A.y, B.y)),
-        (byte)(Pow2CeilDiv(A.z, B.z)),
-        (byte)(Pow2CeilDiv(A.w, B.w)));
+        (Byte)(Pow2CeilDiv(A.x, B.x)),
+        (Byte)(Pow2CeilDiv(A.y, B.y)),
+        (Byte)(Pow2CeilDiv(A.z, B.z)),
+        (Byte)(Pow2CeilDiv(A.w, B.w)));
 }
 
 // Negation (as in Additive Inverse) operator
@@ -2664,76 +2712,76 @@ inline VectorI4 operator*(Int32 A, VectorI4 V)
         (Int32)((A * V.w)));
 }
 
-inline VectorB2 operator*(byte A, VectorB2 V)
+inline VectorB2 operator*(Byte A, VectorB2 V)
 {
     return MkVectorB2(
-        (byte)((A * V.x)),
-        (byte)((A * V.y)));
+        (Byte)((A * V.x)),
+        (Byte)((A * V.y)));
 }
 
-inline VectorB3 operator*(byte A, VectorB3 V)
+inline VectorB3 operator*(Byte A, VectorB3 V)
 {
     return MkVectorB3(
-        (byte)((A * V.x)),
-        (byte)((A * V.y)),
-        (byte)((A * V.z)));
+        (Byte)((A * V.x)),
+        (Byte)((A * V.y)),
+        (Byte)((A * V.z)));
 }
 
-inline VectorB4 operator*(byte A, VectorB4 V)
+inline VectorB4 operator*(Byte A, VectorB4 V)
 {
     return MkVectorB4(
-        (byte)((A * V.x)),
-        (byte)((A * V.y)),
-        (byte)((A * V.z)),
-        (byte)((A * V.w)));
+        (Byte)((A * V.x)),
+        (Byte)((A * V.y)),
+        (Byte)((A * V.z)),
+        (Byte)((A * V.w)));
 }
 
-inline VectorD2 operator*(double A, VectorD2 V)
+inline VectorD2 operator*(Double A, VectorD2 V)
 {
     return MkVectorD2(
-        (double)((A * V.x)),
-        (double)((A * V.y)));
+        (Double)((A * V.x)),
+        (Double)((A * V.y)));
 }
 
-inline VectorD3 operator*(double A, VectorD3 V)
+inline VectorD3 operator*(Double A, VectorD3 V)
 {
     return MkVectorD3(
-        (double)((A * V.x)),
-        (double)((A * V.y)),
-        (double)((A * V.z)));
+        (Double)((A * V.x)),
+        (Double)((A * V.y)),
+        (Double)((A * V.z)));
 }
 
-inline VectorD4 operator*(double A, VectorD4 V)
+inline VectorD4 operator*(Double A, VectorD4 V)
 {
     return MkVectorD4(
-        (double)((A * V.x)),
-        (double)((A * V.y)),
-        (double)((A * V.z)),
-        (double)((A * V.w)));
+        (Double)((A * V.x)),
+        (Double)((A * V.y)),
+        (Double)((A * V.z)),
+        (Double)((A * V.w)));
 }
 
-inline Vector2 operator*(float A, Vector2 V)
+inline Vector2 operator*(Single A, Vector2 V)
 {
     return MkVector2(
-        (float)((A * V.x)),
-        (float)((A * V.y)));
+        (Single)((A * V.x)),
+        (Single)((A * V.y)));
 }
 
-inline Vector3 operator*(float A, Vector3 V)
+inline Vector3 operator*(Single A, Vector3 V)
 {
     return MkVector3(
-        (float)((A * V.x)),
-        (float)((A * V.y)),
-        (float)((A * V.z)));
+        (Single)((A * V.x)),
+        (Single)((A * V.y)),
+        (Single)((A * V.z)));
 }
 
-inline Vector4 operator*(float A, Vector4 V)
+inline Vector4 operator*(Single A, Vector4 V)
 {
     return MkVector4(
-        (float)((A * V.x)),
-        (float)((A * V.y)),
-        (float)((A * V.z)),
-        (float)((A * V.w)));
+        (Single)((A * V.x)),
+        (Single)((A * V.y)),
+        (Single)((A * V.z)),
+        (Single)((A * V.w)));
 }
 
 inline VectorI2 operator/(Int32 A, VectorI2 V)
@@ -2760,76 +2808,76 @@ inline VectorI4 operator/(Int32 A, VectorI4 V)
         (Int32)((Div(A, V.w))));
 }
 
-inline VectorB2 operator/(byte A, VectorB2 V)
+inline VectorB2 operator/(Byte A, VectorB2 V)
 {
     return MkVectorB2(
-        (byte)((Div(A, V.x))),
-        (byte)((Div(A, V.y))));
+        (Byte)((Div(A, V.x))),
+        (Byte)((Div(A, V.y))));
 }
 
-inline VectorB3 operator/(byte A, VectorB3 V)
+inline VectorB3 operator/(Byte A, VectorB3 V)
 {
     return MkVectorB3(
-        (byte)((Div(A, V.x))),
-        (byte)((Div(A, V.y))),
-        (byte)((Div(A, V.z))));
+        (Byte)((Div(A, V.x))),
+        (Byte)((Div(A, V.y))),
+        (Byte)((Div(A, V.z))));
 }
 
-inline VectorB4 operator/(byte A, VectorB4 V)
+inline VectorB4 operator/(Byte A, VectorB4 V)
 {
     return MkVectorB4(
-        (byte)((Div(A, V.x))),
-        (byte)((Div(A, V.y))),
-        (byte)((Div(A, V.z))),
-        (byte)((Div(A, V.w))));
+        (Byte)((Div(A, V.x))),
+        (Byte)((Div(A, V.y))),
+        (Byte)((Div(A, V.z))),
+        (Byte)((Div(A, V.w))));
 }
 
-inline VectorD2 operator/(double A, VectorD2 V)
+inline VectorD2 operator/(Double A, VectorD2 V)
 {
     return MkVectorD2(
-        (double)((Div(A, V.x))),
-        (double)((Div(A, V.y))));
+        (Double)((Div(A, V.x))),
+        (Double)((Div(A, V.y))));
 }
 
-inline VectorD3 operator/(double A, VectorD3 V)
+inline VectorD3 operator/(Double A, VectorD3 V)
 {
     return MkVectorD3(
-        (double)((Div(A, V.x))),
-        (double)((Div(A, V.y))),
-        (double)((Div(A, V.z))));
+        (Double)((Div(A, V.x))),
+        (Double)((Div(A, V.y))),
+        (Double)((Div(A, V.z))));
 }
 
-inline VectorD4 operator/(double A, VectorD4 V)
+inline VectorD4 operator/(Double A, VectorD4 V)
 {
     return MkVectorD4(
-        (double)((Div(A, V.x))),
-        (double)((Div(A, V.y))),
-        (double)((Div(A, V.z))),
-        (double)((Div(A, V.w))));
+        (Double)((Div(A, V.x))),
+        (Double)((Div(A, V.y))),
+        (Double)((Div(A, V.z))),
+        (Double)((Div(A, V.w))));
 }
 
-inline Vector2 operator/(float A, Vector2 V)
+inline Vector2 operator/(Single A, Vector2 V)
 {
     return MkVector2(
-        (float)((Div(A, V.x))),
-        (float)((Div(A, V.y))));
+        (Single)((Div(A, V.x))),
+        (Single)((Div(A, V.y))));
 }
 
-inline Vector3 operator/(float A, Vector3 V)
+inline Vector3 operator/(Single A, Vector3 V)
 {
     return MkVector3(
-        (float)((Div(A, V.x))),
-        (float)((Div(A, V.y))),
-        (float)((Div(A, V.z))));
+        (Single)((Div(A, V.x))),
+        (Single)((Div(A, V.y))),
+        (Single)((Div(A, V.z))));
 }
 
-inline Vector4 operator/(float A, Vector4 V)
+inline Vector4 operator/(Single A, Vector4 V)
 {
     return MkVector4(
-        (float)((Div(A, V.x))),
-        (float)((Div(A, V.y))),
-        (float)((Div(A, V.z))),
-        (float)((Div(A, V.w))));
+        (Single)((Div(A, V.x))),
+        (Single)((Div(A, V.y))),
+        (Single)((Div(A, V.z))),
+        (Single)((Div(A, V.w))));
 }
 
 inline VectorI2 operator*(VectorI2 V, Int32 A)
@@ -2856,76 +2904,76 @@ inline VectorI4 operator*(VectorI4 V, Int32 A)
         (Int32)((V.w * A)));
 }
 
-inline VectorB2 operator*(VectorB2 V, byte A)
+inline VectorB2 operator*(VectorB2 V, Byte A)
 {
     return MkVectorB2(
-        (byte)((V.x * A)),
-        (byte)((V.y * A)));
+        (Byte)((V.x * A)),
+        (Byte)((V.y * A)));
 }
 
-inline VectorB3 operator*(VectorB3 V, byte A)
+inline VectorB3 operator*(VectorB3 V, Byte A)
 {
     return MkVectorB3(
-        (byte)((V.x * A)),
-        (byte)((V.y * A)),
-        (byte)((V.z * A)));
+        (Byte)((V.x * A)),
+        (Byte)((V.y * A)),
+        (Byte)((V.z * A)));
 }
 
-inline VectorB4 operator*(VectorB4 V, byte A)
+inline VectorB4 operator*(VectorB4 V, Byte A)
 {
     return MkVectorB4(
-        (byte)((V.x * A)),
-        (byte)((V.y * A)),
-        (byte)((V.z * A)),
-        (byte)((V.w * A)));
+        (Byte)((V.x * A)),
+        (Byte)((V.y * A)),
+        (Byte)((V.z * A)),
+        (Byte)((V.w * A)));
 }
 
-inline VectorD2 operator*(VectorD2 V, double A)
+inline VectorD2 operator*(VectorD2 V, Double A)
 {
     return MkVectorD2(
-        (double)((V.x * A)),
-        (double)((V.y * A)));
+        (Double)((V.x * A)),
+        (Double)((V.y * A)));
 }
 
-inline VectorD3 operator*(VectorD3 V, double A)
+inline VectorD3 operator*(VectorD3 V, Double A)
 {
     return MkVectorD3(
-        (double)((V.x * A)),
-        (double)((V.y * A)),
-        (double)((V.z * A)));
+        (Double)((V.x * A)),
+        (Double)((V.y * A)),
+        (Double)((V.z * A)));
 }
 
-inline VectorD4 operator*(VectorD4 V, double A)
+inline VectorD4 operator*(VectorD4 V, Double A)
 {
     return MkVectorD4(
-        (double)((V.x * A)),
-        (double)((V.y * A)),
-        (double)((V.z * A)),
-        (double)((V.w * A)));
+        (Double)((V.x * A)),
+        (Double)((V.y * A)),
+        (Double)((V.z * A)),
+        (Double)((V.w * A)));
 }
 
-inline Vector2 operator*(Vector2 V, float A)
+inline Vector2 operator*(Vector2 V, Single A)
 {
     return MkVector2(
-        (float)((V.x * A)),
-        (float)((V.y * A)));
+        (Single)((V.x * A)),
+        (Single)((V.y * A)));
 }
 
-inline Vector3 operator*(Vector3 V, float A)
+inline Vector3 operator*(Vector3 V, Single A)
 {
     return MkVector3(
-        (float)((V.x * A)),
-        (float)((V.y * A)),
-        (float)((V.z * A)));
+        (Single)((V.x * A)),
+        (Single)((V.y * A)),
+        (Single)((V.z * A)));
 }
 
-inline Vector4 operator*(Vector4 V, float A)
+inline Vector4 operator*(Vector4 V, Single A)
 {
     return MkVector4(
-        (float)((V.x * A)),
-        (float)((V.y * A)),
-        (float)((V.z * A)),
-        (float)((V.w * A)));
+        (Single)((V.x * A)),
+        (Single)((V.y * A)),
+        (Single)((V.z * A)),
+        (Single)((V.w * A)));
 }
 
 inline VectorI2 operator/(VectorI2 V, Int32 A)
@@ -2952,76 +3000,76 @@ inline VectorI4 operator/(VectorI4 V, Int32 A)
         (Int32)((Div(V.w, A))));
 }
 
-inline VectorB2 operator/(VectorB2 V, byte A)
+inline VectorB2 operator/(VectorB2 V, Byte A)
 {
     return MkVectorB2(
-        (byte)((Div(V.x, A))),
-        (byte)((Div(V.y, A))));
+        (Byte)((Div(V.x, A))),
+        (Byte)((Div(V.y, A))));
 }
 
-inline VectorB3 operator/(VectorB3 V, byte A)
+inline VectorB3 operator/(VectorB3 V, Byte A)
 {
     return MkVectorB3(
-        (byte)((Div(V.x, A))),
-        (byte)((Div(V.y, A))),
-        (byte)((Div(V.z, A))));
+        (Byte)((Div(V.x, A))),
+        (Byte)((Div(V.y, A))),
+        (Byte)((Div(V.z, A))));
 }
 
-inline VectorB4 operator/(VectorB4 V, byte A)
+inline VectorB4 operator/(VectorB4 V, Byte A)
 {
     return MkVectorB4(
-        (byte)((Div(V.x, A))),
-        (byte)((Div(V.y, A))),
-        (byte)((Div(V.z, A))),
-        (byte)((Div(V.w, A))));
+        (Byte)((Div(V.x, A))),
+        (Byte)((Div(V.y, A))),
+        (Byte)((Div(V.z, A))),
+        (Byte)((Div(V.w, A))));
 }
 
-inline VectorD2 operator/(VectorD2 V, double A)
+inline VectorD2 operator/(VectorD2 V, Double A)
 {
     return MkVectorD2(
-        (double)((Div(V.x, A))),
-        (double)((Div(V.y, A))));
+        (Double)((Div(V.x, A))),
+        (Double)((Div(V.y, A))));
 }
 
-inline VectorD3 operator/(VectorD3 V, double A)
+inline VectorD3 operator/(VectorD3 V, Double A)
 {
     return MkVectorD3(
-        (double)((Div(V.x, A))),
-        (double)((Div(V.y, A))),
-        (double)((Div(V.z, A))));
+        (Double)((Div(V.x, A))),
+        (Double)((Div(V.y, A))),
+        (Double)((Div(V.z, A))));
 }
 
-inline VectorD4 operator/(VectorD4 V, double A)
+inline VectorD4 operator/(VectorD4 V, Double A)
 {
     return MkVectorD4(
-        (double)((Div(V.x, A))),
-        (double)((Div(V.y, A))),
-        (double)((Div(V.z, A))),
-        (double)((Div(V.w, A))));
+        (Double)((Div(V.x, A))),
+        (Double)((Div(V.y, A))),
+        (Double)((Div(V.z, A))),
+        (Double)((Div(V.w, A))));
 }
 
-inline Vector2 operator/(Vector2 V, float A)
+inline Vector2 operator/(Vector2 V, Single A)
 {
     return MkVector2(
-        (float)((Div(V.x, A))),
-        (float)((Div(V.y, A))));
+        (Single)((Div(V.x, A))),
+        (Single)((Div(V.y, A))));
 }
 
-inline Vector3 operator/(Vector3 V, float A)
+inline Vector3 operator/(Vector3 V, Single A)
 {
     return MkVector3(
-        (float)((Div(V.x, A))),
-        (float)((Div(V.y, A))),
-        (float)((Div(V.z, A))));
+        (Single)((Div(V.x, A))),
+        (Single)((Div(V.y, A))),
+        (Single)((Div(V.z, A))));
 }
 
-inline Vector4 operator/(Vector4 V, float A)
+inline Vector4 operator/(Vector4 V, Single A)
 {
     return MkVector4(
-        (float)((Div(V.x, A))),
-        (float)((Div(V.y, A))),
-        (float)((Div(V.z, A))),
-        (float)((Div(V.w, A))));
+        (Single)((Div(V.x, A))),
+        (Single)((Div(V.y, A))),
+        (Single)((Div(V.z, A))),
+        (Single)((Div(V.w, A))));
 }
 
 // Compound assignment operators
@@ -3187,55 +3235,55 @@ inline VectorI4& operator*=(VectorI4& V, Int32 A)
     return V;
 }
 
-inline VectorB2& operator*=(VectorB2& V, byte A)
+inline VectorB2& operator*=(VectorB2& V, Byte A)
 {
     V = V * A;
     return V;
 }
 
-inline VectorB3& operator*=(VectorB3& V, byte A)
+inline VectorB3& operator*=(VectorB3& V, Byte A)
 {
     V = V * A;
     return V;
 }
 
-inline VectorB4& operator*=(VectorB4& V, byte A)
+inline VectorB4& operator*=(VectorB4& V, Byte A)
 {
     V = V * A;
     return V;
 }
 
-inline VectorD2& operator*=(VectorD2& V, double A)
+inline VectorD2& operator*=(VectorD2& V, Double A)
 {
     V = V * A;
     return V;
 }
 
-inline VectorD3& operator*=(VectorD3& V, double A)
+inline VectorD3& operator*=(VectorD3& V, Double A)
 {
     V = V * A;
     return V;
 }
 
-inline VectorD4& operator*=(VectorD4& V, double A)
+inline VectorD4& operator*=(VectorD4& V, Double A)
 {
     V = V * A;
     return V;
 }
 
-inline Vector2& operator*=(Vector2& V, float A)
+inline Vector2& operator*=(Vector2& V, Single A)
 {
     V = V * A;
     return V;
 }
 
-inline Vector3& operator*=(Vector3& V, float A)
+inline Vector3& operator*=(Vector3& V, Single A)
 {
     V = V * A;
     return V;
 }
 
-inline Vector4& operator*=(Vector4& V, float A)
+inline Vector4& operator*=(Vector4& V, Single A)
 {
     V = V * A;
     return V;
@@ -3259,55 +3307,55 @@ inline VectorI4& operator/=(VectorI4& V, Int32 A)
     return V;
 }
 
-inline VectorB2& operator/=(VectorB2& V, byte A)
+inline VectorB2& operator/=(VectorB2& V, Byte A)
 {
     V = V / A;
     return V;
 }
 
-inline VectorB3& operator/=(VectorB3& V, byte A)
+inline VectorB3& operator/=(VectorB3& V, Byte A)
 {
     V = V / A;
     return V;
 }
 
-inline VectorB4& operator/=(VectorB4& V, byte A)
+inline VectorB4& operator/=(VectorB4& V, Byte A)
 {
     V = V / A;
     return V;
 }
 
-inline VectorD2& operator/=(VectorD2& V, double A)
+inline VectorD2& operator/=(VectorD2& V, Double A)
 {
     V = V / A;
     return V;
 }
 
-inline VectorD3& operator/=(VectorD3& V, double A)
+inline VectorD3& operator/=(VectorD3& V, Double A)
 {
     V = V / A;
     return V;
 }
 
-inline VectorD4& operator/=(VectorD4& V, double A)
+inline VectorD4& operator/=(VectorD4& V, Double A)
 {
     V = V / A;
     return V;
 }
 
-inline Vector2& operator/=(Vector2& V, float A)
+inline Vector2& operator/=(Vector2& V, Single A)
 {
     V = V / A;
     return V;
 }
 
-inline Vector3& operator/=(Vector3& V, float A)
+inline Vector3& operator/=(Vector3& V, Single A)
 {
     V = V / A;
     return V;
 }
 
-inline Vector4& operator/=(Vector4& V, float A)
+inline Vector4& operator/=(Vector4& V, Single A)
 {
     V = V / A;
     return V;
@@ -3335,9 +3383,9 @@ inline Int32 DotP(VectorI4 A, VectorI4 B)
         + (A.w * B.w));
 }
 
-inline byte DotP(VectorB2 A, VectorB2 B)
+inline Byte DotP(VectorB2 A, VectorB2 B)
 {
-    return (byte)((A.x * B.x)
+    return (Byte)((A.x * B.x)
         + (A.y * B.y));
 }
 
@@ -3347,9 +3395,9 @@ inline Int32 DotPI(VectorB2 A, VectorB2 B)
         + (Int32)(A.y * B.y));
 }
 
-inline byte DotP(VectorB3 A, VectorB3 B)
+inline Byte DotP(VectorB3 A, VectorB3 B)
 {
-    return (byte)((A.x * B.x)
+    return (Byte)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z));
 }
@@ -3361,9 +3409,9 @@ inline Int32 DotPI(VectorB3 A, VectorB3 B)
         + (Int32)(A.z * B.z));
 }
 
-inline byte DotP(VectorB4 A, VectorB4 B)
+inline Byte DotP(VectorB4 A, VectorB4 B)
 {
-    return (byte)((A.x * B.x)
+    return (Byte)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z)
         + (A.w * B.w));
@@ -3377,67 +3425,67 @@ inline Int32 DotPI(VectorB4 A, VectorB4 B)
         + (Int32)(A.w * B.w));
 }
 
-inline double DotP(VectorD2 A, VectorD2 B)
+inline Double DotP(VectorD2 A, VectorD2 B)
 {
-    return (double)((A.x * B.x)
+    return (Double)((A.x * B.x)
         + (A.y * B.y));
 }
 
-inline double DotP(VectorD3 A, VectorD3 B)
+inline Double DotP(VectorD3 A, VectorD3 B)
 {
-    return (double)((A.x * B.x)
+    return (Double)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z));
 }
 
-inline double DotP(VectorD4 A, VectorD4 B)
+inline Double DotP(VectorD4 A, VectorD4 B)
 {
-    return (double)((A.x * B.x)
+    return (Double)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z)
         + (A.w * B.w));
 }
 
-inline float DotP(Vector2 A, Vector2 B)
+inline Single DotP(Vector2 A, Vector2 B)
 {
-    return (float)((A.x * B.x)
+    return (Single)((A.x * B.x)
         + (A.y * B.y));
 }
 
-inline double DotPD(Vector2 A, Vector2 B)
+inline Double DotPD(Vector2 A, Vector2 B)
 {
-    return (double)((double)(A.x * B.x)
-        + (double)(A.y * B.y));
+    return (Double)((Double)(A.x * B.x)
+        + (Double)(A.y * B.y));
 }
 
-inline float DotP(Vector3 A, Vector3 B)
+inline Single DotP(Vector3 A, Vector3 B)
 {
-    return (float)((A.x * B.x)
+    return (Single)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z));
 }
 
-inline double DotPD(Vector3 A, Vector3 B)
+inline Double DotPD(Vector3 A, Vector3 B)
 {
-    return (double)((double)(A.x * B.x)
-        + (double)(A.y * B.y)
-        + (double)(A.z * B.z));
+    return (Double)((Double)(A.x * B.x)
+        + (Double)(A.y * B.y)
+        + (Double)(A.z * B.z));
 }
 
-inline float DotP(Vector4 A, Vector4 B)
+inline Single DotP(Vector4 A, Vector4 B)
 {
-    return (float)((A.x * B.x)
+    return (Single)((A.x * B.x)
         + (A.y * B.y)
         + (A.z * B.z)
         + (A.w * B.w));
 }
 
-inline double DotPD(Vector4 A, Vector4 B)
+inline Double DotPD(Vector4 A, Vector4 B)
 {
-    return (double)((double)(A.x * B.x)
-        + (double)(A.y * B.y)
-        + (double)(A.z * B.z)
-        + (double)(A.w * B.w));
+    return (Double)((Double)(A.x * B.x)
+        + (Double)(A.y * B.y)
+        + (Double)(A.z * B.z)
+        + (Double)(A.w * B.w));
 }
 
 // Square length
@@ -3456,7 +3504,7 @@ inline Int32 SqLen(VectorI4 V)
     return DotP(V,V);
 }
 
-inline byte SqLen(VectorB2 V)
+inline Byte SqLen(VectorB2 V)
 {
     return DotP(V,V);
 }
@@ -3466,7 +3514,7 @@ inline Int32 SqLenI(VectorB2 V)
     return DotPI(V,V);
 }
 
-inline byte SqLen(VectorB3 V)
+inline Byte SqLen(VectorB3 V)
 {
     return DotP(V,V);
 }
@@ -3476,7 +3524,7 @@ inline Int32 SqLenI(VectorB3 V)
     return DotPI(V,V);
 }
 
-inline byte SqLen(VectorB4 V)
+inline Byte SqLen(VectorB4 V)
 {
     return DotP(V,V);
 }
@@ -3486,47 +3534,47 @@ inline Int32 SqLenI(VectorB4 V)
     return DotPI(V,V);
 }
 
-inline double SqLen(VectorD2 V)
+inline Double SqLen(VectorD2 V)
 {
     return DotP(V,V);
 }
 
-inline double SqLen(VectorD3 V)
+inline Double SqLen(VectorD3 V)
 {
     return DotP(V,V);
 }
 
-inline double SqLen(VectorD4 V)
+inline Double SqLen(VectorD4 V)
 {
     return DotP(V,V);
 }
 
-inline float SqLen(Vector2 V)
+inline Single SqLen(Vector2 V)
 {
     return DotP(V,V);
 }
 
-inline double SqLenD(Vector2 V)
+inline Double SqLenD(Vector2 V)
 {
     return DotPD(V,V);
 }
 
-inline float SqLen(Vector3 V)
+inline Single SqLen(Vector3 V)
 {
     return DotP(V,V);
 }
 
-inline double SqLenD(Vector3 V)
+inline Double SqLenD(Vector3 V)
 {
     return DotPD(V,V);
 }
 
-inline float SqLen(Vector4 V)
+inline Single SqLen(Vector4 V)
 {
     return DotP(V,V);
 }
 
-inline double SqLenD(Vector4 V)
+inline Double SqLenD(Vector4 V)
 {
     return DotPD(V,V);
 }
@@ -3547,78 +3595,78 @@ inline Int32 ManhatLength(VectorI4 V)
     return (Int32)(V.x + V.y + V.z + V.w);
 }
 
-inline byte ManhatLength(VectorB2 V)
+inline Byte ManhatLength(VectorB2 V)
 {
-    return (byte)(V.x + V.y);
+    return (Byte)(V.x + V.y);
 }
 
-inline byte ManhatLength(VectorB3 V)
+inline Byte ManhatLength(VectorB3 V)
 {
-    return (byte)(V.x + V.y + V.z);
+    return (Byte)(V.x + V.y + V.z);
 }
 
-inline byte ManhatLength(VectorB4 V)
+inline Byte ManhatLength(VectorB4 V)
 {
-    return (byte)(V.x + V.y + V.z + V.w);
+    return (Byte)(V.x + V.y + V.z + V.w);
 }
 
-inline double ManhatLength(VectorD2 V)
+inline Double ManhatLength(VectorD2 V)
 {
-    return (double)(V.x + V.y);
+    return (Double)(V.x + V.y);
 }
 
-inline double ManhatLength(VectorD3 V)
+inline Double ManhatLength(VectorD3 V)
 {
-    return (double)(V.x + V.y + V.z);
+    return (Double)(V.x + V.y + V.z);
 }
 
-inline double ManhatLength(VectorD4 V)
+inline Double ManhatLength(VectorD4 V)
 {
-    return (double)(V.x + V.y + V.z + V.w);
+    return (Double)(V.x + V.y + V.z + V.w);
 }
 
-inline float ManhatLength(Vector2 V)
+inline Single ManhatLength(Vector2 V)
 {
-    return (float)(V.x + V.y);
+    return (Single)(V.x + V.y);
 }
 
-inline float ManhatLength(Vector3 V)
+inline Single ManhatLength(Vector3 V)
 {
-    return (float)(V.x + V.y + V.z);
+    return (Single)(V.x + V.y + V.z);
 }
 
-inline float ManhatLength(Vector4 V)
+inline Single ManhatLength(Vector4 V)
 {
-    return (float)(V.x + V.y + V.z + V.w);
+    return (Single)(V.x + V.y + V.z + V.w);
 }
 
 // Vector length (as in, euclidean)
-inline double Len(VectorD2 V)
+inline Double Len(VectorD2 V)
 {
     return Sqrt(SqLen(V));
 }
 
-inline double Len(VectorD3 V)
+inline Double Len(VectorD3 V)
 {
     return Sqrt(SqLen(V));
 }
 
-inline double Len(VectorD4 V)
+inline Double Len(VectorD4 V)
 {
     return Sqrt(SqLen(V));
 }
 
-inline float Len(Vector2 V)
+inline Single Len(Vector2 V)
 {
     return Sqrt(SqLen(V));
 }
 
-inline float Len(Vector3 V)
+inline Single Len(Vector3 V)
 {
     return Sqrt(SqLen(V));
 }
 
-inline float Len(Vector4 V)
+inline Single Len(Vector4 V)
 {
     return Sqrt(SqLen(V));
 }
@@ -3670,9 +3718,9 @@ inline Int32 Volume(VectorI4 V)
     return (Int32)(V.x * V.y * V.z * V.w);
 }
 
-inline byte Volume(VectorB2 V)
+inline Byte Volume(VectorB2 V)
 {
-    return (byte)(V.x * V.y);
+    return (Byte)(V.x * V.y);
 }
 
 inline Int32 VolumeI(VectorB2 V)
@@ -3680,9 +3728,9 @@ inline Int32 VolumeI(VectorB2 V)
     return (Int32)(V.x * V.y);
 }
 
-inline byte Volume(VectorB3 V)
+inline Byte Volume(VectorB3 V)
 {
-    return (byte)(V.x * V.y * V.z);
+    return (Byte)(V.x * V.y * V.z);
 }
 
 inline Int32 VolumeI(VectorB3 V)
@@ -3690,9 +3738,9 @@ inline Int32 VolumeI(VectorB3 V)
     return (Int32)(V.x * V.y * V.z);
 }
 
-inline byte Volume(VectorB4 V)
+inline Byte Volume(VectorB4 V)
 {
-    return (byte)(V.x * V.y * V.z * V.w);
+    return (Byte)(V.x * V.y * V.z * V.w);
 }
 
 inline Int32 VolumeI(VectorB4 V)
@@ -3700,49 +3748,49 @@ inline Int32 VolumeI(VectorB4 V)
     return (Int32)(V.x * V.y * V.z * V.w);
 }
 
-inline double Volume(VectorD2 V)
+inline Double Volume(VectorD2 V)
 {
-    return (double)(V.x * V.y);
+    return (Double)(V.x * V.y);
 }
 
-inline double Volume(VectorD3 V)
+inline Double Volume(VectorD3 V)
 {
-    return (double)(V.x * V.y * V.z);
+    return (Double)(V.x * V.y * V.z);
 }
 
-inline double Volume(VectorD4 V)
+inline Double Volume(VectorD4 V)
 {
-    return (double)(V.x * V.y * V.z * V.w);
+    return (Double)(V.x * V.y * V.z * V.w);
 }
 
-inline float Volume(Vector2 V)
+inline Single Volume(Vector2 V)
 {
-    return (float)(V.x * V.y);
+    return (Single)(V.x * V.y);
 }
 
-inline double VolumeD(Vector2 V)
+inline Double VolumeD(Vector2 V)
 {
-    return (double)(V.x * V.y);
+    return (Double)(V.x * V.y);
 }
 
-inline float Volume(Vector3 V)
+inline Single Volume(Vector3 V)
 {
-    return (float)(V.x * V.y * V.z);
+    return (Single)(V.x * V.y * V.z);
 }
 
-inline double VolumeD(Vector3 V)
+inline Double VolumeD(Vector3 V)
 {
-    return (double)(V.x * V.y * V.z);
+    return (Double)(V.x * V.y * V.z);
 }
 
-inline float Volume(Vector4 V)
+inline Single Volume(Vector4 V)
 {
-    return (float)(V.x * V.y * V.z * V.w);
+    return (Single)(V.x * V.y * V.z * V.w);
 }
 
-inline double VolumeD(Vector4 V)
+inline Double VolumeD(Vector4 V)
 {
-    return (double)(V.x * V.y * V.z * V.w);
+    return (Double)(V.x * V.y * V.z * V.w);
 }
 
 inline Int32 Pow2Volume(VectorI2 V)
@@ -3760,9 +3808,9 @@ inline Int32 Pow2Volume(VectorI4 V)
     return Pow2Mult((Int32)1, (Int32)(V.x + V.y + V.z + V.w));
 }
 
-inline byte Pow2Volume(VectorB2 V)
+inline Byte Pow2Volume(VectorB2 V)
 {
-    return Pow2Mult((byte)1, (byte)(V.x + V.y));
+    return Pow2Mult((Byte)1, (Byte)(V.x + V.y));
 }
 
 inline Int32 Pow2VolumeI(VectorB2 V)
@@ -3770,9 +3818,9 @@ inline Int32 Pow2VolumeI(VectorB2 V)
     return Pow2Mult((Int32)1, (Int32)(V.x + V.y));
 }
 
-inline byte Pow2Volume(VectorB3 V)
+inline Byte Pow2Volume(VectorB3 V)
 {
-    return Pow2Mult((byte)1, (byte)(V.x + V.y + V.z));
+    return Pow2Mult((Byte)1, (Byte)(V.x + V.y + V.z));
 }
 
 inline Int32 Pow2VolumeI(VectorB3 V)
@@ -3780,9 +3828,9 @@ inline Int32 Pow2VolumeI(VectorB3 V)
     return Pow2Mult((Int32)1, (Int32)(V.x + V.y + V.z));
 }
 
-inline byte Pow2Volume(VectorB4 V)
+inline Byte Pow2Volume(VectorB4 V)
 {
-    return Pow2Mult((byte)1, (byte)(V.x + V.y + V.z + V.w));
+    return Pow2Mult((Byte)1, (Byte)(V.x + V.y + V.z + V.w));
 }
 
 inline Int32 Pow2VolumeI(VectorB4 V)

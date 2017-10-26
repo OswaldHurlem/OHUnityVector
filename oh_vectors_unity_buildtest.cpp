@@ -7,11 +7,13 @@
 #include <intrin.h>
 #include <math.h>
 
-typedef uint8_t   byte;
+typedef uint8_t   Byte;
 typedef uint32_t  UInt32;
 typedef int32_t   Int32;
 typedef int64_t   Int64;
 typedef uint32_t  Boolean;
+typedef float     Single;
+typedef double    Double;
 
 #define Min(X, Y) (((X) < (Y)) ? (X) : (Y))
 #define Max(X, Y) (((X) > (Y)) ? (X) : (Y))
@@ -41,27 +43,27 @@ inline Int32 Pow2Mult(Int64 A, Int64 Pow2)
     return A << Pow2;
 }
 
-inline byte Pow2Rem(byte A, byte Pow2)
+inline Byte Pow2Rem(Byte A, Byte Pow2)
 {
     return A & ((1 << Pow2) - 1);
 }
 
-inline byte Pow2Div(byte A, byte Pow2)
+inline Byte Pow2Div(Byte A, Byte Pow2)
 {
     return A >> Pow2;
 }
 
-inline byte Pow2CeilDiv(byte A, byte Pow2)
+inline Byte Pow2CeilDiv(Byte A, Byte Pow2)
 {
     return (A >> Pow2) + ((A & ((1 << Pow2) - 1)) != 0);
 }
 
-inline byte Pow2Mult(byte A, byte Pow2)
+inline Byte Pow2Mult(Byte A, Byte Pow2)
 {
     return A << Pow2;
 }
 
-inline float Sqrt(float A)
+inline Single Sqrt(Single A)
 {
     return sqrtf(A);
 }
@@ -91,71 +93,71 @@ inline Int32 Rem(Int32 A, Int32 B)
        return r;
 }
 
-inline float Div(float A, float B)
+inline Single Div(Single A, Single B)
 {
     return A/B;
 }
 
-inline byte Div(byte A, byte B)
+inline Byte Div(Byte A, Byte B)
 {
     return A/B;
 }
 
-inline double Div(double A, double B)
+inline Double Div(Double A, Double B)
 {
     return A/B;
 }
 
-inline byte CeilDiv(byte A, byte B)
+inline Byte CeilDiv(Byte A, Byte B)
 {
     return (A/B) + ((A%B!=0)
         ? !((A>0)^(B>0))
         : 0);
 }
 
-inline byte Rem(byte A, byte B)
+inline Byte Rem(Byte A, Byte B)
 {
     return A%B;
 }
 
-inline Int32 FloorIF(float x)
+inline Int32 FloorIF(Single x)
 {
     return (Int32)floorf(x);
 }
 
-inline Int32 CeilIF(float x)
+inline Int32 CeilIF(Single x)
 {
     return (Int32)ceilf(x);
 }
 
-inline byte FloorBF(float x)
+inline Byte FloorBF(Single x)
 {
-    return (byte)floorf(x);
+    return (Byte)floorf(x);
 }
 
-inline byte CeilBF(float x)
+inline Byte CeilBF(Single x)
 {
-    return (byte)ceilf(x);
+    return (Byte)ceilf(x);
 }
 
-inline Int32 FloorID(double x)
+inline Int32 FloorID(Double x)
 {
     return (Int32)floor(x);
 }
 
-inline Int32 CeilID(double x)
+inline Int32 CeilID(Double x)
 {
     return (Int32)ceil(x);
 }
 
-inline byte FloorBD(double x)
+inline Byte FloorBD(Double x)
 {
-    return (byte)floor(x);
+    return (Byte)floor(x);
 }
 
-inline byte CeilBD(double x)
+inline Byte CeilBD(Double x)
 {
-    return (byte)ceil(x);
+    return (Byte)ceil(x);
 }
 
 #include "oh_vectors_unity.h"

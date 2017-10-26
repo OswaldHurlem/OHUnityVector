@@ -42,7 +42,7 @@ csFileEnd = '}'
 # which seems to help with Unity's compile times :(
 # TODO allow splitting C++ file
 settingsByLanguage = {
-    'C' : {
+    'C++' : {
         'outputFile' : r'oh_vectors_unity.h',
         'funcPrefix' : 'inline ',
         'swizzlePrefix' : 'Swizz',
@@ -61,7 +61,7 @@ settingsByLanguage = {
         'firstParamModifier' : 'this ',
         'booleanName' : 'Boolean',
         'extMethodClassName' : 'VecExt', # Set to None to disable
-        'stdCallClassName' : 'VecOps', # Set to None to disable
+        'stdCallClassName' : 'OHV', # Set to None to disable
         'mathClassName' : 'Arith',
         'fileBegin' : csFileBegin,
         'fileEnd' : csFileEnd
@@ -71,35 +71,65 @@ settingsByLanguage = {
 class expando(object):
     pass
 
-# Creating primitive definitions
-def makePrimitive(
-    nameByLang,
-    usedInVecs = False,
-    isFloatType = False,
-    declareVecsInLangs = [],
-    castUpTo = None,
-    functionSuffixByLanguage = None,
-    useForCtors = False):
-        prim = expando()
-        prim.nameByLang = nameByLang
-        prim.usedInVecs = usedInVecs
-        prim.isFloatType = isFloatType
-        prim.declareVecsInLangs = declareVecsInLangs
-        prim.castUpTo = castUpTo
-        prim.functionSuffixByLanguage = functionSuffixByLanguage
-        prim.useForCtors = useForCtors
-        return prim
+def makePrimitive():
+    prim = expando()
+    prim.nameByLang = {'C++' : '???', 'C#' : '???'}
+    prim.usedInVecs = False
+    prim.isFloatType = False
+    prim.declareVecsInLangs = []
+    prim.castUpTo = None
+    prim.functionSuffixByLanguage = None
+    prim.useForCtors = False
+    prim.minByLanguage = {'C++' : '???', 'C#' : '???'}
+    prim.maxByLanguage = {'C++' : '???', 'C#' : '???'}
+    return prim
 
-i64 = makePrimitive({'C' : 'Int64', 'C#' : 'Int64'})
-i32 = makePrimitive({'C' : 'Int32', 'C#' : 'Int32'},   usedInVecs = True, isFloatType = False, 
-    declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = i64,  functionSuffixByLanguage = {'C':'I', 'C#':'I'}, useForCtors = True)
-u8 = makePrimitive({'C' : 'byte', 'C#' : 'byte'},      usedInVecs = True, isFloatType = False, 
-    declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = i32,  functionSuffixByLanguage = {'C':'B', 'C#':'B'}, useForCtors = True)
-f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, usedInVecs = True, isFloatType = True,  
-    declareVecsInLangs = {'C':True, 'C#':True},  castUpTo = None, functionSuffixByLanguage = {'C':'D', 'C#':'D'}, useForCtors = True)
-# f64 = makePrimitive({'C' : 'double', 'C#' : 'double'}, isFloatType = True)
-f32 = makePrimitive({'C' : 'float', 'C#' : 'float'},   usedInVecs = True, isFloatType = True,  
-    declareVecsInLangs = {'C':True, 'C#':False}, castUpTo = f64,  functionSuffixByLanguage = {'C':'F', 'C#':'F'}, useForCtors = True)
+i64 = makePrimitive()
+i64.nameByLang = {'C++' : 'Int64', 'C#' : 'Int64'}
+
+i32 = makePrimitive()
+i32.nameByLang = {'C++' : 'Int32', 'C#' : 'Int32'}
+i32.usedInVecs = True
+i32.isFloatType = False
+i32.declareVecsInLangs = {'C++':True, 'C#':True}
+i32.castUpTo = i64
+i32.functionSuffixByLanguage = {'C++':'I', 'C#':'I'}
+i32.useForCtors = True
+i32.minByLanguage = {'C++' : 'INT32_MIN', 'C#' : 'Int32.MinValue'}
+i32.maxByLanguage = {'C++' : 'INT32_MAX', 'C#' : 'Int32.MaxValue'}
+
+u8 = makePrimitive()
+u8.nameByLang = {'C++' : 'Byte', 'C#' : 'Byte'}
+u8.usedInVecs = True
+u8.isFloatType = False
+u8.declareVecsInLangs = {'C++':True, 'C#':True}
+u8.castUpTo = i32
+u8.functionSuffixByLanguage = {'C++':'B', 'C#':'B'}
+u8.useForCtors = True
+u8.minByLanguage = {'C++' : '0', 'C#' : '0'}
+u8.maxByLanguage = {'C++' : 'UINT8_MAX', 'C#' : 'Byte.MaxValue'}
+
+f64 = makePrimitive()
+f64.nameByLang = {'C++' : 'Double', 'C#' : 'Double'}
+f64.usedInVecs = True
+f64.isFloatType = True
+f64.declareVecsInLangs = {'C++':True, 'C#':True}
+f64.castUpTo = None
+f64.functionSuffixByLanguage = {'C++':'D', 'C#':'D'}
+f64.useForCtors = True
+f64.minByLanguage = {'C++' : '-INFINITY', 'C#' : 'Double.NegativeInfinity'}
+f64.maxByLanguage = {'C++' : 'INFINITY', 'C#' : 'Double.PositiveInfinity'}
+
+f32 = makePrimitive()
+f32.nameByLang = {'C++' : 'Single', 'C#' : 'Single'}
+f32.usedInVecs = True
+f32.isFloatType = True
+f32.declareVecsInLangs = {'C++':True, 'C#':False}
+f32.castUpTo = f64
+f32.functionSuffixByLanguage = {'C++':'F', 'C#':'F'}
+f32.useForCtors = True
+f32.minByLanguage = {'C++' : '-INFINITY', 'C#' : 'Single.NegativeInfinity'}
+f32.maxByLanguage = {'C++' : 'INFINITY', 'C#' : 'Single.PositiveInfinity'}
 
 # Creating vector definitions
 def getSubscriptSchemes(n):
@@ -117,12 +147,12 @@ def nameVectorByLanguage(primitive, n):
     primAbbrev = {
         'Int64' : 'L',
         'Int32' : 'I',
-        'byte' : 'B',
-        'float' : '',
-        'double' : 'D'
+        'Byte' : 'B',
+        'Single' : '',
+        'Double' : 'D'
     }[primCSharpName]
     vectorName = "Vector#{primAbbrev}#{n}"
-    return {'C' : vectorName, 'C#' : vectorName}
+    return {'C++' : vectorName, 'C#' : vectorName}
 
 vecList = []
 
@@ -505,7 +535,7 @@ def switchToLanguage(language):
 
 
 # Outputting C code
-switchToLanguage('C')
+switchToLanguage('C++')
 
 for vector in vecList:
     if vector.declare:
@@ -535,6 +565,14 @@ for vector in vecList:
         OUT("#define #{vector.name}_right   (#{vector.name}{  1,  0,  0 })")
         OUT("#define #{vector.name}_up      (#{vector.name}{  0,  1,  0 })")
         OUT("#define #{vector.name}_forward (#{vector.name}{  0,  0,  1 })")
+    OUT("#define #{vector.name}_one #{nameCtor(vector, vector.prim, 0)}(1);")
+    OUT("#define #{vector.name}_zero #{nameCtor(vector, vector.prim, 0)}(0);")
+    minName = 'negativeInfinity' if vector.isFloatType else 'MinValue'
+    minVal = vector.prim.minByLanguage['C++']
+    OUT("#define #{vector.name}_#{minName} #{nameCtor(vector, vector.prim, 0)}(#{minVal});")
+    maxName = 'positiveInfinity' if vector.isFloatType else 'MaxValue'
+    maxVal = vector.prim.maxByLanguage['C++']
+    OUT("#define #{vector.name}_#{maxName} #{nameCtor(vector, vector.prim, 0)}(#{maxVal});")
 OUT("")
 
 OUT("// Constructors from primitives. Float converts to int using floor")
@@ -746,6 +784,14 @@ for vector in vecList:
             OUT("public static #{vector.name} right   = #{nameCtor(vector, vector.prim, 0)}( 1,  0,  0 );")
             OUT("public static #{vector.name} up      = #{nameCtor(vector, vector.prim, 0)}( 0,  1,  0 );")
             OUT("public static #{vector.name} forward = #{nameCtor(vector, vector.prim, 0)}( 0,  0,  1 );")
+        OUT("public static #{vector.name} one = #{nameCtor(vector, vector.prim, 0)}(1);")
+        OUT("public static #{vector.name} zero = #{nameCtor(vector, vector.prim, 0)}(0);")
+        minName = 'negativeInfinity' if vector.isFloatType else 'MinValue'
+        minVal = vector.prim.minByLanguage['C#']
+        OUT("public static #{vector.name} #{minName} = #{nameCtor(vector, vector.prim, 0)}(#{minVal});")
+        maxName = 'positiveInfinity' if vector.isFloatType else 'MaxValue'
+        maxVal = vector.prim.maxByLanguage['C#']
+        OUT("public static #{vector.name} #{maxName} = #{nameCtor(vector, vector.prim, 0)}(#{maxVal});")
     OUT("")
     outputLogicalInnerProduct('operator==', '==', '&&', vector)
     outputLogicalInnerProduct('operator!=', '!=', '||', vector)
