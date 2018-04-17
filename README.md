@@ -1,5 +1,8 @@
 # Oswald Hurlem's Unity Vector Library and Generator
 
+## UPDATE: 4/2018
+Use [Unity.Mathematics](https://github.com/Unity-Technologies/Unity.Mathematics) instead.
+
 ## UPDATE: 11/2017
 Unity has announced that [future versions of its engine will feature a non-verbose math library with integer-based vectors](https://youtu.be/tGmnZdY5Y-E?t=1h5m12s). Therefore, this repository will no longer be updated, and I encourage you not to use it.
 
